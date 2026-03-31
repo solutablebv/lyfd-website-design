@@ -12,6 +12,20 @@ export const metadata: Metadata = {
     "Liftmonteurs voor Modernisering | Combiteams & Vervangingsgarantie | LYFD",
   description:
     "LYFD levert gecertificeerde monteurs voor liftmodernisering. Combiteams senior+junior, vervangingsgarantie, vaste opleverdatum. Bekijk hoe het werkt.",
+  openGraph: {
+    title: "Liftmonteurs voor Modernisering | Combiteams & Vervangingsgarantie | LYFD",
+    description:
+      "LYFD levert gecertificeerde monteurs voor liftmodernisering. Combiteams senior+junior, vervangingsgarantie, vaste opleverdatum. Bekijk hoe het werkt.",
+    type: "website",
+    locale: "nl_NL",
+    siteName: "LYFD",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Liftmonteurs voor Modernisering | Combiteams & Vervangingsgarantie | LYFD",
+    description:
+      "LYFD levert gecertificeerde monteurs voor liftmodernisering. Combiteams senior+junior, vervangingsgarantie, vaste opleverdatum. Bekijk hoe het werkt.",
+  },
 };
 
 const faqItems = [
@@ -46,9 +60,33 @@ const faqItems = [
   },
 ];
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Liftmonteurs voor Modernisering",
+  description:
+    "LYFD levert gecertificeerde monteurs voor liftmodernisering. Combiteams senior+junior, vervangingsgarantie, vaste opleverdatum.",
+  provider: {
+    "@type": "Organization",
+    name: "LYFD B.V.",
+    url: "https://lyfd.nl",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Nederland",
+  },
+  serviceType: "Lift Modernisering",
+};
+
 export default function LiftModerniseringPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJsonLd),
+        }}
+      />
       <ServiceHero
         eyebrow="Modernisering"
         title="Keiharde planning. Nul ruimte voor uitval. Wij leveren."

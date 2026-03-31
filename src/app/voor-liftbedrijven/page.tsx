@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: "Liftcapaciteit voor Liftbedrijven | Flexibel en Gecertificeerd | LYFD",
   description:
     "LYFD levert gecertificeerde liftmonteurs aan liftbedrijven in Nederland. On-demand tot retainer. DBA-compliant. Bekijk alle diensten en modellen.",
+  openGraph: {
+    title: "Liftcapaciteit voor Liftbedrijven | Flexibel en Gecertificeerd | LYFD",
+    description:
+      "LYFD levert gecertificeerde liftmonteurs aan liftbedrijven in Nederland. On-demand tot retainer. DBA-compliant. Bekijk alle diensten en modellen.",
+    type: "website",
+    locale: "nl_NL",
+    siteName: "LYFD",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Liftcapaciteit voor Liftbedrijven | Flexibel en Gecertificeerd | LYFD",
+    description:
+      "LYFD levert gecertificeerde liftmonteurs aan liftbedrijven in Nederland. On-demand tot retainer. DBA-compliant. Bekijk alle diensten en modellen.",
+  },
 };
 
 const faqItems = [

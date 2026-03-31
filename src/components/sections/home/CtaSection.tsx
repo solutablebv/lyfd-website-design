@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { ArrowDown } from "@phosphor-icons/react";
+
 
 export function CtaSection() {
   return (
@@ -56,7 +56,7 @@ export function CtaSection() {
           <ScrollReveal delay={0.2}>
             <div className="mt-12 flex flex-col sm:flex-row gap-3 justify-center">
               <Button
-                href="#gesprek"
+                href="/aanvraag/"
                 variant="white"
                 size="lg"
                 icon="arrow-right"
@@ -64,16 +64,13 @@ export function CtaSection() {
                 Plan een capaciteitsgesprek
               </Button>
               <Button
-                href="#gids"
+                href="/kennisbank/"
                 variant="ghost"
                 size="lg"
                 icon="none"
                 className="border-white/20 text-white/90 hover:bg-white/10 hover:border-white/30 hover:text-white"
               >
-                <span className="flex items-center gap-2">
-                  <ArrowDown weight="bold" className="w-4 h-4" />
-                  Download de LYFD Capaciteitsgids
-                </span>
+                Bekijk de kennisbank
               </Button>
             </div>
           </ScrollReveal>

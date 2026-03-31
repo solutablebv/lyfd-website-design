@@ -17,8 +17,8 @@ const footerColumns = [
     title: "Voor Liftmonteurs",
     links: [
       { label: "Werken bij LYFD", href: "/voor-liftmonteurs/" },
-      { label: "Vacatures", href: "#vacatures" },
-      { label: "Certificeringen", href: "#certificeringen" },
+      { label: "Vacatures", href: "/voor-liftmonteurs/" },
+      { label: "Certificeringen", href: "/kennisbank/nen-certificering/" },
       { label: "Aanmelden", href: "/voor-liftmonteurs/" },
     ],
   },
@@ -27,15 +27,14 @@ const footerColumns = [
     links: [
       { label: "Over ons", href: "/over-lyfd/" },
       { label: "Kennisbank", href: "/kennisbank/" },
-      { label: "Case studies", href: "#cases" },
       { label: "Contact", href: "/contact/" },
     ],
   },
   {
     title: "Juridisch",
     links: [
-      { label: "Privacyverklaring", href: "#privacy" },
-      { label: "Algemene voorwaarden", href: "#voorwaarden" },
+      { label: "Privacyverklaring", href: "/privacy/" },
+      { label: "Algemene voorwaarden", href: "/voorwaarden/" },
     ],
   },
 ];

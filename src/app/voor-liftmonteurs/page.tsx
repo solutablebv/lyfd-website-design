@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   title: "Werken als Liftmonteur via LYFD | Beter Verdienen, Meer Vrijheid",
   description:
     "LYFD zoekt ervaren liftmonteurs die beter willen verdienen en meer controle willen over hun werk. Geen vaste baan, geen onzekere zzp. Ontdek hoe het werkt.",
+  openGraph: {
+    title: "Werken als Liftmonteur via LYFD | Beter Verdienen, Meer Vrijheid",
+    description:
+      "LYFD zoekt ervaren liftmonteurs die beter willen verdienen en meer controle willen over hun werk. Geen vaste baan, geen onzekere zzp. Ontdek hoe het werkt.",
+    type: "website",
+    locale: "nl_NL",
+    siteName: "LYFD",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Werken als Liftmonteur via LYFD | Beter Verdienen, Meer Vrijheid",
+    description:
+      "LYFD zoekt ervaren liftmonteurs die beter willen verdienen en meer controle willen over hun werk. Geen vaste baan, geen onzekere zzp. Ontdek hoe het werkt.",
+  },
 };
 
 const faqItems = [
@@ -44,13 +58,13 @@ const faqItems = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "JobPosting",
-  title: "Liftmonteur via LYFD",
+  title: "Liftmonteur",
   description:
-    "LYFD zoekt ervaren liftmonteurs die beter willen verdienen en meer controle willen over hun werk.",
+    "LYFD zoekt ervaren liftmonteurs. Werk voor topbedrijven in de liftindustrie, op jouw voorwaarden.",
   hiringOrganization: {
     "@type": "Organization",
     name: "LYFD B.V.",
-    url: "https://lyfd.nl",
+    sameAs: "https://lyfd.nl",
   },
   jobLocation: {
     "@type": "Place",
@@ -60,6 +74,7 @@ const jsonLd = {
     },
   },
   employmentType: "CONTRACTOR",
+  industry: "Liftindustrie",
 };
 
 export default function VoorLiftmonteursPage() {

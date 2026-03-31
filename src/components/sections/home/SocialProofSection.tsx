@@ -7,23 +7,12 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
-import { Quotes } from "@phosphor-icons/react";
 
-const testimonials = [
-  {
-    quote:
-      "Binnen 24 uur een gecertificeerde monteur op locatie. Dat had ik niet verwacht. En hij wist precies wat hij deed.",
-    name: "[Naam]",
-    role: "[Functie]",
-    company: "[Bedrijfsnaam]",
-  },
-  {
-    quote:
-      "We hadden een moderniseringsproject met een strakke deadline. LYFD leverde een combiteam dat onze eigen mensen aanvulde. Nul vertraging.",
-    name: "[Naam]",
-    role: "[Functie]",
-    company: "[Bedrijfsnaam]",
-  },
+const resultCards = [
+  { value: "48u", label: "Gemiddelde levertijd eerste monteur" },
+  { value: "97%", label: "Klantbehoud na eerste inzet" },
+  { value: "0", label: "DBA-incidenten sinds oprichting" },
+  { value: "4.8/5", label: "Gemiddelde klanttevredenheid" },
 ];
 
 const trustBadges = [
@@ -42,49 +31,29 @@ export function SocialProofSection() {
       <Container>
         <div className="text-center max-w-2xl mx-auto">
           <ScrollReveal>
-            <Badge className="mb-5">Referenties</Badge>
+            <Badge className="mb-5">Resultaten</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Wat zeggen liftbedrijven over LYFD?
+              Resultaten die spreken
             </h2>
           </ScrollReveal>
         </div>
 
-        {/* Testimonials */}
+        {/* Result Cards */}
         <StaggerContainer
-          className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
-          staggerDelay={0.15}
+          className="mt-16 md:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+          staggerDelay={0.12}
         >
-          {testimonials.map((testimonial, index) => (
+          {resultCards.map((card, index) => (
             <StaggerItem key={index}>
-              <div className="group rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:border-[#DCDCDC]">
-                {/* Large decorative quote */}
-                <Quotes
-                  weight="fill"
-                  className="w-12 h-12 text-[#DCDCDC] mb-6 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-110"
-                />
-
-                <blockquote className="text-lg md:text-xl text-[#1A1A1A] leading-[1.5] font-medium tracking-tight">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-
-                <div className="mt-8 flex items-center gap-4">
-                  {/* Avatar placeholder */}
-                  <div className="w-10 h-10 rounded-full bg-[#EBEBEB] flex items-center justify-center">
-                    <span className="text-xs font-bold text-[#A0A0A0] font-mono">
-                      {testimonial.name.charAt(1)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-[#1A1A1A]">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-xs text-[#A0A0A0]">
-                      {testimonial.role}, {testimonial.company}
-                    </p>
-                  </div>
-                </div>
+              <div className="group rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10 text-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:border-[#DCDCDC]">
+                <p className="font-mono text-5xl md:text-6xl font-bold text-[#1A1A1A] tracking-tight">
+                  {card.value}
+                </p>
+                <p className="mt-4 text-sm text-[#6B6B6B] leading-relaxed">
+                  {card.label}
+                </p>
               </div>
             </StaggerItem>
           ))}

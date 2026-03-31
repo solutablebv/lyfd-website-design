@@ -143,7 +143,7 @@ export function HeroSection() {
             className="mt-12 flex flex-col sm:flex-row gap-3"
           >
             <Button
-              href="#contact"
+              href="/aanvraag/"
               variant="primary"
               size="lg"
               icon="arrow-right"

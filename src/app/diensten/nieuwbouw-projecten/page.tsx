@@ -12,6 +12,20 @@ export const metadata: Metadata = {
     "Liftmonteurs Nieuwbouw | Capaciteit voor Liftinstallatie Projecten | LYFD",
   description:
     "LYFD levert gecertificeerde liftmonteurs voor nieuwbouwprojecten. Van installatiestart tot oplevering. Combiteams, vervangingsgarantie, DBA-compliant.",
+  openGraph: {
+    title: "Liftmonteurs Nieuwbouw | Capaciteit voor Liftinstallatie Projecten | LYFD",
+    description:
+      "LYFD levert gecertificeerde liftmonteurs voor nieuwbouwprojecten. Van installatiestart tot oplevering. Combiteams, vervangingsgarantie, DBA-compliant.",
+    type: "website",
+    locale: "nl_NL",
+    siteName: "LYFD",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Liftmonteurs Nieuwbouw | Capaciteit voor Liftinstallatie Projecten | LYFD",
+    description:
+      "LYFD levert gecertificeerde liftmonteurs voor nieuwbouwprojecten. Van installatiestart tot oplevering. Combiteams, vervangingsgarantie, DBA-compliant.",
+  },
 };
 
 const faqItems = [
@@ -45,6 +59,24 @@ const faqItems = [
       "Ja. Als een project meerwerk uitlokt of nalevering nodig is, kan de inzetperiode worden verlengd. Dit wordt per project afgestemd en contractueel vastgelegd.",
   },
 ];
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Liftmonteurs Nieuwbouw",
+  description:
+    "LYFD levert gecertificeerde liftmonteurs voor nieuwbouwprojecten. Van installatiestart tot oplevering. Combiteams, vervangingsgarantie, DBA-compliant.",
+  provider: {
+    "@type": "Organization",
+    name: "LYFD B.V.",
+    url: "https://lyfd.nl",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Nederland",
+  },
+  serviceType: "Nieuwbouw Liftinstallatie",
+};
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -112,6 +144,12 @@ const breadcrumbJsonLd = {
 export default function NieuwbouwProjectenPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJsonLd),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

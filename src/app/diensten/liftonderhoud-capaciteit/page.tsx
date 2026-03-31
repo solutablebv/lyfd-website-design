@@ -12,6 +12,20 @@ export const metadata: Metadata = {
     "Liftonderhoud Capaciteit | Gecertificeerde Monteurs op Aanvraag | LYFD",
   description:
     "LYFD levert gecertificeerde liftmonteurs voor service en onderhoud. Geen gat in je planning, geen DBA-risico. Binnen 48 uur beschikbaar.",
+  openGraph: {
+    title: "Liftonderhoud Capaciteit | Gecertificeerde Monteurs op Aanvraag | LYFD",
+    description:
+      "LYFD levert gecertificeerde liftmonteurs voor service en onderhoud. Geen gat in je planning, geen DBA-risico. Binnen 48 uur beschikbaar.",
+    type: "website",
+    locale: "nl_NL",
+    siteName: "LYFD",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Liftonderhoud Capaciteit | Gecertificeerde Monteurs op Aanvraag | LYFD",
+    description:
+      "LYFD levert gecertificeerde liftmonteurs voor service en onderhoud. Geen gat in je planning, geen DBA-risico. Binnen 48 uur beschikbaar.",
+  },
 };
 
 const faqItems = [
@@ -44,9 +58,33 @@ const faqItems = [
   },
 ];
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Liftonderhoud Capaciteit",
+  description:
+    "LYFD levert gecertificeerde liftmonteurs voor service en onderhoud. Geen gat in je planning, geen DBA-risico. Binnen 48 uur beschikbaar.",
+  provider: {
+    "@type": "Organization",
+    name: "LYFD B.V.",
+    url: "https://lyfd.nl",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Nederland",
+  },
+  serviceType: "Liftonderhoud",
+};
+
 export default function LiftonderhoudCapaciteitPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJsonLd),
+        }}
+      />
       <ServiceHero
         eyebrow="Service & Onderhoud"
         title="Geen monteur beschikbaar? Dat is verleden tijd."

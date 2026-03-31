@@ -13,6 +13,20 @@ export const metadata: Metadata = {
     "Capacity as a Service Liftindustrie | Wat is CaaS? | LYFD",
   description:
     "Capacity as a Service (CaaS) is het alternatief voor zzp en uitzendbureau in de liftindustrie. LYFD legt uit hoe het werkt en waarom het beter is.",
+  openGraph: {
+    title: "Capacity as a Service Liftindustrie | Wat is CaaS? | LYFD",
+    description:
+      "Capacity as a Service (CaaS) is het alternatief voor zzp en uitzendbureau in de liftindustrie. LYFD legt uit hoe het werkt en waarom het beter is.",
+    type: "website",
+    locale: "nl_NL",
+    siteName: "LYFD",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Capacity as a Service Liftindustrie | Wat is CaaS? | LYFD",
+    description:
+      "Capacity as a Service (CaaS) is het alternatief voor zzp en uitzendbureau in de liftindustrie. LYFD legt uit hoe het werkt en waarom het beter is.",
+  },
 };
 
 const faqItems = [
@@ -50,6 +64,24 @@ const faqItems = [
       "Een LYFD-monteur kan werken onder jouw bedrijfsnaam, in jouw werkkleding, met jouw procedures. Voor de eindklant is er geen verschil zichtbaar. Dit is standaard beschikbaar bij alle engagementmodellen.",
   },
 ];
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Capacity as a Service",
+  description:
+    "Capacity as a Service (CaaS) is het alternatief voor zzp en uitzendbureau in de liftindustrie. Flexibeler dan vast personeel, betrouwbaarder dan zzp.",
+  provider: {
+    "@type": "Organization",
+    name: "LYFD B.V.",
+    url: "https://lyfd.nl",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Nederland",
+  },
+  serviceType: "Capacity as a Service",
+};
 
 const webPageJsonLd = {
   "@context": "https://schema.org",
@@ -110,6 +142,12 @@ const breadcrumbJsonLd = {
 export default function CapacityAsAServicePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJsonLd),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
