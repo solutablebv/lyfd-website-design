@@ -21,7 +21,7 @@ const trustIndicators = [
     icon: ShieldCheck,
     title: "DBA-compliant",
     description:
-      "Alle inzet via LYFD B.V. Geen ZZP-risico. Geen juridische grijs gebied.",
+      "Alle inzet via LYFD B.V. Geen ZZP-risico. Geen juridisch grijs gebied.",
   },
   {
     icon: ArrowsClockwise,

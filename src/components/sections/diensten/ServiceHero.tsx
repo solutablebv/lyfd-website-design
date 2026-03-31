@@ -30,7 +30,7 @@ export function ServiceHero({
 }: ServiceHeroProps) {
   return (
     <section className="relative min-h-[85dvh] bg-white overflow-hidden flex items-center">
-      {/* Background video — cropped tighter, shifted right */}
+      {/* Background video (cropped tighter, shifted right) */}
       {videoSrc && (
         <div className="absolute inset-0">
           <div
@@ -57,10 +57,10 @@ export function ServiceHero({
         </div>
       )}
 
-      {/* Top gradient — seamless header blend */}
+      {/* Top gradient (seamless header blend) */}
       <div className="absolute top-0 left-0 right-0 h-56 bg-gradient-to-b from-white via-white/80 to-transparent z-[2] pointer-events-none" />
 
-      {/* Bottom gradient — seamless section transition */}
+      {/* Bottom gradient (seamless section transition) */}
       <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-white via-white/80 to-transparent z-[2] pointer-events-none" />
 
       <Container className="relative z-10 py-32 md:py-0" style={{ textShadow: '0 1px 8px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.5)' }}>

@@ -8,7 +8,7 @@ import { MagnifyingGlass } from "@phosphor-icons/react";
 export function KennisbankHero() {
   return (
     <section className="relative bg-white pt-36 md:pt-44 pb-20 md:pb-28 overflow-hidden">
-      {/* Background video — centered inward masking */}
+      {/* Background video (centered inward masking) */}
       <div className="absolute inset-0">
         <div
           className="relative w-full h-full"
@@ -33,7 +33,7 @@ export function KennisbankHero() {
         </div>
       </div>
 
-      {/* Top gradient — seamless header blend */}
+      {/* Top gradient (seamless header blend) */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent z-[2] pointer-events-none" />
 
       <Container className="relative z-10" style={{ textShadow: '0 1px 8px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.5)' }}>

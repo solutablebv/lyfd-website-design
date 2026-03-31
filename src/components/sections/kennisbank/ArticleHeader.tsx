@@ -25,7 +25,7 @@ export function ArticleHeader({
 }: ArticleHeaderProps) {
   return (
     <section className="relative bg-white pt-36 md:pt-44 pb-12 md:pb-16">
-      {/* Top gradient — seamless header blend */}
+      {/* Top gradient (seamless header blend) */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent z-[2] pointer-events-none" />
 
       <Container className="relative z-10">

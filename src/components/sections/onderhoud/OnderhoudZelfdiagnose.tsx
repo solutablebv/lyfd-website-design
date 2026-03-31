@@ -62,7 +62,7 @@ export function OnderhoudZelfdiagnose() {
         </div>
       </Container>
 
-      {/* Bottom blend — into ServiceCta dark section */}
+      {/* Bottom blend (into ServiceCta dark section) */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
     </section>
   );

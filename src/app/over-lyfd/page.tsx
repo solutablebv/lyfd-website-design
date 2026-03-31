@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ServiceHero } from "@/components/sections/diensten/ServiceHero";
 import { HetVerhaal } from "@/components/sections/over-lyfd/HetVerhaal";
 import { MissieWaarden } from "@/components/sections/over-lyfd/MissieWaarden";
-import { TeamPlaceholder } from "@/components/sections/over-lyfd/TeamPlaceholder";
+import { OprichterSection } from "@/components/sections/over-lyfd/OprichterSection";
 import { Bedrijfsgegevens } from "@/components/sections/over-lyfd/Bedrijfsgegevens";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
 
@@ -44,7 +44,7 @@ export default function OverLyfdPage() {
       />
       <HetVerhaal />
       <MissieWaarden />
-      <TeamPlaceholder />
+      <OprichterSection />
       <Bedrijfsgegevens />
       <ServiceCta
         title="Wil je weten of LYFD bij jou past?"
