@@ -17,6 +17,7 @@ interface ButtonProps {
   icon?: "arrow-right" | "arrow-up-right" | "none";
   type?: "button" | "submit";
   magnetic?: boolean;
+  disabled?: boolean;
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
@@ -46,6 +47,7 @@ export function Button({
   icon = "arrow-right",
   type = "button",
   magnetic = true,
+  disabled = false,
 }: ButtonProps) {
   const btnRef = useRef<HTMLAnchorElement & HTMLButtonElement>(null);
 
@@ -111,6 +113,7 @@ export function Button({
     "select-none cursor-pointer",
     variantStyles[variant],
     sizeStyles[size],
+    disabled && "opacity-50 pointer-events-none",
     className
   );
 
@@ -132,6 +135,7 @@ export function Button({
     <button
       type={type}
       onClick={onClick}
+      disabled={disabled}
       ref={btnRef as React.RefObject<HTMLButtonElement>}
       className={sharedClasses}
       onMouseMove={handleMouseMove}
