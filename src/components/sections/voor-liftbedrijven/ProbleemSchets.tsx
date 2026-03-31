@@ -1,0 +1,100 @@
+"use client";
+
+import { Container } from "@/components/ui/Container";
+import { Badge } from "@/components/ui/Badge";
+import {
+  ScrollReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/ScrollReveal";
+import {
+  ClockCountdown,
+  Warning,
+  Handshake,
+} from "@phosphor-icons/react";
+
+const painPoints = [
+  {
+    icon: ClockCountdown,
+    title: "Zelf aannemen duurt maanden",
+    text: "En bindt je aan vaste kosten in een sector met pieken en dalen.",
+  },
+  {
+    icon: Warning,
+    title: "Zzp'ers zijn onbetrouwbaar",
+    text: "DBA-risicovol en vaak niet gecertificeerd voor jouw specifieke installaties.",
+  },
+  {
+    icon: Handshake,
+    title: "Generieke uitzendbureaus missen kennis",
+    text: "Ze kennen het verschil niet tussen een MRL en een machinekamerinstallatie.",
+  },
+];
+
+export function ProbleemSchets() {
+  return (
+    <section className="relative bg-white py-28 md:py-36">
+      {/* Top blend */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+
+      <Container>
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <div className="text-center">
+              <Badge className="mb-5">Waarom LYFD</Badge>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+                Waarom kiezen liftbedrijven voor LYFD?
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <p className="mt-10 md:mt-14 text-base md:text-lg text-[#404040] leading-relaxed text-center">
+              Niet omdat het leuk is om extern in te huren. Maar omdat de alternatieven niet werken.
+            </p>
+          </ScrollReveal>
+        </div>
+
+        <StaggerContainer
+          className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 max-w-5xl mx-auto"
+          staggerDelay={0.12}
+        >
+          {painPoints.map((point) => {
+            const Icon = point.icon;
+            return (
+              <StaggerItem key={point.title}>
+                <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
+                      <Icon weight="light" className="w-5 h-5 text-[#6B6B6B]" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+                      {point.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-[#404040] leading-relaxed">
+                    {point.text}
+                  </p>
+                </div>
+              </StaggerItem>
+            );
+          })}
+        </StaggerContainer>
+
+        <ScrollReveal delay={0.3}>
+          <div className="mt-14 md:mt-18 max-w-[65ch] mx-auto">
+            <p className="text-sm md:text-base text-[#404040] leading-relaxed text-center">
+              LYFD is geen van deze drie.{" "}
+              <span className="text-[#1A1A1A] font-medium">
+                We zijn een capaciteitsplatform dat uitsluitend voor de liftbranche werkt.
+              </span>
+            </p>
+          </div>
+        </ScrollReveal>
+      </Container>
+
+      {/* Bottom blend */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+    </section>
+  );
+}
