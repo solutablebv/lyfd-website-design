@@ -54,7 +54,7 @@ const faqItems = [
     question:
       "Wat kost een liftmonteur voor service en onderhoud via LYFD?",
     answer:
-      "Tarieven zijn transparant en afhankelijk van niveau (Junior EUR 40 tot Senior EUR 65/uur, excl. BTW) en het gekozen model. Retainer- en projectafspraken geven 5-15% korting op het standaardtarief.",
+      "Onze monteurs starten vanaf EUR 65 per uur (excl. BTW). Het exacte tarief is afhankelijk van het ervaringsprofiel en het gekozen engagementmodel. Retainer- en projectafspraken bieden aantrekkelijke voorwaarden.",
   },
 ];
 

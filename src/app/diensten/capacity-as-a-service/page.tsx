@@ -33,7 +33,7 @@ const faqItems = [
   {
     question: "Wat is het verschil tussen CaaS en uitzenden?",
     answer:
-      "Bij uitzenden levert een bureau arbeidsuren van een medewerker. Bij CaaS levert LYFD capaciteit als dienst: inclusief certificering, uitrusting, vervangingsgarantie en branchekennis. De monteur werkt niet via de loonadministratie van de klant, maar blijft onder het regime van LYFD B.V.",
+      "Bij uitzenden levert een bureau arbeidsuren van een medewerker. Bij CaaS levert LYFD capaciteit als dienst: inclusief certificering, uitrusting, vervangingsgarantie en branchekennis. De monteur is in dienst bij LYFD B.V. en werkt onder onze verantwoordelijkheid voor kwaliteit, certificering en uitrusting.",
   },
   {
     question: "Is CaaS duurder dan zelf aannemen?",
@@ -56,12 +56,23 @@ const faqItems = [
     question:
       "Hoe zit het met aansprakelijkheid voor werkzaamheden van een LYFD-monteur?",
     answer:
-      "LYFD-monteurs voeren werkzaamheden uit in opdracht van de klant. De beroepsaansprakelijkheidsverzekering van de monteur is onderdeel van de LYFD-inzet. Voor projectmatige aansprakelijkheden gelden de Algemene Voorwaarden van LYFD B.V.",
+      "De opdrachtgever is verantwoordelijk voor een veilige werkomgeving en draagt de hoofdverantwoordelijkheid voor toezicht en veiligheid op locatie. LYFD-monteurs zijn volledig verzekerd via onze beroepsaansprakelijkheidsverzekering. Alle details rondom aansprakelijkheid staan beschreven in de Algemene Voorwaarden van LYFD B.V.",
   },
   {
     question: "Wat is het Chameleon-concept?",
     answer:
       "Een LYFD-monteur kan werken onder jouw bedrijfsnaam, in jouw werkkleding, met jouw procedures. Voor de eindklant is er geen verschil zichtbaar. Dit is standaard beschikbaar bij alle engagementmodellen.",
+  },
+  {
+    question: "Kan een LYFD-monteur werken in mijn bedrijfskleding?",
+    answer:
+      "Ja. Via het Chameleon-concept werkt de monteur onder jouw bedrijfsnaam, in jouw werkkleding en volgens jouw procedures. Dit is standaard beschikbaar bij alle modellen.",
+  },
+  {
+    question:
+      "Wat als een LYFD-monteur niet voldoet aan mijn verwachtingen?",
+    answer:
+      "LYFD biedt een vervangingsgarantie. Als een monteur niet aansluit bij jouw verwachtingen, regelen we binnen 24 tot 48 uur een alternatief. Zonder extra kosten of gedoe.",
   },
 ];
 

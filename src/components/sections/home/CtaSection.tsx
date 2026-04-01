@@ -8,9 +8,18 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function CtaSection() {
   return (
-    <section id="contact" className="relative bg-[#1A1A1A] py-28 md:py-40 overflow-hidden">
+    <section
+      id="contact"
+      className="relative bg-[#1A1A1A] py-28 md:py-40 overflow-hidden"
+      style={{
+        maskImage:
+          "linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
+        WebkitMaskImage:
+          "linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
+      }}
+    >
       {/* Top gradient blend from white */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#1A1A1A] to-transparent" />
+      <div className="absolute -top-40 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#1A1A1A]" />
 
       {/* Animated dot pattern */}
       <div className="absolute inset-0 opacity-[0.04]">
@@ -37,6 +46,9 @@ export function CtaSection() {
 
       {/* Glow behind heading */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.03)_0%,transparent_70%)] pointer-events-none" />
+
+      {/* Semi-transparent overlay for softer edges */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#1A1A1A]/0 via-[#1A1A1A] to-[#1A1A1A]/0" />
 
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center">
@@ -78,7 +90,7 @@ export function CtaSection() {
       </Container>
 
       {/* Bottom gradient blend to white */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#1A1A1A]" />
+      <div className="absolute -bottom-40 left-0 right-0 h-40 bg-gradient-to-b from-[#1A1A1A] to-transparent" />
     </section>
   );
 }

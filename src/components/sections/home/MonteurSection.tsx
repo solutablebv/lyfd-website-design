@@ -67,10 +67,12 @@ export function MonteurSection() {
                 </h2>
 
                 <p className="mt-4 text-base md:text-lg text-[#404040] leading-[1.7] max-w-[55ch]">
-                  LYFD zoekt ervaren monteurs die beter willen verdienen en meer
-                  controle willen over hun agenda. Geen vast dienstverband, geen
-                  onzekere zzp-situatie. Werken voor topbedrijven, op jouw
-                  voorwaarden.
+                  LYFD werkt met monteurs in vaste dienst. Het gaat bij ons niet
+                  alleen om meer verdienen, maar om de juiste beloning en
+                  waardering voor je vak. Werken met ervaren collega&apos;s die
+                  dezelfde passie delen. Afwisseling door opdrachten bij diverse
+                  opdrachtgevers. Groeimogelijkheden en een kijkje in
+                  verschillende keukens. Een unieke kans in de liftbranche.
                 </p>
               </div>
 

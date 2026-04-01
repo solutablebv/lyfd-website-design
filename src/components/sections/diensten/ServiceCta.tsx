@@ -13,9 +13,17 @@ interface ServiceCtaProps {
 
 export function ServiceCta({ title, body, ctaText, ctaHref }: ServiceCtaProps) {
   return (
-    <section className="relative bg-[#1A1A1A] py-24 md:py-32 overflow-hidden">
+    <section
+      className="relative bg-[#1A1A1A] py-24 md:py-32 overflow-hidden"
+      style={{
+        maskImage:
+          "linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
+        WebkitMaskImage:
+          "linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
+      }}
+    >
       {/* Top gradient blend */}
-      <div className="absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#1A1A1A]" />
+      <div className="absolute -top-40 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#1A1A1A]" />
 
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-[0.03]">
@@ -28,6 +36,9 @@ export function ServiceCta({ title, body, ctaText, ctaHref }: ServiceCtaProps) {
           }}
         />
       </div>
+
+      {/* Semi-transparent overlay for softer edges */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#1A1A1A]/0 via-[#1A1A1A] to-[#1A1A1A]/0" />
 
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center">
@@ -59,7 +70,7 @@ export function ServiceCta({ title, body, ctaText, ctaHref }: ServiceCtaProps) {
       </Container>
 
       {/* Bottom gradient blend */}
-      <div className="absolute -bottom-24 left-0 right-0 h-24 bg-gradient-to-b from-[#1A1A1A] to-transparent" />
+      <div className="absolute -bottom-40 left-0 right-0 h-40 bg-gradient-to-b from-[#1A1A1A] to-transparent" />
     </section>
   );
 }
