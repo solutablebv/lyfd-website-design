@@ -73,26 +73,6 @@ export function ProblemSection() {
       {/* Subtle gradient mesh background */}
       <div className="absolute inset-0 gradient-mesh-light pointer-events-none" />
 
-      {/* Ambient particles video background */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.06]"
-        aria-hidden="true"
-        style={{
-          maskImage: "radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 70%)",
-          WebkitMaskImage: "radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 70%)",
-        }}
-      >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover grayscale"
-        >
-          <source src="/abstract-particles.mp4" type="video/mp4" />
-        </video>
-      </div>
-
       <Container className="relative">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
@@ -149,7 +129,7 @@ export function ProblemSection() {
               <p className="text-base md:text-lg text-[#404040] leading-[1.75] text-center">
                 De rekensom klopt niet. Liftbedrijven voelen dit elke dag: routes
                 die niet gereden kunnen worden, moderniseringsprojecten die
-                uitlopen, nieuwbouwoplevering die vertraging oploopt. Niet omdat je
+                uitlopen. Niet omdat je
                 slecht georganiseerd bent. Maar omdat er simpelweg te weinig
                 gecertificeerde mensen zijn, en de bestaande alternatieven (zzp,
                 uitzendbureau) betrouwbaarheid noch kwaliteitsgarantie bieden.

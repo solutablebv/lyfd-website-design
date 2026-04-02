@@ -11,11 +11,11 @@ import { FaqSection } from "@/components/sections/diensten/FaqSection";
 export const metadata: Metadata = {
   title: "Liftcapaciteit voor Liftbedrijven | Flexibel en Gecertificeerd | LYFD",
   description:
-    "LYFD levert gecertificeerde liftmonteurs aan liftbedrijven in Nederland. On-demand tot retainer. DBA-compliant. Bekijk alle diensten en modellen.",
+    "Capaciteitstekort bij uw liftbedrijf oplossen? LYFD levert gecertificeerde monteurs on-demand of op retainer. DBA-compliant. Plan een gesprek.",
   openGraph: {
     title: "Liftcapaciteit voor Liftbedrijven | Flexibel en Gecertificeerd | LYFD",
     description:
-      "LYFD levert gecertificeerde liftmonteurs aan liftbedrijven in Nederland. On-demand tot retainer. DBA-compliant. Bekijk alle diensten en modellen.",
+      "Capaciteitstekort bij uw liftbedrijf oplossen? LYFD levert gecertificeerde monteurs on-demand of op retainer. DBA-compliant. Plan een gesprek.",
     type: "website",
     locale: "nl_NL",
     siteName: "LYFD",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Liftcapaciteit voor Liftbedrijven | Flexibel en Gecertificeerd | LYFD",
     description:
-      "LYFD levert gecertificeerde liftmonteurs aan liftbedrijven in Nederland. On-demand tot retainer. DBA-compliant. Bekijk alle diensten en modellen.",
+      "Capaciteitstekort bij uw liftbedrijf oplossen? LYFD levert gecertificeerde monteurs on-demand of op retainer. DBA-compliant. Plan een gesprek.",
   },
 };
 
@@ -56,6 +56,38 @@ const faqItems = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://lyfd.nl/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Voor Liftbedrijven",
+      item: "https://lyfd.nl/voor-liftbedrijven/",
+    },
+  ],
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -81,14 +113,23 @@ export default function VoorLiftbedrijvenPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <ServiceHero
         eyebrow="Voor Liftbedrijven"
-        title="Liftcapaciteit voor liftbedrijven. Gecertificeerd, flexibel, betrouwbaar."
-        subtitle="Van losse uren tot vaste capaciteitsreservering. LYFD levert de monteurs die jij nodig hebt, wanneer je ze nodig hebt."
+        title="Jouw liftbedrijf verdient een capaciteitspartner die de branche kent."
+        subtitle="Niet nog een uitzendbureau. Niet weer een zzp-gok. Een partner die weet wat een MRL is, welk certificaat je monteur nodig heeft, en die levert wanneer het ertoe doet."
         intro=""
         ctaText="Plan een capaciteitsgesprek"
         ctaHref="/aanvraag/"
         breadcrumbLabel="Voor Liftbedrijven"
+        imageSrc="/lift-gang-perspectief.jpg"
       />
       <ProbleemSchets />
       <DienstenOverzicht />
@@ -96,8 +137,8 @@ export default function VoorLiftbedrijvenPage() {
       <ChameleonConcept />
       <DbaCompliance />
       <ServiceCta
-        title="Klaar om capaciteit anders te regelen?"
-        body="Vertel ons wat je nodig hebt. Wij komen binnen 24 uur terug met een concreet voorstel. Geen verkooppraatje, een helder plan."
+        title="Klaar om te groeien zonder capaciteitsrisico?"
+        body="Laten we in gesprek gaan over wat jouw bedrijf nodig heeft. Geen verkooppraatje, een concreet voorstel."
         ctaText="Plan een capaciteitsgesprek"
         ctaHref="/aanvraag/"
       />

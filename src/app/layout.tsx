@@ -21,11 +21,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "LYFD | Capacity as a Service voor de liftindustrie",
   description:
-    "Gecertificeerde liftmonteurs, wanneer en waar jij ze nodig hebt. On-demand, op project of op retainer. DBA-compliant. Binnen 48 uur geregeld.",
+    "LYFD levert Capacity as a Service voor de liftindustrie. Gecertificeerde liftmonteurs, on-demand of op retainer. DBA-compliant. Plan een capaciteitsgesprek.",
   openGraph: {
     title: "LYFD | Capacity as a Service voor de liftindustrie",
     description:
-      "Gecertificeerde liftmonteurs, wanneer en waar jij ze nodig hebt. On-demand, op project of op retainer. DBA-compliant. Binnen 48 uur geregeld.",
+      "LYFD levert Capacity as a Service voor de liftindustrie. Gecertificeerde liftmonteurs, on-demand of op retainer. DBA-compliant. Plan een capaciteitsgesprek.",
     type: "website",
     locale: "nl_NL",
     siteName: "LYFD",

@@ -16,23 +16,23 @@ import {
 const opties = [
   {
     icon: Lock,
-    title: "Vaste dienst",
-    subtitle: "Zekerheid, maar beperkte vergoeding",
-    text: "CAO-tarief, weinig tot geen keuze in projecten, beperkte autonomie over je eigen planning.",
+    title: "Vast dienstverband",
+    subtitle: "Voorspelbaar, maar beperkt",
+    text: "Zekerheid van een contract, maar je zit vast aan CAO-lonen, dezelfde installaties en beperkte autonomie over je eigen planning. Groeien? Alleen als er ruimte is.",
     color: "bg-[#F0F0F0]",
   },
   {
     icon: Warning,
     title: "Zzp",
-    subtitle: "Vrijheid, maar onzekerheid",
-    text: "DBA-risico, eigen administratie, geen zekerheid van opdrachten. En altijd de vraag: is dit juridisch houdbaar?",
+    subtitle: "Vrijheid, maar risico",
+    text: "Je bepaalt je eigen tarief, maar draagt ook alle risico's. DBA-onzekerheid, eigen administratie, geen collega's om op terug te vallen. En altijd de vraag: waar komt de volgende opdracht vandaan?",
     color: "bg-[#F0F0F0]",
   },
   {
     icon: ArrowsSplit,
     title: "LYFD",
-    subtitle: "De derde weg",
-    text: "Beter verdienen dan CAO, geen zzp-risico, controle over je agenda. Interessante projecten bij de beste liftbedrijven.",
+    subtitle: "Het beste van beide",
+    text: "Vast contract met zekerheid, maar dan met afwisseling, collega's die het vak delen, 10-15% boven CAO en de mogelijkheid om bij verschillende opdrachtgevers ervaring op te doen.",
     color: "bg-[#1A1A1A]",
     textColor: "text-white",
     subtitleColor: "text-white/70",
@@ -49,14 +49,14 @@ export function HetProbleem() {
       <Container>
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <Badge className="mb-5">Het probleem</Badge>
+            <Badge className="mb-5">De keuze</Badge>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
-              Vaste dienst of zzp. Allebei niet ideaal.
+              Vast of zzp. Alsof dat de enige opties zijn.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p className="mt-5 text-base md:text-lg text-[#404040] leading-relaxed">
-              Je bent een specialist. Je wilt goed betaald worden, interessant werk doen en zelf bepalen hoe je werkt. Maar de huidige opties dwingen je om te kiezen.
+              Je bent een vakman. Je wilt gewaardeerd worden voor wat je doet, werken aan uitdagende installaties en de zekerheid hebben dat je morgen ook nog werk hebt. Maar de huidige opties dwingen je om te kiezen tussen zekerheid en vrijheid.
             </p>
           </ScrollReveal>
         </div>

@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import Link from "next/link";
+import Image from "next/image";
 import { CaretRight } from "@phosphor-icons/react";
 
 interface ServiceHeroProps {
@@ -16,6 +17,7 @@ interface ServiceHeroProps {
   ctaHref: string;
   breadcrumbLabel: string;
   videoSrc?: string;
+  imageSrc?: string;
 }
 
 export function ServiceHero({
@@ -27,12 +29,13 @@ export function ServiceHero({
   ctaHref,
   breadcrumbLabel,
   videoSrc,
+  imageSrc,
 }: ServiceHeroProps) {
   return (
     <section className="relative min-h-[85dvh] bg-white overflow-hidden flex items-center">
       {/* Background video (cropped tighter, shifted right) */}
       {videoSrc && (
-        <div className="absolute inset-0">
+        <div className="absolute inset-0" aria-hidden="true">
           <div
             className="relative w-full h-full"
             style={{
@@ -57,6 +60,32 @@ export function ServiceHero({
         </div>
       )}
 
+      {/* Background image (same masking as video) */}
+      {imageSrc && !videoSrc && (
+        <div className="absolute inset-0" aria-hidden="true">
+          <div
+            className="relative w-full h-full"
+            style={{
+              maskImage: `
+                radial-gradient(ellipse 45% 45% at 68% 50%, black 15%, transparent 58%)
+              `,
+              WebkitMaskImage: `
+                radial-gradient(ellipse 45% 45% at 68% 50%, black 15%, transparent 58%)
+              `,
+            }}
+          >
+            <Image
+              src={imageSrc}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center opacity-50 grayscale"
+              priority
+            />
+          </div>
+        </div>
+      )}
+
       {/* Top gradient (seamless header blend) */}
       <div className="absolute top-0 left-0 right-0 h-56 bg-gradient-to-b from-white via-white/80 to-transparent z-[2] pointer-events-none" />
 
@@ -69,7 +98,7 @@ export function ServiceHero({
           <motion.nav
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.05 }}
+            transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.2 }}
             className="flex items-center gap-1.5 mb-8"
             aria-label="Breadcrumb"
           >
@@ -89,20 +118,20 @@ export function ServiceHero({
 
           {/* Eyebrow Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+            initial={{ opacity: 0, y: 32, filter: "blur(4px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
+            transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.25 }}
           >
-            <Badge variant="outline" className={videoSrc ? "bg-white/80 backdrop-blur-sm border-[#DCDCDC] mb-6" : "mb-6"}>
+            <Badge variant="outline" className={(videoSrc || imageSrc) ? "bg-white/80 backdrop-blur-sm border-[#DCDCDC] mb-6" : "mb-6"}>
               {eyebrow}
             </Badge>
           </motion.div>
 
           {/* H1 */}
           <motion.h1
-            initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
+            initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.9, ease: [0.32, 0.72, 0, 1], delay: 0.2 }}
+            transition={{ duration: 1.2, ease: [0.32, 0.72, 0, 1], delay: 0.35 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-[#1A1A1A] tracking-tighter leading-[1.05]"
           >
             {title}
@@ -110,9 +139,9 @@ export function ServiceHero({
 
           {/* Subtitle */}
           <motion.p
-            initial={{ opacity: 0, y: 32, filter: "blur(6px)" }}
+            initial={{ opacity: 0, y: 32, filter: "blur(4px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.35 }}
+            transition={{ duration: 1.2, ease: [0.32, 0.72, 0, 1], delay: 0.5 }}
             className="mt-5 text-base md:text-lg text-[#2A2A2A] font-medium leading-relaxed"
           >
             {subtitle}
@@ -120,10 +149,10 @@ export function ServiceHero({
 
           {/* Intro */}
           <motion.p
-            initial={{ opacity: 0, y: 28, filter: "blur(6px)" }}
+            initial={{ opacity: 0, y: 28, filter: "blur(4px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.45 }}
-            className="mt-4 text-sm md:text-base text-[#404040] leading-relaxed max-w-[600px]"
+            transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.6 }}
+            className="mt-4 text-sm md:text-base text-[#404040] leading-[1.8] max-w-[640px]"
           >
             {intro}
           </motion.p>
@@ -132,7 +161,7 @@ export function ServiceHero({
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1], delay: 0.55 }}
+            transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1], delay: 0.7 }}
             className="mt-10"
           >
             <Button href={ctaHref} variant="primary" size="lg" icon="arrow-right">

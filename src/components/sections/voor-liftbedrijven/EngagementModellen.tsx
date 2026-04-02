@@ -2,40 +2,47 @@
 
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import {
+  ScrollReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/ScrollReveal";
+import {
+  Lightning,
+  Calendar,
+  CheckCircle,
+} from "@phosphor-icons/react";
 
-const modellen = [
+const routes = [
   {
-    model: "On-Demand (A)",
-    duur: "Per uur / per dag",
-    inzet: "Geen commitment",
-    korting: "Standaard",
-    sla: "48 uur",
+    label: "Flexibele capaciteit",
+    title: "Capaciteit wanneer je het nodig hebt",
+    description:
+      "Voor pieken, projecten of onverwachte uitval. Je geeft aan wat je nodig hebt, wij leveren binnen 48 uur. Geen langlopend contract, betaal per inzet.",
+    voordelen: [
+      "Inzet per uur, dag of project",
+      "Geen minimale afname",
+      "Opschalen en afschalen naar behoefte",
+      "SLA: 48 uur",
+    ],
+    icon: Lightning,
+    geschiktVoor: "Ideaal voor: seizoenspieken, projecten, uitval of eenmalige opdrachten.",
   },
   {
-    model: "Project (B)",
-    duur: "2-12 weken",
-    inzet: "Tijdelijk verhoogd volume",
-    korting: "5-10%",
-    sla: "48 uur",
-  },
-  {
-    model: "Retainer (C)",
-    duur: "3-12 maanden",
-    inzet: "Structurele reservering",
-    korting: "10-15%",
-    sla: "24 uur",
-  },
-  {
-    model: "Enterprise (D)",
-    duur: "12+ maanden",
-    inzet: "Maatwerk, meerdere locaties",
-    korting: "15-20%",
-    sla: "Maatwerk",
+    label: "Vaste capaciteit",
+    title: "Structurele capaciteit op afspraak",
+    description:
+      "Voor liftbedrijven die vooruit plannen. Reserveer een vast aantal monteursdagen per maand, met een gegarandeerde SLA van 24 uur en een voordeliger tarief.",
+    voordelen: [
+      "Vaste capaciteitsreservering per maand",
+      "10-15% voordeliger dan flexibel",
+      "SLA: 24 uur",
+      "Dezelfde monteur(s) voor continuiteit",
+    ],
+    icon: Calendar,
+    geschiktVoor: "Ideaal voor: groeiende onderhoudsportefeuilles, langlopende moderniseringen of structureel tekort.",
   },
 ];
-
-const headers = ["Model", "Duur", "Inzet", "Korting", "SLA"];
 
 export function EngagementModellen() {
   return (
@@ -46,94 +53,65 @@ export function EngagementModellen() {
       <Container>
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <Badge className="mb-5">Engagementmodellen</Badge>
+            <Badge className="mb-5">Twee routes</Badge>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
-              Kies het model dat bij jou past
+              Flexibel of vast. Jij kiest.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p className="mt-5 text-base md:text-lg text-[#404040] leading-relaxed">
-              Van incidentele inzet tot langjarige capaciteitsafspraken. Elk model heeft een eigen SLA en prijsstructuur.
+              Twee heldere routes naar capaciteit. Geen vier modellen, geen complexe matrix. Kies wat past bij jouw situatie.
             </p>
           </ScrollReveal>
         </div>
 
-        {/* Desktop table */}
-        <ScrollReveal delay={0.2}>
-          <div className="mt-14 md:mt-20 hidden md:block">
-            <div className="rounded-2xl border border-[#EBEBEB] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-[#F8F8F8]">
-                    {headers.map((header) => (
-                      <th
-                        key={header}
-                        className="px-6 py-4 text-left text-xs font-semibold text-[#6B6B6B] uppercase tracking-wider"
-                      >
-                        {header}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-[#EBEBEB]">
-                  {modellen.map((m) => (
-                    <tr
-                      key={m.model}
-                      className="bg-white transition-colors duration-300 hover:bg-[#FAFAFA]"
-                    >
-                      <td className="px-6 py-5 text-sm font-semibold text-[#1A1A1A]">
-                        {m.model}
-                      </td>
-                      <td className="px-6 py-5 text-sm text-[#404040]">
-                        {m.duur}
-                      </td>
-                      <td className="px-6 py-5 text-sm text-[#404040]">
-                        {m.inzet}
-                      </td>
-                      <td className="px-6 py-5 text-sm text-[#404040] font-mono">
-                        {m.korting}
-                      </td>
-                      <td className="px-6 py-5 text-sm text-[#404040] font-mono">
-                        {m.sla}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </ScrollReveal>
+        <StaggerContainer
+          className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 max-w-5xl mx-auto"
+          staggerDelay={0.15}
+        >
+          {routes.map((route) => {
+            const Icon = route.icon;
+            return (
+              <StaggerItem key={route.label}>
+                <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
+                      <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
+                    </div>
+                    <span className="text-xs uppercase tracking-[0.15em] font-medium text-[#A0A0A0]">
+                      {route.label}
+                    </span>
+                  </div>
 
-        {/* Mobile cards */}
-        <div className="mt-10 md:hidden space-y-4">
-          {modellen.map((m, index) => (
-            <ScrollReveal key={m.model} delay={0.1 + index * 0.08}>
-              <div className="rounded-2xl bg-white border border-[#EBEBEB] p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-                <h3 className="text-base font-semibold text-[#1A1A1A] mb-4">
-                  {m.model}
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-xs text-[#A0A0A0] uppercase tracking-wider font-medium">Duur</span>
-                    <span className="text-sm text-[#404040]">{m.duur}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-xs text-[#A0A0A0] uppercase tracking-wider font-medium">Inzet</span>
-                    <span className="text-sm text-[#404040]">{m.inzet}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-xs text-[#A0A0A0] uppercase tracking-wider font-medium">Korting</span>
-                    <span className="text-sm text-[#404040] font-mono">{m.korting}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-xs text-[#A0A0A0] uppercase tracking-wider font-medium">SLA</span>
-                    <span className="text-sm text-[#404040] font-mono">{m.sla}</span>
-                  </div>
+                  <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight mb-3">
+                    {route.title}
+                  </h3>
+                  <p className="text-sm text-[#404040] leading-relaxed mb-6">
+                    {route.description}
+                  </p>
+
+                  <ul className="space-y-3 mb-6">
+                    {route.voordelen.map((voordeel) => (
+                      <li key={voordeel} className="flex items-start gap-2.5">
+                        <CheckCircle
+                          weight="fill"
+                          className="w-4.5 h-4.5 text-[#2A2A2A] flex-shrink-0 mt-0.5"
+                        />
+                        <span className="text-sm text-[#404040] leading-relaxed">
+                          {voordeel}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="text-xs text-[#6B6B6B] leading-relaxed pt-4 border-t border-[#EBEBEB]">
+                    {route.geschiktVoor}
+                  </p>
                 </div>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
+              </StaggerItem>
+            );
+          })}
+        </StaggerContainer>
       </Container>
 
       {/* Bottom blend */}

@@ -14,12 +14,20 @@ const navLinks = [
     hasDropdown: true,
     children: [
       { label: "Service & Onderhoud", href: "/diensten/liftonderhoud-capaciteit" },
+      { label: "Reparatie", href: "/diensten/reparatie" },
       { label: "Modernisering", href: "/diensten/lift-modernisering" },
-      { label: "Nieuwbouw", href: "/diensten/nieuwbouw-projecten" },
       { label: "Capacity as a Service", href: "/diensten/capacity-as-a-service" },
     ],
   },
-  { label: "Voor Liftmonteurs", href: "/voor-liftmonteurs/" },
+  {
+    label: "Voor Liftmonteurs",
+    href: "/voor-liftmonteurs/",
+    hasDropdown: true,
+    children: [
+      { label: "Werken bij LYFD", href: "/voor-liftmonteurs/" },
+      { label: "LYFD Academy", href: "/academy/" },
+    ],
+  },
   { label: "Kennisbank", href: "/kennisbank/" },
   { label: "Over LYFD", href: "/over-lyfd/" },
   { label: "Contact", href: "/contact/" },

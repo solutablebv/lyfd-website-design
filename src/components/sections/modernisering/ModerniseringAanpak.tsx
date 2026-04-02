@@ -4,43 +4,33 @@ import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
-  Users,
-  ArrowsClockwise,
-  Toolbox,
-  Timer,
-  ShieldCheck,
+  ClipboardText,
+  UsersThree,
+  CheckCircle,
+  Info,
 } from "@phosphor-icons/react";
 
-const usps = [
+const steps = [
   {
-    icon: Users,
-    title: "Senior + junior combiteams",
+    number: "01",
+    icon: ClipboardText,
+    title: "Beschrijf je project",
     description:
-      "Modernisering vraagt om een combinatie. Een senior monteur bewaakt de technische kwaliteit en voert de complexe onderdelen uit. Een junior ondersteunt, installeert het gestandaardiseerde werk en groeit in het vak. Dit combiteam is sneller dan een solo-senior en veiliger dan een solo-junior, en kostenefficiënter. Je betaalt senior-uren alleen waar senior-capaciteit nodig is.",
+      "Scope, timeline, locatie, certificeringen. Welke installaties, welk merk, welke opleverdatum. Hoe specifieker, hoe beter wij matchen. Wij stellen de vragen die je verwacht, maar ook de vragen die je nog niet hebt gesteld.",
   },
   {
-    icon: ArrowsClockwise,
-    title: "Vervangingsgarantie",
+    number: "02",
+    icon: UsersThree,
+    title: "Wij bouwen je team",
     description:
-      "Als er iemand uitvalt tijdens het project, regelen wij vervanging. Geen gat. Geen vertraging. Jouw planning blijft staan.",
+      "We stellen een team samen op basis van de specifieke eisen van jouw project. Niet alleen op merk-ervaring, maar ook op de samenwerking: wie werkt goed samen, wie kent de regio, wie heeft vergelijkbare installaties gedaan. Of het nu KONE, Schindler of vreemd fabricaat (CAN-OPEN) betreft. Dat is het verschil met een bureau dat een CV stuurt.",
   },
   {
-    icon: Toolbox,
-    title: "Volledig uitgerust",
+    number: "03",
+    icon: CheckCircle,
+    title: "Wij leveren. Ook als het tegenzit.",
     description:
-      "Elke monteur die LYFD levert voor modernisering, komt met zijn eigen gereedschapspakket, PBM conform de Arbowet en beroepsaansprakelijkheidsverzekering. Niets hoef je voor te schieten.",
-  },
-  {
-    icon: Timer,
-    title: "Flexibele projectduur",
-    description:
-      "Een woning met 4 installaties is iets anders dan een kantoorcomplex met 40. Wij leveren voor de exacte duur van het project. Niet meer, niet minder.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "DBA-compliant",
-    description:
-      "Alle inzet verloopt via LYFD B.V. Geen ZZP-risico, geen juridische grijze gebieden.",
+      "Projecten lopen uit. Dat weten wij ook. Het verschil is wat er dan gebeurt. Bij LYFD is vervanging bij uitval standaard. Als een monteur ziek wordt, regelen wij binnen 24 uur een alternatief. Niet als gunst, als afspraak. Daarom durven wij het woord 'garantie' te gebruiken.",
   },
 ];
 
@@ -53,72 +43,72 @@ export function ModerniseringAanpak() {
       <Container>
         <div className="max-w-2xl">
           <ScrollReveal>
-            <Badge className="mb-5">Onze aanpak</Badge>
+            <Badge className="mb-5">Het plan</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
-              Hoe levert LYFD capaciteit voor liftmoderniseringen?
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A] text-balance">
+              Hoe LYFD je moderniseringsproject ondersteunt
             </h2>
           </ScrollReveal>
         </div>
 
-        {/* Zig-zag feature blocks */}
-        <div className="mt-16 md:mt-24 space-y-6 md:space-y-0">
-          {usps.map((usp, index) => {
-            const Icon = usp.icon;
-            const isEven = index % 2 === 0;
+        {/* Vertical timeline */}
+        <div className="mt-16 md:mt-24 max-w-2xl mx-auto relative">
+          {/* Vertical line */}
+          <div className="absolute left-5 md:left-6 top-0 bottom-0 w-px bg-[#EBEBEB]" />
 
-            return (
-              <ScrollReveal key={usp.title} delay={index * 0.08}>
-                <div
-                  className={`md:grid md:grid-cols-12 md:gap-8 lg:gap-12 items-center ${
-                    index > 0 ? "md:mt-0 mt-6" : ""
-                  } ${index < usps.length - 1 ? "md:pb-16 lg:pb-20" : ""}`}
-                >
-                  {/* Number + Icon block */}
-                  <div
-                    className={`md:col-span-4 lg:col-span-4 ${
-                      isEven ? "md:order-1" : "md:order-2"
-                    }`}
-                  >
-                    <div className="flex items-center gap-4 md:justify-center mb-5 md:mb-0">
-                      <div className="relative">
-                        <span className="text-[5rem] md:text-[6rem] font-bold tracking-tighter text-[#EBEBEB]/50 leading-none select-none font-mono">
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-                        <div className="absolute bottom-2 right-0 w-12 h-12 rounded-2xl bg-[#F0F0F0] flex items-center justify-center">
-                          <Icon
-                            weight="light"
-                            className="w-6 h-6 text-[#2A2A2A]"
-                          />
-                        </div>
-                      </div>
+          <div className="space-y-12 md:space-y-16">
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <ScrollReveal key={step.number} delay={index * 0.1}>
+                  <div className="relative pl-16 md:pl-20">
+                    {/* Timeline dot */}
+                    <div className="absolute left-0 top-0 w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-[#1A1A1A] flex items-center justify-center z-10">
+                      <Icon
+                        weight="bold"
+                        className="w-5 h-5 md:w-6 md:h-6 text-white"
+                      />
                     </div>
-                  </div>
 
-                  {/* Text content */}
-                  <div
-                    className={`md:col-span-8 lg:col-span-8 ${
-                      isEven ? "md:order-2" : "md:order-1"
-                    }`}
-                  >
-                    <h3 className="text-xl md:text-2xl font-semibold text-[#1A1A1A] tracking-tight">
-                      {usp.title}
+                    {/* Step number */}
+                    <span className="text-xs font-mono font-medium text-[#A0A0A0] uppercase tracking-wider">
+                      Stap {step.number}
+                    </span>
+
+                    <h3 className="mt-2 text-xl md:text-2xl font-semibold text-[#1A1A1A] tracking-tight text-balance">
+                      {step.title}
                     </h3>
-                    <p className="mt-3 text-sm md:text-base text-[#404040] leading-relaxed max-w-[55ch]">
-                      {usp.description}
+                    <p className="mt-3 text-sm md:text-base text-[#404040] leading-relaxed max-w-[50ch]">
+                      {step.description}
                     </p>
                   </div>
-                </div>
-
-                {/* Divider between items */}
-                {index < usps.length - 1 && (
-                  <div className="hidden md:block my-0 h-px bg-gradient-to-r from-transparent via-[#EBEBEB] to-transparent max-w-lg mx-auto" />
-                )}
-              </ScrollReveal>
-            );
-          })}
+                </ScrollReveal>
+              );
+            })}
+          </div>
         </div>
+
+        {/* Eerlijkheidsblok */}
+        <ScrollReveal delay={0.3}>
+          <div className="mt-16 md:mt-20 max-w-2xl mx-auto">
+            <div className="rounded-2xl bg-[#F0F0F0] border border-[#E5E5E5] p-8 md:p-10">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#E0E0E0] flex items-center justify-center">
+                  <Info weight="bold" className="w-5 h-5 text-[#6B6B6B]" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-[#1A1A1A] mb-2">
+                    Eerlijk is eerlijk
+                  </p>
+                  <p className="text-sm text-[#404040] leading-relaxed">
+                    Wij kunnen de bouwplanning van de hoofdaannemer niet controleren. We kunnen niet voorkomen dat materiaal te laat wordt geleverd. Wat we wel kunnen: zorgen dat het aan de monteurs niet ligt. Dat is onze belofte.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
       </Container>
 
       {/* Bottom blend */}

@@ -1,75 +1,44 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-
 export function CtaSection() {
   return (
-    <section
-      id="contact"
-      className="relative bg-[#1A1A1A] py-28 md:py-40 overflow-hidden"
-      style={{
-        maskImage:
-          "linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
-        WebkitMaskImage:
-          "linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
-      }}
-    >
-      {/* Top gradient blend from white */}
-      <div className="absolute -top-40 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#1A1A1A]" />
+    <section id="contact" className="relative bg-white py-32 md:py-48 overflow-hidden">
+      {/* Subtle radial gradient for warmth without breaking flow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(245,245,245,0.8) 0%, transparent 70%)",
+        }}
+      />
 
-      {/* Animated dot pattern */}
-      <div className="absolute inset-0 opacity-[0.04]">
-        <motion.div
-          className="absolute inset-0"
-          animate={{
-            backgroundPosition: ["0px 0px", "32px 32px"],
-          }}
-          transition={{
-            duration: 20,
-            ease: "linear",
-            repeat: Infinity,
-          }}
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-            backgroundSize: "32px 32px",
-          }}
-        />
-      </div>
-
-      {/* Gradient mesh for depth */}
-      <div className="absolute inset-0 gradient-mesh-dark pointer-events-none" />
-
-      {/* Glow behind heading */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.03)_0%,transparent_70%)] pointer-events-none" />
-
-      {/* Semi-transparent overlay for softer edges */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#1A1A1A]/0 via-[#1A1A1A] to-[#1A1A1A]/0" />
+      {/* Thin decorative line above */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
 
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-white text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.75rem] font-bold tracking-tighter leading-[1.02] text-[#1A1A1A] text-balance">
               Klaar om het capaciteitsprobleem structureel op te lossen?
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-6 text-base md:text-lg text-white/70 leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-8 text-base md:text-lg text-[#6B6B6B] leading-[1.7] max-w-[55ch] mx-auto">
               Wij kijken samen naar je situatie en vertellen je binnen 24 uur welk
               model bij jou past. Geen verkooppraatje, een concreet voorstel.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="mt-12 flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="mt-14 flex flex-col sm:flex-row gap-3 justify-center">
               <Button
                 href="/aanvraag/"
-                variant="white"
+                variant="primary"
                 size="lg"
                 icon="arrow-right"
               >
@@ -80,7 +49,6 @@ export function CtaSection() {
                 variant="ghost"
                 size="lg"
                 icon="none"
-                className="border-white/20 text-white/90 hover:bg-white/10 hover:border-white/30 hover:text-white"
               >
                 Bekijk de kennisbank
               </Button>
@@ -89,8 +57,8 @@ export function CtaSection() {
         </div>
       </Container>
 
-      {/* Bottom gradient blend to white */}
-      <div className="absolute -bottom-40 left-0 right-0 h-40 bg-gradient-to-b from-[#1A1A1A] to-transparent" />
+      {/* Thin decorative line below */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
     </section>
   );
 }

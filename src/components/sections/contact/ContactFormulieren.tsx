@@ -307,7 +307,7 @@ export function ContactFormulieren() {
                   <SelectField
                     label="Type werkzaamheden"
                     name="bedrijf-type"
-                    options={["Service/Onderhoud", "Modernisering", "Nieuwbouw", "Algemeen"]}
+                    options={["Service/Onderhoud", "Reparatie", "Modernisering", "Algemeen"]}
                     required
                     disabled={bedrijfLoading}
                   />

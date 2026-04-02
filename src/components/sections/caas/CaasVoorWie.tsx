@@ -7,6 +7,8 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import { ArrowRight } from "@phosphor-icons/react";
+import Link from "next/link";
 
 const scenarios = [
   {
@@ -31,7 +33,7 @@ const scenarios = [
     number: "04",
     title: "Projectcapaciteit",
     description:
-      "Een modernisering of nieuwbouwproject vraagt tijdelijk extra handen.",
+      "Een moderniseringsproject vraagt tijdelijk extra handen.",
   },
   {
     number: "05",
@@ -91,6 +93,23 @@ export function CaasVoorWie() {
               capaciteitsgesprek waarin we samen bepalen wat jouw organisatie
               nodig heeft.
             </p>
+          </ScrollReveal>
+
+          {/* Gerelateerde kennisbank artikelen */}
+          <ScrollReveal delay={0.4}>
+            <div className="mt-14 md:mt-18 pt-10 border-t border-[#EBEBEB]">
+              <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#A0A0A0] mb-5">Lees ook in de kennisbank</p>
+              <div className="space-y-3">
+                <Link href="/kennisbank/caas-uitgelegd/caas-vs-uitzendbureau/" className="group flex items-center justify-between rounded-xl bg-[#F8F8F8] border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                  <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">CaaS vs. uitzendbureau: wat is het verschil?</span>
+                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                </Link>
+                <Link href="/kennisbank/caas-uitgelegd/welk-caas-model/" className="group flex items-center justify-between rounded-xl bg-[#F8F8F8] border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                  <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Welk CaaS-model past bij jouw liftbedrijf?</span>
+                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                </Link>
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </Container>

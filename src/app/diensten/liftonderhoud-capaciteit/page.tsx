@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ServiceHero } from "@/components/sections/diensten/ServiceHero";
 import { OnderhoudProbleem } from "@/components/sections/onderhoud/OnderhoudProbleem";
 import { OnderhoudAanpak } from "@/components/sections/onderhoud/OnderhoudAanpak";
+import { CapaciteitsPlanner } from "@/components/sections/onderhoud/CapaciteitsPlanner";
 import { OnderhoudWatJeKrijgt } from "@/components/sections/onderhoud/OnderhoudWatJeKrijgt";
 import { OnderhoudZelfdiagnose } from "@/components/sections/onderhoud/OnderhoudZelfdiagnose";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
   title:
     "Liftonderhoud Capaciteit | Gecertificeerde Monteurs op Aanvraag | LYFD",
   description:
-    "LYFD levert gecertificeerde liftmonteurs voor service en onderhoud. Geen gat in je planning, geen DBA-risico. Binnen 48 uur beschikbaar.",
+    "Liftmonteurs inhuren voor onderhoud? LYFD levert gecertificeerde monteurs binnen 48 uur. DBA-compliant, vervangingsgarantie. Plan een capaciteitsgesprek.",
   openGraph: {
     title: "Liftonderhoud Capaciteit | Gecertificeerde Monteurs op Aanvraag | LYFD",
     description:
-      "LYFD levert gecertificeerde liftmonteurs voor service en onderhoud. Geen gat in je planning, geen DBA-risico. Binnen 48 uur beschikbaar.",
+      "Liftmonteurs inhuren voor onderhoud? LYFD levert gecertificeerde monteurs binnen 48 uur. DBA-compliant, vervangingsgarantie. Plan een capaciteitsgesprek.",
     type: "website",
     locale: "nl_NL",
     siteName: "LYFD",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Liftonderhoud Capaciteit | Gecertificeerde Monteurs op Aanvraag | LYFD",
     description:
-      "LYFD levert gecertificeerde liftmonteurs voor service en onderhoud. Geen gat in je planning, geen DBA-risico. Binnen 48 uur beschikbaar.",
+      "Liftmonteurs inhuren voor onderhoud? LYFD levert gecertificeerde monteurs binnen 48 uur. DBA-compliant, vervangingsgarantie. Plan een capaciteitsgesprek.",
   },
 };
 
@@ -58,12 +59,50 @@ const faqItems = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://lyfd.nl/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Diensten",
+      item: "https://lyfd.nl/diensten/",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Liftonderhoud Capaciteit",
+      item: "https://lyfd.nl/diensten/liftonderhoud-capaciteit/",
+    },
+  ],
+};
+
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Liftonderhoud Capaciteit",
   description:
-    "LYFD levert gecertificeerde liftmonteurs voor service en onderhoud. Geen gat in je planning, geen DBA-risico. Binnen 48 uur beschikbaar.",
+    "Liftmonteurs inhuren voor onderhoud? LYFD levert gecertificeerde monteurs binnen 48 uur. DBA-compliant, vervangingsgarantie. Plan een capaciteitsgesprek.",
   provider: {
     "@type": "Organization",
     name: "LYFD B.V.",
@@ -85,18 +124,31 @@ export default function LiftonderhoudCapaciteitPage() {
           __html: JSON.stringify(serviceJsonLd),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       <ServiceHero
         eyebrow="Service & Onderhoud"
         title="Geen monteur beschikbaar? Dat is verleden tijd."
         subtitle="Capaciteit voor liftonderhoud en service. Flexibel, gecertificeerd, binnen 48 uur op locatie."
-        intro="Onderhoudroutes lopen door. Storingen komen altijd op het verkeerde moment. En je vaste mensen zijn niet altijd beschikbaar. LYFD levert liftmonteurs voor service en onderhoud op het moment dat jij ze nodig hebt, niet wanneer het een bureau uitkomt."
-        ctaText="Plan een capaciteitsgesprek"
+        intro="Liftonderhoud capaciteit is het vermogen om onderhoudsroutes, storingsdienst en servicecontracten volledig te bemensen. Onderhoudroutes lopen door. Storingen komen altijd op het verkeerde moment. En je vaste mensen zijn niet altijd beschikbaar. LYFD levert liftmonteurs voor service en onderhoud op het moment dat jij ze nodig hebt, niet wanneer het een bureau uitkomt."
+        ctaText="Los je capaciteitstekort op"
         ctaHref="/aanvraag/"
         breadcrumbLabel="Liftonderhoud Capaciteit"
-        videoSrc="/service-video.mp4"
+        imageSrc="/lift-schacht-boven.jpg"
       />
       <OnderhoudProbleem />
       <OnderhoudAanpak />
+      <CapaciteitsPlanner />
       <OnderhoudWatJeKrijgt />
       <OnderhoudZelfdiagnose />
       <ServiceCta

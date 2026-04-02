@@ -11,18 +11,18 @@ import {
 const stappen = [
   {
     nummer: "01",
-    title: "Intake",
-    text: "Een persoonlijk gesprek over je ervaring, certificeringen en voorkeuren. Wij beoordelen of je bij het LYFD-profiel past.",
+    title: "Meld je aan en vertel over je ervaring",
+    text: "Een persoonlijk gesprek over je achtergrond, certificeringen en wat je zoekt. Geen standaard sollicitatieprocedure, maar een kennismaking.",
   },
   {
     nummer: "02",
-    title: "Match",
-    text: "Wij matchen je met opdrachten die passen bij je specialisatie, niveau en beschikbaarheid. Geen willekeurige toewijzing.",
+    title: "Wij matchen je met opdrachten die bij je passen",
+    text: "Op basis van je specialisatie, ervaring en voorkeuren koppelen wij je aan de juiste opdrachtgevers en installaties.",
   },
   {
     nummer: "03",
-    title: "Jij kiest",
-    text: "Je krijgt de opdracht voorgelegd met alle details: locatie, type installatie, duur en vergoeding. Jij beslist of je hem aanneemt.",
+    title: "Jij doet waar je goed in bent, wij regelen de rest",
+    text: "Administratie, planning, certificeringsbeheer, technische achterwacht. Jij focust op het vak, wij zorgen voor de randvoorwaarden.",
   },
 ];
 

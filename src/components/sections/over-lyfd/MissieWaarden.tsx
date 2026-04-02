@@ -17,23 +17,23 @@ import {
 const waarden = [
   {
     icon: UserCircle,
-    title: "Technician-first",
-    text: "Eerlijke vergoedingen, interessante opdrachten en autonomie. De monteur is het fundament van alles wat wij doen.",
+    title: "De monteur centraal",
+    text: "Wij investeren in eerlijke vergoedingen, technische ondersteuning en groeimogelijkheden. Want de kwaliteit van onze service begint bij de mensen die het werk doen.",
   },
   {
     icon: ShieldCheck,
-    title: "Betrouwbaarheid boven snelheid",
-    text: "De juiste monteur is altijd belangrijker dan een snelle monteur. Wij matchen op kwaliteit, niet op beschikbaarheid alleen.",
+    title: "Kwaliteit boven snelheid",
+    text: "Wij matchen op vakmanschap, certificeringen en persoonlijkheid. Niet op wie er toevallig beschikbaar is. Dat kost soms een dag langer, maar levert altijd meer op.",
   },
   {
     icon: Eye,
-    title: "Transparantie als standaard",
-    text: "Tarieven op de website, geen verborgen kosten, geen kleine lettertjes. Je weet vooraf wat je betaalt en wat je krijgt.",
+    title: "Volledige transparantie",
+    text: "Tarieven op de website, geen verborgen kosten, geen kleine lettertjes. Onze opdrachtgevers en monteurs weten vooraf wat ze kunnen verwachten.",
   },
   {
     icon: Scales,
-    title: "DBA-compliant als fundament",
-    text: "Niet als bijzaak of marketingargument. Volledig compliant opereren is een voorwaarde, geen optie.",
+    title: "Compliant als fundament",
+    text: "Volledig DBA-compliant opereren is bij LYFD geen verkoopargument. Het is een voorwaarde waar we geen concessies op doen.",
   },
 ];
 
@@ -46,11 +46,11 @@ export function MissieWaarden() {
       <Container>
         <div className="max-w-2xl">
           <ScrollReveal>
-            <Badge className="mb-5">Missie en waarden</Badge>
+            <Badge className="mb-5">Waar we voor staan</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
-              Waar LYFD voor staat
+              Vier principes. Geen compromissen.
             </h2>
           </ScrollReveal>
         </div>

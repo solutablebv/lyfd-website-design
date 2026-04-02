@@ -45,38 +45,16 @@ export function OnderhoudProbleem() {
             <div className="text-center">
               <Badge className="mb-5">Het probleem</Badge>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
-                Waarom loopt capaciteit voor liftonderhoud altijd krap?
+                Je contracten groeien. Je team niet.
               </h2>
             </div>
           </ScrollReveal>
 
-          {/* Stats compact context block */}
+          {/* Subtext with integrated stats */}
           <ScrollReveal delay={0.1}>
-            <div className="mt-14 md:mt-18 flex items-center justify-center gap-4 md:gap-6">
-              <div className="text-center">
-                <span className="block text-3xl md:text-4xl font-bold tracking-tighter text-[#1A1A1A] font-mono">
-                  105.000
-                </span>
-                <span className="block mt-1 text-xs text-[#A0A0A0] font-medium">
-                  installaties
-                </span>
-              </div>
-              <div className="flex items-center justify-center">
-                <div className="w-8 h-8 rounded-full bg-[#F0F0F0] border border-[#EBEBEB] flex items-center justify-center">
-                  <span className="text-[#6B6B6B] font-bold text-[10px] font-mono">
-                    vs
-                  </span>
-                </div>
-              </div>
-              <div className="text-center">
-                <span className="block text-3xl md:text-4xl font-bold tracking-tighter text-[#1A1A1A] font-mono">
-                  1.800
-                </span>
-                <span className="block mt-1 text-xs text-[#A0A0A0] font-medium">
-                  monteurs
-                </span>
-              </div>
-            </div>
+            <p className="mt-8 md:mt-10 text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[55ch] mx-auto">
+              105.000 installaties. 1.800 monteurs. De rekensom klopt niet, en jouw bedrijf voelt het elke dag.
+            </p>
           </ScrollReveal>
 
           {/* Body */}

@@ -1,0 +1,111 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Container } from "@/components/ui/Container";
+import { Badge } from "@/components/ui/Badge";
+import {
+  ScrollReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/ScrollReveal";
+import { Wrench, GraduationCap, ArrowRight } from "@phosphor-icons/react";
+
+/* ── Component ──────────────────────────────────────────── */
+
+export function TweePaden() {
+  return (
+    <section className="relative bg-white py-28 md:py-36 overflow-hidden">
+      <Container>
+        <ScrollReveal>
+          <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+            <Badge className="mb-5">Kies je route</Badge>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+              Waar sta jij in je carriere?
+            </h2>
+            <p className="mt-5 text-sm md:text-base text-[#404040] leading-relaxed">
+              Of je nu ervaren liftmonteur bent of het vak wilt leren, LYFD
+              heeft een pad voor jou.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <StaggerContainer
+          staggerDelay={0.15}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+        >
+          {/* ── Pad 1: Ervaren monteur (primair) ─────────── */}
+          <StaggerItem>
+            <motion.a
+              href="#salaris-quiz"
+              whileHover={{ y: -2 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="group block h-full"
+            >
+              <div className="relative h-full rounded-2xl border-l-[3px] border-l-[#1A1A1A] border border-[#EBEBEB] bg-white p-8 md:p-10 transition-all duration-500 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)] hover:border-[#C0C0C0]">
+                <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center mb-6">
+                  <Wrench weight="fill" className="w-6 h-6 text-white" />
+                </div>
+
+                <h3 className="text-xl font-bold text-[#1A1A1A] tracking-tight mb-3">
+                  Ik ben al liftmonteur
+                </h3>
+                <p className="text-sm text-[#6B6B6B] leading-relaxed mb-8">
+                  Je hebt ervaring in de branche en wilt meer: betere beloning,
+                  afwisseling, groeimogelijkheden. Ontdek wat je werkelijk waard
+                  bent.
+                </p>
+
+                <div className="flex items-center gap-2 text-sm font-medium text-[#1A1A1A] group-hover:gap-3 transition-all duration-300">
+                  <span>Ontdek je marktwaarde</span>
+                  <ArrowRight
+                    weight="bold"
+                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </div>
+              </div>
+            </motion.a>
+          </StaggerItem>
+
+          {/* ── Pad 2: Academy (secundair) ────────────────── */}
+          <StaggerItem>
+            <motion.a
+              href="/academy/"
+              whileHover={{ y: -2 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="group block h-full"
+            >
+              <div className="relative h-full rounded-2xl border border-[#EBEBEB] bg-[#FAFAFA] p-8 md:p-10 transition-all duration-500 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.03)] hover:border-[#C0C0C0]">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
+                    <GraduationCap
+                      weight="light"
+                      className="w-6 h-6 text-[#1A1A1A]"
+                    />
+                  </div>
+                  <Badge variant="outline">LYFD Academy</Badge>
+                </div>
+
+                <h3 className="text-xl font-bold text-[#1A1A1A] tracking-tight mb-3">
+                  Ik wil liftmonteur worden
+                </h3>
+                <p className="text-sm text-[#6B6B6B] leading-relaxed mb-8">
+                  Geen liftervaring? Geen probleem. Als je technisch aangelegd
+                  bent en het vak wilt leren, leiden wij je op tot volwaardig
+                  liftmonteur.
+                </p>
+
+                <div className="flex items-center gap-2 text-sm font-medium text-[#6B6B6B] group-hover:text-[#1A1A1A] group-hover:gap-3 transition-all duration-300">
+                  <span>Bekijk de Academy</span>
+                  <ArrowRight
+                    weight="bold"
+                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </div>
+              </div>
+            </motion.a>
+          </StaggerItem>
+        </StaggerContainer>
+      </Container>
+    </section>
+  );
+}

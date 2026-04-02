@@ -17,17 +17,17 @@ const painPoints = [
   {
     icon: ClockCountdown,
     title: "Zelf aannemen duurt maanden",
-    text: "En bindt je aan vaste kosten in een sector met pieken en dalen.",
+    text: "En bindt je aan vaste kosten in een sector met pieken en dalen. Ondertussen lopen contracten mis.",
   },
   {
     icon: Warning,
-    title: "Zzp'ers zijn onbetrouwbaar",
-    text: "DBA-risicovol en vaak niet gecertificeerd voor jouw specifieke installaties.",
+    title: "Zzp is een risico",
+    text: "DBA-boetes tot EUR 50.000 per geval, geen zekerheid van beschikbaarheid, en vaak niet gecertificeerd voor jouw installaties.",
   },
   {
     icon: Handshake,
-    title: "Generieke uitzendbureaus missen kennis",
-    text: "Ze kennen het verschil niet tussen een MRL en een machinekamerinstallatie.",
+    title: "Uitzendbureaus missen branchekennis",
+    text: "Ze kennen het verschil niet tussen een MRL en een machinekamerinstallatie. Dat merk je op de werkvloer.",
   },
 ];
 
@@ -41,16 +41,16 @@ export function ProbleemSchets() {
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="text-center">
-              <Badge className="mb-5">Waarom LYFD</Badge>
+              <Badge className="mb-5">Het probleem</Badge>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
-                Waarom kiezen liftbedrijven voor LYFD?
+                Je wilt groeien. Je capaciteit houdt je tegen.
               </h2>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
             <p className="mt-10 md:mt-14 text-base md:text-lg text-[#404040] leading-relaxed text-center">
-              Niet omdat het leuk is om extern in te huren. Maar omdat de alternatieven niet werken.
+              Meer contracten aannemen. Betere service leveren. Eindelijk die moderniseringsportefeuille uitbouwen. Maar je team is vol. En de alternatieven (zzp, uitzendbureau) kosten meer dan ze opleveren.
             </p>
           </ScrollReveal>
         </div>
@@ -86,7 +86,7 @@ export function ProbleemSchets() {
             <p className="text-sm md:text-base text-[#404040] leading-relaxed text-center">
               LYFD is geen van deze drie.{" "}
               <span className="text-[#1A1A1A] font-medium">
-                We zijn een capaciteitsplatform dat uitsluitend voor de liftbranche werkt.
+                Wij zijn een capaciteitspartner die uitsluitend voor de liftbranche werkt.
               </span>
             </p>
           </div>

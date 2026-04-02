@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { ServiceHero } from "@/components/sections/diensten/ServiceHero";
+import { TweePaden } from "@/components/sections/voor-liftmonteurs/TweePaden";
 import { HetProbleem } from "@/components/sections/voor-liftmonteurs/HetProbleem";
-import { HoeWerktHet } from "@/components/sections/voor-liftmonteurs/HoeWerktHet";
+import { SalarisQuiz } from "@/components/sections/voor-liftmonteurs/SalarisQuiz";
+import { RouteNaarSucces } from "@/components/sections/voor-liftmonteurs/RouteNaarSucces";
 import { WatLyfdBiedt } from "@/components/sections/voor-liftmonteurs/WatLyfdBiedt";
 import { Profiel } from "@/components/sections/voor-liftmonteurs/Profiel";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
@@ -10,11 +12,11 @@ import { FaqSection } from "@/components/sections/diensten/FaqSection";
 export const metadata: Metadata = {
   title: "Werken als Liftmonteur via LYFD | Beter Verdienen, Meer Vrijheid",
   description:
-    "LYFD zoekt ervaren liftmonteurs die beter willen verdienen en meer controle willen over hun werk. Geen vaste baan, geen onzekere zzp. Ontdek hoe het werkt.",
+    "Werken als liftmonteur via LYFD: 10-15% boven CAO, topprojecten, geen zzp-risico. Ontdek hoe het CaaS-model werkt en meld je aan.",
   openGraph: {
     title: "Werken als Liftmonteur via LYFD | Beter Verdienen, Meer Vrijheid",
     description:
-      "LYFD zoekt ervaren liftmonteurs die beter willen verdienen en meer controle willen over hun werk. Geen vaste baan, geen onzekere zzp. Ontdek hoe het werkt.",
+      "Werken als liftmonteur via LYFD: 10-15% boven CAO, topprojecten, geen zzp-risico. Ontdek hoe het CaaS-model werkt en meld je aan.",
     type: "website",
     locale: "nl_NL",
     siteName: "LYFD",
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Werken als Liftmonteur via LYFD | Beter Verdienen, Meer Vrijheid",
     description:
-      "LYFD zoekt ervaren liftmonteurs die beter willen verdienen en meer controle willen over hun werk. Geen vaste baan, geen onzekere zzp. Ontdek hoe het werkt.",
+      "Werken als liftmonteur via LYFD: 10-15% boven CAO, topprojecten, geen zzp-risico. Ontdek hoe het CaaS-model werkt en meld je aan.",
   },
 };
 
@@ -41,7 +43,7 @@ const faqItems = [
   {
     question: "Wat voor soort opdrachten krijg ik?",
     answer:
-      "Service, onderhoud, storingen, modernisering en nieuwbouw. Afhankelijk van je profiel en voorkeuren matchen wij je met de juiste opdrachten.",
+      "Service, onderhoud, storingen en modernisering. Afhankelijk van je profiel en voorkeuren matchen wij je met de juiste opdrachten.",
   },
   {
     question: "Wat zijn de certificeringseisen?",
@@ -54,6 +56,38 @@ const faqItems = [
       "10-15% boven CAO Metalektro, afhankelijk van je ervaringsniveau, specialisatie en het type opdracht.",
   },
 ];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://lyfd.nl/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Voor Liftmonteurs",
+      item: "https://lyfd.nl/voor-liftmonteurs/",
+    },
+  ],
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -84,22 +118,32 @@ export default function VoorLiftmonteursPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <ServiceHero
         eyebrow="Voor Liftmonteurs"
-        title="Jij bent de specialist. Het is tijd dat je daar ook voor betaald wordt."
-        subtitle="Topprojecten bij de beste liftbedrijven. Controle over je agenda. En een vergoeding die recht doet aan je vakmanschap."
+        title="Het vak dat je kent. De waardering die je verdient."
+        subtitle="LYFD is er voor liftmonteurs die meer willen dan een standaard dienstverband of de onzekerheid van zzp. Vast contract, afwisseling, en collega's die hetzelfde vak delen."
         intro=""
-        ctaText="Meld je aan als LYFD-monteur"
+        ctaText="Meld je aan bij LYFD"
         ctaHref="/contact/"
         breadcrumbLabel="Voor Liftmonteurs"
       />
+      <TweePaden />
       <HetProbleem />
-      <HoeWerktHet />
+      <SalarisQuiz />
+      <RouteNaarSucces />
       <WatLyfdBiedt />
       <Profiel />
       <ServiceCta
-        title="Klaar voor de volgende stap?"
-        body="Meld je aan en ontdek wat LYFD voor jou kan betekenen. Geen verplichtingen, gewoon een goed gesprek."
+        title="Klaar voor je volgende stap in de liftbranche?"
+        body="Meld je aan. We nemen binnen 2 werkdagen contact op voor een persoonlijk gesprek."
         ctaText="Meld je aan"
         ctaHref="/contact/"
       />

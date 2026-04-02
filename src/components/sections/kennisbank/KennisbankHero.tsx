@@ -3,41 +3,27 @@
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 
 export function KennisbankHero() {
   return (
     <section className="relative bg-white pt-36 md:pt-44 pb-20 md:pb-28 overflow-hidden">
-      {/* Background video (centered inward masking) */}
-      <div className="absolute inset-0">
-        <div
-          className="relative w-full h-full"
-          style={{
-            maskImage: `
-              radial-gradient(ellipse 50% 50% at 50% 50%, black 10%, transparent 55%)
-            `,
-            WebkitMaskImage: `
-              radial-gradient(ellipse 50% 50% at 50% 50%, black 10%, transparent 55%)
-            `,
-          }}
-        >
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover object-center opacity-60"
-          >
-            <source src="/kennisbank-video.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-
       {/* Top gradient (seamless header blend) */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent z-[2] pointer-events-none" />
 
       <Container className="relative z-10" style={{ textShadow: '0 1px 8px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.5)' }}>
         <div className="max-w-3xl">
+          {/* Breadcrumb */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.05 }}
+            className="mb-8"
+          >
+            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Kennisbank" }]} />
+          </motion.div>
+
           {/* Eyebrow Badge */}
           <motion.div
             initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}

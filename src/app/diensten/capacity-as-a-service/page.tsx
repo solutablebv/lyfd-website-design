@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   title:
     "Capacity as a Service Liftindustrie | Wat is CaaS? | LYFD",
   description:
-    "Capacity as a Service (CaaS) is het alternatief voor zzp en uitzendbureau in de liftindustrie. LYFD legt uit hoe het werkt en waarom het beter is.",
+    "Capacity as a Service voor de liftbranche: het alternatief voor zzp en uitzendbureau. Ontdek hoe CaaS werkt en vraag een capaciteitsgesprek aan.",
   openGraph: {
     title: "Capacity as a Service Liftindustrie | Wat is CaaS? | LYFD",
     description:
-      "Capacity as a Service (CaaS) is het alternatief voor zzp en uitzendbureau in de liftindustrie. LYFD legt uit hoe het werkt en waarom het beter is.",
+      "Capacity as a Service voor de liftbranche: het alternatief voor zzp en uitzendbureau. Ontdek hoe CaaS werkt en vraag een capaciteitsgesprek aan.",
     type: "website",
     locale: "nl_NL",
     siteName: "LYFD",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Capacity as a Service Liftindustrie | Wat is CaaS? | LYFD",
     description:
-      "Capacity as a Service (CaaS) is het alternatief voor zzp en uitzendbureau in de liftindustrie. LYFD legt uit hoe het werkt en waarom het beter is.",
+      "Capacity as a Service voor de liftbranche: het alternatief voor zzp en uitzendbureau. Ontdek hoe CaaS werkt en vraag een capaciteitsgesprek aan.",
   },
 };
 
@@ -99,7 +99,7 @@ const webPageJsonLd = {
   "@type": "WebPage",
   name: "Capacity as a Service Liftindustrie | Wat is CaaS?",
   description:
-    "Capacity as a Service (CaaS) is het alternatief voor zzp en uitzendbureau in de liftindustrie. LYFD legt uit hoe het werkt en waarom het beter is.",
+    "Capacity as a Service voor de liftbranche: het alternatief voor zzp en uitzendbureau. Ontdek hoe CaaS werkt en vraag een capaciteitsgesprek aan.",
   url: "https://lyfd.nl/diensten/capacity-as-a-service/",
   publisher: {
     "@type": "Organization",
@@ -179,12 +179,13 @@ export default function CapacityAsAServicePage() {
       />
       <ServiceHero
         eyebrow="Capacity as a Service"
-        title="Wat is Capacity as a Service, en waarom werkt het beter?"
-        subtitle="CaaS is de derde weg in de liftbranche. Flexibeler dan vast personeel, betrouwbaarder dan zzp, specialistischer dan een uitzendbureau."
+        title="Zzp is een gok. Uitzendbureau kent je branche niet. Er is een derde weg."
+        subtitle="Capacity as a Service combineert de flexibiliteit van zzp met de zekerheid van vast personeel. Zonder de nadelen van beide."
         intro="Liftbedrijven hebben traditioneel twee opties als de eigen capaciteit niet genoeg is: zelf aannemen of zzp'ers inschakelen. Beide hebben fundamentele nadelen. CaaS lost die op."
         ctaText="Plan een capaciteitsgesprek"
         ctaHref="/aanvraag/"
         breadcrumbLabel="Capacity as a Service"
+        imageSrc="/lift-lichtinval.jpg"
       />
       <CaasDefinitie />
       <CaasVergelijking />

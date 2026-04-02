@@ -8,37 +8,29 @@ import {
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
 import {
-  Wrench,
-  ArrowsClockwise,
-  Buildings,
-  Stack,
-  ArrowRight,
+  ChatCircle,
+  UsersThree,
+  Rocket,
 } from "@phosphor-icons/react";
 
-const diensten = [
+const stappen = [
   {
-    icon: Wrench,
-    title: "Service en Onderhoud",
-    description: "Gecertificeerde monteurs voor onderhoudsroutes, storingsdienst en servicecontracten.",
-    href: "/diensten/liftonderhoud-capaciteit",
+    nummer: "01",
+    icon: ChatCircle,
+    title: "Vertel ons wat je nodig hebt",
+    text: "Hoeveel monteurs, welk type installaties, welke certificeringen, welke periode. Wij luisteren en stellen de juiste vragen. Geen standaard intake, maar een echt capaciteitsgesprek.",
   },
   {
-    icon: ArrowsClockwise,
-    title: "Modernisering",
-    description: "Projectcapaciteit voor liftmoderniseringen. Van besturingsvervangingen tot complete renovaties.",
-    href: "/diensten/lift-modernisering",
+    nummer: "02",
+    icon: UsersThree,
+    title: "Wij matchen de juiste monteurs",
+    text: "Op basis van ervaring, certificeringen en persoonlijkheid selecteren wij monteurs die passen bij jouw bedrijf en installaties. Inclusief onboarding op jouw procedures en werkwijze.",
   },
   {
-    icon: Buildings,
-    title: "Nieuwbouw",
-    description: "Monteurs voor nieuwbouwprojecten. Montage, afstelling en oplevering.",
-    href: "/diensten/nieuwbouw-projecten",
-  },
-  {
-    icon: Stack,
-    title: "Capacity as a Service",
-    description: "Het volledige LYFD-model. Begrijp hoe wij capaciteit structureel anders organiseren.",
-    href: "/diensten/capacity-as-a-service",
+    nummer: "03",
+    icon: Rocket,
+    title: "Jij levert, wij schalen mee",
+    text: "Jouw contractenportefeuille groeit, en wij groeien mee. Meer volume nodig? Wij schalen op. Rustiger periode? Wij schalen af. Geen vaste kosten voor capaciteit die je niet gebruikt.",
   },
 ];
 
@@ -51,51 +43,44 @@ export function DienstenOverzicht() {
       <Container>
         <div className="max-w-2xl">
           <ScrollReveal>
-            <Badge className="mb-5">Diensten</Badge>
+            <Badge className="mb-5">Het plan</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
-              Wat LYFD levert
+              Drie stappen naar structurele capaciteit
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <p className="mt-5 text-base md:text-lg text-[#404040] leading-relaxed">
-              Vier typen capaciteit, allemaal geleverd via hetzelfde platform. Klik door voor de details.
+              Geen ingewikkelde trajecten. Geen langlopende verplichtingen vooraf. Gewoon een helder proces dat werkt.
             </p>
           </ScrollReveal>
         </div>
 
         <StaggerContainer
-          className="mt-14 md:mt-20 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5"
-          staggerDelay={0.1}
+          className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5"
+          staggerDelay={0.15}
         >
-          {diensten.map((dienst) => {
-            const Icon = dienst.icon;
+          {stappen.map((stap) => {
+            const Icon = stap.icon;
             return (
-              <StaggerItem key={dienst.title}>
-                <a
-                  href={dienst.href}
-                  className="group block h-full rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC]"
-                >
+              <StaggerItem key={stap.nummer}>
+                <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                   <div className="flex items-center gap-3 mb-5">
+                    <span className="inline-block text-3xl font-bold text-[#EBEBEB] font-mono tracking-tighter">
+                      {stap.nummer}
+                    </span>
                     <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
                       <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
-                      {dienst.title}
-                    </h3>
                   </div>
-                  <p className="text-sm text-[#404040] leading-relaxed mb-6">
-                    {dienst.description}
+                  <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight mb-3">
+                    {stap.title}
+                  </h3>
+                  <p className="text-sm text-[#404040] leading-relaxed">
+                    {stap.text}
                   </p>
-                  <div className="flex items-center gap-2 text-sm font-medium text-[#2A2A2A]">
-                    <span>Bekijk details</span>
-                    <ArrowRight
-                      weight="bold"
-                      className="w-3.5 h-3.5 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1"
-                    />
-                  </div>
-                </a>
+                </div>
               </StaggerItem>
             );
           })}

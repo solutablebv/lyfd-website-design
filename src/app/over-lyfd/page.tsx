@@ -9,7 +9,26 @@ import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
 export const metadata: Metadata = {
   title: "Over LYFD | Capacity as a Service voor de Liftindustrie",
   description:
-    "LYFD B.V. is het eerste Capacity as a Service platform voor de Nederlandse liftindustrie. Leer wie wij zijn, wat we doen en waarom we het anders doen.",
+    "LYFD B.V. is het eerste Capacity as a Service platform voor de Nederlandse liftindustrie. Ontdek wie wij zijn en neem contact op.",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://lyfd.nl/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Over LYFD",
+      item: "https://lyfd.nl/over-lyfd/",
+    },
+  ],
 };
 
 const jsonLd = {
@@ -33,10 +52,14 @@ export default function OverLyfdPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <ServiceHero
         eyebrow="Over LYFD"
-        title="Gebouwd voor de liftindustrie. Door mensen die de liftindustrie kennen."
-        subtitle="LYFD is geen generiek uitzendplatform. Wij werken uitsluitend voor de liftbranche, met monteurs die de installaties kennen."
+        title="Wij zijn LYFD. Gebouwd voor de liftindustrie."
+        subtitle="Niet nog een uitzendbureau. Niet een generiek platform. Een capaciteitspartner die weet wat een MRL is, wat een hydraulische installatie vraagt, en welke monteur bij welk project past."
         intro=""
         ctaText="Neem contact op"
         ctaHref="/contact/"

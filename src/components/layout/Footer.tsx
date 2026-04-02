@@ -9,8 +9,8 @@ const footerColumns = [
     links: [
       { label: "Capacity as a Service", href: "/diensten/capacity-as-a-service" },
       { label: "Liftonderhoud", href: "/diensten/liftonderhoud-capaciteit" },
+      { label: "Reparatie", href: "/diensten/reparatie" },
       { label: "Modernisering", href: "/diensten/lift-modernisering" },
-      { label: "Nieuwbouw", href: "/diensten/nieuwbouw-projecten" },
     ],
   },
   {
@@ -19,6 +19,7 @@ const footerColumns = [
       { label: "Werken bij LYFD", href: "/voor-liftmonteurs/" },
       { label: "Vacatures", href: "/voor-liftmonteurs/" },
       { label: "Certificeringen", href: "/kennisbank/nen-certificering/" },
+      { label: "LYFD Academy", href: "/academy/" },
       { label: "Aanmelden", href: "/voor-liftmonteurs/" },
     ],
   },

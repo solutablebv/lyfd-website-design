@@ -8,33 +8,31 @@ import {
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
 import {
-  Certificate,
-  Users,
-  ArrowsClockwise,
-  Van,
-  CurrencyEur,
+  CalendarCheck,
+  Handshake,
+  TrendUp,
+  ArrowRight,
 } from "@phosphor-icons/react";
+import Link from "next/link";
 
-const deliverables = [
+const outcomes = [
   {
-    icon: Certificate,
-    text: "Gecertificeerde monteurs (NEN 3140, VCA, fabrikantspecifiek) die dag 1 productief zijn",
+    icon: CalendarCheck,
+    title: "Opgeleverd op datum",
+    description:
+      "Geen uitloop, geen boeteclausules, geen ongemakkelijke telefoontjes naar de opdrachtgever. Het project wordt afgerond zoals afgesproken.",
   },
   {
-    icon: Users,
-    text: "Combiteams afgestemd op jouw projectomvang en planning",
+    icon: Handshake,
+    title: "Opdrachtgever tevreden",
+    description:
+      "Een soepel project versterkt de relatie. Tevreden opdrachtgevers komen terug, en ze vertellen het door.",
   },
   {
-    icon: ArrowsClockwise,
-    text: "Vervangingsgarantie: wij garanderen continuïteit, geen excuses",
-  },
-  {
-    icon: Van,
-    text: "Volledig uitgerust: auto, gereedschap, PBM, verzekering inbegrepen",
-  },
-  {
-    icon: CurrencyEur,
-    text: "Transparante projecttarieven zonder verborgen kosten",
+    icon: TrendUp,
+    title: "Volgende project al in de planning",
+    description:
+      "Met betrouwbare capaciteit achter de hand durf je grotere projecten aan te nemen. Je orderportefeuille groeit, zonder dat je team onder druk staat.",
   },
 ];
 
@@ -45,37 +43,60 @@ export function ModerniseringWatJeKrijgt() {
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto text-center">
           <ScrollReveal>
-            <Badge className="mb-5">Inbegrepen</Badge>
+            <Badge className="mb-5">Het resultaat</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
-              Wat levert LYFD voor liftmodernisering?
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A] text-balance">
+              Na het project: wat je hebt bereikt
             </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.15}>
+            <p className="mt-6 text-base md:text-lg text-[#404040] leading-relaxed max-w-[55ch] mx-auto">
+              Opgeleverd op datum. Opdrachtgever tevreden. Volgende project al in
+              de planning. Dat is het verschil van een capaciteitspartner die
+              levert.
+            </p>
           </ScrollReveal>
         </div>
 
         <StaggerContainer
-          className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 gap-x-8 md:gap-x-16 max-w-4xl"
-          staggerDelay={0.08}
+          className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+          staggerDelay={0.1}
         >
-          {deliverables.map((item) => {
+          {outcomes.map((item) => {
             const Icon = item.icon;
             return (
-              <StaggerItem key={item.text}>
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
-                    <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
+              <StaggerItem key={item.title}>
+                <div className="h-full rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10">
+                  <div className="w-12 h-12 rounded-2xl bg-[#1A1A1A] flex items-center justify-center mb-6">
+                    <Icon weight="bold" className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-sm md:text-base text-[#404040] leading-relaxed pt-2">
-                    {item.text}
+                  <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight text-balance">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm text-[#404040] leading-relaxed">
+                    {item.description}
                   </p>
                 </div>
               </StaggerItem>
             );
           })}
         </StaggerContainer>
+
+        {/* CTA link */}
+        <ScrollReveal delay={0.3}>
+          <div className="mt-12 text-center">
+            <Link
+              href="/aanvraag/"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1A1A] hover:gap-3 transition-all duration-300"
+            >
+              Plan je project in
+              <ArrowRight weight="bold" className="w-4 h-4" />
+            </Link>
+          </div>
+        </ScrollReveal>
       </Container>
 
       {/* Bottom blend */}

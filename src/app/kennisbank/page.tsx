@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title:
     "Kennisbank Liftindustrie | Alles over Capaciteit, Certificering & CaaS | LYFD",
   description:
-    "De LYFD Kennisbank bevat praktische gidsen voor liftbedrijven en liftmonteurs. Over NEN 3140, capaciteitsmanagement, CaaS en meer.",
+    "Kennisbank voor de liftindustrie: praktische gidsen over capaciteitsmanagement, NEN 3140, CaaS en meer. Geschreven door branche-experts bij LYFD.",
 };
 
 export default function KennisbankPage() {

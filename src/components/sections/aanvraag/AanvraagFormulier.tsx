@@ -234,7 +234,7 @@ export function AanvraagFormulier() {
                   <SelectField
                     label="Type werkzaamheden"
                     name="aanvraag-type"
-                    options={["Service/Onderhoud", "Modernisering", "Nieuwbouw", "Algemeen"]}
+                    options={["Service/Onderhoud", "Reparatie", "Modernisering", "Algemeen"]}
                     required
                     disabled={loading}
                   />

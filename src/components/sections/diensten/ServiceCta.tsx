@@ -13,52 +13,38 @@ interface ServiceCtaProps {
 
 export function ServiceCta({ title, body, ctaText, ctaHref }: ServiceCtaProps) {
   return (
-    <section
-      className="relative bg-[#1A1A1A] py-24 md:py-32 overflow-hidden"
-      style={{
-        maskImage:
-          "linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
-        WebkitMaskImage:
-          "linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
-      }}
-    >
-      {/* Top gradient blend */}
-      <div className="absolute -top-40 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#1A1A1A]" />
+    <section className="relative bg-white py-28 md:py-40 overflow-hidden">
+      {/* Subtle gradient background for depth without breaking the flow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(248,248,248,1) 0%, transparent 70%)",
+        }}
+      />
 
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-            backgroundSize: "32px 32px",
-          }}
-        />
-      </div>
-
-      {/* Semi-transparent overlay for softer edges */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#1A1A1A]/0 via-[#1A1A1A] to-[#1A1A1A]/0" />
+      {/* Thin decorative line above */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
 
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               {title}
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-6 text-base md:text-lg text-white/70 leading-relaxed max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#6B6B6B] leading-[1.7] max-w-[55ch] mx-auto">
               {body}
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="mt-10">
+            <div className="mt-12">
               <Button
                 href={ctaHref}
-                variant="white"
+                variant="primary"
                 size="lg"
                 icon="arrow-right"
               >
@@ -69,8 +55,8 @@ export function ServiceCta({ title, body, ctaText, ctaHref }: ServiceCtaProps) {
         </div>
       </Container>
 
-      {/* Bottom gradient blend */}
-      <div className="absolute -bottom-40 left-0 right-0 h-40 bg-gradient-to-b from-[#1A1A1A] to-transparent" />
+      {/* Thin decorative line below */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
     </section>
   );
 }

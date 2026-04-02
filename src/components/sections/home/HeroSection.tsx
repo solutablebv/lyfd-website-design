@@ -22,6 +22,7 @@ export function HeroSection() {
       <motion.div
         className="absolute inset-0 flex items-center justify-center"
         style={{ y: videoY }}
+        aria-hidden="true"
       >
         <div
           className="relative w-full h-full"
@@ -127,7 +128,7 @@ export function HeroSection() {
             }}
             className="mt-4 text-sm text-[#A0A0A0] leading-relaxed max-w-[480px]"
           >
-            Liftbedrijven die groeien, contracten aannemen, en kwaliteit willen
+            LYFD B.V. is het eerste Capacity as a Service (CaaS) platform voor de Nederlandse liftindustrie. Liftbedrijven die groeien, contracten aannemen, en kwaliteit willen
             leveren, maar niet altijd de mensen hebben om het waar te maken.
             Dat is precies het gat dat LYFD vult.
           </motion.p>

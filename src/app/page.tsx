@@ -28,8 +28,8 @@ const localBusinessJsonLd = {
   serviceType: [
     "Capacity as a Service",
     "Liftonderhoud",
+    "Liftreparatie",
     "Lift Modernisering",
-    "Nieuwbouw Liftinstallatie",
   ],
   sameAs: ["https://linkedin.com/company/lyfd"],
 };
@@ -99,7 +99,7 @@ const faqJsonLd = {
       name: "Voor welk type werkzaamheden kan ik LYFD inzetten?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Service en onderhoud (routematig en storingsmontage), modernisering (combiteams), nieuwbouw (installatie), en specialistisch werk (hydraulisch, MRL, specifieke OEM-installaties).",
+        text: "Service en onderhoud (routematig onderhoud en storingen), reparatie (sensorlijsten, onderdelen, deuren), modernisering (combiteams) en specialistisch werk (hydraulisch, MRL, specifieke OEM-installaties).",
       },
     },
   ],
