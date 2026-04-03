@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import {
@@ -34,6 +35,18 @@ const painPoints = [
 export function ProbleemSchets() {
   return (
     <section className="relative bg-white py-28 md:py-36">
+      {/* Background image */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <Image
+          src="/urban-plein-schaduwen.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.06] grayscale"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
@@ -42,14 +55,14 @@ export function ProbleemSchets() {
           <ScrollReveal>
             <div className="text-center">
               <Badge className="mb-5">Het probleem</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 Je wilt groeien. Je capaciteit houdt je tegen.
               </h2>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-10 md:mt-14 text-base md:text-lg text-[#404040] leading-relaxed text-center">
+            <p className="mt-10 md:mt-14 text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[65ch] mx-auto">
               Meer contracten aannemen. Betere service leveren. Eindelijk die moderniseringsportefeuille uitbouwen. Maar je team is vol. En de alternatieven (zzp, uitzendbureau) kosten meer dan ze opleveren.
             </p>
           </ScrollReveal>
@@ -68,7 +81,7 @@ export function ProbleemSchets() {
                     <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
                       <Icon weight="light" className="w-5 h-5 text-[#6B6B6B]" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                       {point.title}
                     </h3>
                   </div>

@@ -171,7 +171,7 @@ export function AcademyAssessment() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <Badge className="mb-5">Geschiktheidstest</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 Past de liftbranche bij jou?
               </h2>
               <p className="mt-4 text-base text-[#6B6B6B]">
@@ -232,7 +232,7 @@ export function AcademyAssessment() {
                         </span>
                       </div>
 
-                      <h3 className="text-xl md:text-2xl font-bold text-[#1A1A1A] tracking-tight mb-8">
+                      <h3 className="text-xl md:text-2xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-8">
                         {questions[currentQuestion].question}
                       </h3>
 
@@ -268,7 +268,7 @@ export function AcademyAssessment() {
                       transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
                       className="text-center py-8"
                     >
-                      <h3 className="text-2xl font-bold text-[#1A1A1A] tracking-tight mb-4">
+                      <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-4">
                         De liftbranche is misschien niet de beste match voor jou.
                       </h3>
                       <p className="text-base text-[#6B6B6B] leading-relaxed mb-8 max-w-[48ch] mx-auto">
@@ -290,7 +290,7 @@ export function AcademyAssessment() {
                       <div className="w-14 h-14 rounded-full bg-[#F0F0F0] flex items-center justify-center mx-auto mb-5">
                         <CheckCircle weight="fill" className="w-7 h-7 text-[#2A2A2A]" />
                       </div>
-                      <h3 className="text-2xl font-bold text-[#1A1A1A] tracking-tight mb-3">
+                      <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                         Bedankt{submittedName ? ` ${submittedName}` : ""}!
                       </h3>
                       <p className="text-base text-[#6B6B6B] leading-relaxed mb-2">
@@ -312,7 +312,7 @@ export function AcademyAssessment() {
                         <div className="w-14 h-14 rounded-full bg-[#F0F0F0] flex items-center justify-center mx-auto mb-5">
                           <CheckCircle weight="fill" className="w-7 h-7 text-[#2A2A2A]" />
                         </div>
-                        <h3 className="text-2xl font-bold text-[#1A1A1A] tracking-tight mb-3">
+                        <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                           Je profiel past bij de LYFD Academy!
                         </h3>
                         <p className="text-sm text-[#6B6B6B] leading-relaxed max-w-[48ch] mx-auto">

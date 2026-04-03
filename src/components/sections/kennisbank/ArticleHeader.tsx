@@ -90,7 +90,7 @@ export function ArticleHeader({
               ease: [0.32, 0.72, 0, 1],
               delay: 0.2,
             }}
-            className="text-3xl sm:text-4xl md:text-[2.75rem] font-bold text-[#1A1A1A] tracking-tighter leading-[1.1]"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1A1A1A] tracking-tighter leading-[1.05] text-balance"
           >
             {title}
           </motion.h1>

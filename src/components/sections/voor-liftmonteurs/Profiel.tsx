@@ -24,14 +24,14 @@ export function Profiel() {
           <ScrollReveal>
             <div className="text-center">
               <Badge className="mb-5">Voor jou?</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 Herken je jezelf?
               </h2>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-5 text-base md:text-lg text-[#404040] leading-relaxed text-center">
+            <p className="mt-5 text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[65ch] mx-auto">
               LYFD is er voor ervaren vakmensen die het beste uit hun carriere willen halen. Geen eisenlijst, maar een uitnodiging. Herken je je in het volgende?
             </p>
           </ScrollReveal>

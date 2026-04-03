@@ -23,7 +23,7 @@ export function ContactInfo() {
                   <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-[#EBEBEB]">
                     <EnvelopeSimple weight="light" className="w-5 h-5 text-[#2A2A2A]" />
                   </div>
-                  <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight">
+                  <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                     Bedrijfsgegevens
                   </h3>
                 </div>
@@ -40,7 +40,7 @@ export function ContactInfo() {
                   <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-[#EBEBEB]">
                     <Clock weight="light" className="w-5 h-5 text-[#2A2A2A]" />
                   </div>
-                  <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight">
+                  <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                     Reactietijden
                   </h3>
                 </div>

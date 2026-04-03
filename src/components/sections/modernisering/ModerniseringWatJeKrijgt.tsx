@@ -48,7 +48,7 @@ export function ModerniseringWatJeKrijgt() {
             <Badge className="mb-5">Het resultaat</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Na het project: wat je hebt bereikt
             </h2>
           </ScrollReveal>
@@ -73,7 +73,7 @@ export function ModerniseringWatJeKrijgt() {
                   <div className="w-12 h-12 rounded-2xl bg-[#1A1A1A] flex items-center justify-center mb-6">
                     <Icon weight="bold" className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight text-balance">
+                  <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug text-balance">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-sm text-[#404040] leading-relaxed">

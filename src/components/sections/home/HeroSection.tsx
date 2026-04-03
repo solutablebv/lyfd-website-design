@@ -85,7 +85,7 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.15 }}
-            className="font-bold text-[#1A1A1A] tracking-tighter leading-[1.02] text-balance"
+            className="font-bold text-[#1A1A1A] tracking-tighter leading-[1.05] text-balance"
             style={{
               fontSize: "clamp(2rem, 4.5vw + 0.5rem, 3.75rem)",
             }}

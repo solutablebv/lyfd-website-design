@@ -19,7 +19,7 @@ export function TweePaden() {
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
             <Badge className="mb-5">Kies je route</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Waar sta jij in je carriere?
             </h2>
             <p className="mt-5 text-sm md:text-base text-[#404040] leading-relaxed">
@@ -46,7 +46,7 @@ export function TweePaden() {
                   <Wrench weight="fill" className="w-6 h-6 text-white" />
                 </div>
 
-                <h3 className="text-xl font-bold text-[#1A1A1A] tracking-tight mb-3">
+                <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                   Ik ben al liftmonteur
                 </h3>
                 <p className="text-sm text-[#6B6B6B] leading-relaxed mb-8">
@@ -85,7 +85,7 @@ export function TweePaden() {
                   <Badge variant="outline">LYFD Academy</Badge>
                 </div>
 
-                <h3 className="text-xl font-bold text-[#1A1A1A] tracking-tight mb-3">
+                <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                   Ik wil liftmonteur worden
                 </h3>
                 <p className="text-sm text-[#6B6B6B] leading-relaxed mb-8">

@@ -22,7 +22,7 @@ export function CtaSection() {
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.75rem] font-bold tracking-tighter leading-[1.02] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Klaar om het capaciteitsprobleem structureel op te lossen?
             </h2>
           </ScrollReveal>

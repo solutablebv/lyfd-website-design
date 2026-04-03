@@ -1,12 +1,32 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function CaasDefinitie() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-28 md:py-36 overflow-hidden">
+      {/* Decorative background image */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          maskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 0%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 0%, transparent 70%)",
+        }}
+      >
+        <Image
+          src="/urban-lift-avond.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          loading="lazy"
+        />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
@@ -15,7 +35,7 @@ export function CaasDefinitie() {
           <ScrollReveal>
             <div className="text-center">
               <Badge className="mb-5">Wat is CaaS?</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 Capacity as a Service: de derde weg in de liftbranche
               </h2>
             </div>

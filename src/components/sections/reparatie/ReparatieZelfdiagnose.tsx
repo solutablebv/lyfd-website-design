@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Container } from "@/components/ui/Container";
@@ -59,7 +60,26 @@ function AnimatedIcon({ type, delay }: { type: "x" | "check"; delay: number }) {
 
 export function ReparatieZelfdiagnose() {
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36">
+    <section className="relative bg-[#F8F8F8] py-28 md:py-36 overflow-hidden">
+      {/* Decorative background image */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          maskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 0%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 0%, transparent 70%)",
+        }}
+      >
+        <Image
+          src="/urban-doorgang.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          loading="lazy"
+        />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -86,7 +106,7 @@ export function ReparatieZelfdiagnose() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-6">
+              <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6">
                 Wat er gebeurt als reparaties blijven liggen
               </h3>
 
@@ -115,7 +135,7 @@ export function ReparatieZelfdiagnose() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-6">
+              <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6">
                 Wat er gebeurt met de juiste partner
               </h3>
 

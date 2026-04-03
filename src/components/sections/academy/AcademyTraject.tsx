@@ -194,7 +194,7 @@ function ParallaxFase({
 
             <h3
               className={cn(
-                "text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-4",
+                "text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tighter leading-[1.05] mb-4",
                 isDark ? "text-white" : "text-[#1A1A1A]"
               )}
             >
@@ -287,7 +287,7 @@ function TrajectCTA() {
         <p className="text-white/40 text-xs uppercase tracking-[0.25em] font-medium mb-6">
           Het eindpunt
         </p>
-        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-white mb-6">
+        <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tighter leading-[1.05] text-white mb-6">
           Van nul naar gecertificeerd liftmonteur.
         </h3>
         <p className="text-white/60 text-base md:text-lg mb-10 max-w-[44ch] mx-auto">
@@ -330,7 +330,7 @@ function TrajectHeader() {
         <span className="inline-flex items-center rounded-full border border-[#E0E0E0] bg-white px-4 py-1.5 text-[11px] uppercase tracking-[0.2em] font-medium text-[#6B6B6B] mb-6">
           Het traject
         </span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A] mb-5">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-5">
           Van nul naar gecertificeerd liftmonteur
         </h2>
         <p className="text-base text-[#6B6B6B] max-w-[48ch] mx-auto">

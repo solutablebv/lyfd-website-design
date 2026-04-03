@@ -93,7 +93,7 @@ function PillarCard({ pillar }: { pillar: PillarTopic }) {
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight">
+        <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
           {pillar.title}
         </h3>
 

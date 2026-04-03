@@ -34,7 +34,7 @@ export function DbaCompliance() {
           <ScrollReveal>
             <div className="text-center">
               <Badge className="mb-5">Compliance</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 DBA-risico? Niet met LYFD.
               </h2>
             </div>
@@ -60,7 +60,7 @@ export function DbaCompliance() {
                       <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-[#EBEBEB]">
                         <Icon weight="light" className="w-5 h-5 text-[#6B6B6B]" />
                       </div>
-                      <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight">
+                      <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                         {risico.title}
                       </h3>
                     </div>
@@ -81,7 +81,7 @@ export function DbaCompliance() {
                   <ShieldCheck weight="light" className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white tracking-tight mb-3">
+                  <h3 className="text-lg font-semibold text-white tracking-tight leading-snug mb-3">
                     Met LYFD ben je volledig DBA-compliant
                   </h3>
                   <p className="text-sm md:text-base text-white/70 leading-relaxed">

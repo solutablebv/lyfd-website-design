@@ -91,7 +91,7 @@ export function PillarIndexLayout({
                 ease: [0.32, 0.72, 0, 1],
                 delay: 0.2,
               }}
-              className="text-3xl sm:text-4xl md:text-[2.75rem] font-bold text-[#1A1A1A] tracking-tighter leading-[1.1]"
+              className="text-3xl sm:text-4xl md:text-[2.75rem] font-bold text-[#1A1A1A] tracking-tighter leading-[1.05]"
             >
               {pillar}
             </motion.h1>
@@ -129,7 +129,7 @@ export function PillarIndexLayout({
       <section className="relative bg-white py-20 md:py-28">
         <Container>
           <ScrollReveal>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter text-[#1A1A1A] mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-12">
               Artikelen
             </h2>
           </ScrollReveal>
@@ -199,7 +199,7 @@ export function PillarIndexLayout({
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-white">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-white text-balance">
                 Klaar om het capaciteitsprobleem structureel op te lossen?
               </h2>
             </ScrollReveal>

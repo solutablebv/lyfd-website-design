@@ -27,7 +27,7 @@ export function HetVerhaal() {
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <Badge className="mb-5">Het verhaal</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Waarom LYFD bestaat
             </h2>
           </ScrollReveal>

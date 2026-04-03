@@ -117,7 +117,7 @@ function DesktopServices() {
             onMouseLeave={handleMouseLeave}
           >
             <h3
-              className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#1A1A1A] tracking-tighter transition-transform duration-300 ease-out group-hover:translate-x-[10px]"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1A1A1A] tracking-tighter leading-[1.05] transition-transform duration-300 ease-out group-hover:translate-x-[10px]"
             >
               {service.title}
             </h3>
@@ -236,7 +236,7 @@ function MobileServices() {
             />
           </div>
           <div className="p-5">
-            <h3 className="text-xl font-medium text-[#1A1A1A] tracking-tight">
+            <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
               {service.title}
             </h3>
             <p className="mt-1 text-sm text-[#6B6B6B]">

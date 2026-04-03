@@ -38,7 +38,7 @@ export function HoeWerktHet() {
             <Badge className="mb-5">Hoe het werkt</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               In drie stappen aan de slag
             </h2>
           </ScrollReveal>
@@ -54,7 +54,7 @@ export function HoeWerktHet() {
                 <span className="inline-block text-3xl font-bold text-[#EBEBEB] font-mono mb-4 tracking-tighter">
                   {stap.nummer}
                 </span>
-                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight mb-3">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                   {stap.title}
                 </h3>
                 <p className="text-sm text-[#404040] leading-relaxed">

@@ -56,7 +56,7 @@ export function ReparatieWatJeKrijgt() {
       {/* Decorative background image */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <Image
-          src="/lift-staalkabels.jpg"
+          src="/lift-cabine-schacht.jpg"
           alt=""
           fill
           sizes="100vw"
@@ -74,7 +74,7 @@ export function ReparatieWatJeKrijgt() {
             <Badge className="mb-5">Reparatietypen</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Welke reparaties pakt LYFD aan?
             </h2>
           </ScrollReveal>
@@ -93,7 +93,7 @@ export function ReparatieWatJeKrijgt() {
                   <div className="w-10 h-10 rounded-xl bg-[#1A1A1A] flex items-center justify-center mb-5">
                     <Icon weight="bold" className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight">
+                  <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm text-[#404040] leading-relaxed">

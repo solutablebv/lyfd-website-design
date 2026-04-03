@@ -7,6 +7,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import Image from "next/image";
 import {
   Lightning,
   Calendar,
@@ -43,7 +44,26 @@ const models = [
 
 export function OnderhoudAanpak() {
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36">
+    <section className="relative bg-[#F8F8F8] py-28 md:py-36 overflow-hidden">
+      {/* Decorative background image */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          maskImage: "linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 60%)",
+          WebkitMaskImage: "linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 60%)",
+        }}
+      >
+        <Image
+          src="/lift-cabine-schacht.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.06]"
+          loading="lazy"
+        />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -53,7 +73,7 @@ export function OnderhoudAanpak() {
             <Badge className="mb-5">Onze aanpak</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Hoe levert LYFD capaciteit voor liftonderhoud en service?
             </h2>
           </ScrollReveal>
@@ -73,7 +93,7 @@ export function OnderhoudAanpak() {
                     <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
                       <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                       {model.title}
                     </h3>
                   </div>

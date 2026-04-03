@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import {
@@ -40,6 +41,18 @@ const painPoints = [
 export function ModerniseringProbleem() {
   return (
     <section className="relative bg-white py-28 md:py-36">
+      {/* Background image */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <Image
+          src="/urban-lobby-liften.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.05] grayscale"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
@@ -48,7 +61,7 @@ export function ModerniseringProbleem() {
           <ScrollReveal>
             <div className="text-center">
               <Badge className="mb-5">Het probleem</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A] text-balance">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 De deadline staat. Heb jij genoeg handen?
               </h2>
             </div>

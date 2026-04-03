@@ -224,7 +224,7 @@ export function ProjectPlanner() {
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto">
             <Badge className="mb-5">Projectplanner</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Plan je moderniseringsproject
             </h2>
             <p className="mt-5 text-sm md:text-base text-[#404040] leading-relaxed">
@@ -290,7 +290,7 @@ export function ProjectPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 1/6
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4 text-balance">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
                   Wat zijn de projectdetails?
                 </h3>
                 <div className="space-y-4">
@@ -352,7 +352,7 @@ export function ProjectPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 2/6
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4 text-balance">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
                   Welk type modernisering?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -407,7 +407,7 @@ export function ProjectPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 3/6
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4 text-balance">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
                   Wat is de omvang van het project?
                 </h3>
                 <div>
@@ -494,7 +494,7 @@ export function ProjectPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 4/6
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4 text-balance">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
                   Vertel ons meer over de installatie
                 </h3>
 
@@ -608,7 +608,7 @@ export function ProjectPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 5/6
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4 text-balance">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
                   Welke team samenstelling?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -663,7 +663,7 @@ export function ProjectPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 6/6
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4 text-balance">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
                   Wat zijn de specifieke eisen?
                 </h3>
 

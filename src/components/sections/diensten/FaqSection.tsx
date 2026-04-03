@@ -86,7 +86,7 @@ export function FaqSection({ title, items, closingText }: FaqSectionProps) {
           <ScrollReveal>
             <div className="text-center mb-14 md:mb-20">
               <Badge className="mb-5">Veelgestelde vragen</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 {title}
               </h2>
             </div>

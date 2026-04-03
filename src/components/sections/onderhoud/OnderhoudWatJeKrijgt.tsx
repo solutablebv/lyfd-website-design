@@ -7,6 +7,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import Image from "next/image";
 import {
   CheckCircle,
   Clock,
@@ -29,7 +30,26 @@ const stats = [
 
 export function OnderhoudWatJeKrijgt() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-28 md:py-36 overflow-hidden">
+      {/* Decorative background image */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          maskImage: "linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 60%)",
+          WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 60%)",
+        }}
+      >
+        <Image
+          src="/urban-atrium-lift.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          loading="lazy"
+        />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
@@ -39,7 +59,7 @@ export function OnderhoudWatJeKrijgt() {
             <Badge className="mb-5">Inbegrepen</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Wat LYFD levert voor jouw onderhoudsteam
             </h2>
           </ScrollReveal>
@@ -50,7 +70,7 @@ export function OnderhoudWatJeKrijgt() {
           {/* Kolom 1: groot, span 2 */}
           <ScrollReveal delay={0.15} className="lg:col-span-2">
             <div className="rounded-2xl border border-[#EBEBEB] bg-white p-8 md:p-10 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full">
-              <h3 className="text-xl md:text-2xl font-bold tracking-tight text-[#1A1A1A]">
+              <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-snug text-[#1A1A1A]">
                 Direct inzetbare liftcapaciteit
               </h3>
               <p className="mt-4 text-sm md:text-base text-[#404040] leading-[1.8] max-w-[50ch]">

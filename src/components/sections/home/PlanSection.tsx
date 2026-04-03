@@ -154,7 +154,7 @@ export function PlanSection() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight">
+                <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                   {step.title}
                 </h3>
                 <p className="mt-3 text-sm text-[#404040] leading-relaxed max-w-[38ch] mx-auto md:mx-0">

@@ -65,7 +65,7 @@ export function GuideSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl md:text-[2.75rem] font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 LYFD: de capaciteitspartner die de liftbranche kent
               </h2>
             </ScrollReveal>
@@ -97,7 +97,7 @@ export function GuideSection() {
                           />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+                          <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                             {item.title}
                           </h3>
                           <p className="mt-1.5 text-sm text-[#404040] leading-relaxed">

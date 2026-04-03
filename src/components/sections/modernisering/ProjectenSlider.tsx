@@ -66,7 +66,7 @@ function ProjectCard({
         />
       </div>
       <div className="p-5">
-        <h3 className="text-sm font-semibold text-[#1A1A1A] text-balance">
+        <h3 className="text-sm font-semibold text-[#1A1A1A] tracking-tight leading-snug text-balance">
           {project.title}
         </h3>
         <div className="mt-1.5 flex items-center gap-2">
@@ -98,7 +98,7 @@ export function ProjectenSlider() {
             <Badge className="mb-5">Track record</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Projecten die ons voorgingen
             </h2>
           </ScrollReveal>

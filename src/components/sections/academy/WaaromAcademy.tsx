@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import {
@@ -30,6 +31,18 @@ const sellingPoints = [
 export function WaaromAcademy() {
   return (
     <section className="relative bg-[#F8F8F8] py-28 md:py-36">
+      {/* Background image */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <Image
+          src="/urban-straat.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.05] grayscale"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F8F8] via-transparent to-[#F8F8F8]" />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -39,7 +52,7 @@ export function WaaromAcademy() {
             <Badge className="mb-5">Waarom de Academy</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               De liftbranche schreeuwt om nieuwe mensen
             </h2>
           </ScrollReveal>
@@ -64,7 +77,7 @@ export function WaaromAcademy() {
                   <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center mb-5">
                     <Icon weight="duotone" className="w-5 h-5 text-[#1A1A1A]" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight mb-3">
+                  <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                     {point.title}
                   </h3>
                   <p className="text-sm text-[#404040] leading-relaxed">

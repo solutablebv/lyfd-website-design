@@ -49,7 +49,7 @@ export function MissieWaarden() {
             <Badge className="mb-5">Waar we voor staan</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Vier principes. Geen compromissen.
             </h2>
           </ScrollReveal>
@@ -68,7 +68,7 @@ export function MissieWaarden() {
                     <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
                       <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                       {waarde.title}
                     </h3>
                   </div>

@@ -7,6 +7,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import Image from "next/image";
 import { CheckCircle, ArrowRight } from "@phosphor-icons/react";
 import Link from "next/link";
 
@@ -19,7 +20,26 @@ const checkItems = [
 
 export function OnderhoudZelfdiagnose() {
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36">
+    <section className="relative bg-[#F8F8F8] py-28 md:py-36 overflow-hidden">
+      {/* Decorative background image */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          maskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 0%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 0%, transparent 70%)",
+        }}
+      >
+        <Image
+          src="/lift-lichtinval.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          loading="lazy"
+        />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -28,14 +48,14 @@ export function OnderhoudZelfdiagnose() {
           <ScrollReveal>
             <div className="text-center mb-14 md:mb-18">
               <Badge className="mb-5">Voor wie?</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 Is LYFD liftonderhoudscapaciteit iets voor jou?
               </h2>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="text-base md:text-lg text-[#404040] leading-relaxed text-center mb-10">
+            <p className="text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[65ch] mx-auto mb-10">
               LYFD onderhoudscapaciteit is voor jou als je:
             </p>
           </ScrollReveal>

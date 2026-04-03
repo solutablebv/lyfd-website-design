@@ -7,6 +7,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import Image from "next/image";
 import {
   FirstAid,
   CalendarX,
@@ -35,7 +36,26 @@ const painPoints = [
 
 export function OnderhoudProbleem() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-28 md:py-36 overflow-hidden">
+      {/* Decorative background image */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          maskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 0%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 0%, transparent 70%)",
+        }}
+      >
+        <Image
+          src="/urban-lobby-liften.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.06]"
+          loading="lazy"
+        />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
@@ -44,7 +64,7 @@ export function OnderhoudProbleem() {
           <ScrollReveal>
             <div className="text-center">
               <Badge className="mb-5">Het probleem</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 Je contracten groeien. Je team niet.
               </h2>
             </div>
@@ -59,7 +79,7 @@ export function OnderhoudProbleem() {
 
           {/* Body */}
           <ScrollReveal delay={0.15}>
-            <p className="mt-10 md:mt-14 text-base md:text-lg text-[#404040] leading-relaxed text-center">
+            <p className="mt-10 md:mt-14 text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[65ch] mx-auto">
               Liftbedrijven voelen dit elke dag:
             </p>
           </ScrollReveal>

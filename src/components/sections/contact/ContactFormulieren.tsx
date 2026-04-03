@@ -284,7 +284,7 @@ export function ContactFormulieren() {
           <ScrollReveal>
             <div className="rounded-2xl bg-white border border-[#EBEBEB] p-8 md:p-10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
               <Badge className="mb-5">Voor Liftbedrijven</Badge>
-              <h2 className="text-2xl font-bold text-[#1A1A1A] tracking-tighter mb-2">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-2">
                 Capaciteitsgesprek
               </h2>
               <p className="text-sm text-[#6B6B6B] mb-8">
@@ -341,7 +341,7 @@ export function ContactFormulieren() {
           <ScrollReveal delay={0.15}>
             <div className="rounded-2xl bg-white border border-[#EBEBEB] p-8 md:p-10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
               <Badge className="mb-5">Voor Liftmonteurs</Badge>
-              <h2 className="text-2xl font-bold text-[#1A1A1A] tracking-tighter mb-2">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-2">
                 Aanmelden als monteur
               </h2>
               <p className="text-sm text-[#6B6B6B] mb-8">

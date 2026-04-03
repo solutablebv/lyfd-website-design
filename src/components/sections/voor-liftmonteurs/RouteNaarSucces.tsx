@@ -110,7 +110,7 @@ export function RouteNaarSucces() {
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto">
             <Badge className="mb-5">Route naar succes</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               7 stappen naar je nieuwe carriere
             </h2>
             <p className="mt-5 text-sm md:text-base text-[#404040] leading-relaxed">
@@ -204,7 +204,7 @@ export function RouteNaarSucces() {
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3
-                              className={`text-base font-bold tracking-tight ${
+                              className={`text-base font-semibold tracking-tight leading-snug ${
                                 index <= 0 ? "text-white" : "text-[#1A1A1A]"
                               }`}
                             >

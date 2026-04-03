@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
+import Image from "next/image";
 import {
   ScrollReveal,
   StaggerContainer,
@@ -48,7 +49,26 @@ const routes = [
 
 export function CaasModellen() {
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36">
+    <section className="relative bg-[#F8F8F8] py-28 md:py-36 overflow-hidden">
+      {/* Decorative background image */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          maskImage: "linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 60%)",
+          WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 60%)",
+        }}
+      >
+        <Image
+          src="/lift-lichtinval.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          loading="lazy"
+        />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -58,7 +78,7 @@ export function CaasModellen() {
             <Badge className="mb-5">Modellen</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Twee routes naar capaciteit
             </h2>
           </ScrollReveal>
@@ -101,7 +121,7 @@ export function CaasModellen() {
                         className="w-5 h-5 text-[#2A2A2A]"
                       />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                       {route.title}
                     </h3>
                   </div>

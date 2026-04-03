@@ -27,7 +27,7 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
         <Container>
           <div className="max-w-[720px] mx-auto xl:max-w-none">
             <ScrollReveal>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter text-[#1A1A1A] mb-10">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-10">
                 Gerelateerde artikelen
               </h2>
             </ScrollReveal>
@@ -82,7 +82,7 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-white">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-white text-balance">
                 Klaar om het capaciteitsprobleem structureel op te lossen?
               </h2>
             </ScrollReveal>

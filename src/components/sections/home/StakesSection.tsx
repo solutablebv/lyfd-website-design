@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
@@ -60,6 +61,18 @@ function AnimatedIcon({ type, delay }: { type: "x" | "check"; delay: number }) {
 export function StakesSection() {
   return (
     <section className="relative bg-white py-32 md:py-44">
+      {/* Background image */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <Image
+          src="/urban-toren.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.04] grayscale"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
+      </div>
+
       {/* Top blend from CTA */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent" />
 
@@ -86,7 +99,7 @@ export function StakesSection() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-6">
+              <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6">
                 Het risico van niets doen
               </h3>
 
@@ -115,7 +128,7 @@ export function StakesSection() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-6">
+              <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6">
                 Met LYFD als capaciteitspartner
               </h3>
 

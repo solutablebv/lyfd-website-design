@@ -46,7 +46,7 @@ export function ModerniseringAanpak() {
             <Badge className="mb-5">Het plan</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Hoe LYFD je moderniseringsproject ondersteunt
             </h2>
           </ScrollReveal>
@@ -76,7 +76,7 @@ export function ModerniseringAanpak() {
                       Stap {step.number}
                     </span>
 
-                    <h3 className="mt-2 text-xl md:text-2xl font-semibold text-[#1A1A1A] tracking-tight text-balance">
+                    <h3 className="mt-2 text-xl md:text-2xl font-semibold text-[#1A1A1A] tracking-tight leading-snug text-balance">
                       {step.title}
                     </h3>
                     <p className="mt-3 text-sm md:text-base text-[#404040] leading-relaxed max-w-[50ch]">

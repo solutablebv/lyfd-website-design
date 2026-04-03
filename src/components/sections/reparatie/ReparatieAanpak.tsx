@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -35,7 +36,26 @@ const steps = [
 
 export function ReparatieAanpak() {
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36">
+    <section className="relative bg-[#F8F8F8] py-28 md:py-36 overflow-hidden">
+      {/* Decorative background image */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          maskImage: "linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 60%)",
+          WebkitMaskImage: "linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 60%)",
+        }}
+      >
+        <Image
+          src="/lift-staalkabels.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.06]"
+          loading="lazy"
+        />
+      </div>
+
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -45,7 +65,7 @@ export function ReparatieAanpak() {
             <Badge className="mb-5">Het plan</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               LYFD pakt je reparatieberg aan
             </h2>
           </ScrollReveal>
@@ -75,7 +95,7 @@ export function ReparatieAanpak() {
                       Stap {step.number}
                     </span>
 
-                    <h3 className="mt-2 text-xl md:text-2xl font-semibold text-[#1A1A1A] tracking-tight">
+                    <h3 className="mt-2 text-xl md:text-2xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                       {step.title}
                     </h3>
                     <p className="mt-3 text-sm md:text-base text-[#404040] leading-relaxed max-w-[50ch]">

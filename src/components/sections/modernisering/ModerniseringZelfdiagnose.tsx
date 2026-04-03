@@ -86,7 +86,7 @@ export function ModerniseringZelfdiagnose() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 text-balance">
+              <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 text-balance">
                 Wat er misgaat als je het risico neemt
               </h3>
 
@@ -115,7 +115,7 @@ export function ModerniseringZelfdiagnose() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-6 text-balance">
+              <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 text-balance">
                 Wat er gebeurt met de juiste partner
               </h3>
 

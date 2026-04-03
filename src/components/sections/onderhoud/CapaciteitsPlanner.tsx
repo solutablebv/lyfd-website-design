@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -129,6 +130,25 @@ export function CapaciteitsPlanner() {
 
   return (
     <section className="relative bg-[#F8F8F8] py-28 md:py-36 overflow-hidden">
+      {/* Decorative background image */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          maskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 0%, transparent 70%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 0%, transparent 70%)",
+        }}
+      >
+        <Image
+          src="/lift-staal-textuur.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.03]"
+          loading="lazy"
+        />
+      </div>
+
       {/* Subtle background mesh */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -142,7 +162,7 @@ export function CapaciteitsPlanner() {
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto">
             <Badge className="mb-5">Capaciteitsplanner</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Plan je capaciteit
             </h2>
             <p className="mt-5 text-sm md:text-base text-[#404040] leading-relaxed">
@@ -208,7 +228,7 @@ export function CapaciteitsPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 1/5
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
                   Wanneer heb je capaciteit nodig?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -282,7 +302,7 @@ export function CapaciteitsPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 2/5
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
                   Wat voor werk moet er gebeuren?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -330,7 +350,7 @@ export function CapaciteitsPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 3/5
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
                   Hoeveel monteurs heb je nodig?
                 </h3>
                 <div className="flex items-center gap-6">
@@ -375,7 +395,7 @@ export function CapaciteitsPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 4/5
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
                   Welk ervaringsniveau zoek je?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -430,7 +450,7 @@ export function CapaciteitsPlanner() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 5/5
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
                   In welke regio is de inzet?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

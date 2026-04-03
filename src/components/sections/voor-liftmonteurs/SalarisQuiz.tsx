@@ -283,7 +283,7 @@ export function SalarisQuiz() {
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto">
             <Badge className="mb-5">Salaris Quiz</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Ontdek je marktwaarde als liftmonteur
             </h2>
             <p className="mt-5 text-sm md:text-base text-[#404040] leading-relaxed">
@@ -350,7 +350,7 @@ export function SalarisQuiz() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 1/{TOTAL_STEPS}
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
                   Hoeveel jaar ervaring heb je als liftmonteur?
                 </h3>
 
@@ -440,7 +440,7 @@ export function SalarisQuiz() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 2/{TOTAL_STEPS}
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
                   Welke certificeringen heb je?
                 </h3>
 
@@ -512,7 +512,7 @@ export function SalarisQuiz() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 3/{TOTAL_STEPS}
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
                   Wat voor werk doe je voornamelijk?
                 </h3>
 
@@ -576,7 +576,7 @@ export function SalarisQuiz() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 4/{TOTAL_STEPS}
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
                   In welke regio werk je?
                 </h3>
 
@@ -633,7 +633,7 @@ export function SalarisQuiz() {
                 <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
                   Stap 5/{TOTAL_STEPS}
                 </span>
-                <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
                   Wat is je huidige werksituatie?
                 </h3>
 
@@ -703,7 +703,7 @@ export function SalarisQuiz() {
                     Stap {TOTAL_STEPS}/{TOTAL_STEPS}
                   </span>
 
-                  <h3 className="text-lg font-bold tracking-tight mt-4 mb-2">
+                  <h3 className="text-lg font-semibold tracking-tight leading-snug mt-4 mb-2">
                     Je geschatte marktwaarde als liftmonteur
                   </h3>
 
@@ -752,7 +752,7 @@ export function SalarisQuiz() {
 
                 {/* Lead capture formulier */}
                 <div className={cardClass}>
-                  <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight mb-2">
+                  <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-2">
                     Wil je weten wat LYFD concreet voor jou kan betekenen?
                   </h3>
                   <p className="text-sm text-[#6B6B6B] mb-6">
@@ -918,7 +918,7 @@ export function SalarisQuiz() {
                   weight="fill"
                   className="w-12 h-12 text-white/60 mx-auto mb-4"
                 />
-                <h3 className="text-2xl font-bold tracking-tight mb-3">
+                <h3 className="text-xl font-semibold tracking-tight leading-snug mb-3">
                   Bedankt {form.naam}!
                 </h3>
                 <p className="text-sm text-white/60 leading-relaxed mb-8">

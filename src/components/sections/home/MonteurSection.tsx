@@ -62,7 +62,7 @@ export function MonteurSection() {
                   </span>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A]">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                   Ben je liftmonteur?
                 </h2>
 

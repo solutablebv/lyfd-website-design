@@ -105,7 +105,7 @@ export function OprichterSection() {
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <Badge className="mb-5">Het team</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               De mensen achter LYFD
             </h2>
             <p className="mt-5 text-sm md:text-base text-[#6B6B6B] leading-relaxed max-w-[52ch] mx-auto">

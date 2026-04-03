@@ -50,7 +50,7 @@ export function HetProbleem() {
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <Badge className="mb-5">De keuze</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Vast of zzp. Alsof dat de enige opties zijn.
             </h2>
           </ScrollReveal>
@@ -87,7 +87,7 @@ export function HetProbleem() {
                       />
                     </div>
                     <h3
-                      className={`text-lg font-semibold tracking-tight ${
+                      className={`text-lg font-semibold tracking-tight leading-snug ${
                         optie.textColor || "text-[#1A1A1A]"
                       }`}
                     >
