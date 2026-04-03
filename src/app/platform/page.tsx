@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PlatformHero } from "@/components/sections/platform/PlatformHero";
+import { PlatformSocialProof } from "@/components/sections/platform/PlatformSocialProof";
 import { PlatformModules } from "@/components/sections/platform/PlatformModules";
+import { PlatformTour } from "@/components/sections/platform/PlatformTour";
+import { PlatformIntegrations } from "@/components/sections/platform/PlatformIntegrations";
 import { PlatformPricing } from "@/components/sections/platform/PlatformPricing";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
 
@@ -22,7 +25,10 @@ export default function PlatformPage() {
   return (
     <>
       <PlatformHero />
+      <PlatformSocialProof />
       <PlatformModules />
+      <PlatformTour />
+      <PlatformIntegrations />
       <PlatformPricing />
       <ServiceCta
         title="Klaar om je liftoperatie te digitaliseren?"

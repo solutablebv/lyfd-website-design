@@ -7,7 +7,7 @@ interface ModuleMockupProps {
 function StatusBadge({ color, label }: { color: string; label: string }) {
   return (
     <div
-      className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-medium"
+      className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-medium"
       style={{ backgroundColor: `${color}15`, color }}
     >
       <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: color }} />
@@ -16,51 +16,47 @@ function StatusBadge({ color, label }: { color: string; label: string }) {
   );
 }
 
-function MockRow({ widths, hasStatus }: { widths: string[]; hasStatus?: boolean }) {
+function PrioBadge({ label, color }: { label: string; color: string }) {
   return (
-    <div className="flex items-center gap-3 py-2.5 border-b border-[#F0F0F0] last:border-0">
-      {widths.map((w, i) => (
-        <div key={i} className={`h-3 rounded bg-[#EBEBEB]`} style={{ width: w }} />
-      ))}
-      {hasStatus && (
-        <div className="ml-auto">
-          <div className="h-5 w-16 rounded-full bg-[#E8F5E9]" />
-        </div>
-      )}
-    </div>
+    <span
+      className="text-[9px] font-medium px-1.5 py-0.5 rounded"
+      style={{ backgroundColor: `${color}12`, color }}
+    >
+      {label}
+    </span>
   );
 }
 
-// FieldAssist: werkorder lijst
+// FieldAssist: werkorder lijst met echte data
 function FieldAssistMockup() {
   const orders = [
-    { id: "WO-2847", status: "Actief", statusColor: "#22C55E" },
-    { id: "WO-2846", status: "Gepland", statusColor: "#3B82F6" },
-    { id: "WO-2845", status: "Afgerond", statusColor: "#6B6B6B" },
-    { id: "WO-2844", status: "Actief", statusColor: "#22C55E" },
-    { id: "WO-2843", status: "Wacht", statusColor: "#F59E0B" },
+    { id: "WO-2847", locatie: "Schindler lift G-142", monteur: "Johan K.", status: "Actief", statusColor: "#22C55E", prio: "Normaal", prioColor: "#6B6B6B" },
+    { id: "WO-2846", locatie: "KONE lift A-089", monteur: "Lisa V.", status: "Gepland", statusColor: "#3B82F6", prio: "Hoog", prioColor: "#EF4444" },
+    { id: "WO-2845", locatie: "Otis lift B-201", monteur: "Sander V.", status: "Afgerond", statusColor: "#6B6B6B", prio: "Normaal", prioColor: "#6B6B6B" },
+    { id: "WO-2844", locatie: "Orona lift C-455", monteur: "Jarno K.", status: "Wacht", statusColor: "#F59E0B", prio: "Laag", prioColor: "#A0A0A0" },
+    { id: "WO-2843", locatie: "ThyssenKrupp D-112", monteur: "Jasvir S.", status: "Actief", statusColor: "#22C55E", prio: "Hoog", prioColor: "#EF4444" },
   ];
 
   return (
     <div className="space-y-0">
       {/* Table header */}
-      <div className="flex items-center gap-4 py-2 border-b border-[#EBEBEB] mb-1">
-        <span className="text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider w-20">Order</span>
-        <span className="text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider flex-1">Locatie</span>
-        <span className="text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider w-20">Monteur</span>
-        <span className="text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider w-20 text-right">Status</span>
+      <div className="grid grid-cols-12 gap-2 py-2 border-b border-[#EBEBEB] mb-1">
+        <span className="col-span-2 text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider">Order</span>
+        <span className="col-span-3 text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider">Locatie</span>
+        <span className="col-span-2 text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider">Monteur</span>
+        <span className="col-span-2 text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider text-center">Status</span>
+        <span className="col-span-3 text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider text-right">Prioriteit</span>
       </div>
       {orders.map((order) => (
-        <div key={order.id} className="flex items-center gap-4 py-2.5 border-b border-[#F5F5F5] last:border-0 hover:bg-[#FAFAFA] transition-colors">
-          <span className="text-xs font-mono text-[#1A1A1A] w-20">{order.id}</span>
-          <div className="flex-1">
-            <div className="h-3 rounded bg-[#EBEBEB]" style={{ width: `${60 + Math.random() * 30}%` }} />
-          </div>
-          <div className="w-20">
-            <div className="w-6 h-6 rounded-full bg-[#F0F0F0]" />
-          </div>
-          <div className="w-20 flex justify-end">
+        <div key={order.id} className="grid grid-cols-12 gap-2 py-2.5 border-b border-[#F5F5F5] last:border-0 hover:bg-[#FAFAFA] transition-colors items-center">
+          <span className="col-span-2 text-xs font-mono text-[#1A1A1A]">{order.id}</span>
+          <span className="col-span-3 text-xs text-[#6B6B6B] truncate">{order.locatie}</span>
+          <span className="col-span-2 text-xs text-[#6B6B6B]">{order.monteur}</span>
+          <div className="col-span-2 flex justify-center">
             <StatusBadge color={order.statusColor} label={order.status} />
+          </div>
+          <div className="col-span-3 flex justify-end">
+            <PrioBadge label={order.prio} color={order.prioColor} />
           </div>
         </div>
       ))}
@@ -68,63 +64,99 @@ function FieldAssistMockup() {
   );
 }
 
-// FieldPro: weekkalender
+// FieldPro: weekplanner met echte namen en uren
 function FieldProMockup() {
   const days = ["Ma", "Di", "Wo", "Do", "Vr"];
-  const slots = [
-    [3, 2, 1],
-    [2, 3, 0],
-    [1, 2, 2],
-    [3, 1, 1],
-    [2, 2, 1],
+  const monteurs = [
+    { naam: "Johan K.", uren: ["8/8h", "6/8h", "8/8h", "4/8h", "-"] },
+    { naam: "Lisa V.", uren: ["8/8h", "8/8h", "6/8h", "8/8h", "4/8h"] },
+    { naam: "Sander V.", uren: ["4/8h", "8/8h", "8/8h", "8/8h", "8/8h"] },
+    { naam: "Jarno K.", uren: ["-", "4/8h", "8/8h", "8/8h", "6/8h"] },
   ];
+
+  function getCellColor(uren: string): string {
+    if (uren === "-") return "bg-[#F0F0F0] text-[#A0A0A0]";
+    if (uren.startsWith("8/8")) return "bg-[#1A1A1A] text-white";
+    if (uren.startsWith("6/8") || uren.startsWith("4/8")) return "bg-[#4A4A4A] text-white";
+    return "bg-[#F0F0F0] text-[#6B6B6B]";
+  }
 
   return (
     <div className="space-y-3">
-      {/* Header with day columns */}
-      <div className="grid grid-cols-5 gap-2">
+      {/* Header */}
+      <div className="grid grid-cols-[80px_repeat(5,1fr)] gap-1.5">
+        <div />
         {days.map((day) => (
           <div key={day} className="text-center">
             <span className="text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider">{day}</span>
           </div>
         ))}
       </div>
-      {/* Calendar grid */}
-      <div className="grid grid-cols-5 gap-2">
-        {slots.map((daySlots, dayIdx) => (
-          <div key={dayIdx} className="space-y-1.5">
-            {daySlots.map((height, slotIdx) => (
-              <div
-                key={slotIdx}
-                className="rounded-lg border border-[#EBEBEB] bg-white p-1.5"
-                style={{ height: `${24 + height * 12}px` }}
-              >
-                <div className="h-2 rounded bg-[#EBEBEB]" style={{ width: `${50 + height * 15}%` }} />
-                {height > 1 && <div className="h-1.5 rounded bg-[#F0F0F0] mt-1" style={{ width: "40%" }} />}
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-      {/* Capacity bar */}
-      <div className="flex items-center gap-3 pt-2 border-t border-[#F0F0F0]">
-        <span className="text-[10px] text-[#A0A0A0]">Capaciteit</span>
-        <div className="flex-1 h-2 rounded-full bg-[#F0F0F0] overflow-hidden">
-          <div className="h-full rounded-full bg-[#1A1A1A]" style={{ width: "72%" }} />
+      {/* Rows */}
+      {monteurs.map((m) => (
+        <div key={m.naam} className="grid grid-cols-[80px_repeat(5,1fr)] gap-1.5 items-center">
+          <span className="text-[10px] text-[#6B6B6B] font-medium truncate">{m.naam}</span>
+          {m.uren.map((u, i) => (
+            <div
+              key={i}
+              className={`text-center py-1.5 rounded-md text-[9px] font-mono ${getCellColor(u)}`}
+            >
+              {u}
+            </div>
+          ))}
         </div>
-        <span className="text-[10px] font-mono text-[#1A1A1A]">72%</span>
+      ))}
+      {/* Capacity bar */}
+      <div className="flex items-center gap-3 pt-3 border-t border-[#F0F0F0]">
+        <span className="text-[10px] text-[#A0A0A0]">Team capaciteit</span>
+        <div className="flex-1 h-2 rounded-full bg-[#F0F0F0] overflow-hidden">
+          <div className="h-full rounded-full bg-[#1A1A1A]" style={{ width: "84%" }} />
+        </div>
+        <span className="text-[10px] font-mono font-medium text-[#1A1A1A]">84% bezet</span>
       </div>
     </div>
   );
 }
 
-// FieldRepair: kanban board
+// FieldRepair: kanban met echte reparatie-items
 function FieldRepairMockup() {
   const columns = [
-    { label: "Nieuw", count: 4, color: "#3B82F6" },
-    { label: "In behandeling", count: 3, color: "#F59E0B" },
-    { label: "Gepland", count: 2, color: "#8B5CF6" },
-    { label: "Afgerond", count: 6, color: "#22C55E" },
+    {
+      label: "Nieuw",
+      count: 4,
+      color: "#3B82F6",
+      items: [
+        { title: "Deurslot #B-089", detail: "Prio: Hoog", detailColor: "#EF4444" },
+        { title: "Kabel #D-112", detail: "Prio: Middel", detailColor: "#F59E0B" },
+      ],
+    },
+    {
+      label: "In behandeling",
+      count: 3,
+      color: "#F59E0B",
+      items: [
+        { title: "Sensorlijst #A-142", detail: "Monteur: Lisa V.", detailColor: "#6B6B6B" },
+        { title: "Besturing #G-455", detail: "Monteur: Johan K.", detailColor: "#6B6B6B" },
+      ],
+    },
+    {
+      label: "Gepland",
+      count: 2,
+      color: "#8B5CF6",
+      items: [
+        { title: "Motor #C-201", detail: "Datum: 8 apr", detailColor: "#6B6B6B" },
+        { title: "Rubbers #E-087", detail: "Datum: 10 apr", detailColor: "#6B6B6B" },
+      ],
+    },
+    {
+      label: "Afgerond",
+      count: 6,
+      color: "#22C55E",
+      items: [
+        { title: "Schakelaar #F-330", detail: "Afgesloten", detailColor: "#A0A0A0" },
+        { title: "Geleiding #H-110", detail: "Afgesloten", detailColor: "#A0A0A0" },
+      ],
+    },
   ];
 
   return (
@@ -135,14 +167,10 @@ function FieldRepairMockup() {
             <span className="text-[10px] font-medium text-[#6B6B6B]">{col.label}</span>
             <span className="text-[10px] font-mono text-[#A0A0A0]">{col.count}</span>
           </div>
-          {Array.from({ length: Math.min(col.count, 3) }).map((_, i) => (
-            <div key={i} className="rounded-lg border border-[#EBEBEB] bg-white p-2 space-y-1.5">
-              <div className="h-2.5 rounded bg-[#EBEBEB]" style={{ width: `${60 + i * 10}%` }} />
-              <div className="h-2 rounded bg-[#F5F5F5]" style={{ width: `${40 + i * 15}%` }} />
-              <div className="flex items-center gap-1 pt-0.5">
-                <div className="w-4 h-4 rounded-full bg-[#F0F0F0]" />
-                <div className="h-1.5 rounded bg-[#F0F0F0] w-8" />
-              </div>
+          {col.items.map((item, i) => (
+            <div key={i} className="rounded-lg border border-[#EBEBEB] bg-white p-2 space-y-1">
+              <span className="text-[10px] font-medium text-[#1A1A1A] block">{item.title}</span>
+              <span className="text-[9px] block" style={{ color: item.detailColor }}>{item.detail}</span>
             </div>
           ))}
         </div>
@@ -151,28 +179,44 @@ function FieldRepairMockup() {
   );
 }
 
-// Shop: product grid
+// Shop: product grid met echte onderdelen
 function ShopMockup() {
-  const products = Array.from({ length: 6 });
+  const products = [
+    { name: "Frequentieregelaar 11kW", price: "EUR 890", stock: "Op voorraad", stockColor: "#22C55E" },
+    { name: "Deurcellen set compleet", price: "EUR 245", stock: "Op voorraad", stockColor: "#22C55E" },
+    { name: "Sensorlijst 2m", price: "EUR 78", stock: "3 beschikbaar", stockColor: "#3B82F6" },
+    { name: "Besturingskast RPS400", price: "EUR 1.450", stock: "Op aanvraag", stockColor: "#F59E0B" },
+    { name: "Deurmotor 200W", price: "EUR 320", stock: "Op voorraad", stockColor: "#22C55E" },
+    { name: "Kabelset 40m", price: "EUR 165", stock: "5 beschikbaar", stockColor: "#3B82F6" },
+  ];
 
   return (
     <div className="space-y-3">
       {/* Search bar */}
       <div className="flex gap-2">
         <div className="flex-1 h-8 rounded-lg bg-[#F0F0F0] flex items-center px-3">
-          <div className="h-3 w-3 rounded-full border border-[#DCDCDC]" />
-          <div className="h-2.5 rounded bg-[#DCDCDC] ml-2 w-24" />
+          <svg className="w-3 h-3 text-[#DCDCDC]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+          <span className="text-[10px] text-[#A0A0A0] ml-2 font-mono">Zoek onderdeel...</span>
         </div>
-        <div className="h-8 w-20 rounded-lg bg-[#1A1A1A]" />
+        <div className="h-8 px-3 rounded-lg bg-[#1A1A1A] flex items-center">
+          <span className="text-[10px] text-white font-medium">Filters</span>
+        </div>
       </div>
       {/* Product grid */}
       <div className="grid grid-cols-3 gap-2">
-        {products.map((_, i) => (
-          <div key={i} className="rounded-lg border border-[#EBEBEB] bg-white p-2 space-y-2">
-            <div className="aspect-square rounded-md bg-[#F5F5F5]" />
-            <div className="h-2.5 rounded bg-[#EBEBEB]" style={{ width: `${60 + i * 5}%` }} />
-            <div className="h-2 rounded bg-[#F0F0F0] w-1/2" />
-            <div className="h-4 rounded bg-[#1A1A1A] w-2/3" />
+        {products.map((p, i) => (
+          <div key={i} className="rounded-lg border border-[#EBEBEB] bg-white p-2.5 space-y-1.5">
+            <div className="aspect-square rounded-md bg-[#F5F5F5] flex items-center justify-center">
+              <div className="w-8 h-8 rounded bg-[#EBEBEB]" />
+            </div>
+            <span className="text-[10px] text-[#1A1A1A] font-medium block leading-tight truncate">{p.name}</span>
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-mono font-bold text-[#1A1A1A]">{p.price}</span>
+            </div>
+            <span className="text-[9px] block" style={{ color: p.stockColor }}>{p.stock}</span>
           </div>
         ))}
       </div>
@@ -180,7 +224,7 @@ function ShopMockup() {
   );
 }
 
-// Offertes: document lijst
+// Offertes: document lijst (bestaand, al goed)
 function OffertesMockup() {
   const docs = [
     { name: "Offerte Otis NL", status: "Verzonden", statusColor: "#3B82F6", date: "28 mrt" },
@@ -209,7 +253,7 @@ function OffertesMockup() {
   );
 }
 
-// EDNL Sense: IoT dashboard met grafieken
+// EDNL Sense: IoT dashboard (bestaand, al goed)
 function SenseMockup() {
   return (
     <div className="space-y-3">
@@ -253,11 +297,11 @@ function SenseMockup() {
           {/* Area fill */}
           <path
             d="M0,55 L25,50 L50,45 L75,52 L100,38 L125,42 L150,30 L175,35 L200,25 L225,28 L250,20 L275,22 L300,18 L300,80 L0,80Z"
-            fill="url(#chartGradient)"
+            fill="url(#chartGradientModule)"
             opacity="0.15"
           />
           <defs>
-            <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+            <linearGradient id="chartGradientModule" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#1A1A1A" />
               <stop offset="100%" stopColor="#1A1A1A" stopOpacity="0" />
             </linearGradient>
@@ -282,38 +326,91 @@ function SenseMockup() {
   );
 }
 
-// LiftParts Exchange: marktplaats
+// LiftParts Exchange: marktplaats met echte listings
 function LiftPartsMockup() {
-  const items = Array.from({ length: 4 });
+  const filters = ["Alle", "Deuren", "Motoren", "Besturing", "Kabels"];
+
+  const listings = [
+    {
+      name: "Motor ABB 4kW",
+      price: "EUR 450",
+      condition: "Gebruikt - Goed",
+      conditionColor: "#F59E0B",
+      seller: "TechLift BV",
+      location: "Rotterdam",
+      rating: 4,
+    },
+    {
+      name: "Besturingskast Otis 2000",
+      price: "EUR 1.200",
+      condition: "Gereviseerd",
+      conditionColor: "#22C55E",
+      seller: "LiftPartner",
+      location: "Amsterdam",
+      rating: 5,
+    },
+    {
+      name: "Deurcellen Schindler",
+      price: "EUR 180",
+      condition: "Gebruikt - Goed",
+      conditionColor: "#F59E0B",
+      seller: "ElevatorParts",
+      location: "Utrecht",
+      rating: 4,
+    },
+    {
+      name: "Kabelset Thyssen 30m",
+      price: "EUR 220",
+      condition: "Nieuw",
+      conditionColor: "#3B82F6",
+      seller: "LiftSupply NL",
+      location: "Den Haag",
+      rating: 4,
+    },
+  ];
 
   return (
     <div className="space-y-3">
       {/* Filter bar */}
-      <div className="flex gap-2">
-        <div className="h-7 rounded-full bg-[#1A1A1A] px-3 flex items-center">
-          <span className="text-[10px] text-white">Alle onderdelen</span>
-        </div>
-        <div className="h-7 rounded-full bg-[#F0F0F0] px-3 flex items-center">
-          <span className="text-[10px] text-[#6B6B6B]">Deuren</span>
-        </div>
-        <div className="h-7 rounded-full bg-[#F0F0F0] px-3 flex items-center">
-          <span className="text-[10px] text-[#6B6B6B]">Motoren</span>
-        </div>
-        <div className="h-7 rounded-full bg-[#F0F0F0] px-3 flex items-center">
-          <span className="text-[10px] text-[#6B6B6B]">Besturing</span>
-        </div>
+      <div className="flex gap-1.5 flex-wrap">
+        {filters.map((f, i) => (
+          <div
+            key={f}
+            className={`h-7 rounded-full px-3 flex items-center ${
+              i === 0 ? "bg-[#1A1A1A]" : "bg-[#F0F0F0]"
+            }`}
+          >
+            <span className={`text-[10px] ${i === 0 ? "text-white" : "text-[#6B6B6B]"}`}>{f}</span>
+          </div>
+        ))}
       </div>
-      {/* Listings grid */}
-      <div className="grid grid-cols-2 gap-2">
-        {items.map((_, i) => (
-          <div key={i} className="rounded-lg border border-[#EBEBEB] bg-white p-2.5 space-y-2">
-            <div className="aspect-[4/3] rounded-md bg-[#F5F5F5] flex items-center justify-center">
-              <div className="w-8 h-8 rounded bg-[#EBEBEB]" />
+      {/* Listings */}
+      <div className="space-y-2">
+        {listings.map((item, i) => (
+          <div key={i} className="flex gap-3 rounded-lg border border-[#EBEBEB] bg-white p-2.5">
+            <div className="w-14 h-14 rounded-md bg-[#F5F5F5] flex items-center justify-center flex-shrink-0">
+              <div className="w-7 h-7 rounded bg-[#EBEBEB]" />
             </div>
-            <div className="h-2.5 rounded bg-[#EBEBEB]" style={{ width: `${65 + i * 8}%` }} />
-            <div className="flex items-center justify-between">
-              <div className="h-3.5 rounded bg-[#1A1A1A] w-12" />
-              <div className="h-5 w-5 rounded-full bg-[#F0F0F0]" />
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[11px] font-medium text-[#1A1A1A] truncate">{item.name}</span>
+                <span className="text-[11px] font-mono font-bold text-[#1A1A1A] flex-shrink-0">{item.price}</span>
+              </div>
+              <span className="text-[9px] font-medium" style={{ color: item.conditionColor }}>{item.condition}</span>
+              <div className="flex items-center justify-between mt-1">
+                <span className="text-[9px] text-[#A0A0A0]">{item.seller} - {item.location}</span>
+                <div className="flex gap-0.5">
+                  {Array.from({ length: 5 }).map((_, s) => (
+                    <span
+                      key={s}
+                      className="text-[8px]"
+                      style={{ color: s < item.rating ? "#1A1A1A" : "#DCDCDC" }}
+                    >
+                      &#9733;
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         ))}

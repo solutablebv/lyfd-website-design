@@ -15,10 +15,10 @@ const modules = [
     description:
       "Opdrachten aanmaken, toewijzen en tracken. De basis voor elke liftoperatie.",
     features: [
-      "Werkorders aanmaken",
-      "Monteur toewijzing",
-      "Status tracking",
-      "Rapportage",
+      "Automatische werkorderverdeling",
+      "Real-time status tracking",
+      "Monteur-locatie inzicht",
+      "Digitale werkbonnen",
     ],
     badge: null,
   },
@@ -29,10 +29,10 @@ const modules = [
     description:
       "Weekplanning, capaciteitsoverzicht en freelancer beheer. Weet altijd wie waar is.",
     features: [
-      "Weekplanning",
-      "Capaciteitsoverzicht",
-      "Freelancer beheer",
-      "Beschikbaarheid",
+      "Drag-and-drop weekplanning",
+      "Beschikbaarheidscontrole",
+      "Capaciteitsvoorspelling",
+      "Freelancer pool beheer",
     ],
     badge: "Pro",
   },
@@ -43,10 +43,10 @@ const modules = [
     description:
       "Reparatieverzoeken registreren, prioriteren en plannen. Van aanvraag tot afronding.",
     features: [
-      "Reparatieverzoeken",
-      "Liftbeheer",
-      "Onderdelenbeheer",
-      "Prioritering",
+      "Prioritering op veiligheid",
+      "Component tracking per lift",
+      "Fotodocumentatie bij reparatie",
+      "Automatische herinnering",
     ],
     badge: "Repair",
   },
@@ -57,10 +57,10 @@ const modules = [
     description:
       "Liftonderdelen bestellen, direct uit voorraad. Catalogus met technische specificaties.",
     features: [
-      "Onderdelencatalogus",
-      "Direct bestellen",
-      "Technische specs",
-      "Voorraad check",
+      "Zoeken op specificatie",
+      "Real-time voorraad check",
+      "Bestelhistorie per lift",
+      "Levertijd indicatie",
     ],
     badge: null,
   },
@@ -71,10 +71,10 @@ const modules = [
     description:
       "Van concept tot getekende overeenkomst. Professionele offertes in je huisstijl.",
     features: [
-      "Offerte builder",
-      "Templates",
-      "Digitale handtekening",
-      "Conversie tracking",
+      "Offerte in 5 minuten",
+      "Huisstijl templates",
+      "Digitale ondertekening",
+      "Conversie dashboard",
     ],
     badge: null,
   },
@@ -85,10 +85,10 @@ const modules = [
     description:
       "Live status van elke installatie. Storinghistorie, patronen en voorspellend onderhoud.",
     features: [
-      "Live monitoring",
-      "Storinghistorie",
-      "Patronen analyse",
+      "Live installatie monitoring",
+      "Storingpatroon herkenning",
       "Voorspellend onderhoud",
+      "Automatische alerts",
     ],
     badge: "IoT",
   },
@@ -99,10 +99,10 @@ const modules = [
     description:
       "Tweedehands liftonderdelen kopen en verkopen. De marktplaats voor de liftbranche.",
     features: [
-      "Marktplaats",
-      "Zoeken op specificatie",
-      "Kopen en verkopen",
-      "QR scanner",
+      "Marktplaats voor de branche",
+      "QR-scan identificatie",
+      "Kwaliteitsbeoordeling",
+      "Directe communicatie",
     ],
     badge: "Exchange",
   },

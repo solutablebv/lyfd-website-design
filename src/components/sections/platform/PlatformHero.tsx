@@ -1,11 +1,86 @@
 "use client";
 
+import { useRef, useEffect, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+
+function AnimatedCounter({
+  target,
+  suffix = "",
+  decimals = 0,
+  duration = 2200,
+  isInView,
+}: {
+  target: number;
+  suffix?: string;
+  decimals?: number;
+  duration?: number;
+  isInView: boolean;
+}) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    let startTimestamp: number | null = null;
+
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const eased =
+        progress < 0.8
+          ? 1 - Math.pow(1 - progress / 0.8, 3)
+          : 1 + Math.sin((progress - 0.8) * Math.PI * 5) * 0.01 * (1 - progress);
+      const value = Math.min(eased, 1) * target;
+      setCount(decimals > 0 ? parseFloat(value.toFixed(decimals)) : Math.floor(value));
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        setCount(target);
+      }
+    };
+
+    requestAnimationFrame(step);
+  }, [isInView, target, duration, decimals]);
+
+  const displayValue = decimals > 0 ? count.toFixed(decimals) : count.toString();
+  return <>{displayValue}{suffix}</>;
+}
 
 export function PlatformHero() {
+  const dashboardRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(dashboardRef, { once: true, amount: 0.3 });
+
+  const sidebarItems = [
+    { label: "Dashboard", active: true },
+    { label: "FieldAssist", active: false },
+    { label: "FieldPro", active: false },
+    { label: "FieldRepair", active: false },
+    { label: "Shop", active: false },
+    { label: "Offertes", active: false },
+  ];
+
+  const sidebarSecondary = [
+    { label: "EDNL Sense" },
+    { label: "LiftParts" },
+  ];
+
+  const statCards = [
+    { value: 247, suffix: "", label: "Installaties online", dotColor: "#22C55E", pulse: true },
+    { value: 12, suffix: "", label: "Monteurs actief", dotColor: "#3B82F6", pulse: false },
+    { value: 3, suffix: "", label: "Openstaande storingen", dotColor: "#EF4444", pulse: false },
+    { value: 96.4, suffix: "%", label: "Beschikbaarheid", dotColor: null, decimals: 1 },
+  ];
+
+  const workOrders = [
+    { order: "WO-2847", locatie: "Schindler G-142", monteur: "Johan", status: "Actief", statusColor: "#22C55E" },
+    { order: "WO-2846", locatie: "KONE A-089", monteur: "Lisa", status: "Gepland", statusColor: "#3B82F6" },
+    { order: "WO-2845", locatie: "Otis B-201", monteur: "Sander", status: "Afgerond", statusColor: "#6B6B6B" },
+  ];
+
   return (
     <section className="relative bg-white pt-32 md:pt-44 pb-24 md:pb-32 overflow-hidden">
       <Container className="relative z-10">
@@ -55,6 +130,7 @@ export function PlatformHero() {
 
         {/* Dashboard mockup */}
         <motion.div
+          ref={dashboardRef}
           initial={{ opacity: 0, y: 60, scale: 0.95, filter: "blur(12px)" }}
           animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 1, ease: [0.32, 0.72, 0, 1], delay: 0.5 }}
@@ -82,44 +158,145 @@ export function PlatformHero() {
             </div>
 
             {/* Dashboard content mockup */}
-            <div className="p-6 md:p-8 bg-[#F8F8F8]">
-              <div className="grid grid-cols-12 gap-4">
+            <div className="p-4 md:p-6 bg-[#F8F8F8]">
+              <div className="grid grid-cols-12 gap-3 md:gap-4">
                 {/* Sidebar mockup */}
                 <div className="col-span-3 hidden md:block">
-                  <div className="space-y-2">
-                    <div className="h-8 rounded-lg bg-[#1A1A1A] w-full" />
-                    <div className="h-6 rounded-md bg-[#EBEBEB] w-4/5" />
-                    <div className="h-6 rounded-md bg-[#EBEBEB] w-3/4" />
-                    <div className="h-6 rounded-md bg-[#F0F0F0] w-4/5" />
-                    <div className="h-6 rounded-md bg-[#F0F0F0] w-2/3" />
-                    <div className="h-px bg-[#EBEBEB] my-3" />
-                    <div className="h-6 rounded-md bg-[#EBEBEB] w-3/4" />
-                    <div className="h-6 rounded-md bg-[#F0F0F0] w-4/5" />
-                    <div className="h-6 rounded-md bg-[#F0F0F0] w-2/3" />
+                  <div className="bg-white rounded-xl border border-[#EBEBEB] p-3 space-y-1">
+                    {/* Logo */}
+                    <div className="flex items-center gap-1.5 px-2 py-1.5 mb-1">
+                      <div className="w-4 h-4 rounded bg-[#1A1A1A]" />
+                      <span className="text-[9px] font-mono font-bold text-[#1A1A1A] tracking-tight">LYFD</span>
+                    </div>
+
+                    <div className="h-px bg-[#EBEBEB] my-1.5" />
+
+                    {/* Primary nav */}
+                    {sidebarItems.map((item) => (
+                      <div
+                        key={item.label}
+                        className={`px-2 py-1.5 rounded-md text-[8px] font-mono leading-none ${
+                          item.active
+                            ? "bg-[#1A1A1A] text-white font-medium"
+                            : "text-[#6B6B6B] hover:bg-[#F5F5F5]"
+                        }`}
+                      >
+                        {item.label}
+                      </div>
+                    ))}
+
+                    <div className="h-px bg-[#EBEBEB] my-1.5" />
+
+                    {/* Secondary nav */}
+                    {sidebarSecondary.map((item) => (
+                      <div
+                        key={item.label}
+                        className="px-2 py-1.5 rounded-md text-[8px] font-mono text-[#6B6B6B] leading-none"
+                      >
+                        {item.label}
+                      </div>
+                    ))}
+
+                    <div className="h-px bg-[#EBEBEB] my-1.5" />
+
+                    <div className="px-2 py-1.5 rounded-md text-[8px] font-mono text-[#A0A0A0] leading-none">
+                      Instellingen
+                    </div>
                   </div>
                 </div>
 
                 {/* Main content mockup */}
-                <div className="col-span-12 md:col-span-9">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-                    <div className="h-20 rounded-xl bg-white border border-[#EBEBEB] p-3">
-                      <div className="h-3 w-16 rounded bg-[#EBEBEB] mb-2" />
-                      <div className="h-6 w-10 rounded bg-[#1A1A1A]" />
+                <div className="col-span-12 md:col-span-9 space-y-3">
+                  {/* Stat cards */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+                    {statCards.map((card) => (
+                      <div
+                        key={card.label}
+                        className="rounded-xl bg-white border border-[#EBEBEB] p-2.5 md:p-3"
+                      >
+                        <div className="flex items-center gap-1 mb-1.5">
+                          {card.dotColor && (
+                            <span className="relative flex h-2 w-2">
+                              {card.pulse && (
+                                <span
+                                  className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+                                  style={{ backgroundColor: card.dotColor }}
+                                />
+                              )}
+                              <span
+                                className="relative inline-flex rounded-full h-2 w-2"
+                                style={{ backgroundColor: card.dotColor }}
+                              />
+                            </span>
+                          )}
+                          <span className="text-[8px] text-[#A0A0A0] font-mono uppercase tracking-wider leading-none">
+                            {card.label}
+                          </span>
+                        </div>
+                        <div className="text-base md:text-lg font-bold font-mono text-[#1A1A1A] leading-none">
+                          <AnimatedCounter
+                            target={card.value}
+                            suffix={card.suffix}
+                            decimals={"decimals" in card ? (card.decimals as number) : 0}
+                            isInView={isInView}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Work order table */}
+                  <div className="rounded-xl bg-white border border-[#EBEBEB] p-3 md:p-4">
+                    {/* Breadcrumb */}
+                    <div className="mb-2.5">
+                      <span className="text-[8px] font-mono text-[#A0A0A0]">
+                        Dashboard &gt; Overzicht
+                      </span>
                     </div>
-                    <div className="h-20 rounded-xl bg-white border border-[#EBEBEB] p-3">
-                      <div className="h-3 w-16 rounded bg-[#EBEBEB] mb-2" />
-                      <div className="h-6 w-10 rounded bg-[#1A1A1A]" />
+
+                    {/* Table header */}
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-[9px] font-mono font-medium text-[#1A1A1A]">Recent</span>
                     </div>
-                    <div className="h-20 rounded-xl bg-white border border-[#EBEBEB] p-3">
-                      <div className="h-3 w-16 rounded bg-[#EBEBEB] mb-2" />
-                      <div className="h-6 w-10 rounded bg-[#1A1A1A]" />
-                    </div>
-                    <div className="h-20 rounded-xl bg-white border border-[#EBEBEB] p-3">
-                      <div className="h-3 w-16 rounded bg-[#EBEBEB] mb-2" />
-                      <div className="h-6 w-10 rounded bg-[#1A1A1A]" />
+
+                    {/* Table */}
+                    <div className="overflow-hidden">
+                      {/* Table head */}
+                      <div className="grid grid-cols-12 gap-2 py-1.5 border-b border-[#EBEBEB]">
+                        <span className="col-span-2 text-[8px] font-mono text-[#A0A0A0] uppercase tracking-wider">Order</span>
+                        <span className="col-span-4 text-[8px] font-mono text-[#A0A0A0] uppercase tracking-wider">Locatie</span>
+                        <span className="col-span-3 text-[8px] font-mono text-[#A0A0A0] uppercase tracking-wider">Monteur</span>
+                        <span className="col-span-3 text-[8px] font-mono text-[#A0A0A0] uppercase tracking-wider text-right">Status</span>
+                      </div>
+
+                      {/* Table rows */}
+                      {workOrders.map((wo) => (
+                        <div
+                          key={wo.order}
+                          className="grid grid-cols-12 gap-2 py-2 border-b border-[#F5F5F5] last:border-0"
+                        >
+                          <span className="col-span-2 text-[9px] font-mono text-[#1A1A1A] font-medium">{wo.order}</span>
+                          <span className="col-span-4 text-[9px] font-mono text-[#6B6B6B] truncate">{wo.locatie}</span>
+                          <span className="col-span-3 text-[9px] font-mono text-[#6B6B6B]">{wo.monteur}</span>
+                          <div className="col-span-3 flex justify-end">
+                            <span
+                              className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[8px] font-mono font-medium"
+                              style={{
+                                backgroundColor: `${wo.statusColor}15`,
+                                color: wo.statusColor,
+                              }}
+                            >
+                              <span
+                                className="w-1 h-1 rounded-full"
+                                style={{ backgroundColor: wo.statusColor }}
+                              />
+                              {wo.status}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  <div className="h-48 rounded-xl bg-white border border-[#EBEBEB]" />
                 </div>
               </div>
             </div>
