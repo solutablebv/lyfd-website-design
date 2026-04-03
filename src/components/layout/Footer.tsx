@@ -28,6 +28,7 @@ const footerColumns = [
     links: [
       { label: "Over ons", href: "/over-lyfd/" },
       { label: "Kennisbank", href: "/kennisbank/" },
+      { label: "Platform", href: "/platform/" },
       { label: "Contact", href: "/contact/" },
     ],
   },

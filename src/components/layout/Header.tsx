@@ -28,6 +28,7 @@ const navLinks = [
       { label: "LYFD Academy", href: "/academy/" },
     ],
   },
+  { label: "Platform", href: "/platform/" },
   { label: "Kennisbank", href: "/kennisbank/" },
   { label: "Over LYFD", href: "/over-lyfd/" },
   { label: "Contact", href: "/contact/" },
