@@ -7,6 +7,7 @@ import { ServicesSection } from "@/components/sections/home/ServicesSection";
 import { SocialProofSection } from "@/components/sections/home/SocialProofSection";
 import { CtaSection } from "@/components/sections/home/CtaSection";
 import { StakesSection } from "@/components/sections/home/StakesSection";
+import { ArtikelenSlider } from "@/components/sections/kennisbank/ArtikelenSlider";
 import { MonteurSection } from "@/components/sections/home/MonteurSection";
 import { HomeFaqSection } from "@/components/sections/home/HomeFaqSection";
 
@@ -130,6 +131,7 @@ export default function HomePage() {
       <SocialProofSection />
       <CtaSection />
       <StakesSection />
+      <ArtikelenSlider />
       <MonteurSection />
       <HomeFaqSection />
     </>
