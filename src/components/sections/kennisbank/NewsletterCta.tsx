@@ -30,7 +30,7 @@ export function NewsletterCta() {
   }
 
   return (
-    <section className="relative bg-[#F8F8F8] py-24 md:py-32">
+    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
       {/* Top gradient blend */}
       <div className="absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
 

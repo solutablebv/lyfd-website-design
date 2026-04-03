@@ -204,14 +204,14 @@ export function AanvraagFormulier() {
   }
 
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36">
+    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
       <Container>
         <div className="max-w-[640px] mx-auto">
           <ScrollReveal>
-            <div className="rounded-2xl bg-white border border-[#EBEBEB] p-8 md:p-10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+            <div className="rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
               {success ? (
                 <div className="flex flex-col items-center justify-center py-16 text-center">
                   <div className="w-14 h-14 rounded-full bg-[#F0F0F0] flex items-center justify-center mb-5">

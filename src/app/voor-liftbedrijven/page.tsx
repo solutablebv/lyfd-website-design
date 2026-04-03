@@ -126,7 +126,7 @@ export default function VoorLiftbedrijvenPage() {
         title="Jouw liftbedrijf verdient een capaciteitspartner die de branche kent."
         subtitle="Niet nog een uitzendbureau. Niet weer een zzp-gok. Een partner die weet wat een MRL is, welk certificaat je monteur nodig heeft, en die levert wanneer het ertoe doet."
         intro=""
-        ctaText="Plan een capaciteitsgesprek"
+        ctaText="Laten we in gesprek gaan"
         ctaHref="/aanvraag/"
         breadcrumbLabel="Voor Liftbedrijven"
         imageSrc="/lift-gang-perspectief.jpg"
@@ -139,7 +139,7 @@ export default function VoorLiftbedrijvenPage() {
       <ServiceCta
         title="Klaar om te groeien zonder capaciteitsrisico?"
         body="Laten we in gesprek gaan over wat jouw bedrijf nodig heeft. Geen verkooppraatje, een concreet voorstel."
-        ctaText="Plan een capaciteitsgesprek"
+        ctaText="Laten we in gesprek gaan"
         ctaHref="/aanvraag/"
       />
       <FaqSection

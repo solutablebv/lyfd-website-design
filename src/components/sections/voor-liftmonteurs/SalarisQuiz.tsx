@@ -268,7 +268,7 @@ export function SalarisQuiz() {
   return (
     <section
       id="salaris-quiz"
-      className="relative bg-[#F8F8F8] py-28 md:py-36 overflow-hidden"
+      className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden"
     >
       {/* Subtle background mesh */}
       <div

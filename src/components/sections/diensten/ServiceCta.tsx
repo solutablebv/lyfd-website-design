@@ -13,7 +13,7 @@ interface ServiceCtaProps {
 
 export function ServiceCta({ title, body, ctaText, ctaHref }: ServiceCtaProps) {
   return (
-    <section className="relative bg-white py-28 md:py-40 overflow-hidden">
+    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
       {/* Subtle gradient background for depth without breaking the flow */}
       <div
         className="absolute inset-0 pointer-events-none"

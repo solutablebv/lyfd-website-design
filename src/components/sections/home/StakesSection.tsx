@@ -74,7 +74,7 @@ export function StakesSection() {
       </div>
 
       {/* Top blend from CTA */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
         <div className="text-center max-w-2xl mx-auto">
@@ -91,7 +91,7 @@ export function StakesSection() {
         <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {/* Without LYFD */}
           <ScrollReveal delay={0.1}>
-            <div className="group rounded-2xl bg-[#FDF6F6] border border-[#E8D0D0] p-10 md:p-14 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.05)]">
+            <div className="group rounded-2xl bg-[#FDF6F6] border border-[#E8D0D0] p-8 md:p-10 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F5E0E0] mb-6">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#C0A0A0]" />
                 <span className="text-xs font-medium text-[#8B6B6B] tracking-wide">
@@ -120,7 +120,7 @@ export function StakesSection() {
 
           {/* With LYFD */}
           <ScrollReveal delay={0.2}>
-            <div className="group rounded-2xl bg-[#F6FDF6] border-l-2 border border-[#E0E0E0] border-l-[#2A2A2A] p-10 md:p-14 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
+            <div className="group rounded-2xl bg-[#F6FDF6] border-l-2 border border-[#E0E0E0] border-l-[#2A2A2A] p-8 md:p-10 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E0F0E0] mb-6">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#2A2A2A]" />
                 <span className="text-xs font-medium text-[#2A2A2A] tracking-wide">

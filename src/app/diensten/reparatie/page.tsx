@@ -49,7 +49,7 @@ const faqItems = [
     question:
       "Wat kost reparatiecapaciteit via LYFD?",
     answer:
-      "Onze monteurs starten vanaf EUR 65 per uur (excl. BTW). Het exacte tarief hangt af van het type werk en het engagementmodel.",
+      "Onze monteurs starten vanaf EUR 64,99 per uur (excl. BTW). Het exacte tarief hangt af van het type werk en het engagementmodel.",
   },
 ];
 

@@ -220,8 +220,8 @@ export function CaasVsUitzendbureauContent() {
               <ScrollReveal delay={0.05}>
                 <p><strong>Scenario B: CaaS via LYFD</strong></p>
                 <ul>
-                  <li>Blended tarief: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 50</span> per uur (Bron: LYFD Pricing 2026)</li>
-                  <li>Directe kosten 160 uur: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 8.000</span></li>
+                  <li>Vanaf-tarief: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 64,99</span> per uur (Bron: LYFD Pricing 2026)</li>
+                  <li>Directe kosten 160 uur: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 10.398</span></li>
                   <li>Inwerkperiode: minimaal (branchekennis aanwezig)</li>
                   <li>Gereedschap en PBM&apos;s: inbegrepen</li>
                   <li>Certificeringen: inbegrepen</li>
@@ -231,7 +231,7 @@ export function CaasVsUitzendbureauContent() {
               </ScrollReveal>
 
               <ScrollReveal delay={0.05}>
-                <p><strong>Effectieve kosten scenario B:</strong> <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 8.000</span> (alle kosten inbegrepen)</p>
+                <p><strong>Effectieve kosten scenario B:</strong> <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 10.398</span> (alle kosten inbegrepen)</p>
               </ScrollReveal>
 
               <ScrollReveal delay={0.05}>

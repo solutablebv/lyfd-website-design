@@ -34,7 +34,7 @@ const painPoints = [
 
 export function ProbleemSchets() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <Image

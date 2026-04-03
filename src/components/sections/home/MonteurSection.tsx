@@ -8,13 +8,13 @@ import Image from "next/image";
 
 export function MonteurSection() {
   return (
-    <section id="monteurs" className="relative bg-[#F8F8F8] py-28 md:py-36">
+    <section id="monteurs" className="relative bg-[#F8F8F8] py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
       <Container>
         <ScrollReveal>
-          <div className="relative rounded-2xl border border-[#EBEBEB] p-8 md:p-12 lg:p-16 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_4px_16px_rgba(0,0,0,0.03)] overflow-hidden"
+          <div className="relative rounded-2xl border border-[#EBEBEB] p-8 md:p-10 shadow-[0_2px_8px_rgba(0,0,0,0.06)] overflow-hidden"
             style={{
               background: "linear-gradient(135deg, #FFFFFF 0%, #F8F8F8 50%, #F0F0F0 100%)",
             }}

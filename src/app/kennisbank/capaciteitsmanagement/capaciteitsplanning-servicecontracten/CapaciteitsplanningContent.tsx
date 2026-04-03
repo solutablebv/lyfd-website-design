@@ -252,7 +252,7 @@ export function CapaciteitsplanningContent() {
                   Dat betekent: monteurs met de juiste certificeringen (NEN 3140, VCA),
                   branchekennis, en ervaring met OEM-systemen. Geen generieke uitzendkrachten,
                   maar vakmensen die direct inzetbaar zijn.{" "}
-                  <a href="/diensten/caas/" className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300">
+                  <a href="/diensten/capacity-as-a-service/" className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300">
                     Lees meer over onze CaaS-modellen
                   </a>.
                 </p>
@@ -344,7 +344,7 @@ export function CapaciteitsplanningContent() {
                 Wil je je capaciteitsplanning strategisch aanpakken?
               </p>
               <p className="mt-2 text-sm text-[#404040] leading-relaxed max-w-[50ch]">
-                Plan een capaciteitsgesprek. Wij helpen je het gat in kaart te brengen en een plan op maat te maken.
+                Wij helpen je het gat in kaart te brengen en een plan op maat te maken.
               </p>
               <a href="/aanvraag/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300">
                 Plan een gesprek

@@ -16,14 +16,14 @@ const articles = [
     excerpt:
       "Capacity as a Service en uitzenden lijken op het eerste gezicht op elkaar. De verschillen zijn fundamenteel.",
     href: "/kennisbank/caas-uitgelegd/caas-vs-uitzendbureau/",
-    date: "Binnenkort beschikbaar",
+    date: "25 maart 2026",
   },
   {
     title: "Welk CaaS-model past bij jouw liftbedrijf?",
     excerpt:
       "Niet elk CaaS-model is hetzelfde. Een overzicht van de opties en hoe je de juiste keuze maakt.",
     href: "/kennisbank/caas-uitgelegd/welk-caas-model/",
-    date: "Binnenkort beschikbaar",
+    date: "25 maart 2026",
   },
 ];
 

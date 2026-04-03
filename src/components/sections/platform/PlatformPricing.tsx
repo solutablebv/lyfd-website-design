@@ -103,7 +103,7 @@ export function PlatformPricing() {
   const recommended = getRecommendedTier(monteurs);
 
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-40 overflow-hidden">
+    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
       {/* Top gradient blend */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
 
@@ -153,10 +153,10 @@ export function PlatformPricing() {
               <StaggerItem key={tier.name}>
                 <div
                   className={cn(
-                    "relative rounded-2xl p-6 md:p-8 h-full flex flex-col transition-all duration-500",
+                    "relative rounded-2xl p-7 md:p-8 h-full flex flex-col transition-all duration-500",
                     isRecommended
-                      ? "bg-white border-2 border-[#1A1A1A] shadow-[0_8px_40px_rgba(0,0,0,0.08)]"
-                      : "bg-white border border-[#EBEBEB] shadow-[0_2px_12px_rgba(0,0,0,0.03)]"
+                      ? "bg-white border-2 border-[#1A1A1A] shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
+                      : "bg-white border border-[#EBEBEB] shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
                   )}
                 >
                   {isRecommended && (

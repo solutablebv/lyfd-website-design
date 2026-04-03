@@ -46,7 +46,7 @@ const recentArticles: Article[] = [
 
 export function RecentArticles() {
   return (
-    <section className="relative bg-white py-20 md:py-28">
+    <section className="relative bg-white py-32 md:py-44">
       <Container>
         <ScrollReveal>
           <div className="flex items-center justify-between mb-12">
@@ -81,7 +81,7 @@ export function RecentArticles() {
 function ArticleCard({ article }: { article: Article }) {
   return (
     <a href={article.href} className="group block h-full">
-      <div className="h-full rounded-2xl border border-[#EBEBEB] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC] hover:-translate-y-0.5 flex flex-col">
+      <div className="h-full rounded-2xl border border-[#EBEBEB] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC] hover:-translate-y-0.5 flex flex-col">
         {/* Thumbnail placeholder */}
         <div className="h-40 bg-[#F5F5F4] relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-[#F0F0F0] to-[#E8E8E8] transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105" />

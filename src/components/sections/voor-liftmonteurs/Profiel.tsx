@@ -15,7 +15,7 @@ const kenmerken = [
 
 export function Profiel() {
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36">
+    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -37,7 +37,7 @@ export function Profiel() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="mt-12 md:mt-16 rounded-2xl bg-white border border-[#EBEBEB] p-8 md:p-10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+            <div className="mt-12 md:mt-16 rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
               <ul className="space-y-5">
                 {kenmerken.map((kenmerk) => (
                   <li key={kenmerk} className="flex items-start gap-3">

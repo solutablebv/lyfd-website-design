@@ -37,7 +37,7 @@ function FaqAccordionItem({
           className="group flex items-start justify-between w-full py-6 md:py-7 text-left cursor-pointer"
           aria-expanded={isOpen}
         >
-          <span className="text-base md:text-lg font-semibold text-[#1A1A1A] tracking-tight pr-8 leading-snug">
+          <span className="text-lg font-semibold text-[#1A1A1A] tracking-tight pr-8 leading-snug">
             {item.question}
           </span>
           <span className="flex-shrink-0 mt-0.5 w-8 h-8 rounded-full bg-[#F0F0F0] flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:bg-[#E8E8E8]">
@@ -77,7 +77,7 @@ export function FaqSection({ title, items, closingText }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 

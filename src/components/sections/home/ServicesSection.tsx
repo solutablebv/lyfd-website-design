@@ -251,7 +251,7 @@ function MobileServices() {
 
 export function ServicesSection() {
   return (
-    <section id="diensten" className="relative bg-white py-28 md:py-36">
+    <section id="diensten" className="relative bg-white py-32 md:py-44">
       <Container>
         <div className="max-w-2xl">
           <ScrollReveal>

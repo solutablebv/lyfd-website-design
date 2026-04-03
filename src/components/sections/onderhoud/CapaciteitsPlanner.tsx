@@ -129,7 +129,7 @@ export function CapaciteitsPlanner() {
   const progressFraction = activeStep / (totalSteps - 1);
 
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36 overflow-hidden">
+    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -530,7 +530,7 @@ export function CapaciteitsPlanner() {
 
                 <div className="mt-8 p-4 rounded-xl bg-white/10">
                   <p className="text-lg font-bold">
-                    Vanaf EUR <AnimatedNumber value={65} />/uur per monteur{" "}
+                    Vanaf EUR 64,99/uur per monteur{" "}
                     <span className="text-sm font-normal text-white/60">(excl. BTW)</span>
                   </p>
                 </div>

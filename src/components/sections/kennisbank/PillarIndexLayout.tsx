@@ -126,7 +126,7 @@ export function PillarIndexLayout({
       </section>
 
       {/* Articles list */}
-      <section className="relative bg-white py-20 md:py-28">
+      <section className="relative bg-white py-32 md:py-44">
         <Container>
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-12">
@@ -141,7 +141,7 @@ export function PillarIndexLayout({
             {articles.map((article) => (
               <StaggerItem key={article.title}>
                 <a href={article.href} className="group block h-full">
-                  <div className="h-full rounded-2xl border border-[#EBEBEB] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC] hover:-translate-y-0.5 flex flex-col">
+                  <div className="h-full rounded-2xl border border-[#EBEBEB] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC] hover:-translate-y-0.5 flex flex-col">
                     {/* Thumbnail placeholder */}
                     <div className="h-40 bg-[#F5F5F4] relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-[#F0F0F0] to-[#E8E8E8] transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105" />
@@ -182,7 +182,7 @@ export function PillarIndexLayout({
       </section>
 
       {/* CTA */}
-      <section className="relative bg-[#1A1A1A] py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-[#1A1A1A] py-32 md:py-44 overflow-hidden">
         <div className="absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#1A1A1A]" />
 
         <div className="absolute inset-0 opacity-[0.03]">
@@ -212,7 +212,7 @@ export function PillarIndexLayout({
                   size="lg"
                   icon="arrow-right"
                 >
-                  Plan een capaciteitsgesprek
+                  Neem contact op
                 </Button>
               </div>
             </ScrollReveal>

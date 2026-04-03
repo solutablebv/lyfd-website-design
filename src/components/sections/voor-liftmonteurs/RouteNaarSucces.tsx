@@ -104,7 +104,7 @@ export function RouteNaarSucces() {
   return (
     <section
       id="route-naar-succes"
-      className="relative bg-white py-28 md:py-36 overflow-hidden"
+      className="relative bg-white py-32 md:py-44 overflow-hidden"
     >
       <Container>
         <ScrollReveal>
@@ -176,7 +176,7 @@ export function RouteNaarSucces() {
                     >
                       <div
                         className={`
-                          rounded-2xl p-6 md:p-8 transition-all duration-500
+                          rounded-2xl p-7 md:p-8 transition-all duration-500
                           ${
                             index <= 0
                               ? "bg-[#1A1A1A] text-white border border-[#1A1A1A] shadow-[0_8px_32px_rgba(0,0,0,0.12)]"

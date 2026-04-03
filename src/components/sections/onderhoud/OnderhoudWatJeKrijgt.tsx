@@ -30,7 +30,7 @@ const stats = [
 
 export function OnderhoudWatJeKrijgt() {
   return (
-    <section className="relative bg-white py-28 md:py-36 overflow-hidden">
+    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -69,7 +69,7 @@ export function OnderhoudWatJeKrijgt() {
         <div className="mt-14 md:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl">
           {/* Kolom 1: groot, span 2 */}
           <ScrollReveal delay={0.15} className="lg:col-span-2">
-            <div className="rounded-2xl border border-[#EBEBEB] bg-white p-8 md:p-10 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full">
+            <div className="rounded-2xl border border-[#EBEBEB] bg-white p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full">
               <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-snug text-[#1A1A1A]">
                 Direct inzetbare liftcapaciteit
               </h3>

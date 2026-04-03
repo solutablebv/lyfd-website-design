@@ -169,7 +169,7 @@ export function PlanSection() {
         <ScrollReveal delay={0.3}>
           <div className="mt-20 md:mt-24 flex justify-center">
             <Button href="#contact" variant="primary" size="lg" icon="arrow-right">
-              Plan een capaciteitsgesprek
+              Start vandaag
             </Button>
           </div>
         </ScrollReveal>

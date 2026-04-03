@@ -274,7 +274,7 @@ export function ContactFormulieren() {
   }
 
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36">
+    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -282,7 +282,7 @@ export function ContactFormulieren() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {/* Capaciteitsgesprek formulier */}
           <ScrollReveal>
-            <div className="rounded-2xl bg-white border border-[#EBEBEB] p-8 md:p-10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+            <div className="rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
               <Badge className="mb-5">Voor Liftbedrijven</Badge>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-2">
                 Capaciteitsgesprek
@@ -339,7 +339,7 @@ export function ContactFormulieren() {
 
           {/* Aanmelden als monteur formulier */}
           <ScrollReveal delay={0.15}>
-            <div className="rounded-2xl bg-white border border-[#EBEBEB] p-8 md:p-10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+            <div className="rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
               <Badge className="mb-5">Voor Liftmonteurs</Badge>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-2">
                 Aanmelden als monteur

@@ -36,7 +36,7 @@ const steps = [
 
 export function ModerniseringAanpak() {
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36">
+    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -92,7 +92,7 @@ export function ModerniseringAanpak() {
         {/* Eerlijkheidsblok */}
         <ScrollReveal delay={0.3}>
           <div className="mt-16 md:mt-20 max-w-2xl mx-auto">
-            <div className="rounded-2xl bg-[#F0F0F0] border border-[#E5E5E5] p-8 md:p-10">
+            <div className="rounded-2xl bg-[#F0F0F0] border border-[#E5E5E5] p-7 md:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#E0E0E0] flex items-center justify-center">
                   <Info weight="bold" className="w-5 h-5 text-[#6B6B6B]" />

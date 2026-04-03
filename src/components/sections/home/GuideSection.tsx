@@ -88,7 +88,7 @@ export function GuideSection() {
                 const Icon = item.icon;
                 return (
                   <StaggerItem key={item.title}>
-                    <div className="group rounded-2xl bg-white p-6 md:p-8 border border-[#EBEBEB] shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)] hover:-translate-y-1 hover:border-[#DCDCDC]">
+                    <div className="group rounded-2xl bg-white p-7 md:p-8 border border-[#EBEBEB] shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-[#DCDCDC]">
                       <div className="flex items-start gap-5">
                         <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[#F0F0F0] flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-110 group-hover:bg-[#EBEBEB]">
                           <Icon

@@ -55,7 +55,7 @@ const faqItems = [
     question:
       "Wat kost een liftmonteur voor service en onderhoud via LYFD?",
     answer:
-      "Onze monteurs starten vanaf EUR 65 per uur (excl. BTW). Het exacte tarief is afhankelijk van het ervaringsprofiel en het gekozen engagementmodel. Retainer- en projectafspraken bieden aantrekkelijke voorwaarden.",
+      "Onze monteurs starten vanaf EUR 64,99 per uur (excl. BTW). Het exacte tarief is afhankelijk van het ervaringsprofiel en het gekozen engagementmodel. Retainer- en projectafspraken bieden aantrekkelijke voorwaarden.",
   },
 ];
 

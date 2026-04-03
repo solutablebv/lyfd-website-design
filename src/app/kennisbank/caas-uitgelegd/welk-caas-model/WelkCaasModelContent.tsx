@@ -359,7 +359,7 @@ export function WelkCaasModelContent() {
                     het verschil tussen CaaS en een uitzendbureau
                   </a>{" "}
                   of bekijk onze{" "}
-                  <a href="/diensten/caas/" className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300">
+                  <a href="/diensten/capacity-as-a-service/" className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300">
                     CaaS-dienstenpagina
                   </a>.
                 </p>
@@ -371,7 +371,7 @@ export function WelkCaasModelContent() {
                 Wil je weten welk CaaS-model bij jouw bedrijf past?
               </p>
               <p className="mt-2 text-sm text-[#404040] leading-relaxed max-w-[50ch]">
-                Plan een capaciteitsgesprek. Wij helpen je het juiste model kiezen op basis van jouw situatie.
+                Wij helpen je het juiste model kiezen op basis van jouw situatie.
               </p>
               <a href="/aanvraag/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300">
                 Plan een gesprek

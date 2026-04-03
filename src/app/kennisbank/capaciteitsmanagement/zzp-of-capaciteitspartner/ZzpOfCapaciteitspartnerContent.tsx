@@ -152,7 +152,7 @@ export function ZzpOfCapaciteitspartnerContent() {
                       <tr className="border-b border-[#EBEBEB]">
                         <td className="py-3 pr-4 font-medium">Uurtarief</td>
                         <td className="py-3 pr-4">EUR 45 - 70</td>
-                        <td className="py-3">Blended EUR 50</td>
+                        <td className="py-3">Vanaf EUR 64,99</td>
                       </tr>
                       <tr className="border-b border-[#EBEBEB]">
                         <td className="py-3 pr-4 font-medium">Certificeringskosten</td>
@@ -366,9 +366,9 @@ export function ZzpOfCapaciteitspartnerContent() {
               <ScrollReveal delay={0.05}>
                 <p><strong>Scenario B: CaaS via LYFD</strong></p>
                 <ul>
-                  <li>Blended tarief: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 50</span> per uur (Bron: LYFD Pricing 2026)</li>
+                  <li>Vanaf-tarief: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 64,99</span> per uur (Bron: LYFD Pricing 2026)</li>
                   <li>Jaarlijkse uren: 3 x 1.472 = <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">4.416 uur</span></li>
-                  <li>Totale kosten: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 220.800</span></li>
+                  <li>Totale kosten: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 286.916</span></li>
                   <li>Administratie: minimaal (enkele factuur per maand)</li>
                   <li>DBA-risico: nul</li>
                   <li>Vervangingsgarantie: inbegrepen</li>
@@ -377,12 +377,12 @@ export function ZzpOfCapaciteitspartnerContent() {
               </ScrollReveal>
 
               <ScrollReveal delay={0.05}>
-                <p><strong>Totaal scenario B:</strong> <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">circa EUR 221.000</span> per jaar</p>
+                <p><strong>Totaal scenario B:</strong> <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">circa EUR 287.000</span> per jaar</p>
               </ScrollReveal>
 
               <ScrollReveal delay={0.05}>
                 <p>
-                  Het verschil in directe kosten is al <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">circa EUR 38.000</span> per jaar in het voordeel van CaaS. En dan hebben we het DBA-risico (met een potentiele exposure van tienduizenden euro&apos;s per monteur) nog buiten beschouwing gelaten. (Illustratief voorbeeld)
+                  Op uurtariefniveau lijkt CaaS duurder, maar bij scenario A zijn verborgen kosten (administratie, onboarding, uitval, DBA-risico met een potentiele exposure van tienduizenden euro&apos;s per monteur) niet meegerekend. Inclusief die verborgen kosten is CaaS vrijwel altijd voordeliger. (Illustratief voorbeeld)
                 </p>
               </ScrollReveal>
 
@@ -401,7 +401,7 @@ export function ZzpOfCapaciteitspartnerContent() {
               <ScrollReveal delay={0.05}>
                 <p>
                   Benieuwd wat het verschil zou betekenen voor jouw specifieke situatie?{" "}
-                  <a href="/diensten/caas/" className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300">
+                  <a href="/diensten/capacity-as-a-service/" className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300">
                     Lees meer over ons CaaS-model
                   </a>{" "}
                   of plan direct een gesprek.
@@ -415,7 +415,7 @@ export function ZzpOfCapaciteitspartnerContent() {
                 Wil je de vergelijking voor jouw situatie doorrekenen?
               </p>
               <p className="mt-2 text-sm text-[#404040] leading-relaxed max-w-[50ch]">
-                Plan een capaciteitsgesprek. Wij rekenen het samen door, specifiek voor jouw bedrijf.
+                Wij rekenen het samen door, specifiek voor jouw bedrijf.
               </p>
               <a
                 href="/aanvraag/"

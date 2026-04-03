@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function HetVerhaal() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Decorative background image */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <Image
@@ -51,7 +51,7 @@ export function HetVerhaal() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.25}>
-            <div className="mt-10 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10">
+            <div className="mt-10 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-7 md:p-8">
               <p className="text-base md:text-lg text-[#1A1A1A] font-medium leading-relaxed">
                 &ldquo;De liftbranche verdient een capaciteitsoplossing die de branche begrijpt. Dat is waar LYFD voor gebouwd is.&rdquo;
               </p>

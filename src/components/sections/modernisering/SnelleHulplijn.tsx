@@ -7,10 +7,10 @@ import { Phone, WhatsappLogo } from "@phosphor-icons/react";
 
 export function SnelleHulplijn() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-32 md:py-44">
       <Container>
         <ScrollReveal>
-          <div className="relative max-w-3xl mx-auto rounded-2xl border border-[#EBEBEB] bg-white p-10 md:p-14 border-l-2 border-l-[#1A1A1A] shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+          <div className="relative max-w-3xl mx-auto rounded-2xl border border-[#EBEBEB] bg-white p-8 md:p-10 border-l-2 border-l-[#1A1A1A] shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
             {/* 24u badge */}
             <div className="absolute top-4 right-4 md:top-6 md:right-6 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F0F0F0] border border-[#E5E5E5]">
               <div className="w-1.5 h-1.5 rounded-full bg-[#1A1A1A] animate-pulse" />

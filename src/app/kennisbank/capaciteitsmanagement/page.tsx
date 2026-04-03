@@ -23,21 +23,21 @@ const articles = [
     excerpt:
       "Een vergelijking van zzp-inzet versus een structurele capaciteitspartner voor liftbedrijven.",
     href: "/kennisbank/capaciteitsmanagement/zzp-of-capaciteitspartner/",
-    date: "Binnenkort beschikbaar",
+    date: "25 maart 2026",
   },
   {
     title: "Capaciteitsplanning bij servicecontracten",
     excerpt:
       "Hoe plan je monteurscapaciteit bij langlopende servicecontracten? Strategieen voor liftbedrijven.",
     href: "/kennisbank/capaciteitsmanagement/capaciteitsplanning-servicecontracten/",
-    date: "Binnenkort beschikbaar",
+    date: "25 maart 2026",
   },
   {
     title: "Wet DBA en de liftbranche",
     excerpt:
       "Wat betekent de hernieuwde handhaving van de Wet DBA voor liftbedrijven die met zzp-monteurs werken?",
     href: "/kennisbank/capaciteitsmanagement/wet-dba-liftbranche/",
-    date: "Binnenkort beschikbaar",
+    date: "25 maart 2026",
   },
 ];
 

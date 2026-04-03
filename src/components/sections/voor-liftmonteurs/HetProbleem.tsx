@@ -42,7 +42,7 @@ const opties = [
 
 export function HetProbleem() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 

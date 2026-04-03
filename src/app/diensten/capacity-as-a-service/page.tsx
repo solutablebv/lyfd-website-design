@@ -182,7 +182,7 @@ export default function CapacityAsAServicePage() {
         title="Zzp is een gok. Uitzendbureau kent je branche niet. Er is een derde weg."
         subtitle="Capacity as a Service combineert de flexibiliteit van zzp met de zekerheid van vast personeel. Zonder de nadelen van beide."
         intro="Liftbedrijven hebben traditioneel twee opties als de eigen capaciteit niet genoeg is: zelf aannemen of zzp'ers inschakelen. Beide hebben fundamentele nadelen. CaaS lost die op."
-        ctaText="Plan een capaciteitsgesprek"
+        ctaText="Ontdek wat CaaS kan betekenen"
         ctaHref="/aanvraag/"
         breadcrumbLabel="Capacity as a Service"
         imageSrc="/lift-lichtinval.jpg"
@@ -194,8 +194,8 @@ export default function CapacityAsAServicePage() {
       <CaasVoorWie />
       <ServiceCta
         title="Wil je weten welk CaaS-model bij jou past?"
-        body="Plan een capaciteitsgesprek. We kijken samen naar je situatie en adviseren welk model en welk tarief het best aansluit."
-        ctaText="Plan een capaciteitsgesprek"
+        body="We kijken samen naar je situatie en adviseren welk model en welk tarief het best aansluit."
+        ctaText="Vraag een adviesgesprek aan"
         ctaHref="/aanvraag/"
       />
       <FaqSection

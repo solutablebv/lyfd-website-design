@@ -54,7 +54,7 @@ const pillars: PillarTopic[] = [
 
 export function PillarGrid() {
   return (
-    <section className="relative bg-white py-20 md:py-28">
+    <section className="relative bg-white py-32 md:py-44">
       <Container>
         <StaggerContainer
           className="grid grid-cols-1 md:grid-cols-12 gap-4"
@@ -86,7 +86,7 @@ function PillarCard({ pillar }: { pillar: PillarTopic }) {
 
   return (
     <a href={pillar.href} className="group block h-full">
-      <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] shadow-[0_1px_3px_rgba(0,0,0,0.04)] p-6 md:p-8 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC] hover:-translate-y-0.5 flex flex-col">
+      <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] shadow-[0_1px_3px_rgba(0,0,0,0.04)] p-7 md:p-8 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC] hover:-translate-y-0.5 flex flex-col">
         {/* Icon */}
         <div className="w-12 h-12 rounded-full bg-[#F0F0F0] flex items-center justify-center mb-5 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105">
           <IconComponent weight="light" className="w-6 h-6 text-[#2A2A2A]" />

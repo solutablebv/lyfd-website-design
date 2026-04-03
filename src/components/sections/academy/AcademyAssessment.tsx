@@ -165,7 +165,7 @@ export function AcademyAssessment() {
     : 0;
 
   return (
-    <section id="assessment" className="relative bg-white py-28 md:py-36 scroll-mt-24">
+    <section id="assessment" className="relative bg-white py-32 md:py-44 scroll-mt-24">
       <Container>
         <div className="max-w-2xl mx-auto">
           <ScrollReveal>

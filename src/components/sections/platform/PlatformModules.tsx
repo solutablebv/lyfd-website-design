@@ -112,7 +112,7 @@ export function PlatformModules() {
   const [activeModule, setActiveModule] = useState(modules[0].id);
 
   return (
-    <section id="modules" className="relative bg-white py-28 md:py-40 overflow-hidden">
+    <section id="modules" className="relative bg-white py-32 md:py-44 overflow-hidden">
       <Container>
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <ScrollReveal>

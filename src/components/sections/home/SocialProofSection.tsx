@@ -110,7 +110,7 @@ function AnimatedCounterCard({
   return (
     <div
       ref={ref}
-      className="group rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10 text-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:border-[#DCDCDC]"
+      className="group rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-7 md:p-8 text-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC]"
     >
       <motion.div
         initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}

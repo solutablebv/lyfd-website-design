@@ -45,7 +45,7 @@ const statusConfig: Record<
   active: {
     label: null,
     cardClass:
-      "bg-white border-[#DCDCDC] hover:border-[#C0C0C0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)]",
+      "bg-white border-[#DCDCDC] hover:border-[#C0C0C0] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]",
     textClass: "text-[#1A1A1A]",
     iconClass: "text-[#1A1A1A]",
   },
@@ -71,7 +71,7 @@ const statusConfig: Record<
 
 export function PlatformIntegrations() {
   return (
-    <section className="relative bg-white py-28 md:py-40 overflow-hidden">
+    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
       <Container>
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">

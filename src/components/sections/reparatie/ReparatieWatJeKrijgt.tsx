@@ -52,7 +52,7 @@ const reparatieTypes = [
 
 export function ReparatieWatJeKrijgt() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Decorative background image */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <Image

@@ -60,7 +60,7 @@ function AnimatedIcon({ type, delay }: { type: "x" | "check"; delay: number }) {
 
 export function ReparatieZelfdiagnose() {
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-36 overflow-hidden">
+    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -98,7 +98,7 @@ export function ReparatieZelfdiagnose() {
         <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-5xl mx-auto">
           {/* Without LYFD */}
           <ScrollReveal delay={0.1}>
-            <div className="group rounded-2xl bg-[#FDF6F6] border border-[#E8D0D0] p-8 md:p-12 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.05)]">
+            <div className="group rounded-2xl bg-[#FDF6F6] border border-[#E8D0D0] p-7 md:p-8 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F5E0E0] mb-6">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#C0A0A0]" />
                 <span className="text-xs font-medium text-[#8B6B6B] tracking-wide">
@@ -127,7 +127,7 @@ export function ReparatieZelfdiagnose() {
 
           {/* With LYFD */}
           <ScrollReveal delay={0.2}>
-            <div className="group rounded-2xl bg-[#F6FDF6] border-l-2 border border-[#E0E0E0] border-l-[#2A2A2A] p-8 md:p-12 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
+            <div className="group rounded-2xl bg-[#F6FDF6] border-l-2 border border-[#E0E0E0] border-l-[#2A2A2A] p-7 md:p-8 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E0F0E0] mb-6">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#2A2A2A]" />
                 <span className="text-xs font-medium text-[#2A2A2A] tracking-wide">

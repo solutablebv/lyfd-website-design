@@ -583,7 +583,7 @@ export function PlatformTour() {
   const ActiveMockup = tourMockups[activeStep].component;
 
   return (
-    <section className="relative bg-[#F8F8F8] py-28 md:py-40 overflow-hidden">
+    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
 
       <Container>

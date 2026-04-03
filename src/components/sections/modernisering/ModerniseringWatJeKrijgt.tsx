@@ -38,7 +38,7 @@ const outcomes = [
 
 export function ModerniseringWatJeKrijgt() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
@@ -69,7 +69,7 @@ export function ModerniseringWatJeKrijgt() {
             const Icon = item.icon;
             return (
               <StaggerItem key={item.title}>
-                <div className="h-full rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10">
+                <div className="h-full rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-7 md:p-8">
                   <div className="w-12 h-12 rounded-2xl bg-[#1A1A1A] flex items-center justify-center mb-6">
                     <Icon weight="bold" className="w-6 h-6 text-white" />
                   </div>

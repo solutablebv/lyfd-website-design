@@ -14,7 +14,7 @@ import { Wrench, GraduationCap, ArrowRight } from "@phosphor-icons/react";
 
 export function TweePaden() {
   return (
-    <section className="relative bg-white py-28 md:py-36 overflow-hidden">
+    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
@@ -41,7 +41,7 @@ export function TweePaden() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="group block h-full"
             >
-              <div className="relative h-full rounded-2xl border-l-[3px] border-l-[#1A1A1A] border border-[#EBEBEB] bg-white p-8 md:p-10 transition-all duration-500 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)] hover:border-[#C0C0C0]">
+              <div className="relative h-full rounded-2xl border-l-[3px] border-l-[#1A1A1A] border border-[#EBEBEB] bg-white p-7 md:p-8 transition-all duration-500 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#C0C0C0]">
                 <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center mb-6">
                   <Wrench weight="fill" className="w-6 h-6 text-white" />
                 </div>
@@ -74,7 +74,7 @@ export function TweePaden() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="group block h-full"
             >
-              <div className="relative h-full rounded-2xl border border-[#EBEBEB] bg-[#FAFAFA] p-8 md:p-10 transition-all duration-500 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.03)] hover:border-[#C0C0C0]">
+              <div className="relative h-full rounded-2xl border border-[#EBEBEB] bg-[#FAFAFA] p-7 md:p-8 transition-all duration-500 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#C0C0C0]">
                 <div className="flex items-start justify-between mb-6">
                   <div className="w-12 h-12 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
                     <GraduationCap

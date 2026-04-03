@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function CaasDefinitie() {
   return (
-    <section className="relative bg-white py-28 md:py-36 overflow-hidden">
+    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -43,7 +43,7 @@ export function CaasDefinitie() {
 
           {/* Definition block */}
           <ScrollReveal delay={0.1}>
-            <div className="mt-12 md:mt-16 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-6 md:p-8">
+            <div className="mt-12 md:mt-16 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-7 md:p-8">
               <p className="text-base md:text-lg text-[#1A1A1A] leading-relaxed font-medium">
                 Capacity as a Service (CaaS) is een servicemodel waarbij een
                 liftbedrijf gecertificeerde liftmonteurscapaciteit inkoopt van

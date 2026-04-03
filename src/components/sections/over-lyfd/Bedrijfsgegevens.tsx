@@ -6,7 +6,7 @@ import { LinkedinLogo } from "@phosphor-icons/react";
 
 export function Bedrijfsgegevens() {
   return (
-    <section className="relative bg-[#F8F8F8] py-20 md:py-28">
+    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
       <Container>

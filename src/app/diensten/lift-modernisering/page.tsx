@@ -145,7 +145,7 @@ export default function LiftModerniseringPage() {
         title="Keiharde planning. Nul ruimte voor uitval. Wij leveren."
         subtitle="Capaciteit voor liftmodernisering, op tijd, volledig uitgerust, klaar voor het werk."
         intro="Lift modernisering is het vervangen of upgraden van bestaande liftinstallaties, van besturingssystemen tot complete renovaties. Bij een moderniseringsproject staat er meer op het spel dan een monteur die niet komt opdagen. De steigers staan. De opdrachtgever heeft een contractuele opleverdatum. LYFD zorgt dat jouw planning niet afhankelijk is van geluk."
-        ctaText="Plan een capaciteitsgesprek"
+        ctaText="Bespreek je project"
         ctaHref="/aanvraag/"
         breadcrumbLabel="Lift Modernisering"
         imageSrc="/lift-deuren-industrieel.jpg"

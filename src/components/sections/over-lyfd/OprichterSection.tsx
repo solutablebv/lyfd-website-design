@@ -97,7 +97,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[number] }) {
 
 export function OprichterSection() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
@@ -115,7 +115,7 @@ export function OprichterSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.15}>
-            <div className="mt-14 md:mt-18 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-10 md:p-14">
+            <div className="mt-14 md:mt-18 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10">
               <div className="flex flex-col items-center gap-6">
                 {/* Avatar met initialen */}
                 <div className="w-20 h-20 rounded-full bg-[#1A1A1A] flex items-center justify-center flex-shrink-0">

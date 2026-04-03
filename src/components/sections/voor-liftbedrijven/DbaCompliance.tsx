@@ -25,7 +25,7 @@ const risicos = [
 
 export function DbaCompliance() {
   return (
-    <section className="relative bg-white py-28 md:py-36">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
@@ -75,7 +75,7 @@ export function DbaCompliance() {
 
           {/* Solution block */}
           <ScrollReveal delay={0.25}>
-            <div className="mt-8 rounded-2xl bg-[#1A1A1A] p-8 md:p-10">
+            <div className="mt-8 rounded-2xl bg-[#1A1A1A] p-7 md:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
                   <ShieldCheck weight="light" className="w-6 h-6 text-white" />

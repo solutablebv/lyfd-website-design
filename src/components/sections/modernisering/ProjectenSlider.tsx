@@ -55,7 +55,7 @@ function ProjectCard({
   project: (typeof projecten)[number];
 }) {
   return (
-    <div className="w-72 flex-shrink-0 rounded-2xl border border-[#EBEBEB] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-500 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+    <div className="w-72 flex-shrink-0 rounded-2xl border border-[#EBEBEB] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-500 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
       <div className="relative h-48 overflow-hidden">
         <Image
           src={project.image}
@@ -88,7 +88,7 @@ function ProjectCard({
 
 export function ProjectenSlider() {
   return (
-    <section className="relative bg-white py-28 md:py-36 overflow-hidden">
+    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 

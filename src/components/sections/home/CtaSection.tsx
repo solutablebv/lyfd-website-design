@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function CtaSection() {
   return (
-    <section id="contact" className="relative bg-white py-32 md:py-48 overflow-hidden">
+    <section id="contact" className="relative bg-white py-32 md:py-44 overflow-hidden">
       {/* Subtle radial gradient for warmth without breaking flow */}
       <div
         className="absolute inset-0 pointer-events-none"
