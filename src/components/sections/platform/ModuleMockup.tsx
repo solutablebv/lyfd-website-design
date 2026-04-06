@@ -27,8 +27,8 @@ function PrioBadge({ label, color }: { label: string; color: string }) {
   );
 }
 
-// FieldAssist: werkorder lijst met echte data
-function FieldAssistMockup() {
+// LYFD Werkbeheer: werkorder lijst met echte data
+function WerkbeheerMockup() {
   const orders = [
     { id: "WO-2847", locatie: "Schindler lift G-142", monteur: "Johan K.", status: "Actief", statusColor: "#22C55E", prio: "Normaal", prioColor: "#6B6B6B" },
     { id: "WO-2846", locatie: "KONE lift A-089", monteur: "Lisa V.", status: "Gepland", statusColor: "#3B82F6", prio: "Hoog", prioColor: "#EF4444" },
@@ -64,8 +64,8 @@ function FieldAssistMockup() {
   );
 }
 
-// FieldPro: weekplanner met echte namen en uren
-function FieldProMockup() {
+// LYFD Planning: weekplanner met echte namen en uren
+function PlanningMockup() {
   const days = ["Ma", "Di", "Wo", "Do", "Vr"];
   const monteurs = [
     { naam: "Johan K.", uren: ["8/8h", "6/8h", "8/8h", "4/8h", "-"] },
@@ -118,8 +118,8 @@ function FieldProMockup() {
   );
 }
 
-// FieldRepair: kanban met echte reparatie-items
-function FieldRepairMockup() {
+// LYFD Reparatie: kanban met echte reparatie-items
+function ReparatieMockup() {
   const columns = [
     {
       label: "Nieuw",
@@ -179,8 +179,8 @@ function FieldRepairMockup() {
   );
 }
 
-// Shop: product grid met echte onderdelen
-function ShopMockup() {
+// LYFD Onderdelen: product grid met echte onderdelen
+function OnderdelenMockup() {
   const products = [
     { name: "Frequentieregelaar 11kW", price: "EUR 890", stock: "Op voorraad", stockColor: "#22C55E" },
     { name: "Deurcellen set compleet", price: "EUR 245", stock: "Op voorraad", stockColor: "#22C55E" },
@@ -224,7 +224,7 @@ function ShopMockup() {
   );
 }
 
-// Offertes: document lijst (bestaand, al goed)
+// LYFD Offertes: document lijst
 function OffertesMockup() {
   const docs = [
     { name: "Offerte Otis NL", status: "Verzonden", statusColor: "#3B82F6", date: "28 mrt" },
@@ -253,8 +253,8 @@ function OffertesMockup() {
   );
 }
 
-// EDNL Sense: IoT dashboard (bestaand, al goed)
-function SenseMockup() {
+// LYFD Monitor: IoT dashboard
+function MonitorMockup() {
   return (
     <div className="space-y-3">
       {/* Status row */}
@@ -326,8 +326,8 @@ function SenseMockup() {
   );
 }
 
-// LiftParts Exchange: marktplaats met echte listings
-function LiftPartsMockup() {
+// LYFD Marktplaats: marktplaats met echte listings
+function MarktplaatsMockup() {
   const filters = ["Alle", "Deuren", "Motoren", "Besturing", "Kabels"];
 
   const listings = [
@@ -420,13 +420,13 @@ function LiftPartsMockup() {
 }
 
 const mockupComponents: Record<string, () => React.JSX.Element> = {
-  fieldassist: FieldAssistMockup,
-  fieldpro: FieldProMockup,
-  fieldrepair: FieldRepairMockup,
-  shop: ShopMockup,
+  werkbeheer: WerkbeheerMockup,
+  planning: PlanningMockup,
+  reparatie: ReparatieMockup,
+  onderdelen: OnderdelenMockup,
   offertes: OffertesMockup,
-  sense: SenseMockup,
-  liftparts: LiftPartsMockup,
+  monitor: MonitorMockup,
+  marktplaats: MarktplaatsMockup,
 };
 
 export function ModuleMockup({ moduleId }: ModuleMockupProps) {

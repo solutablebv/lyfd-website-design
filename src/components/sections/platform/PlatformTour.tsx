@@ -542,7 +542,7 @@ const tourMockups: Array<{ component: () => React.JSX.Element; url: string }> = 
   { component: DashboardMockup, url: "app.lyfd.nl/dashboard" },
   { component: WorkorderAssignMockup, url: "app.lyfd.nl/werkorders/WO-2851" },
   { component: WeekplanningMockup, url: "app.lyfd.nl/planning" },
-  { component: SenseMonitorMockup, url: "app.lyfd.nl/sense" },
+  { component: SenseMonitorMockup, url: "app.lyfd.nl/monitor" },
   { component: OfferteBuilderMockup, url: "app.lyfd.nl/offertes/nieuw" },
 ];
 

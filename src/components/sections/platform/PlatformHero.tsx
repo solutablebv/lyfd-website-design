@@ -56,16 +56,16 @@ export function PlatformHero() {
 
   const sidebarItems = [
     { label: "Dashboard", active: true },
-    { label: "FieldAssist", active: false },
-    { label: "FieldPro", active: false },
-    { label: "FieldRepair", active: false },
-    { label: "Shop", active: false },
+    { label: "Werkbeheer", active: false },
+    { label: "Planning", active: false },
+    { label: "Reparatie", active: false },
+    { label: "Onderdelen", active: false },
     { label: "Offertes", active: false },
   ];
 
   const sidebarSecondary = [
-    { label: "EDNL Sense" },
-    { label: "LiftParts" },
+    { label: "Monitor" },
+    { label: "Marktplaats" },
   ];
 
   const statCards = [

@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 
 const modules = [
   {
-    id: "fieldassist",
-    name: "FieldAssist",
-    tagline: "Werkorderbeheer",
+    id: "werkbeheer",
+    name: "LYFD Werkbeheer",
+    tagline: "Opdrachten en werkorders",
     description:
       "Opdrachten aanmaken, toewijzen en tracken. De basis voor elke liftoperatie.",
     features: [
@@ -23,11 +23,11 @@ const modules = [
     badge: null,
   },
   {
-    id: "fieldpro",
-    name: "FieldPro",
-    tagline: "Monteur management",
+    id: "planning",
+    name: "LYFD Planning",
+    tagline: "Capaciteit en weekplanning",
     description:
-      "Weekplanning, capaciteitsoverzicht en freelancer beheer. Weet altijd wie waar is.",
+      "Weet altijd wie waar is, wie beschikbaar is, en waar je capaciteit tekort komt.",
     features: [
       "Drag-and-drop weekplanning",
       "Beschikbaarheidscontrole",
@@ -37,8 +37,8 @@ const modules = [
     badge: "Pro",
   },
   {
-    id: "fieldrepair",
-    name: "FieldRepair",
+    id: "reparatie",
+    name: "LYFD Reparatie",
     tagline: "Reparatiebeheer",
     description:
       "Reparatieverzoeken registreren, prioriteren en plannen. Van aanvraag tot afronding.",
@@ -48,11 +48,11 @@ const modules = [
       "Fotodocumentatie bij reparatie",
       "Automatische herinnering",
     ],
-    badge: "Repair",
+    badge: null,
   },
   {
-    id: "shop",
-    name: "LYFD Shop",
+    id: "onderdelen",
+    name: "LYFD Onderdelen",
     tagline: "Onderdelenwinkel",
     description:
       "Liftonderdelen bestellen, direct uit voorraad. Catalogus met technische specificaties.",
@@ -66,10 +66,10 @@ const modules = [
   },
   {
     id: "offertes",
-    name: "Offertes",
+    name: "LYFD Offertes",
     tagline: "Offerte management",
     description:
-      "Van concept tot getekende overeenkomst. Professionele offertes in je huisstijl.",
+      "Van prospect naar offerte in 5 minuten. In je eigen huisstijl. Digitale ondertekening inbegrepen.",
     features: [
       "Offerte in 5 minuten",
       "Huisstijl templates",
@@ -79,11 +79,11 @@ const modules = [
     badge: null,
   },
   {
-    id: "sense",
-    name: "EDNL Sense",
+    id: "monitor",
+    name: "LYFD Monitor",
     tagline: "IoT monitoring",
     description:
-      "Live status van elke installatie. Storinghistorie, patronen en voorspellend onderhoud.",
+      "Live status van elke installatie. Storingen worden automatisch gemeld. Patronen worden herkend.",
     features: [
       "Live installatie monitoring",
       "Storingpatroon herkenning",
@@ -93,8 +93,8 @@ const modules = [
     badge: "IoT",
   },
   {
-    id: "liftparts",
-    name: "LiftParts Exchange",
+    id: "marktplaats",
+    name: "LYFD Marktplaats",
     tagline: "Onderdelen marktplaats",
     description:
       "Tweedehands liftonderdelen kopen en verkopen. De marktplaats voor de liftbranche.",
@@ -104,7 +104,7 @@ const modules = [
       "Kwaliteitsbeoordeling",
       "Directe communicatie",
     ],
-    badge: "Exchange",
+    badge: null,
   },
 ];
 
