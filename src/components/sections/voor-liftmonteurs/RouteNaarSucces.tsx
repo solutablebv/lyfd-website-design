@@ -104,7 +104,7 @@ export function RouteNaarSucces() {
   return (
     <section
       id="route-naar-succes"
-      className="relative bg-white py-32 md:py-44 overflow-hidden"
+      className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden"
     >
       <Container>
         <ScrollReveal>
@@ -113,7 +113,7 @@ export function RouteNaarSucces() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               7 stappen naar je nieuwe carriere
             </h2>
-            <p className="mt-5 text-sm md:text-base text-[#404040] leading-relaxed">
+            <p className="mt-5 text-sm md:text-base text-[#3D3A37] leading-relaxed">
               Van eerste kennismaking tot je eerste opdracht. Zo werkt het
               onboarding proces bij LYFD.
             </p>
@@ -126,7 +126,7 @@ export function RouteNaarSucces() {
           className="mt-16 md:mt-20 relative max-w-4xl mx-auto"
         >
           {/* Verticale lijn (achtergrond) */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-[#EBEBEB] md:-translate-x-px" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-[#E8E5E0] md:-translate-x-px" />
 
           {/* Verticale lijn (animated vul) */}
           <motion.div
@@ -155,7 +155,7 @@ export function RouteNaarSucces() {
                           ${
                             index <= 0
                               ? "bg-[#1A1A1A] text-white border-[#1A1A1A] shadow-[0_2px_12px_rgba(0,0,0,0.15)]"
-                              : "bg-white text-[#6B6B6B] border-[#EBEBEB]"
+                              : "bg-[#FDFCFA] text-[#6B6560] border-[#E8E5E0]"
                           }
                         `}
                       >
@@ -180,7 +180,7 @@ export function RouteNaarSucces() {
                           ${
                             index <= 0
                               ? "bg-[#1A1A1A] text-white border border-[#1A1A1A] shadow-[0_8px_32px_rgba(0,0,0,0.12)]"
-                              : "bg-white text-[#1A1A1A] border border-[#EBEBEB] hover:border-[#C0C0C0] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]"
+                              : "bg-[#FDFCFA] text-[#1A1A1A] border border-[#E8E5E0] hover:border-[#C0C0C0] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]"
                           }
                         `}
                       >
@@ -191,7 +191,7 @@ export function RouteNaarSucces() {
                               ${
                                 index <= 0
                                   ? "bg-white/10"
-                                  : "bg-[#F0F0F0]"
+                                  : "bg-[#F2F0ED]"
                               }
                             `}
                           >
@@ -212,7 +212,7 @@ export function RouteNaarSucces() {
                             </h3>
                             <p
                               className={`mt-2 text-sm leading-relaxed ${
-                                index <= 0 ? "text-white/60" : "text-[#6B6B6B]"
+                                index <= 0 ? "text-white/60" : "text-[#6B6560]"
                               }`}
                             >
                               {stap.beschrijving}
@@ -222,7 +222,7 @@ export function RouteNaarSucces() {
                                 className={`inline-block mt-3 text-[10px] font-mono uppercase tracking-wider ${
                                   index <= 0
                                     ? "text-white/40"
-                                    : "text-[#A0A0A0]"
+                                    : "text-[#9C9690]"
                                 }`}
                               >
                                 {stap.detail}

@@ -30,14 +30,14 @@ const sellingPoints = [
 
 export function WaaromAcademy() {
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <Image
           src="/urban-straat.jpg"
           alt=""
           fill
-          className="object-cover opacity-[0.05] grayscale"
+          className="object-cover opacity-[0.05]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#F8F8F8] via-transparent to-[#F8F8F8]" />
@@ -57,7 +57,7 @@ export function WaaromAcademy() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <p className="mt-6 text-base md:text-lg text-[#404040] leading-relaxed max-w-[60ch]">
+            <p className="mt-6 text-base md:text-lg text-[#3D3A37] leading-relaxed max-w-[60ch]">
               Er zijn 105.000 liftinstallaties in Nederland en maar 1.800 monteurs.
               De branche vergrijst. Er is ruimte voor nieuwe vakmensen.
               De vraag is niet of er werk is. De vraag is: ben jij er klaar voor?
@@ -73,14 +73,14 @@ export function WaaromAcademy() {
             const Icon = point.icon;
             return (
               <StaggerItem key={point.title}>
-                <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-                  <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center mb-5">
+                <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                  <div className="w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center mb-5">
                     <Icon weight="duotone" className="w-5 h-5 text-[#1A1A1A]" />
                   </div>
                   <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                     {point.title}
                   </h3>
-                  <p className="text-sm text-[#404040] leading-relaxed">
+                  <p className="text-sm text-[#3D3A37] leading-relaxed">
                     {point.text}
                   </p>
                 </div>
@@ -91,7 +91,7 @@ export function WaaromAcademy() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

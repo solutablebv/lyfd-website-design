@@ -123,13 +123,13 @@ export function CapaciteitsPlanner() {
   );
 
   const inputClasses =
-    "w-full rounded-xl border border-[#EBEBEB] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] focus:outline-none focus:border-[#2A2A2A] focus:ring-1 focus:ring-[#2A2A2A]/10 transition-colors duration-300";
+    "w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] focus:outline-none focus:border-[#2A2A2A] focus:ring-1 focus:ring-[#2A2A2A]/10 transition-colors duration-300";
 
   const totalSteps = 5;
   const progressFraction = activeStep / (totalSteps - 1);
 
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -144,7 +144,7 @@ export function CapaciteitsPlanner() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.03]"
+          className="object-cover contrast-[1.05] brightness-[1.1] opacity-[0.03]"
           loading="lazy"
         />
       </div>
@@ -165,7 +165,7 @@ export function CapaciteitsPlanner() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Plan je capaciteit
             </h2>
-            <p className="mt-5 text-sm md:text-base text-[#404040] leading-relaxed">
+            <p className="mt-5 text-sm md:text-base text-[#3D3A37] leading-relaxed">
               Configureer je capaciteitsbehoefte. Ontvang binnen 24 uur een voorstel op maat.
             </p>
           </div>
@@ -175,7 +175,7 @@ export function CapaciteitsPlanner() {
         <ScrollReveal delay={0.1}>
           <div className="mt-12 md:mt-16 relative flex items-center justify-center gap-2 md:gap-3 flex-wrap">
             {/* Progress line behind buttons */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-4rem)] h-px bg-[#EBEBEB] hidden md:block" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-4rem)] h-px bg-[#E8E5E0] hidden md:block" />
             <div
               className="absolute top-1/2 left-1/2 -translate-y-1/2 h-px bg-[#1A1A1A] hidden md:block transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] origin-left"
               style={{
@@ -199,7 +199,7 @@ export function CapaciteitsPlanner() {
                     ${
                       isActive
                         ? "bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                        : "bg-white text-[#6B6B6B] border border-[#EBEBEB] hover:border-[#C0C0C0]"
+                        : "bg-[#FDFCFA] text-[#6B6560] border border-[#E8E5E0] hover:border-[#C0C0C0]"
                     }
                   `}
                 >
@@ -223,9 +223,9 @@ export function CapaciteitsPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 1/5
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
@@ -233,7 +233,7 @@ export function CapaciteitsPlanner() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-2">
+                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
                       Startdatum
                     </label>
                     <input
@@ -244,7 +244,7 @@ export function CapaciteitsPlanner() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-2">
+                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
                       Einddatum
                     </label>
                     <input
@@ -260,7 +260,7 @@ export function CapaciteitsPlanner() {
                   <div
                     className={`
                       w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all duration-200
-                      ${config.ongoing ? "bg-[#1A1A1A] border-[#1A1A1A]" : "border-[#DCDCDC] bg-white"}
+                      ${config.ongoing ? "bg-[#1A1A1A] border-[#1A1A1A]" : "border-[#D9D4CE] bg-[#FDFCFA]"}
                     `}
                     onClick={() => {
                       updateConfig("ongoing", !config.ongoing);
@@ -272,7 +272,7 @@ export function CapaciteitsPlanner() {
                     )}
                   </div>
                   <span
-                    className="text-sm text-[#404040]"
+                    className="text-sm text-[#3D3A37]"
                     onClick={() => {
                       updateConfig("ongoing", !config.ongoing);
                       if (!config.ongoing) updateConfig("endDate", "");
@@ -297,9 +297,9 @@ export function CapaciteitsPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 2/5
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
@@ -318,7 +318,7 @@ export function CapaciteitsPlanner() {
                         ${
                           config.workType === type.value
                             ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                            : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                            : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                         }
                       `}
                     >
@@ -345,9 +345,9 @@ export function CapaciteitsPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 3/5
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
@@ -360,15 +360,15 @@ export function CapaciteitsPlanner() {
                     max={10}
                     value={config.count}
                     onChange={(e) => updateConfig("count", parseInt(e.target.value))}
-                    className="flex-1 h-2 bg-[#EBEBEB] rounded-full appearance-none cursor-pointer accent-[#1A1A1A] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#1A1A1A] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer"
+                    className="flex-1 h-2 bg-[#E8E5E0] rounded-full appearance-none cursor-pointer accent-[#1A1A1A] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#1A1A1A] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer"
                   />
-                  <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-[#F0F0F0] flex items-center justify-center">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-[#F2F0ED] flex items-center justify-center">
                     <span className="text-2xl font-bold text-[#1A1A1A] font-mono">
                       {config.count}
                     </span>
                   </div>
                 </div>
-                <p className="mt-3 text-xs text-[#A0A0A0]">
+                <p className="mt-3 text-xs text-[#9C9690]">
                   {config.count === 1 ? "1 monteur" : `${config.count} monteurs`}
                 </p>
                 <div className="mt-8 flex justify-between">
@@ -390,9 +390,9 @@ export function CapaciteitsPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 4/5
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
@@ -411,14 +411,14 @@ export function CapaciteitsPlanner() {
                         ${
                           config.level === niveau.value
                             ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                            : "border-[#EBEBEB] bg-white hover:border-[#C0C0C0]"
+                            : "border-[#E8E5E0] bg-[#FDFCFA] hover:border-[#C0C0C0]"
                         }
                       `}
                     >
                       <span className="block text-base font-bold">{niveau.label}</span>
                       <span
                         className={`block mt-1 text-xs ${
-                          config.level === niveau.value ? "text-white/70" : "text-[#A0A0A0]"
+                          config.level === niveau.value ? "text-white/70" : "text-[#9C9690]"
                         }`}
                       >
                         {niveau.sub}
@@ -445,9 +445,9 @@ export function CapaciteitsPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 5/5
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
@@ -466,7 +466,7 @@ export function CapaciteitsPlanner() {
                         ${
                           config.region === regio.value
                             ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                            : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                            : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                         }
                       `}
                     >

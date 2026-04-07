@@ -15,7 +15,7 @@ const stats = [
 
 export function PlatformSocialProof() {
   return (
-    <section className="relative bg-[#F8F8F8] py-16 md:py-20 overflow-hidden">
+    <section className="relative bg-[#F5F3F0] py-16 md:py-20 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
 
       <Container>
@@ -29,7 +29,7 @@ export function PlatformSocialProof() {
                 <p className="mt-2 text-sm font-semibold text-[#1A1A1A]">
                   {stat.label}
                 </p>
-                <p className="mt-1 text-xs text-[#6B6B6B]">
+                <p className="mt-1 text-xs text-[#6B6560]">
                   {stat.sublabel}
                 </p>
               </div>

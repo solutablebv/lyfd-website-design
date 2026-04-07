@@ -17,7 +17,7 @@ const mobileImages = [
 
 export function UrbanShowcase() {
   return (
-    <section className="relative bg-white py-8 md:py-16 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] py-8 md:py-16 overflow-hidden">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
@@ -44,7 +44,7 @@ export function UrbanShowcase() {
                 src={src}
                 alt=""
                 fill
-                className="object-cover grayscale"
+                className="object-cover grayscale-[30%]"
                 sizes="50vw"
                 aria-hidden="true"
               />
@@ -53,7 +53,7 @@ export function UrbanShowcase() {
           ))}
         </div>
 
-        <p className="hidden md:block text-center text-xs text-[#A0A0A0] mt-6 font-mono">
+        <p className="hidden md:block text-center text-xs text-[#9C9690] mt-6 font-mono">
           Beweeg je cursor om te interacteren
         </p>
       </Container>

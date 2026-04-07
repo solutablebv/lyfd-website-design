@@ -105,7 +105,7 @@ function DesktopServices() {
           <a
             key={service.title}
             href={service.href}
-            className="group flex items-center justify-between border-t border-[#EBEBEB] px-4 md:px-8 py-10 md:py-14 cursor-pointer transition-opacity duration-300 ease-out"
+            className="group flex items-center justify-between border-t border-[#E8E5E0] px-4 md:px-8 py-10 md:py-14 cursor-pointer transition-opacity duration-300 ease-out"
             style={{
               borderBottom:
                 index === services.length - 1
@@ -121,7 +121,7 @@ function DesktopServices() {
             >
               {service.title}
             </h3>
-            <p className="hidden sm:block text-base text-[#6B6B6B] max-w-[30ch] text-right">
+            <p className="hidden sm:block text-base text-[#6B6560] max-w-[30ch] text-right">
               {service.description}
             </p>
           </a>
@@ -224,7 +224,7 @@ function MobileServices() {
         <a
           key={service.title}
           href={service.href}
-          className="block rounded-xl overflow-hidden border border-[#EBEBEB]"
+          className="block rounded-xl overflow-hidden border border-[#E8E5E0]"
         >
           <div className="relative w-full h-48">
             <Image
@@ -239,7 +239,7 @@ function MobileServices() {
             <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
               {service.title}
             </h3>
-            <p className="mt-1 text-sm text-[#6B6B6B]">
+            <p className="mt-1 text-sm text-[#6B6560]">
               {service.description}
             </p>
           </div>
@@ -251,7 +251,7 @@ function MobileServices() {
 
 export function ServicesSection() {
   return (
-    <section id="diensten" className="relative bg-white py-32 md:py-44">
+    <section id="diensten" className="relative bg-[#FDFCFA] py-32 md:py-44">
       <Container>
         <div className="max-w-2xl">
           <ScrollReveal>

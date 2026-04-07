@@ -13,7 +13,7 @@ const tocItems = [
 
 export function ArticleLayout() {
   return (
-    <section className="relative bg-white pb-20 md:pb-28">
+    <section className="relative bg-[#FDFCFA] pb-20 md:pb-28">
       <Container>
         <div className="relative flex justify-center gap-16">
           {/* Article content */}
@@ -21,11 +21,11 @@ export function ArticleLayout() {
             <ArticleBody />
 
             {/* Article closing CTA */}
-            <div className="mt-16 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-7 md:p-8">
+            <div className="mt-16 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-7 md:p-8">
               <p className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
                 Wil je weten wat capaciteitsgebrek jouw bedrijf kost?
               </p>
-              <p className="mt-2 text-sm text-[#404040] leading-relaxed max-w-[50ch]">
+              <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed max-w-[50ch]">
                 Neem contact op. Wij rekenen het samen door.
               </p>
               <a
@@ -33,7 +33,7 @@ export function ArticleLayout() {
                 className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300"
               >
                 Plan een gesprek
-                <span className="text-[#A0A0A0]">&rarr;</span>
+                <span className="text-[#9C9690]">&rarr;</span>
               </a>
             </div>
           </article>

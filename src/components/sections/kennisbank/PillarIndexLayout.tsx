@@ -33,8 +33,8 @@ export function PillarIndexLayout({
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-white pt-36 md:pt-44 pb-12 md:pb-16">
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent z-[2] pointer-events-none" />
+      <section className="relative bg-[#FDFCFA] pt-36 md:pt-44 pb-12 md:pb-16">
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#FDFCFA] to-transparent z-[2] pointer-events-none" />
 
         <Container className="relative z-10">
           <div className="max-w-3xl">
@@ -52,19 +52,19 @@ export function PillarIndexLayout({
             >
               <Link
                 href="/"
-                className="text-xs text-[#A0A0A0] hover:text-[#6B6B6B] transition-colors duration-300 font-medium"
+                className="text-xs text-[#9C9690] hover:text-[#6B6560] transition-colors duration-300 font-medium"
               >
                 Home
               </Link>
               <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DCDCDC]" />
               <Link
                 href="/kennisbank/"
-                className="text-xs text-[#A0A0A0] hover:text-[#6B6B6B] transition-colors duration-300 font-medium"
+                className="text-xs text-[#9C9690] hover:text-[#6B6560] transition-colors duration-300 font-medium"
               >
                 Kennisbank
               </Link>
               <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DCDCDC]" />
-              <span className="text-xs text-[#6B6B6B] font-medium">
+              <span className="text-xs text-[#6B6560] font-medium">
                 {pillar}
               </span>
             </motion.nav>
@@ -105,7 +105,7 @@ export function PillarIndexLayout({
                 ease: [0.32, 0.72, 0, 1],
                 delay: 0.35,
               }}
-              className="mt-5 text-base md:text-lg text-[#404040] leading-relaxed max-w-[55ch]"
+              className="mt-5 text-base md:text-lg text-[#3D3A37] leading-relaxed max-w-[55ch]"
             >
               {description}
             </motion.p>
@@ -119,14 +119,14 @@ export function PillarIndexLayout({
                 ease: [0.32, 0.72, 0, 1],
                 delay: 0.45,
               }}
-              className="mt-8 h-px bg-[#EBEBEB] origin-left"
+              className="mt-8 h-px bg-[#E8E5E0] origin-left"
             />
           </div>
         </Container>
       </section>
 
       {/* Articles list */}
-      <section className="relative bg-white py-32 md:py-44">
+      <section className="relative bg-[#FDFCFA] py-32 md:py-44">
         <Container>
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-12">
@@ -141,7 +141,7 @@ export function PillarIndexLayout({
             {articles.map((article) => (
               <StaggerItem key={article.title}>
                 <a href={article.href} className="group block h-full">
-                  <div className="h-full rounded-2xl border border-[#EBEBEB] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC] hover:-translate-y-0.5 flex flex-col">
+                  <div className="h-full rounded-2xl border border-[#E8E5E0] bg-[#FDFCFA] shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#D9D4CE] hover:-translate-y-0.5 flex flex-col">
                     {/* Thumbnail placeholder */}
                     <div className="h-40 bg-[#F5F5F4] relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-[#F0F0F0] to-[#E8E8E8] transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105" />
@@ -157,15 +157,15 @@ export function PillarIndexLayout({
                         {article.title}
                       </h3>
 
-                      <p className="mt-2 text-sm text-[#404040] leading-relaxed line-clamp-2 flex-1">
+                      <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed line-clamp-2 flex-1">
                         {article.excerpt}
                       </p>
 
                       <div className="mt-4 flex items-center justify-between">
-                        <span className="text-xs text-[#A0A0A0] font-mono">
+                        <span className="text-xs text-[#9C9690] font-mono">
                           {article.date}
                         </span>
-                        <div className="w-7 h-7 rounded-full bg-[#F0F0F0] flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:bg-[#1A1A1A]">
+                        <div className="w-7 h-7 rounded-full bg-[#F2F0ED] flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:bg-[#1A1A1A]">
                           <ArrowRight
                             weight="bold"
                             className="w-3 h-3 text-[#2A2A2A] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:text-white group-hover:translate-x-0.5"

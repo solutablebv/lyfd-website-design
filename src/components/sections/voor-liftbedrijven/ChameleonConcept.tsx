@@ -37,7 +37,7 @@ const aspecten = [
 
 export function ChameleonConcept() {
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -53,7 +53,7 @@ export function ChameleonConcept() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-6 text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#3D3A37] leading-relaxed text-center max-w-[55ch] mx-auto">
               Een LYFD-monteur past zich aan jouw bedrijf aan. Voor de eindklant is er geen verschil. Zo houd je de controle over je merk en klanttevredenheid.
             </p>
           </ScrollReveal>
@@ -62,20 +62,20 @@ export function ChameleonConcept() {
         {/* Side-by-side comparison */}
         <ScrollReveal delay={0.2}>
           <div className="mt-14 md:mt-20 max-w-4xl mx-auto">
-            <div className="rounded-2xl bg-white border border-[#EBEBEB] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+            <div className="rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
               {/* Header row */}
-              <div className="grid grid-cols-[1fr_1fr_1fr] border-b border-[#EBEBEB] bg-[#FAFAFA]">
+              <div className="grid grid-cols-[1fr_1fr_1fr] border-b border-[#E8E5E0] bg-[#F8F6F3]">
                 <div className="p-5 md:p-6">
-                  <span className="text-xs uppercase tracking-[0.15em] font-medium text-[#A0A0A0]">
+                  <span className="text-xs uppercase tracking-[0.15em] font-medium text-[#9C9690]">
                     Aspect
                   </span>
                 </div>
-                <div className="p-5 md:p-6 border-l border-[#EBEBEB]">
-                  <span className="text-xs uppercase tracking-[0.15em] font-medium text-[#A0A0A0]">
+                <div className="p-5 md:p-6 border-l border-[#E8E5E0]">
+                  <span className="text-xs uppercase tracking-[0.15em] font-medium text-[#9C9690]">
                     Zonder Chameleon
                   </span>
                 </div>
-                <div className="p-5 md:p-6 border-l border-[#EBEBEB] bg-[#1A1A1A]">
+                <div className="p-5 md:p-6 border-l border-[#E8E5E0] bg-[#1A1A1A]">
                   <span className="text-xs uppercase tracking-[0.15em] font-medium text-white/60">
                     Met Chameleon
                   </span>
@@ -90,23 +90,23 @@ export function ChameleonConcept() {
                   <div
                     key={aspect.label}
                     className={`grid grid-cols-[1fr_1fr_1fr] ${
-                      !isLast ? "border-b border-[#EBEBEB]" : ""
+                      !isLast ? "border-b border-[#E8E5E0]" : ""
                     }`}
                   >
                     <div className="p-5 md:p-6 flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[#F0F0F0] flex items-center justify-center flex-shrink-0">
-                        <Icon weight="light" className="w-4 h-4 text-[#6B6B6B]" />
+                      <div className="w-8 h-8 rounded-lg bg-[#F2F0ED] flex items-center justify-center flex-shrink-0">
+                        <Icon weight="light" className="w-4 h-4 text-[#6B6560]" />
                       </div>
                       <span className="text-sm font-medium text-[#1A1A1A]">
                         {aspect.label}
                       </span>
                     </div>
-                    <div className="p-5 md:p-6 border-l border-[#EBEBEB] flex items-start">
-                      <span className="text-sm text-[#6B6B6B] leading-relaxed">
+                    <div className="p-5 md:p-6 border-l border-[#E8E5E0] flex items-start">
+                      <span className="text-sm text-[#6B6560] leading-relaxed">
                         {aspect.zonder}
                       </span>
                     </div>
-                    <div className="p-5 md:p-6 border-l border-[#EBEBEB] bg-[#1A1A1A] flex items-start">
+                    <div className="p-5 md:p-6 border-l border-[#E8E5E0] bg-[#1A1A1A] flex items-start">
                       <span className="text-sm text-white/80 leading-relaxed">
                         {aspect.met}
                       </span>
@@ -122,8 +122,8 @@ export function ChameleonConcept() {
         <ScrollReveal delay={0.3}>
           <div className="mt-8 max-w-4xl mx-auto">
             <div className="flex items-center gap-3 justify-center">
-              <UserSwitch weight="light" className="w-5 h-5 text-[#6B6B6B]" />
-              <p className="text-sm text-[#6B6B6B]">
+              <UserSwitch weight="light" className="w-5 h-5 text-[#6B6560]" />
+              <p className="text-sm text-[#6B6560]">
                 Standaard beschikbaar bij zowel flexibele als vaste capaciteit. Geen meerkosten.
               </p>
             </div>
@@ -132,7 +132,7 @@ export function ChameleonConcept() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

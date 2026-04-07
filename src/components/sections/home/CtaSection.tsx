@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function CtaSection() {
   return (
-    <section id="contact" className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section id="contact" className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       {/* Subtle radial gradient for warmth without breaking flow */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -28,7 +28,7 @@ export function CtaSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-8 text-base md:text-lg text-[#6B6B6B] leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-8 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto">
               Wij kijken samen naar je situatie en vertellen je binnen 24 uur welk
               model bij jou past. Geen verkooppraatje, een concreet voorstel.
             </p>

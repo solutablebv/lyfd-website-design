@@ -31,7 +31,7 @@ function FaqAccordionItem({
 }) {
   return (
     <ScrollReveal delay={index * 0.05}>
-      <div className="border-b border-[#EBEBEB] last:border-b-0">
+      <div className="border-b border-[#E8E5E0] last:border-b-0">
         <button
           onClick={onToggle}
           className="group flex items-start justify-between w-full py-6 md:py-7 text-left cursor-pointer"
@@ -40,10 +40,10 @@ function FaqAccordionItem({
           <span className="text-lg font-semibold text-[#1A1A1A] tracking-tight pr-8 leading-snug">
             {item.question}
           </span>
-          <span className="flex-shrink-0 mt-0.5 w-8 h-8 rounded-full bg-[#F0F0F0] flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:bg-[#E8E8E8]">
+          <span className="flex-shrink-0 mt-0.5 w-8 h-8 rounded-full bg-[#F2F0ED] flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:bg-[#E5E0DA]">
             <Plus
               weight="bold"
-              className={`w-3.5 h-3.5 text-[#6B6B6B] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:text-[#2A2A2A] ${
+              className={`w-3.5 h-3.5 text-[#6B6560] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:text-[#2A2A2A] ${
                 isOpen ? "rotate-45" : "rotate-0"
               }`}
             />
@@ -62,7 +62,7 @@ function FaqAccordionItem({
               }}
               className="overflow-hidden"
             >
-              <p className="pb-6 md:pb-7 text-sm md:text-base text-[#404040] leading-relaxed max-w-[65ch]">
+              <p className="pb-6 md:pb-7 text-sm md:text-base text-[#3D3A37] leading-relaxed max-w-[65ch]">
                 {item.answer}
               </p>
             </motion.div>
@@ -77,9 +77,9 @@ export function FaqSection({ title, items, closingText }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative bg-white py-32 md:py-44">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto">
@@ -108,7 +108,7 @@ export function FaqSection({ title, items, closingText }: FaqSectionProps) {
 
           {closingText && (
             <ScrollReveal delay={0.2}>
-              <p className="mt-12 md:mt-16 text-sm text-[#A0A0A0] leading-relaxed text-center max-w-[60ch] mx-auto font-mono">
+              <p className="mt-12 md:mt-16 text-sm text-[#9C9690] leading-relaxed text-center max-w-[60ch] mx-auto font-mono">
                 {closingText}
               </p>
             </ScrollReveal>

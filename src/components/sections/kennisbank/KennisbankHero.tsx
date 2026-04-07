@@ -8,9 +8,9 @@ import { MagnifyingGlass } from "@phosphor-icons/react";
 
 export function KennisbankHero() {
   return (
-    <section className="relative bg-white pt-36 md:pt-44 pb-20 md:pb-28 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] pt-36 md:pt-44 pb-20 md:pb-28 overflow-hidden">
       {/* Top gradient (seamless header blend) */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent z-[2] pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#FDFCFA] to-transparent z-[2] pointer-events-none" />
 
       <Container className="relative z-10" style={{ textShadow: '0 1px 8px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.5)' }}>
         <div className="max-w-3xl">
@@ -48,7 +48,7 @@ export function KennisbankHero() {
             initial={{ opacity: 0, y: 32, filter: "blur(6px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.35 }}
-            className="mt-5 text-base md:text-lg text-[#404040] leading-relaxed max-w-[55ch]"
+            className="mt-5 text-base md:text-lg text-[#3D3A37] leading-relaxed max-w-[55ch]"
           >
             Praktische gidsen, uitleg en inzichten voor liftbedrijven en
             liftmonteurs. Geschreven door mensen die de branche kennen.
@@ -64,13 +64,13 @@ export function KennisbankHero() {
             <div className="relative">
               <MagnifyingGlass
                 weight="regular"
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#A0A0A0]"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#9C9690]"
               />
               <input
                 type="text"
                 placeholder="Zoek in de kennisbank..."
                 readOnly
-                className="w-full rounded-full border border-[#EBEBEB] bg-white py-3 pl-12 pr-5 text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] outline-none transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] focus:border-[#DCDCDC] focus:shadow-[0_2px_12px_rgba(0,0,0,0.04)] cursor-default"
+                className="w-full rounded-full border border-[#E8E5E0] bg-[#FDFCFA] py-3 pl-12 pr-5 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] outline-none transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] focus:border-[#D9D4CE] focus:shadow-[0_2px_12px_rgba(0,0,0,0.04)] cursor-default"
               />
             </div>
           </motion.div>
@@ -78,7 +78,7 @@ export function KennisbankHero() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white z-[2] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA] z-[2] pointer-events-none" />
     </section>
   );
 }

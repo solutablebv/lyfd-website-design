@@ -35,8 +35,8 @@ export function CookieBanner() {
           transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
           className="fixed bottom-4 left-4 right-4 z-50 flex justify-center pointer-events-none"
         >
-          <div className="pointer-events-auto w-full max-w-2xl bg-white border border-[#EBEBEB] rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] p-6">
-            <p className="text-sm text-[#404040] leading-relaxed">
+          <div className="pointer-events-auto w-full max-w-2xl bg-[#FDFCFA] border border-[#E8E5E0] rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] p-6">
+            <p className="text-sm text-[#3D3A37] leading-relaxed">
               LYFD gebruikt cookies om je ervaring te verbeteren en onze website
               te analyseren.
             </p>

@@ -150,7 +150,7 @@ interface ContactForm {
 }
 
 const cardClass =
-  "relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]";
+  "relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]";
 
 const stepTransition = {
   initial: { opacity: 0, y: 20 },
@@ -263,12 +263,12 @@ export function SalarisQuiz() {
   };
 
   const inputClasses =
-    "w-full rounded-xl border border-[#EBEBEB] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] focus:outline-none focus:border-[#2A2A2A] focus:ring-1 focus:ring-[#2A2A2A]/10 transition-colors duration-300";
+    "w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] focus:outline-none focus:border-[#2A2A2A] focus:ring-1 focus:ring-[#2A2A2A]/10 transition-colors duration-300";
 
   return (
     <section
       id="salaris-quiz"
-      className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden"
+      className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden"
     >
       {/* Subtle background mesh */}
       <div
@@ -286,7 +286,7 @@ export function SalarisQuiz() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Ontdek je marktwaarde als liftmonteur
             </h2>
-            <p className="mt-5 text-sm md:text-base text-[#404040] leading-relaxed">
+            <p className="mt-5 text-sm md:text-base text-[#3D3A37] leading-relaxed">
               Beantwoord 5 korte vragen en ontvang direct een indicatie van je
               verdiensten. Bij LYFD verdien je gegarandeerd 10-15% boven CAO
               Metalektro.
@@ -297,7 +297,7 @@ export function SalarisQuiz() {
         {/* Step indicators with progress line */}
         <ScrollReveal delay={0.1}>
           <div className="mt-12 md:mt-16 relative flex items-center justify-center gap-2 md:gap-3 flex-wrap">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-4rem)] h-px bg-[#EBEBEB] hidden md:block" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-4rem)] h-px bg-[#E8E5E0] hidden md:block" />
             <div
               className="absolute top-1/2 left-1/2 -translate-y-1/2 h-px bg-[#1A1A1A] hidden md:block transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] origin-left"
               style={{
@@ -324,8 +324,8 @@ export function SalarisQuiz() {
                       isActive
                         ? "bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
                         : isAccessible
-                          ? "bg-white text-[#6B6B6B] border border-[#EBEBEB] hover:border-[#C0C0C0] cursor-pointer"
-                          : "bg-white text-[#C0C0C0] border border-[#EBEBEB] cursor-not-allowed"
+                          ? "bg-[#FDFCFA] text-[#6B6560] border border-[#E8E5E0] hover:border-[#C0C0C0] cursor-pointer"
+                          : "bg-[#FDFCFA] text-[#C0C0C0] border border-[#E8E5E0] cursor-not-allowed"
                     }
                   `}
                 >
@@ -347,7 +347,7 @@ export function SalarisQuiz() {
             {/* ── Stap 1: Ervaring ────────────────────────── */}
             {activeStep === 0 && (
               <motion.div key="step-0" {...stepTransition} className={cardClass}>
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 1/{TOTAL_STEPS}
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
@@ -367,15 +367,15 @@ export function SalarisQuiz() {
                         ervaring: parseInt(e.target.value),
                       }))
                     }
-                    className="flex-1 h-2 bg-[#EBEBEB] rounded-full appearance-none cursor-pointer accent-[#1A1A1A] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#1A1A1A] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer"
+                    className="flex-1 h-2 bg-[#E8E5E0] rounded-full appearance-none cursor-pointer accent-[#1A1A1A] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#1A1A1A] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer"
                   />
-                  <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-[#F0F0F0] flex items-center justify-center">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-[#F2F0ED] flex items-center justify-center">
                     <span className="text-2xl font-bold text-[#1A1A1A] font-mono">
                       {quiz.ervaring}
                     </span>
                   </div>
                 </div>
-                <p className="mt-2 text-xs text-[#A0A0A0]">
+                <p className="mt-2 text-xs text-[#9C9690]">
                   {quiz.ervaring === 0
                     ? "Geen ervaring"
                     : quiz.ervaring === 15
@@ -403,7 +403,7 @@ export function SalarisQuiz() {
                           ${
                             isSelected
                               ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                              : "border-[#EBEBEB] bg-white hover:border-[#C0C0C0]"
+                              : "border-[#E8E5E0] bg-[#FDFCFA] hover:border-[#C0C0C0]"
                           }
                         `}
                       >
@@ -412,7 +412,7 @@ export function SalarisQuiz() {
                         </span>
                         <span
                           className={`block mt-1 text-[10px] ${
-                            isSelected ? "text-white/70" : "text-[#A0A0A0]"
+                            isSelected ? "text-white/70" : "text-[#9C9690]"
                           }`}
                         >
                           {el.sub}
@@ -437,7 +437,7 @@ export function SalarisQuiz() {
             {/* ── Stap 2: Certificeringen ─────────────────── */}
             {activeStep === 1 && (
               <motion.div key="step-1" {...stepTransition} className={cardClass}>
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 2/{TOTAL_STEPS}
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
@@ -459,7 +459,7 @@ export function SalarisQuiz() {
                           ${
                             isSelected
                               ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                              : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                              : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                           }
                         `}
                       >
@@ -468,8 +468,8 @@ export function SalarisQuiz() {
                           w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-all duration-200
                           ${
                             isSelected
-                              ? "bg-white border-white"
-                              : "border-[#DCDCDC] bg-white"
+                              ? "bg-[#FDFCFA] border-white"
+                              : "border-[#D9D4CE] bg-[#FDFCFA]"
                           }
                         `}
                         >
@@ -509,7 +509,7 @@ export function SalarisQuiz() {
             {/* ── Stap 3: Werktype ─────────────────────────── */}
             {activeStep === 2 && (
               <motion.div key="step-2" {...stepTransition} className={cardClass}>
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 3/{TOTAL_STEPS}
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
@@ -534,7 +534,7 @@ export function SalarisQuiz() {
                           ${
                             isSelected
                               ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                              : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                              : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                           }
                         `}
                       >
@@ -573,7 +573,7 @@ export function SalarisQuiz() {
             {/* ── Stap 4: Regio ────────────────────────────── */}
             {activeStep === 3 && (
               <motion.div key="step-3" {...stepTransition} className={cardClass}>
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 4/{TOTAL_STEPS}
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
@@ -597,7 +597,7 @@ export function SalarisQuiz() {
                           ${
                             isSelected
                               ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                              : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                              : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                           }
                         `}
                       >
@@ -630,7 +630,7 @@ export function SalarisQuiz() {
             {/* ── Stap 5: Werksituatie ─────────────────────── */}
             {activeStep === 4 && (
               <motion.div key="step-4" {...stepTransition} className={cardClass}>
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 5/{TOTAL_STEPS}
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
@@ -657,7 +657,7 @@ export function SalarisQuiz() {
                           ${
                             isSelected
                               ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                              : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                              : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                           }
                         `}
                       >
@@ -755,14 +755,14 @@ export function SalarisQuiz() {
                   <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-2">
                     Wil je weten wat LYFD concreet voor jou kan betekenen?
                   </h3>
-                  <p className="text-sm text-[#6B6B6B] mb-6">
+                  <p className="text-sm text-[#6B6560] mb-6">
                     Laat je gegevens achter en we nemen binnen 2 werkdagen
                     contact op.
                   </p>
 
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-2">
+                      <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
                         Naam *
                       </label>
                       <input
@@ -776,7 +776,7 @@ export function SalarisQuiz() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-2">
+                      <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
                         Telefoonnummer *
                       </label>
                       <input
@@ -793,7 +793,7 @@ export function SalarisQuiz() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-2">
+                      <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
                         Email *
                       </label>
                       <input
@@ -815,7 +815,7 @@ export function SalarisQuiz() {
                       <div
                         className={`
                           w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all duration-200 flex-shrink-0 mt-0.5
-                          ${form.belMij ? "bg-[#1A1A1A] border-[#1A1A1A]" : "border-[#DCDCDC] bg-white"}
+                          ${form.belMij ? "bg-[#1A1A1A] border-[#1A1A1A]" : "border-[#D9D4CE] bg-[#FDFCFA]"}
                         `}
                         onClick={() =>
                           setForm((prev) => ({ ...prev, belMij: !prev.belMij }))
@@ -829,7 +829,7 @@ export function SalarisQuiz() {
                         )}
                       </div>
                       <span
-                        className="text-sm text-[#404040]"
+                        className="text-sm text-[#3D3A37]"
                         onClick={() =>
                           setForm((prev) => ({ ...prev, belMij: !prev.belMij }))
                         }
@@ -842,7 +842,7 @@ export function SalarisQuiz() {
                       <div
                         className={`
                           w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all duration-200 flex-shrink-0 mt-0.5
-                          ${form.privacy ? "bg-[#1A1A1A] border-[#1A1A1A]" : "border-[#DCDCDC] bg-white"}
+                          ${form.privacy ? "bg-[#1A1A1A] border-[#1A1A1A]" : "border-[#D9D4CE] bg-[#FDFCFA]"}
                         `}
                         onClick={() =>
                           setForm((prev) => ({
@@ -859,7 +859,7 @@ export function SalarisQuiz() {
                         )}
                       </div>
                       <span
-                        className="text-sm text-[#404040]"
+                        className="text-sm text-[#3D3A37]"
                         onClick={() =>
                           setForm((prev) => ({
                             ...prev,

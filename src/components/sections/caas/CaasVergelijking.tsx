@@ -79,13 +79,13 @@ function getCellColor(value: string): string {
 
   if (positiveValues.includes(value)) return "text-[#059669] font-medium";
   if (negativeValues.includes(value)) return "text-[#DC2626] font-medium";
-  if (neutralValues.includes(value)) return "text-[#A0A0A0]";
-  return "text-[#404040]";
+  if (neutralValues.includes(value)) return "text-[#9C9690]";
+  return "text-[#3D3A37]";
 }
 
 export function CaasVergelijking() {
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -100,7 +100,7 @@ export function CaasVergelijking() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          className="object-cover contrast-[1.05] brightness-[1.1] opacity-[0.05]"
           loading="lazy"
         />
       </div>
@@ -124,19 +124,19 @@ export function CaasVergelijking() {
         <ScrollReveal delay={0.2}>
           <div className="mt-14 md:mt-20 -mx-4 sm:mx-0">
             <div className="overflow-x-auto px-4 sm:px-0">
-              <table className="w-full min-w-[640px] border-collapse bg-white rounded-2xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)] border border-[#EBEBEB]">
+              <table className="w-full min-w-[640px] border-collapse bg-[#FDFCFA] rounded-2xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)] border border-[#E8E5E0]">
                 <thead>
-                  <tr className="bg-[#F8F8F8]">
-                    <th className="text-left text-xs font-semibold text-[#6B6B6B] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#EBEBEB]">
+                  <tr className="bg-[#F5F3F0]">
+                    <th className="text-left text-xs font-semibold text-[#6B6560] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#E8E5E0]">
                       Criterium
                     </th>
-                    <th className="text-left text-xs font-semibold text-[#6B6B6B] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#EBEBEB]">
+                    <th className="text-left text-xs font-semibold text-[#6B6560] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#E8E5E0]">
                       Zzp
                     </th>
-                    <th className="text-left text-xs font-semibold text-[#6B6B6B] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#EBEBEB]">
+                    <th className="text-left text-xs font-semibold text-[#6B6560] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#E8E5E0]">
                       Uitzendbureau
                     </th>
-                    <th className="text-left text-xs font-semibold text-[#1A1A1A] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#EBEBEB] bg-[#F0F0F0]">
+                    <th className="text-left text-xs font-semibold text-[#1A1A1A] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#E8E5E0] bg-[#F2F0ED]">
                       LYFD CaaS
                     </th>
                   </tr>
@@ -147,7 +147,7 @@ export function CaasVergelijking() {
                       key={row.criterium}
                       className={
                         index < rows.length - 1
-                          ? "border-b border-[#EBEBEB]"
+                          ? "border-b border-[#E8E5E0]"
                           : ""
                       }
                     >
@@ -165,7 +165,7 @@ export function CaasVergelijking() {
                         {row.uitzend}
                       </td>
                       <td
-                        className={`py-4 px-5 text-sm bg-[#FAFAFA] ${getCellColor(row.caas)}`}
+                        className={`py-4 px-5 text-sm bg-[#F8F6F3] ${getCellColor(row.caas)}`}
                       >
                         {row.caas}
                       </td>
@@ -179,7 +179,7 @@ export function CaasVergelijking() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

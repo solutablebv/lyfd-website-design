@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export function AcademyHero() {
   return (
-    <section className="relative min-h-[90dvh] bg-white overflow-hidden flex items-center">
+    <section className="relative min-h-[90dvh] bg-[#FDFCFA] overflow-hidden flex items-center">
       {/* Background image */}
       <div className="absolute inset-0" aria-hidden="true">
         <div
@@ -27,17 +27,17 @@ export function AcademyHero() {
             alt=""
             fill
             sizes="100vw"
-            className="object-cover object-center opacity-40 grayscale"
+            className="object-cover object-center opacity-40"
             priority
           />
         </div>
       </div>
 
       {/* Top gradient (seamless header blend) */}
-      <div className="absolute top-0 left-0 right-0 h-56 bg-gradient-to-b from-white via-white/80 to-transparent z-[2] pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-56 bg-gradient-to-b from-[#FDFCFA] via-[#FDFCFA]/80 to-transparent z-[2] pointer-events-none" />
 
       {/* Bottom gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white via-white/60 to-transparent z-[2] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#FDFCFA] via-[#FDFCFA]/60 to-transparent z-[2] pointer-events-none" />
 
       <Container className="relative z-10 py-32 md:py-0">
         <div className="max-w-4xl mx-auto text-center">
@@ -65,7 +65,7 @@ export function AcademyHero() {
             initial={{ opacity: 0, y: 32, filter: "blur(4px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 1, ease: [0.32, 0.72, 0, 1], delay: 0.5 }}
-            className="mt-8 text-lg md:text-xl text-[#404040] font-medium leading-relaxed max-w-[52ch] mx-auto"
+            className="mt-8 text-lg md:text-xl text-[#3D3A37] font-medium leading-relaxed max-w-[52ch] mx-auto"
           >
             De LYFD Academy leidt je op tot gecertificeerd liftmonteur.
             Geen ervaring nodig. Wel lef.

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <section className="bg-white pt-32 md:pt-40 pb-20 md:pb-28">
+    <section className="bg-[#FDFCFA] pt-32 md:pt-40 pb-20 md:pb-28">
       <Container>
         <ScrollReveal>
           <div className="max-w-3xl mx-auto">

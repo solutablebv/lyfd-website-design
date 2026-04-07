@@ -46,9 +46,9 @@ const routes = [
 
 export function EngagementModellen() {
   return (
-    <section className="relative bg-white py-32 md:py-44">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto text-center">
@@ -59,7 +59,7 @@ export function EngagementModellen() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="mt-5 text-base md:text-lg text-[#404040] leading-relaxed">
+            <p className="mt-5 text-base md:text-lg text-[#3D3A37] leading-relaxed">
               Twee heldere routes naar capaciteit. Geen vier modellen, geen complexe matrix. Kies wat past bij jouw situatie.
             </p>
           </ScrollReveal>
@@ -73,12 +73,12 @@ export function EngagementModellen() {
             const Icon = route.icon;
             return (
               <StaggerItem key={route.label}>
-                <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
                       <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
                     </div>
-                    <span className="text-xs uppercase tracking-[0.15em] font-medium text-[#A0A0A0]">
+                    <span className="text-xs uppercase tracking-[0.15em] font-medium text-[#9C9690]">
                       {route.label}
                     </span>
                   </div>
@@ -86,7 +86,7 @@ export function EngagementModellen() {
                   <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                     {route.title}
                   </h3>
-                  <p className="text-sm text-[#404040] leading-relaxed mb-6">
+                  <p className="text-sm text-[#3D3A37] leading-relaxed mb-6">
                     {route.description}
                   </p>
 
@@ -97,14 +97,14 @@ export function EngagementModellen() {
                           weight="fill"
                           className="w-4.5 h-4.5 text-[#2A2A2A] flex-shrink-0 mt-0.5"
                         />
-                        <span className="text-sm text-[#404040] leading-relaxed">
+                        <span className="text-sm text-[#3D3A37] leading-relaxed">
                           {voordeel}
                         </span>
                       </li>
                     ))}
                   </ul>
 
-                  <p className="text-xs text-[#6B6B6B] leading-relaxed pt-4 border-t border-[#EBEBEB]">
+                  <p className="text-xs text-[#6B6560] leading-relaxed pt-4 border-t border-[#E8E5E0]">
                     {route.geschiktVoor}
                   </p>
                 </div>

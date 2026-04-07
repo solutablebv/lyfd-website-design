@@ -30,7 +30,7 @@ export function NewsletterCta() {
   }
 
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
       {/* Top gradient blend */}
       <div className="absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
 
@@ -43,7 +43,7 @@ export function NewsletterCta() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-5 text-base text-[#404040] leading-relaxed max-w-[50ch] mx-auto">
+            <p className="mt-5 text-base text-[#3D3A37] leading-relaxed max-w-[50ch] mx-auto">
               Ontvang praktische inzichten over capaciteitsmanagement,
               certificering en het CaaS-model. Geen spam, alleen vakinhoud.
             </p>
@@ -52,11 +52,11 @@ export function NewsletterCta() {
           <ScrollReveal delay={0.2}>
             {success ? (
               <div className="mt-8 flex items-center justify-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#F0F0F0] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[#F2F0ED] flex items-center justify-center">
                   <CheckCircle weight="fill" className="w-5 h-5 text-[#2A2A2A]" />
                 </div>
                 <p className="text-sm font-medium text-[#1A1A1A]">
-                  Je bent aangemeld!
+                  Je bent erbij. Alleen vakinhoud, geen spam. Beloofd.
                 </p>
               </div>
             ) : (
@@ -73,7 +73,7 @@ export function NewsletterCta() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={loading}
-                    className="flex-1 rounded-full border border-[#EBEBEB] bg-white py-3 px-5 text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] outline-none transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] focus:border-[#DCDCDC] focus:shadow-[0_2px_12px_rgba(0,0,0,0.04)] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 rounded-full border border-[#E8E5E0] bg-[#FDFCFA] py-3 px-5 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] outline-none transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] focus:border-[#D9D4CE] focus:shadow-[0_2px_12px_rgba(0,0,0,0.04)] disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                   <Button
                     type="submit"

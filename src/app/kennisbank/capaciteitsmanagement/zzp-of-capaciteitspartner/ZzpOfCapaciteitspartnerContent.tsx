@@ -14,18 +14,18 @@ const tocItems = [
 
 export function ZzpOfCapaciteitspartnerContent() {
   return (
-    <section className="relative bg-white pb-20 md:pb-28">
+    <section className="relative bg-[#FDFCFA] pb-20 md:pb-28">
       <Container>
         <div className="relative flex justify-center gap-16">
           <article className="w-full max-w-[720px]">
             <div className="prose-lyfd">
               {/* Definitie-blok (AEO-geoptimaliseerd) */}
               <ScrollReveal>
-                <div className="relative bg-[#F8F8F8] rounded-lg border-l-2 border-[#2A2A2A] px-6 py-5 mb-10">
-                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#EBEBEB] text-[#6B6B6B] mb-3">
+                <div className="relative bg-[#F5F3F0] rounded-lg border-l-2 border-[#A0704C] px-6 py-5 mb-10">
+                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#E8E5E0] text-[#6B6560] mb-3">
                     Definitie
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-[#404040] m-0">
+                  <p className="text-[0.9375rem] leading-relaxed text-[#3D3A37] m-0">
                     <strong className="text-[#1A1A1A]">Een capaciteitspartner</strong> is een
                     gespecialiseerde dienstverlener die structureel monteurscapaciteit levert
                     aan liftbedrijven, inclusief certificering, gereedschap, vervangingsgarantie
@@ -148,38 +148,38 @@ export function ZzpOfCapaciteitspartnerContent() {
                         <th className="text-left py-3 font-semibold text-[#1A1A1A]">CaaS (LYFD)</th>
                       </tr>
                     </thead>
-                    <tbody className="text-[#404040]">
-                      <tr className="border-b border-[#EBEBEB]">
+                    <tbody className="text-[#3D3A37]">
+                      <tr className="border-b border-[#E8E5E0]">
                         <td className="py-3 pr-4 font-medium">Uurtarief</td>
                         <td className="py-3 pr-4">EUR 45 - 70</td>
                         <td className="py-3">Vanaf EUR 64,99</td>
                       </tr>
-                      <tr className="border-b border-[#EBEBEB]">
+                      <tr className="border-b border-[#E8E5E0]">
                         <td className="py-3 pr-4 font-medium">Certificeringskosten</td>
                         <td className="py-3 pr-4">Jij controleert en faciliteert</td>
                         <td className="py-3">Inbegrepen</td>
                       </tr>
-                      <tr className="border-b border-[#EBEBEB]">
+                      <tr className="border-b border-[#E8E5E0]">
                         <td className="py-3 pr-4 font-medium">Gereedschap en PBM&apos;s</td>
                         <td className="py-3 pr-4">Vaak van jou (DBA-risico)</td>
                         <td className="py-3">Van LYFD</td>
                       </tr>
-                      <tr className="border-b border-[#EBEBEB]">
+                      <tr className="border-b border-[#E8E5E0]">
                         <td className="py-3 pr-4 font-medium">Vervanging bij uitval</td>
                         <td className="py-3 pr-4">Niet gegarandeerd</td>
                         <td className="py-3">Vervangingsgarantie</td>
                       </tr>
-                      <tr className="border-b border-[#EBEBEB]">
+                      <tr className="border-b border-[#E8E5E0]">
                         <td className="py-3 pr-4 font-medium">DBA-compliance</td>
                         <td className="py-3 pr-4">Jouw risico</td>
                         <td className="py-3">LYFD draagt het</td>
                       </tr>
-                      <tr className="border-b border-[#EBEBEB]">
+                      <tr className="border-b border-[#E8E5E0]">
                         <td className="py-3 pr-4 font-medium">Administratie</td>
                         <td className="py-3 pr-4">Per monteur apart</td>
                         <td className="py-3">Eenvoudige facturering</td>
                       </tr>
-                      <tr className="border-b border-[#EBEBEB]">
+                      <tr className="border-b border-[#E8E5E0]">
                         <td className="py-3 pr-4 font-medium">Onboarding en inwerktijd</td>
                         <td className="py-3 pr-4">1 - 3 dagen per monteur</td>
                         <td className="py-3">Minimaal (branchekennis)</td>
@@ -410,11 +410,11 @@ export function ZzpOfCapaciteitspartnerContent() {
             </div>
 
             {/* Article closing CTA */}
-            <div className="mt-16 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10">
+            <div className="mt-16 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-8 md:p-10">
               <p className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
                 Wil je de vergelijking voor jouw situatie doorrekenen?
               </p>
-              <p className="mt-2 text-sm text-[#404040] leading-relaxed max-w-[50ch]">
+              <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed max-w-[50ch]">
                 Wij rekenen het samen door, specifiek voor jouw bedrijf.
               </p>
               <a
@@ -422,7 +422,7 @@ export function ZzpOfCapaciteitspartnerContent() {
                 className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300"
               >
                 Plan een gesprek
-                <span className="text-[#A0A0A0]">&rarr;</span>
+                <span className="text-[#9C9690]">&rarr;</span>
               </a>
             </div>
           </article>

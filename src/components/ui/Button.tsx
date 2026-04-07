@@ -26,9 +26,9 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondary:
     "bg-[#2A2A2A] text-white hover:bg-[#383838] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
   ghost:
-    "bg-transparent text-[#1A1A1A] border border-[#DCDCDC] hover:bg-[#F5F5F5] hover:border-[#C0C0C0] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
+    "bg-transparent text-[#1A1A1A] border border-[#D9D4CE] hover:bg-[#F5F5F5] hover:border-[#C0C0C0] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
   white:
-    "bg-white text-[#1A1A1A] hover:bg-[#F5F5F5] hover:shadow-[0_4px_16px_rgba(255,255,255,0.15)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
+    "bg-[#FDFCFA] text-[#1A1A1A] hover:bg-[#F5F5F5] hover:shadow-[0_4px_16px_rgba(255,255,255,0.15)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

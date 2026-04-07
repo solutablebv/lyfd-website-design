@@ -66,7 +66,7 @@ function AnimatedIcon({
 
 export function PlatformBeforeAfter() {
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
 
       <Container>
@@ -97,7 +97,7 @@ export function PlatformBeforeAfter() {
                   <StaggerItem key={item}>
                     <div className="flex items-start gap-3">
                       <AnimatedIcon type="x" delay={index * 0.08} />
-                      <span className="text-base font-medium text-[#404040] leading-relaxed">
+                      <span className="text-base font-medium text-[#3D3A37] leading-relaxed">
                         {item}
                       </span>
                     </div>
@@ -122,7 +122,7 @@ export function PlatformBeforeAfter() {
                   <StaggerItem key={item}>
                     <div className="flex items-start gap-3">
                       <AnimatedIcon type="check" delay={index * 0.08} />
-                      <span className="text-base font-medium text-[#404040] leading-relaxed">
+                      <span className="text-base font-medium text-[#3D3A37] leading-relaxed">
                         {item}
                       </span>
                     </div>

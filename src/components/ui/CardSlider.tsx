@@ -46,7 +46,7 @@ export function CardSlider({ children, className }: CardSliderProps) {
       <div className="absolute top-1/2 -translate-y-1/2 left-2 z-20 opacity-0 group-hover/slider:opacity-100 transition-opacity duration-300">
         <button
           onClick={() => scrollTo("left")}
-          className="h-12 w-12 rounded-full bg-white/80 backdrop-blur-md border border-[#EBEBEB] shadow-[0_2px_8px_rgba(0,0,0,0.06)] flex items-center justify-center hover:bg-white hover:scale-110 transition-all active:scale-95"
+          className="h-12 w-12 rounded-full bg-[#FDFCFA]/80 backdrop-blur-md border border-[#E8E5E0] shadow-[0_2px_8px_rgba(0,0,0,0.06)] flex items-center justify-center hover:bg-[#FDFCFA] hover:scale-110 transition-all active:scale-95"
           aria-label="Scroll links"
         >
           <CaretLeft weight="bold" className="w-5 h-5 text-[#1A1A1A]" />
@@ -57,7 +57,7 @@ export function CardSlider({ children, className }: CardSliderProps) {
       <div className="absolute top-1/2 -translate-y-1/2 right-2 z-20 opacity-0 group-hover/slider:opacity-100 transition-opacity duration-300">
         <button
           onClick={() => scrollTo("right")}
-          className="h-12 w-12 rounded-full bg-white/80 backdrop-blur-md border border-[#EBEBEB] shadow-[0_2px_8px_rgba(0,0,0,0.06)] flex items-center justify-center hover:bg-white hover:scale-110 transition-all active:scale-95"
+          className="h-12 w-12 rounded-full bg-[#FDFCFA]/80 backdrop-blur-md border border-[#E8E5E0] shadow-[0_2px_8px_rgba(0,0,0,0.06)] flex items-center justify-center hover:bg-[#FDFCFA] hover:scale-110 transition-all active:scale-95"
           aria-label="Scroll rechts"
         >
           <CaretRight weight="bold" className="w-5 h-5 text-[#1A1A1A]" />
@@ -65,8 +65,8 @@ export function CardSlider({ children, className }: CardSliderProps) {
       </div>
 
       {/* Edge fades */}
-      <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-16 bg-gradient-to-r from-white to-transparent" />
-      <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-16 bg-gradient-to-l from-white to-transparent" />
+      <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-16 bg-gradient-to-r from-[#FDFCFA] to-transparent" />
+      <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-16 bg-gradient-to-l from-[#FDFCFA] to-transparent" />
 
       <motion.div
         ref={containerRef}

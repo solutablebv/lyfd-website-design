@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/sections/home/HeroSection";
+import { LiveIndicator } from "@/components/sections/home/LiveIndicator";
 import { ProblemSection } from "@/components/sections/home/ProblemSection";
 import { UrbanShowcase } from "@/components/sections/home/UrbanShowcase";
 import { GuideSection } from "@/components/sections/home/GuideSection";
@@ -123,6 +124,7 @@ export default function HomePage() {
         }}
       />
       <HeroSection />
+      <LiveIndicator />
       <ProblemSection />
       <UrbanShowcase />
       <GuideSection />

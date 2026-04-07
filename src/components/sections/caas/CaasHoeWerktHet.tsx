@@ -32,7 +32,7 @@ const steps = [
 
 export function CaasHoeWerktHet() {
   return (
-    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -47,13 +47,13 @@ export function CaasHoeWerktHet() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          className="object-cover contrast-[1.05] brightness-[1.1] opacity-[0.05]"
           loading="lazy"
         />
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="text-center max-w-2xl mx-auto">
@@ -85,7 +85,7 @@ export function CaasHoeWerktHet() {
                       {step.number}
                     </span>
                     {/* Step dot on the connecting line */}
-                    <div className="hidden md:flex absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-2 border-[#2A2A2A] items-center justify-center">
+                    <div className="hidden md:flex absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#FDFCFA] border-2 border-[#2A2A2A] items-center justify-center">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#2A2A2A]" />
                     </div>
                   </div>
@@ -94,7 +94,7 @@ export function CaasHoeWerktHet() {
                 <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-sm text-[#404040] leading-relaxed max-w-[38ch] mx-auto md:mx-0">
+                <p className="mt-3 text-sm text-[#3D3A37] leading-relaxed max-w-[38ch] mx-auto md:mx-0">
                   {step.description}
                 </p>
               </div>

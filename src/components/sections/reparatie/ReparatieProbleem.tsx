@@ -40,21 +40,21 @@ const painPoints = [
 
 export function ReparatieProbleem() {
   return (
-    <section className="relative bg-white py-32 md:py-44">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <Image
           src="/urban-atrium-lift.jpg"
           alt=""
           fill
-          className="object-cover opacity-[0.05] grayscale"
+          className="object-cover opacity-[0.05]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCFA] via-transparent to-[#FDFCFA]" />
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto">
@@ -68,7 +68,7 @@ export function ReparatieProbleem() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-8 md:mt-10 text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[55ch] mx-auto">
+            <p className="mt-8 md:mt-10 text-base md:text-lg text-[#3D3A37] leading-relaxed text-center max-w-[55ch] mx-auto">
               Kapotte sensorlijsten, versleten deurrubbers, defecte besturingsonderdelen. Het hoort niet bij een modernisering, maar het past ook niet meer in de reguliere service. Het blijft liggen. En elke dag dat het blijft liggen, stijgt het risico op storingen.
             </p>
           </ScrollReveal>
@@ -83,15 +83,15 @@ export function ReparatieProbleem() {
             const Icon = point.icon;
             return (
               <StaggerItem key={point.title}>
-                <div className="rounded-2xl bg-white border border-[#EBEBEB] p-5 md:p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
-                    <Icon weight="light" className="w-5 h-5 text-[#6B6B6B]" />
+                <div className="rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-5 md:p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
+                    <Icon weight="light" className="w-5 h-5 text-[#6B6560]" />
                   </div>
                   <div className="pt-1">
                     <p className="text-sm md:text-base font-medium text-[#1A1A1A] leading-snug">
                       {point.title}
                     </p>
-                    <p className="mt-1 text-sm text-[#6B6B6B] leading-relaxed">
+                    <p className="mt-1 text-sm text-[#6B6560] leading-relaxed">
                       {point.description}
                     </p>
                   </div>

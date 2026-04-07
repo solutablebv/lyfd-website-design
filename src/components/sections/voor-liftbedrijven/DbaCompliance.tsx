@@ -25,9 +25,9 @@ const risicos = [
 
 export function DbaCompliance() {
   return (
-    <section className="relative bg-white py-32 md:py-44">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto">
@@ -41,7 +41,7 @@ export function DbaCompliance() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-6 text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#3D3A37] leading-relaxed text-center max-w-[55ch] mx-auto">
               De Wet DBA wordt strenger gehandhaafd. Wie nu nog met schijnzelfstandigen werkt, loopt een concreet financieel risico. LYFD neemt dat risico volledig weg.
             </p>
           </ScrollReveal>
@@ -55,16 +55,16 @@ export function DbaCompliance() {
               const Icon = risico.icon;
               return (
                 <StaggerItem key={risico.title}>
-                  <div className="h-full rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-7 md:p-8">
+                  <div className="h-full rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-7 md:p-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-[#EBEBEB]">
-                        <Icon weight="light" className="w-5 h-5 text-[#6B6B6B]" />
+                      <div className="w-10 h-10 rounded-xl bg-[#FDFCFA] flex items-center justify-center border border-[#E8E5E0]">
+                        <Icon weight="light" className="w-5 h-5 text-[#6B6560]" />
                       </div>
                       <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                         {risico.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-[#404040] leading-relaxed">
+                    <p className="text-sm text-[#3D3A37] leading-relaxed">
                       {risico.text}
                     </p>
                   </div>
@@ -94,20 +94,20 @@ export function DbaCompliance() {
 
           {/* Gerelateerde kennisbank artikelen */}
           <ScrollReveal delay={0.3}>
-            <div className="mt-12 md:mt-16 pt-10 border-t border-[#EBEBEB]">
-              <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#A0A0A0] mb-5">Gerelateerd in de kennisbank</p>
+            <div className="mt-12 md:mt-16 pt-10 border-t border-[#E8E5E0]">
+              <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#9C9690] mb-5">Gerelateerd in de kennisbank</p>
               <div className="space-y-3">
-                <Link href="/kennisbank/capaciteitsmanagement/wet-dba-liftbranche/" className="group flex items-center justify-between rounded-xl bg-[#F8F8F8] border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                <Link href="/kennisbank/capaciteitsmanagement/wet-dba-liftbranche/" className="group flex items-center justify-between rounded-xl bg-[#F5F3F0] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                   <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Wet DBA en de liftbranche: wat je moet weten</span>
-                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
                 </Link>
-                <Link href="/kennisbank/capaciteitsmanagement/wat-kost-capaciteitsgebrek/" className="group flex items-center justify-between rounded-xl bg-[#F8F8F8] border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                <Link href="/kennisbank/capaciteitsmanagement/wat-kost-capaciteitsgebrek/" className="group flex items-center justify-between rounded-xl bg-[#F5F3F0] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                   <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Wat kost capaciteitsgebrek een liftbedrijf echt?</span>
-                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
                 </Link>
-                <Link href="/diensten/capacity-as-a-service/" className="group flex items-center justify-between rounded-xl bg-[#F8F8F8] border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                <Link href="/diensten/capacity-as-a-service/" className="group flex items-center justify-between rounded-xl bg-[#F5F3F0] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                   <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Wat is Capacity as a Service?</span>
-                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
                 </Link>
               </div>
             </div>
@@ -116,7 +116,7 @@ export function DbaCompliance() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

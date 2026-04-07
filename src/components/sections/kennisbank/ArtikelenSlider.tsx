@@ -112,7 +112,7 @@ function ArticleCard({ article }: { article: Article }) {
       }}
     >
       <Link href={article.href} className="group block h-full">
-        <div className="h-full rounded-2xl border border-[#EBEBEB] bg-white overflow-hidden transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+        <div className="h-full rounded-2xl border border-[#E8E5E0] bg-[#FDFCFA] overflow-hidden transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
           {/* Image */}
           <div className="relative h-44 overflow-hidden">
             <Image
@@ -120,14 +120,14 @@ function ArticleCard({ article }: { article: Article }) {
               alt={article.title}
               fill
               sizes="320px"
-              className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+              className="object-cover grayscale-[30%] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent opacity-60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#FDFCFA]/80 via-transparent to-transparent opacity-60" />
 
             {/* Category badge */}
             <div className="absolute top-3 left-3">
-              <span className="inline-flex items-center rounded-full px-2.5 py-1 text-[10px] uppercase tracking-[0.15em] font-medium bg-white/80 backdrop-blur-sm text-[#2A2A2A] border border-white/50">
+              <span className="inline-flex items-center rounded-full px-2.5 py-1 text-[10px] uppercase tracking-[0.15em] font-medium bg-[#FDFCFA]/80 backdrop-blur-sm text-[#2A2A2A] border border-white/50">
                 {article.category}
               </span>
             </div>
@@ -139,17 +139,17 @@ function ArticleCard({ article }: { article: Article }) {
               <h3 className="text-base font-semibold leading-snug tracking-tight text-[#1A1A1A] group-hover:text-[#2A2A2A] transition-colors line-clamp-2">
                 {article.title}
               </h3>
-              <p className="mt-2 text-sm text-[#6B6B6B] leading-relaxed line-clamp-3">
+              <p className="mt-2 text-sm text-[#6B6560] leading-relaxed line-clamp-3">
                 {article.description}
               </p>
             </div>
 
-            <div className="pt-4 mt-auto border-t border-[#EBEBEB]/60 flex items-center justify-between">
-              <div className="flex items-center gap-1.5 text-xs text-[#A0A0A0]">
+            <div className="pt-4 mt-auto border-t border-[#E8E5E0]/60 flex items-center justify-between">
+              <div className="flex items-center gap-1.5 text-xs text-[#9C9690]">
                 <BookOpen weight="regular" className="w-3.5 h-3.5" />
                 <span>Kennisbank</span>
               </div>
-              <div className="flex items-center gap-1.5 text-xs font-medium text-[#A0A0A0] bg-[#F0F0F0] px-2.5 py-1 rounded-full">
+              <div className="flex items-center gap-1.5 text-xs font-medium text-[#9C9690] bg-[#F2F0ED] px-2.5 py-1 rounded-full">
                 <Clock weight="regular" className="w-3 h-3" />
                 <span>{article.readTime}</span>
               </div>
@@ -163,7 +163,7 @@ function ArticleCard({ article }: { article: Article }) {
 
 export function ArtikelenSlider() {
   return (
-    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
@@ -171,7 +171,7 @@ export function ArtikelenSlider() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Verdiep je in de liftindustrie
             </h2>
-            <p className="mt-6 text-base md:text-lg text-[#6B6B6B] leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto">
               Praktische artikelen over capaciteitsmanagement, certificering en
               het CaaS-model.
             </p>
@@ -194,7 +194,7 @@ export function ArtikelenSlider() {
           <div className="mt-12 text-center">
             <Link
               href="/kennisbank/"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[#6B6B6B] hover:text-[#1A1A1A] transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-sm font-medium text-[#6B6560] hover:text-[#1A1A1A] transition-colors duration-300"
             >
               Bekijk alle artikelen
               <CaretRight weight="bold" className="w-3.5 h-3.5" />

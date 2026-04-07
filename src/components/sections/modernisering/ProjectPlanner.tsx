@@ -202,7 +202,7 @@ export function ProjectPlanner() {
   }, []);
 
   const inputClasses =
-    "w-full rounded-xl border border-[#EBEBEB] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] focus:outline-none focus:border-[#2A2A2A] focus:ring-1 focus:ring-[#2A2A2A]/10 transition-colors duration-300";
+    "w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] focus:outline-none focus:border-[#2A2A2A] focus:ring-1 focus:ring-[#2A2A2A]/10 transition-colors duration-300";
 
   const totalSteps = 6;
   const progressFraction = activeStep / (totalSteps - 1);
@@ -210,7 +210,7 @@ export function ProjectPlanner() {
   const projectDuration = calculateProjectDuration(config.installationCount, config.schachtStaat);
 
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
       {/* Subtle background mesh */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -227,7 +227,7 @@ export function ProjectPlanner() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               Plan je moderniseringsproject
             </h2>
-            <p className="mt-5 text-sm md:text-base text-[#404040] leading-relaxed">
+            <p className="mt-5 text-sm md:text-base text-[#3D3A37] leading-relaxed">
               Configureer je projectbehoefte. Ontvang binnen 24 uur een projectvoorstel op maat.
             </p>
           </div>
@@ -237,7 +237,7 @@ export function ProjectPlanner() {
         <ScrollReveal delay={0.1}>
           <div className="mt-12 md:mt-16 relative flex items-center justify-center gap-2 md:gap-3 flex-wrap">
             {/* Progress line behind buttons */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-4rem)] h-px bg-[#EBEBEB] hidden md:block" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-4rem)] h-px bg-[#E8E5E0] hidden md:block" />
             <div
               className="absolute top-1/2 left-1/2 -translate-y-1/2 h-px bg-[#1A1A1A] hidden md:block transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] origin-left"
               style={{
@@ -261,7 +261,7 @@ export function ProjectPlanner() {
                     ${
                       isActive
                         ? "bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                        : "bg-white text-[#6B6B6B] border border-[#EBEBEB] hover:border-[#C0C0C0]"
+                        : "bg-[#FDFCFA] text-[#6B6560] border border-[#E8E5E0] hover:border-[#C0C0C0]"
                     }
                   `}
                 >
@@ -285,9 +285,9 @@ export function ProjectPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 1/6
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
@@ -295,7 +295,7 @@ export function ProjectPlanner() {
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-2">
+                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
                       Projectnaam
                     </label>
                     <input
@@ -308,7 +308,7 @@ export function ProjectPlanner() {
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-2">
+                      <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
                         Verwachte startdatum
                       </label>
                       <input
@@ -319,7 +319,7 @@ export function ProjectPlanner() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-2">
+                      <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
                         Opleverdatum
                       </label>
                       <input
@@ -347,9 +347,9 @@ export function ProjectPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 2/6
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
@@ -368,14 +368,14 @@ export function ProjectPlanner() {
                         ${
                           config.type === type.value
                             ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                            : "border-[#EBEBEB] bg-white hover:border-[#C0C0C0]"
+                            : "border-[#E8E5E0] bg-[#FDFCFA] hover:border-[#C0C0C0]"
                         }
                       `}
                     >
                       <span className="block text-sm font-bold">{type.label}</span>
                       <span
                         className={`block mt-1 text-xs ${
-                          config.type === type.value ? "text-white/70" : "text-[#A0A0A0]"
+                          config.type === type.value ? "text-white/70" : "text-[#9C9690]"
                         }`}
                       >
                         {type.sub}
@@ -402,16 +402,16 @@ export function ProjectPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 3/6
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
                   Wat is de omvang van het project?
                 </h3>
                 <div>
-                  <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-4">
+                  <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-4">
                     Aantal installaties
                   </label>
                   <div className="flex items-center gap-6">
@@ -421,22 +421,22 @@ export function ProjectPlanner() {
                       max={20}
                       value={config.installationCount}
                       onChange={(e) => updateConfig("installationCount", parseInt(e.target.value))}
-                      className="flex-1 h-2 bg-[#EBEBEB] rounded-full appearance-none cursor-pointer accent-[#1A1A1A] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#1A1A1A] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer"
+                      className="flex-1 h-2 bg-[#E8E5E0] rounded-full appearance-none cursor-pointer accent-[#1A1A1A] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#1A1A1A] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer"
                     />
-                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-[#F0F0F0] flex items-center justify-center">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-[#F2F0ED] flex items-center justify-center">
                       <span className="text-2xl font-bold text-[#1A1A1A] font-mono">
                         {config.installationCount}
                       </span>
                     </div>
                   </div>
-                  <p className="mt-3 text-xs text-[#A0A0A0]">
+                  <p className="mt-3 text-xs text-[#9C9690]">
                     {config.installationCount === 1
                       ? "1 installatie"
                       : `${config.installationCount} installaties`}
                   </p>
                 </div>
                 <div className="mt-6">
-                  <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-3">
+                  <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-3">
                     Locatie
                   </label>
                   <div className="flex gap-3">
@@ -448,7 +448,7 @@ export function ProjectPlanner() {
                         ${
                           !config.multipleLocations
                             ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                            : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                            : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                         }
                       `}
                     >
@@ -462,7 +462,7 @@ export function ProjectPlanner() {
                         ${
                           config.multipleLocations
                             ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                            : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                            : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                         }
                       `}
                     >
@@ -489,9 +489,9 @@ export function ProjectPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 4/6
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
@@ -500,7 +500,7 @@ export function ProjectPlanner() {
 
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-3">
+                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-3">
                       Type besturing
                     </label>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -514,7 +514,7 @@ export function ProjectPlanner() {
                             ${
                               config.besturingType === bt.value
                                 ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                                : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                                : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                             }
                           `}
                         >
@@ -525,7 +525,7 @@ export function ProjectPlanner() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-3">
+                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-3">
                       Ouderdom installatie
                     </label>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -539,7 +539,7 @@ export function ProjectPlanner() {
                             ${
                               config.ouderdom === od.value
                                 ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                                : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                                : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                             }
                           `}
                         >
@@ -550,7 +550,7 @@ export function ProjectPlanner() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-3">
+                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-3">
                       Staat van de schacht
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -566,14 +566,14 @@ export function ProjectPlanner() {
                             ${
                               config.schachtStaat === ss.value
                                 ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                                : "border-[#EBEBEB] bg-white hover:border-[#C0C0C0]"
+                                : "border-[#E8E5E0] bg-[#FDFCFA] hover:border-[#C0C0C0]"
                             }
                           `}
                         >
                           <span className="block text-sm font-bold">{ss.label}</span>
                           <span
                             className={`block mt-1 text-xs ${
-                              config.schachtStaat === ss.value ? "text-white/70" : "text-[#A0A0A0]"
+                              config.schachtStaat === ss.value ? "text-white/70" : "text-[#9C9690]"
                             }`}
                           >
                             {ss.sub}
@@ -603,9 +603,9 @@ export function ProjectPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 5/6
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
@@ -624,14 +624,14 @@ export function ProjectPlanner() {
                         ${
                           config.teamSize === team.value
                             ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                            : "border-[#EBEBEB] bg-white hover:border-[#C0C0C0]"
+                            : "border-[#E8E5E0] bg-[#FDFCFA] hover:border-[#C0C0C0]"
                         }
                       `}
                     >
                       <span className="block text-sm font-bold">{team.label}</span>
                       <span
                         className={`block mt-1 text-xs ${
-                          config.teamSize === team.value ? "text-white/70" : "text-[#A0A0A0]"
+                          config.teamSize === team.value ? "text-white/70" : "text-[#9C9690]"
                         }`}
                       >
                         {team.sub}
@@ -658,9 +658,9 @@ export function ProjectPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#A0A0A0] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
                   Stap 6/6
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4 text-balance">
@@ -669,7 +669,7 @@ export function ProjectPlanner() {
 
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-3">
+                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-3">
                       OEM / Merk (meerdere mogelijk)
                     </label>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -685,14 +685,14 @@ export function ProjectPlanner() {
                               ${
                                 isSelected
                                   ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                                  : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                                  : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                               }
                             `}
                           >
                             <div
                               className={`
                                 w-4 h-4 rounded border-2 flex items-center justify-center flex-shrink-0 transition-all duration-200
-                                ${isSelected ? "bg-white border-white" : "border-[#DCDCDC] bg-white"}
+                                ${isSelected ? "bg-[#FDFCFA] border-white" : "border-[#D9D4CE] bg-[#FDFCFA]"}
                               `}
                             >
                               {isSelected && (
@@ -707,7 +707,7 @@ export function ProjectPlanner() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-3">
+                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-3">
                       <MapPin weight="light" className="w-3.5 h-3.5 inline-block mr-1 -mt-0.5" />
                       Regio
                     </label>
@@ -724,7 +724,7 @@ export function ProjectPlanner() {
                             ${
                               config.region === regio.value
                                 ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                                : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                                : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                             }
                           `}
                         >
@@ -736,7 +736,7 @@ export function ProjectPlanner() {
 
                   {/* Bouwlift aanwezig */}
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-3">
+                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-3">
                       Is er een werkende bouwlift aanwezig?
                     </label>
                     <div className="flex gap-3">
@@ -748,7 +748,7 @@ export function ProjectPlanner() {
                           ${
                             config.bouwliftAanwezig === true
                               ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                              : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                              : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                           }
                         `}
                       >
@@ -762,7 +762,7 @@ export function ProjectPlanner() {
                           ${
                             config.bouwliftAanwezig === false
                               ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                              : "border-[#EBEBEB] bg-white text-[#404040] hover:border-[#C0C0C0]"
+                              : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
                           }
                         `}
                       >
@@ -773,10 +773,10 @@ export function ProjectPlanner() {
 
                   {/* Bijzonderheden */}
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6B6B] uppercase tracking-wide mb-2">
+                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
                       Zijn er bijzonderheden? (optioneel)
                     </label>
-                    <p className="text-xs text-[#A0A0A0] mb-3">
+                    <p className="text-xs text-[#9C9690] mb-3">
                       Denk aan monumentale panden, beperkte toegang, nachtwerk, etc.
                     </p>
                     <textarea

@@ -14,17 +14,17 @@ const tocItems = [
 
 export function CaasVsUitzendbureauContent() {
   return (
-    <section className="relative bg-white pb-20 md:pb-28">
+    <section className="relative bg-[#FDFCFA] pb-20 md:pb-28">
       <Container>
         <div className="relative flex justify-center gap-16">
           <article className="w-full max-w-[720px]">
             <div className="prose-lyfd">
               <ScrollReveal>
-                <div className="relative bg-[#F8F8F8] rounded-lg border-l-2 border-[#2A2A2A] px-6 py-5 mb-10">
-                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#EBEBEB] text-[#6B6B6B] mb-3">
+                <div className="relative bg-[#F5F3F0] rounded-lg border-l-2 border-[#A0704C] px-6 py-5 mb-10">
+                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#E8E5E0] text-[#6B6560] mb-3">
                     Definitie
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-[#404040] m-0">
+                  <p className="text-[0.9375rem] leading-relaxed text-[#3D3A37] m-0">
                     <strong className="text-[#1A1A1A]">Capacity as a Service (CaaS)</strong> is
                     een capaciteitsmodel waarbij een liftbedrijf gegarandeerde monteurscapaciteit
                     inkoopt bij een gespecialiseerde partner, inclusief certificeringen, gereedschap,
@@ -116,18 +116,18 @@ export function CaasVsUitzendbureauContent() {
                         <th className="text-left py-3 font-semibold text-[#1A1A1A]">CaaS (LYFD)</th>
                       </tr>
                     </thead>
-                    <tbody className="text-[#404040]">
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">Wat je koopt</td><td className="py-3 pr-4">Arbeidsuren van een individu</td><td className="py-3">Gegarandeerde capaciteit</td></tr>
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">Branchekennis</td><td className="py-3 pr-4">Zelden tot nooit</td><td className="py-3">Standaard (liftindustrie-specifiek)</td></tr>
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">Certificeringen (NEN 3140, VCA)</td><td className="py-3 pr-4">Vaak niet aanwezig</td><td className="py-3">Standaard inbegrepen</td></tr>
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">OEM-kennis</td><td className="py-3 pr-4">Niet beschikbaar</td><td className="py-3">Gematcht op installatietype</td></tr>
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">Vervangingsgarantie</td><td className="py-3 pr-4">Niet standaard</td><td className="py-3">Kern van het model</td></tr>
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">DBA-compliance</td><td className="py-3 pr-4">Geregeld (uitzendconstructie)</td><td className="py-3">Geregeld (B2B-constructie)</td></tr>
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">Gereedschap en PBM&apos;s</td><td className="py-3 pr-4">Van het inlenende bedrijf</td><td className="py-3">Van LYFD (volledig uitgerust)</td></tr>
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">Inwerkperiode</td><td className="py-3 pr-4">3 - 5 dagen (geen branchekennis)</td><td className="py-3">Minimaal (monteur kent de branche)</td></tr>
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">Gezagsverhouding</td><td className="py-3 pr-4">Onder jouw gezag</td><td className="py-3">Onder regie LYFD</td></tr>
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">Op-/afschalen</td><td className="py-3 pr-4">Beperkt (afhankelijk van aanbod)</td><td className="py-3">Flexibel (contractueel vastgelegd)</td></tr>
-                      <tr className="border-b border-[#EBEBEB]"><td className="py-3 pr-4 font-medium">Kwaliteitscontrole</td><td className="py-3 pr-4">Jouw verantwoordelijkheid</td><td className="py-3">LYFD bewaakt kwaliteit</td></tr>
+                    <tbody className="text-[#3D3A37]">
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Wat je koopt</td><td className="py-3 pr-4">Arbeidsuren van een individu</td><td className="py-3">Gegarandeerde capaciteit</td></tr>
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Branchekennis</td><td className="py-3 pr-4">Zelden tot nooit</td><td className="py-3">Standaard (liftindustrie-specifiek)</td></tr>
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Certificeringen (NEN 3140, VCA)</td><td className="py-3 pr-4">Vaak niet aanwezig</td><td className="py-3">Standaard inbegrepen</td></tr>
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">OEM-kennis</td><td className="py-3 pr-4">Niet beschikbaar</td><td className="py-3">Gematcht op installatietype</td></tr>
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Vervangingsgarantie</td><td className="py-3 pr-4">Niet standaard</td><td className="py-3">Kern van het model</td></tr>
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">DBA-compliance</td><td className="py-3 pr-4">Geregeld (uitzendconstructie)</td><td className="py-3">Geregeld (B2B-constructie)</td></tr>
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Gereedschap en PBM&apos;s</td><td className="py-3 pr-4">Van het inlenende bedrijf</td><td className="py-3">Van LYFD (volledig uitgerust)</td></tr>
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Inwerkperiode</td><td className="py-3 pr-4">3 - 5 dagen (geen branchekennis)</td><td className="py-3">Minimaal (monteur kent de branche)</td></tr>
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Gezagsverhouding</td><td className="py-3 pr-4">Onder jouw gezag</td><td className="py-3">Onder regie LYFD</td></tr>
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Op-/afschalen</td><td className="py-3 pr-4">Beperkt (afhankelijk van aanbod)</td><td className="py-3">Flexibel (contractueel vastgelegd)</td></tr>
+                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Kwaliteitscontrole</td><td className="py-3 pr-4">Jouw verantwoordelijkheid</td><td className="py-3">LYFD bewaakt kwaliteit</td></tr>
                       <tr><td className="py-3 pr-4 font-medium">Administratieve last</td><td className="py-3 pr-4">Tijdregistratie, inlenersbeloning</td><td className="py-3">Eenvoudige maandfactuur</td></tr>
                     </tbody>
                   </table>
@@ -298,16 +298,16 @@ export function CaasVsUitzendbureauContent() {
               </ScrollReveal>
             </div>
 
-            <div className="mt-16 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10">
+            <div className="mt-16 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-8 md:p-10">
               <p className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
                 Wil je weten wat het verschil betekent voor jouw bedrijf?
               </p>
-              <p className="mt-2 text-sm text-[#404040] leading-relaxed max-w-[50ch]">
+              <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed max-w-[50ch]">
                 Plan een gesprek. Wij rekenen beide scenario&apos;s voor je door.
               </p>
               <a href="/aanvraag/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300">
                 Plan een gesprek
-                <span className="text-[#A0A0A0]">&rarr;</span>
+                <span className="text-[#9C9690]">&rarr;</span>
               </a>
             </div>
           </article>

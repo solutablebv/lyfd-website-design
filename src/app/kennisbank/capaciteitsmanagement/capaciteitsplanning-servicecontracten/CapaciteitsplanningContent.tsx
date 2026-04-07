@@ -14,17 +14,17 @@ const tocItems = [
 
 export function CapaciteitsplanningContent() {
   return (
-    <section className="relative bg-white pb-20 md:pb-28">
+    <section className="relative bg-[#FDFCFA] pb-20 md:pb-28">
       <Container>
         <div className="relative flex justify-center gap-16">
           <article className="w-full max-w-[720px]">
             <div className="prose-lyfd">
               <ScrollReveal>
-                <div className="relative bg-[#F8F8F8] rounded-lg border-l-2 border-[#2A2A2A] px-6 py-5 mb-10">
-                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#EBEBEB] text-[#6B6B6B] mb-3">
+                <div className="relative bg-[#F5F3F0] rounded-lg border-l-2 border-[#A0704C] px-6 py-5 mb-10">
+                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#E8E5E0] text-[#6B6560] mb-3">
                     Definitie
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-[#404040] m-0">
+                  <p className="text-[0.9375rem] leading-relaxed text-[#3D3A37] m-0">
                     <strong className="text-[#1A1A1A]">Capaciteitsplanning in de liftindustrie</strong> is
                     het strategisch afstemmen van beschikbare monteurscapaciteit op de
                     groeiende vraag vanuit servicecontracten, onderhoudsverplichtingen,
@@ -32,7 +32,7 @@ export function CapaciteitsplanningContent() {
                     circa 105.000 liftinstallaties in Nederland en slechts 1.600 tot 1.800
                     actieve monteurs is effectieve capaciteitsplanning het verschil tussen
                     winstgevende groei en onbeheersbare werkdruk.{" "}
-                    <span className="text-[#A0A0A0] text-xs">(Bron: LYFD, marktervaring 5 jaar)</span>
+                    <span className="text-[#9C9690] text-xs">(Bron: LYFD, marktervaring 5 jaar)</span>
                   </p>
                 </div>
               </ScrollReveal>
@@ -339,16 +339,16 @@ export function CapaciteitsplanningContent() {
               </ScrollReveal>
             </div>
 
-            <div className="mt-16 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10">
+            <div className="mt-16 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-8 md:p-10">
               <p className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
                 Wil je je capaciteitsplanning strategisch aanpakken?
               </p>
-              <p className="mt-2 text-sm text-[#404040] leading-relaxed max-w-[50ch]">
+              <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed max-w-[50ch]">
                 Wij helpen je het gat in kaart te brengen en een plan op maat te maken.
               </p>
               <a href="/aanvraag/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300">
                 Plan een gesprek
-                <span className="text-[#A0A0A0]">&rarr;</span>
+                <span className="text-[#9C9690]">&rarr;</span>
               </a>
             </div>
           </article>

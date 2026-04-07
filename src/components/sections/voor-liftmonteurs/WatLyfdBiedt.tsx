@@ -65,9 +65,9 @@ const voordelen = [
 
 export function WatLyfdBiedt() {
   return (
-    <section className="relative bg-white py-32 md:py-44">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="max-w-2xl">
@@ -89,14 +89,14 @@ export function WatLyfdBiedt() {
             const Icon = voordeel.icon;
             return (
               <StaggerItem key={voordeel.title}>
-                <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] p-6 md:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-                  <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center mb-5">
+                <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-6 md:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                  <div className="w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center mb-5">
                     <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
                   </div>
                   <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-2">
                     {voordeel.title}
                   </h3>
-                  <p className="text-sm text-[#404040] leading-relaxed">
+                  <p className="text-sm text-[#3D3A37] leading-relaxed">
                     {voordeel.text}
                   </p>
                 </div>
@@ -107,16 +107,16 @@ export function WatLyfdBiedt() {
 
         {/* Gerelateerde kennisbank artikelen */}
         <ScrollReveal delay={0.3}>
-          <div className="mt-14 md:mt-18 pt-10 border-t border-[#EBEBEB]">
-            <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#A0A0A0] mb-5">Lees ook in de kennisbank</p>
+          <div className="mt-14 md:mt-18 pt-10 border-t border-[#E8E5E0]">
+            <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#9C9690] mb-5">Lees ook in de kennisbank</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/kennisbank/liftmonteur-gids/salaris-liftmonteur/" className="group flex items-center justify-between rounded-xl bg-white border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+              <Link href="/kennisbank/liftmonteur-gids/salaris-liftmonteur/" className="group flex items-center justify-between rounded-xl bg-[#FDFCFA] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                 <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Wat verdient een liftmonteur?</span>
-                <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
               </Link>
-              <Link href="/kennisbank/liftmonteur-gids/vast-zzp-of-caas/" className="group flex items-center justify-between rounded-xl bg-white border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+              <Link href="/kennisbank/liftmonteur-gids/vast-zzp-of-caas/" className="group flex items-center justify-between rounded-xl bg-[#FDFCFA] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                 <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Vast, zzp of CaaS?</span>
-                <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
               </Link>
             </div>
           </div>

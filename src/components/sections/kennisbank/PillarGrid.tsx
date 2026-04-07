@@ -54,7 +54,7 @@ const pillars: PillarTopic[] = [
 
 export function PillarGrid() {
   return (
-    <section className="relative bg-white py-32 md:py-44">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
       <Container>
         <StaggerContainer
           className="grid grid-cols-1 md:grid-cols-12 gap-4"
@@ -86,9 +86,9 @@ function PillarCard({ pillar }: { pillar: PillarTopic }) {
 
   return (
     <a href={pillar.href} className="group block h-full">
-      <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] shadow-[0_1px_3px_rgba(0,0,0,0.04)] p-7 md:p-8 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC] hover:-translate-y-0.5 flex flex-col">
+      <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] shadow-[0_1px_3px_rgba(0,0,0,0.04)] p-7 md:p-8 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#D9D4CE] hover:-translate-y-0.5 flex flex-col">
         {/* Icon */}
-        <div className="w-12 h-12 rounded-full bg-[#F0F0F0] flex items-center justify-center mb-5 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105">
+        <div className="w-12 h-12 rounded-full bg-[#F2F0ED] flex items-center justify-center mb-5 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105">
           <IconComponent weight="light" className="w-6 h-6 text-[#2A2A2A]" />
         </div>
 
@@ -98,14 +98,14 @@ function PillarCard({ pillar }: { pillar: PillarTopic }) {
         </h3>
 
         {/* Description */}
-        <p className="mt-2 text-sm text-[#404040] leading-relaxed line-clamp-2 max-w-[45ch]">
+        <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed line-clamp-2 max-w-[45ch]">
           {pillar.description}
         </p>
 
         {/* Bottom row: badge + arrow */}
         <div className="mt-auto pt-6 flex items-center justify-between">
           <Badge variant="outline">{pillar.articleCount}</Badge>
-          <div className="w-8 h-8 rounded-full bg-[#F0F0F0] flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:bg-[#1A1A1A]">
+          <div className="w-8 h-8 rounded-full bg-[#F2F0ED] flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:bg-[#1A1A1A]">
             <ArrowRight
               weight="bold"
               className="w-3.5 h-3.5 text-[#2A2A2A] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:text-white group-hover:translate-x-0.5"

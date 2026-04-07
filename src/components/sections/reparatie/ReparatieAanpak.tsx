@@ -36,7 +36,7 @@ const steps = [
 
 export function ReparatieAanpak() {
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -51,7 +51,7 @@ export function ReparatieAanpak() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.06]"
+          className="object-cover contrast-[1.05] brightness-[1.1] opacity-[0.06]"
           loading="lazy"
         />
       </div>
@@ -74,7 +74,7 @@ export function ReparatieAanpak() {
         {/* Vertical timeline */}
         <div className="mt-16 md:mt-24 max-w-2xl mx-auto relative">
           {/* Vertical line */}
-          <div className="absolute left-5 md:left-6 top-0 bottom-0 w-px bg-[#EBEBEB]" />
+          <div className="absolute left-5 md:left-6 top-0 bottom-0 w-px bg-[#E8E5E0]" />
 
           <div className="space-y-12 md:space-y-16">
             {steps.map((step, index) => {
@@ -91,14 +91,14 @@ export function ReparatieAanpak() {
                     </div>
 
                     {/* Step number */}
-                    <span className="text-xs font-mono font-medium text-[#A0A0A0] uppercase tracking-wider">
+                    <span className="text-xs font-mono font-medium text-[#9C9690] uppercase tracking-wider">
                       Stap {step.number}
                     </span>
 
                     <h3 className="mt-2 text-xl md:text-2xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                       {step.title}
                     </h3>
-                    <p className="mt-3 text-sm md:text-base text-[#404040] leading-relaxed max-w-[50ch]">
+                    <p className="mt-3 text-sm md:text-base text-[#3D3A37] leading-relaxed max-w-[50ch]">
                       {step.description}
                     </p>
                   </div>
@@ -110,7 +110,7 @@ export function ReparatieAanpak() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

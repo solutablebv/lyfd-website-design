@@ -46,22 +46,22 @@ const implementationSteps = [
 
 function BrowserFrame({ children }: { children: React.ReactNode }) {
   return (
-    <div className="rounded-2xl border border-[#DCDCDC] bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06)] overflow-hidden">
-      <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#EBEBEB] bg-[#FAFAFA]">
+    <div className="rounded-2xl border border-[#D9D4CE] bg-[#FDFCFA] shadow-[0_8px_40px_rgba(0,0,0,0.06)] overflow-hidden">
+      <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#E8E5E0] bg-[#F8F6F3]">
         <div className="flex gap-1.5">
-          <div className="w-2.5 h-2.5 rounded-full bg-[#E8E8E8]" />
-          <div className="w-2.5 h-2.5 rounded-full bg-[#E8E8E8]" />
-          <div className="w-2.5 h-2.5 rounded-full bg-[#E8E8E8]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#E5E0DA]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#E5E0DA]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#E5E0DA]" />
         </div>
         <div className="flex-1 mx-6">
-          <div className="max-w-xs mx-auto h-5 rounded-md bg-[#F0F0F0] flex items-center px-2.5">
-            <span className="text-[9px] text-[#A0A0A0] font-mono">
+          <div className="max-w-xs mx-auto h-5 rounded-md bg-[#F2F0ED] flex items-center px-2.5">
+            <span className="text-[9px] text-[#9C9690] font-mono">
               app.lyfd.nl/onboarding
             </span>
           </div>
         </div>
       </div>
-      <div className="p-4 md:p-5 bg-[#F8F8F8]">{children}</div>
+      <div className="p-4 md:p-5 bg-[#F5F3F0]">{children}</div>
     </div>
   );
 }
@@ -70,8 +70,8 @@ function SetupVisual() {
   return (
     <BrowserFrame>
       <div className="space-y-3">
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-3">
-          <span className="text-[10px] font-medium text-[#6B6B6B] uppercase tracking-wider block mb-3">
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-3">
+          <span className="text-[10px] font-medium text-[#6B6560] uppercase tracking-wider block mb-3">
             Data import
           </span>
           <div className="space-y-2">
@@ -100,7 +100,7 @@ function SetupVisual() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex-1 h-2 rounded-full bg-[#F0F0F0] overflow-hidden">
+          <div className="flex-1 h-2 rounded-full bg-[#F2F0ED] overflow-hidden">
             <div className="h-full rounded-full bg-[#1A1A1A]" style={{ width: "72%" }} />
           </div>
           <span className="text-[10px] font-mono text-[#1A1A1A]">72%</span>
@@ -114,8 +114,8 @@ function TrainingVisual() {
   return (
     <BrowserFrame>
       <div className="space-y-3">
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-3">
-          <span className="text-[10px] font-medium text-[#6B6B6B] uppercase tracking-wider block mb-3">
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-3">
+          <span className="text-[10px] font-medium text-[#6B6560] uppercase tracking-wider block mb-3">
             Training checklist
           </span>
           <div className="space-y-2">
@@ -134,7 +134,7 @@ function TrainingVisual() {
                     "w-4 h-4 rounded border flex items-center justify-center",
                     item.done
                       ? "bg-[#1A1A1A] border-[#1A1A1A]"
-                      : "bg-white border-[#DCDCDC]"
+                      : "bg-[#FDFCFA] border-[#D9D4CE]"
                   )}
                 >
                   {item.done && (
@@ -146,7 +146,7 @@ function TrainingVisual() {
                 <span
                   className={cn(
                     "text-[11px]",
-                    item.done ? "text-[#A0A0A0] line-through" : "text-[#1A1A1A]"
+                    item.done ? "text-[#9C9690] line-through" : "text-[#1A1A1A]"
                   )}
                 >
                   {item.label}
@@ -155,9 +155,9 @@ function TrainingVisual() {
             ))}
           </div>
         </div>
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-3">
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-3">
           <div className="flex items-center justify-between">
-            <span className="text-[10px] text-[#6B6B6B]">Training gepland</span>
+            <span className="text-[10px] text-[#6B6560]">Training gepland</span>
             <span className="text-[10px] font-mono text-[#1A1A1A]">Di 14:00 - 16:00</span>
           </div>
         </div>
@@ -176,18 +176,18 @@ function LiveVisual() {
             { label: "Actieve monteurs", value: "8" },
             { label: "Afgerond", value: "5" },
           ].map((stat) => (
-            <div key={stat.label} className="rounded-lg border border-[#EBEBEB] bg-white p-2.5">
-              <div className="text-[10px] text-[#A0A0A0] mb-1">{stat.label}</div>
+            <div key={stat.label} className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2.5">
+              <div className="text-[10px] text-[#9C9690] mb-1">{stat.label}</div>
               <div className="text-sm font-bold font-mono text-[#1A1A1A]">{stat.value}</div>
             </div>
           ))}
         </div>
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-3">
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-3">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[10px] font-medium text-[#6B6B6B]">Support stand-by</span>
+            <span className="text-[10px] font-medium text-[#6B6560]">Support stand-by</span>
             <div className="flex items-center gap-1">
               <div className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
-              <span className="text-[9px] text-[#A0A0A0]">Online</span>
+              <span className="text-[9px] text-[#9C9690]">Online</span>
             </div>
           </div>
           <div className="space-y-1.5">
@@ -196,8 +196,8 @@ function LiveVisual() {
               { msg: "Monteur Jan heeft hulp nodig bij werkbon", time: "11:15" },
             ].map((item) => (
               <div key={item.time} className="flex items-center justify-between py-1 border-b border-[#F5F5F5] last:border-0">
-                <span className="text-[10px] text-[#6B6B6B]">{item.msg}</span>
-                <span className="text-[9px] text-[#A0A0A0] font-mono">{item.time}</span>
+                <span className="text-[10px] text-[#6B6560]">{item.msg}</span>
+                <span className="text-[9px] text-[#9C9690] font-mono">{item.time}</span>
               </div>
             ))}
           </div>
@@ -211,8 +211,8 @@ function ExpandVisual() {
   return (
     <BrowserFrame>
       <div className="space-y-3">
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-3">
-          <span className="text-[10px] font-medium text-[#6B6B6B] uppercase tracking-wider block mb-3">
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-3">
+          <span className="text-[10px] font-medium text-[#6B6560] uppercase tracking-wider block mb-3">
             Beschikbare modules
           </span>
           <div className="grid grid-cols-2 gap-2">
@@ -230,19 +230,19 @@ function ExpandVisual() {
                   "flex items-center gap-2 rounded-lg border p-2",
                   mod.active
                     ? "border-[#1A1A1A] bg-[#1A1A1A]"
-                    : "border-[#EBEBEB] bg-white"
+                    : "border-[#E8E5E0] bg-[#FDFCFA]"
                 )}
               >
                 <div
                   className={cn(
                     "w-2 h-2 rounded-full",
-                    mod.active ? "bg-white" : "bg-[#DCDCDC]"
+                    mod.active ? "bg-[#FDFCFA]" : "bg-[#DCDCDC]"
                   )}
                 />
                 <span
                   className={cn(
                     "text-[10px] font-medium",
-                    mod.active ? "text-white" : "text-[#6B6B6B]"
+                    mod.active ? "text-white" : "text-[#6B6560]"
                   )}
                 >
                   {mod.name}
@@ -307,7 +307,7 @@ export function PlatformImplementatie() {
   const Visual = currentStep.visual;
 
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
 
       <Container>
@@ -333,7 +333,7 @@ export function PlatformImplementatie() {
                   "flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] cursor-pointer",
                   activeStep === i
                     ? "bg-[#1A1A1A] text-white"
-                    : "bg-white text-[#6B6B6B] border border-[#EBEBEB] hover:border-[#DCDCDC] hover:text-[#1A1A1A]"
+                    : "bg-[#FDFCFA] text-[#6B6560] border border-[#E8E5E0] hover:border-[#D9D4CE] hover:text-[#1A1A1A]"
                 )}
               >
                 <span className="text-[10px] font-mono">{step.week}</span>
@@ -357,15 +357,15 @@ export function PlatformImplementatie() {
                   transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
                 >
                   <div className="space-y-4">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#EBEBEB]">
-                      <span className="text-xs font-mono text-[#A0A0A0]">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FDFCFA] border border-[#E8E5E0]">
+                      <span className="text-xs font-mono text-[#9C9690]">
                         {currentStep.week}
                       </span>
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-[#1A1A1A] tracking-tight">
                       {currentStep.title}
                     </h3>
-                    <p className="text-sm md:text-base text-[#6B6B6B] leading-relaxed">
+                    <p className="text-sm md:text-base text-[#6B6560] leading-relaxed">
                       {currentStep.description}
                     </p>
                   </div>
@@ -390,7 +390,7 @@ export function PlatformImplementatie() {
             <div className="flex items-center justify-between mt-10">
               <button
                 onClick={goPrev}
-                className="flex items-center gap-2 px-4 py-2 rounded-full border border-[#EBEBEB] bg-white text-[#6B6B6B] hover:text-[#1A1A1A] hover:border-[#DCDCDC] transition-all duration-300 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-[#E8E5E0] bg-[#FDFCFA] text-[#6B6560] hover:text-[#1A1A1A] hover:border-[#D9D4CE] transition-all duration-300 cursor-pointer"
               >
                 <CaretLeft weight="bold" className="w-3.5 h-3.5" />
                 <span className="text-sm font-medium">Vorige</span>
@@ -415,7 +415,7 @@ export function PlatformImplementatie() {
 
               <button
                 onClick={goNext}
-                className="flex items-center gap-2 px-4 py-2 rounded-full border border-[#EBEBEB] bg-white text-[#6B6B6B] hover:text-[#1A1A1A] hover:border-[#DCDCDC] transition-all duration-300 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-[#E8E5E0] bg-[#FDFCFA] text-[#6B6560] hover:text-[#1A1A1A] hover:border-[#D9D4CE] transition-all duration-300 cursor-pointer"
               >
                 <span className="text-sm font-medium">Volgende</span>
                 <CaretRight weight="bold" className="w-3.5 h-3.5" />

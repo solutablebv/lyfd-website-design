@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function AcademyCta() {
   return (
-    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       {/* Subtle gradient */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -28,7 +28,7 @@ export function AcademyCta() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-6 text-base md:text-lg text-[#6B6B6B] leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto">
               De eerste stap is een geschiktheidstest van 15 minuten.
               Daarna weet je of de LYFD Academy bij je past.
             </p>

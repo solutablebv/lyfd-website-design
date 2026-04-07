@@ -103,7 +103,7 @@ export function PlatformPricing() {
   const recommended = getRecommendedTier(monteurs);
 
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
       {/* Top gradient blend */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
 
@@ -115,7 +115,7 @@ export function PlatformPricing() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="mt-6 text-base md:text-lg text-[#6B6B6B] leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto">
               Kies het plan dat past bij de fase van je bedrijf. Opschalen kan
               altijd.
             </p>
@@ -125,7 +125,7 @@ export function PlatformPricing() {
         {/* Monteurs slider */}
         <ScrollReveal delay={0.15}>
           <div className="text-center mb-10">
-            <p className="text-sm font-medium text-[#6B6B6B] mb-4">
+            <p className="text-sm font-medium text-[#6B6560] mb-4">
               Hoeveel monteurs werken er in je organisatie?
             </p>
             <div className="flex items-center justify-center gap-6">
@@ -155,8 +155,8 @@ export function PlatformPricing() {
                   className={cn(
                     "relative rounded-2xl p-7 md:p-8 h-full flex flex-col transition-all duration-500",
                     isRecommended
-                      ? "bg-white border-2 border-[#1A1A1A] shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
-                      : "bg-white border border-[#EBEBEB] shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+                      ? "bg-[#FDFCFA] border-2 border-[#1A1A1A] shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
+                      : "bg-[#FDFCFA] border border-[#E8E5E0] shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
                   )}
                 >
                   {isRecommended && (
@@ -174,7 +174,7 @@ export function PlatformPricing() {
                     <p className="mt-1 text-sm font-mono text-[#1A1A1A] font-semibold">
                       {tier.price}
                     </p>
-                    <p className="mt-2 text-sm text-[#6B6B6B] leading-relaxed">
+                    <p className="mt-2 text-sm text-[#6B6560] leading-relaxed">
                       {tier.description}
                     </p>
                   </div>
@@ -183,7 +183,7 @@ export function PlatformPricing() {
                     <div className="space-y-2.5">
                       {tier.modules.map((mod) => (
                         <div key={mod} className="flex items-start gap-2.5">
-                          <div className="mt-1 w-4 h-4 rounded-full bg-[#F0F0F0] flex items-center justify-center flex-shrink-0">
+                          <div className="mt-1 w-4 h-4 rounded-full bg-[#F2F0ED] flex items-center justify-center flex-shrink-0">
                             <svg
                               width="8"
                               height="8"
@@ -199,7 +199,7 @@ export function PlatformPricing() {
                               />
                             </svg>
                           </div>
-                          <span className="text-sm text-[#6B6B6B]">{mod}</span>
+                          <span className="text-sm text-[#6B6560]">{mod}</span>
                         </div>
                       ))}
                     </div>
@@ -227,11 +227,11 @@ export function PlatformPricing() {
               Vergelijk alle features
             </h3>
 
-            <div className="rounded-2xl border border-[#EBEBEB] bg-white overflow-hidden">
+            <div className="rounded-2xl border border-[#E8E5E0] bg-[#FDFCFA] overflow-hidden">
               {/* Table header */}
-              <div className="grid grid-cols-4 border-b border-[#EBEBEB]">
+              <div className="grid grid-cols-4 border-b border-[#E8E5E0]">
                 <div className="p-4">
-                  <span className="text-xs font-medium text-[#A0A0A0] uppercase tracking-wider">
+                  <span className="text-xs font-medium text-[#9C9690] uppercase tracking-wider">
                     Feature
                   </span>
                 </div>
@@ -240,7 +240,7 @@ export function PlatformPricing() {
                     key={name}
                     className={cn(
                       "p-4 text-center",
-                      name === recommended && "bg-[#F8F8F8]"
+                      name === recommended && "bg-[#F5F3F0]"
                     )}
                   >
                     <span
@@ -248,7 +248,7 @@ export function PlatformPricing() {
                         "text-xs font-semibold uppercase tracking-wider",
                         name === recommended
                           ? "text-[#1A1A1A]"
-                          : "text-[#6B6B6B]"
+                          : "text-[#6B6560]"
                       )}
                     >
                       {name}
@@ -267,7 +267,7 @@ export function PlatformPricing() {
                   )}
                 >
                   <div className="p-3 md:p-4 flex items-center">
-                    <span className="text-xs md:text-sm text-[#6B6B6B]">
+                    <span className="text-xs md:text-sm text-[#6B6560]">
                       {row.feature}
                     </span>
                   </div>
@@ -282,7 +282,7 @@ export function PlatformPricing() {
                       key={tier}
                       className={cn(
                         "p-3 md:p-4 flex items-center justify-center",
-                        tier === recommended && "bg-[#F8F8F8]"
+                        tier === recommended && "bg-[#F5F3F0]"
                       )}
                     >
                       {val === "check" ? (
@@ -318,7 +318,7 @@ export function PlatformPricing() {
 
         {/* Disclaimer */}
         <ScrollReveal delay={0.25}>
-          <p className="mt-8 text-center text-xs text-[#A0A0A0] max-w-[65ch] mx-auto">
+          <p className="mt-8 text-center text-xs text-[#9C9690] max-w-[65ch] mx-auto">
             Alle prijzen zijn indicatief en exclusief BTW. Neem contact op voor
             een offerte op maat.
           </p>

@@ -44,7 +44,7 @@ function AnimatedLine() {
   return (
     <div ref={ref} className="hidden md:block absolute top-[5rem] left-[16.67%] right-[16.67%] h-px overflow-hidden">
       {/* Background line */}
-      <div className="absolute inset-0 bg-[#EBEBEB]" />
+      <div className="absolute inset-0 bg-[#E8E5E0]" />
       {/* Animated fill */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-[#2A2A2A] via-[#6B6B6B] to-[#2A2A2A] origin-left"
@@ -69,7 +69,7 @@ function StepDot({ index }: { index: number }) {
   return (
     <div ref={ref} className="hidden md:flex absolute -bottom-1 left-1/2 -translate-x-1/2 items-center justify-center">
       <motion.div
-        className="w-5 h-5 rounded-full bg-white border-2 border-[#2A2A2A] flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+        className="w-5 h-5 rounded-full bg-[#FDFCFA] border-2 border-[#2A2A2A] flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
         transition={{
@@ -94,9 +94,9 @@ function StepDot({ index }: { index: number }) {
 
 export function PlanSection() {
   return (
-    <section id="plan" className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section id="plan" className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       {/* Decorative network nodes background */}
       <div
@@ -112,7 +112,7 @@ export function PlanSection() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1]"
+          className="object-cover grayscale-[30%] contrast-[1.05] brightness-[1.1]"
           loading="lazy"
         />
       </div>
@@ -157,7 +157,7 @@ export function PlanSection() {
                 <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-sm text-[#404040] leading-relaxed max-w-[38ch] mx-auto md:mx-0">
+                <p className="mt-3 text-sm text-[#3D3A37] leading-relaxed max-w-[38ch] mx-auto md:mx-0">
                   {step.description}
                 </p>
               </div>
@@ -176,7 +176,7 @@ export function PlanSection() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

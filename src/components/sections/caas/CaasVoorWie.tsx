@@ -52,7 +52,7 @@ const scenarios = [
 
 export function CaasVoorWie() {
   return (
-    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -67,13 +67,13 @@ export function CaasVoorWie() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          className="object-cover contrast-[1.05] brightness-[1.1] opacity-[0.05]"
           loading="lazy"
         />
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto">
@@ -92,14 +92,14 @@ export function CaasVoorWie() {
           >
             {scenarios.map((scenario) => (
               <StaggerItem key={scenario.number}>
-                <div className="h-full rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-                  <span className="font-mono text-xs text-[#A0A0A0] mb-3 block">
+                <div className="h-full rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                  <span className="font-mono text-xs text-[#9C9690] mb-3 block">
                     {scenario.number}
                   </span>
                   <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-2">
                     {scenario.title}
                   </h3>
-                  <p className="text-sm text-[#404040] leading-relaxed">
+                  <p className="text-sm text-[#3D3A37] leading-relaxed">
                     {scenario.description}
                   </p>
                 </div>
@@ -108,7 +108,7 @@ export function CaasVoorWie() {
           </StaggerContainer>
 
           <ScrollReveal delay={0.3}>
-            <p className="mt-12 md:mt-16 text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-2xl mx-auto">
+            <p className="mt-12 md:mt-16 text-base md:text-lg text-[#3D3A37] leading-relaxed text-center max-w-2xl mx-auto">
               Elke situatie is anders. Daarom begint elk traject met een
               capaciteitsgesprek waarin we samen bepalen wat jouw organisatie
               nodig heeft.
@@ -117,16 +117,16 @@ export function CaasVoorWie() {
 
           {/* Gerelateerde kennisbank artikelen */}
           <ScrollReveal delay={0.4}>
-            <div className="mt-14 md:mt-18 pt-10 border-t border-[#EBEBEB]">
-              <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#A0A0A0] mb-5">Lees ook in de kennisbank</p>
+            <div className="mt-14 md:mt-18 pt-10 border-t border-[#E8E5E0]">
+              <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#9C9690] mb-5">Lees ook in de kennisbank</p>
               <div className="space-y-3">
-                <Link href="/kennisbank/caas-uitgelegd/caas-vs-uitzendbureau/" className="group flex items-center justify-between rounded-xl bg-[#F8F8F8] border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                <Link href="/kennisbank/caas-uitgelegd/caas-vs-uitzendbureau/" className="group flex items-center justify-between rounded-xl bg-[#F5F3F0] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                   <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">CaaS vs. uitzendbureau: wat is het verschil?</span>
-                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
                 </Link>
-                <Link href="/kennisbank/caas-uitgelegd/welk-caas-model/" className="group flex items-center justify-between rounded-xl bg-[#F8F8F8] border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                <Link href="/kennisbank/caas-uitgelegd/welk-caas-model/" className="group flex items-center justify-between rounded-xl bg-[#F5F3F0] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                   <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Welk CaaS-model past bij jouw liftbedrijf?</span>
-                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
                 </Link>
               </div>
             </div>
@@ -135,7 +135,7 @@ export function CaasVoorWie() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

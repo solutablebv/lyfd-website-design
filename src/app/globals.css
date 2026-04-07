@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #FFFFFF;
+  --color-background: #FDFCFA;
   --color-foreground: #1A1A1A;
-  --color-surface: #FFFFFF;
-  --color-surface-alt: #F8F8F8;
+  --color-surface: #FDFCFA;
+  --color-surface-alt: #F5F3F0;
 
   --color-text-primary: #1A1A1A;
-  --color-text-secondary: #6B6B6B;
-  --color-text-muted: #A0A0A0;
+  --color-text-secondary: #6B6560;
+  --color-text-muted: #9C9690;
 
-  --color-accent: #2A2A2A;
-  --color-accent-hover: #404040;
-  --color-accent-light: #F0F0F0;
-  --color-accent-light-text: #2A2A2A;
+  --color-accent: #A0704C;
+  --color-accent-hover: #8B6142;
+  --color-accent-light: #F5EDE6;
+  --color-accent-light-text: #7D5A3C;
 
-  --color-border-subtle: #EBEBEB;
+  --color-border-subtle: #E8E5E0;
 
   --color-success: #2A2A2A;
-  --color-success-light: #F0F0F0;
-  --color-danger: #6B6B6B;
-  --color-danger-light: #F0F0F0;
+  --color-success-light: #F2F0ED;
+  --color-danger: #6B6560;
+  --color-danger-light: #F2F0ED;
 
   --color-dark: #1A1A1A;
   --color-dark-surface: #222222;
@@ -65,7 +65,7 @@ body {
 }
 
 ::selection {
-  background-color: #E8E8E8;
+  background-color: #F0E6DA;
   color: #1A1A1A;
 }
 
@@ -79,12 +79,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4D4D4;
+  background: #D4CFC8;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A0A0A0;
+  background: #9C9690;
 }
 
 /* Scroll progress indicator */
@@ -93,7 +93,7 @@ body {
   top: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #1A1A1A 0%, #6B6B6B 50%, #1A1A1A 100%);
+  background: linear-gradient(90deg, #1A1A1A 0%, #6B6560 50%, #1A1A1A 100%);
   z-index: 9999;
   transform-origin: left;
   pointer-events: none;
@@ -197,7 +197,7 @@ body {
 
 .animated-gradient-border {
   position: relative;
-  background: white;
+  background: #FDFCFA;
   border-radius: 9999px;
 }
 
@@ -208,11 +208,11 @@ body {
   border-radius: inherit;
   background: conic-gradient(
     from var(--gradient-angle),
-    #EBEBEB 0%,
-    #A0A0A0 25%,
-    #EBEBEB 50%,
-    #A0A0A0 75%,
-    #EBEBEB 100%
+    #E8E5E0 0%,
+    #9C9690 25%,
+    #E8E5E0 50%,
+    #9C9690 75%,
+    #E8E5E0 100%
   );
   z-index: -1;
   animation: gradient-rotate 4s linear infinite;
@@ -298,7 +298,7 @@ body {
 .prose-lyfd p {
   font-size: 1rem;
   line-height: 1.8;
-  color: #404040;
+  color: #3D3A37;
   margin-bottom: 1.25rem;
 }
 
@@ -314,10 +314,10 @@ body {
 }
 
 .prose-lyfd blockquote {
-  border-left: 2px solid #EBEBEB;
+  border-left: 2px solid #E8E5E0;
   padding-left: 1.5rem;
   font-style: italic;
-  color: #6B6B6B;
+  color: #6B6560;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-size: 0.9375rem;
@@ -339,7 +339,7 @@ body {
   padding-left: 1.25rem;
   font-size: 1rem;
   line-height: 1.8;
-  color: #404040;
+  color: #3D3A37;
 }
 
 @media (min-width: 768px) {
@@ -356,7 +356,7 @@ body {
   width: 5px;
   height: 5px;
   border-radius: 9999px;
-  background-color: #DCDCDC;
+  background-color: #D9D4CE;
 }
 
 /* Marquee animation */

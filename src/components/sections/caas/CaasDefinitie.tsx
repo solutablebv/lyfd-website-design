@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function CaasDefinitie() {
   return (
-    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -22,13 +22,13 @@ export function CaasDefinitie() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          className="object-cover contrast-[1.05] brightness-[1.1] opacity-[0.05]"
           loading="lazy"
         />
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto">
@@ -43,7 +43,7 @@ export function CaasDefinitie() {
 
           {/* Definition block */}
           <ScrollReveal delay={0.1}>
-            <div className="mt-12 md:mt-16 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-7 md:p-8">
+            <div className="mt-12 md:mt-16 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-7 md:p-8">
               <p className="text-base md:text-lg text-[#1A1A1A] leading-relaxed font-medium">
                 Capacity as a Service (CaaS) is een servicemodel waarbij een
                 liftbedrijf gecertificeerde liftmonteurscapaciteit inkoopt van
@@ -51,7 +51,7 @@ export function CaasDefinitie() {
                 nemen. LYFD levert deze capaciteit op aanvraag, per project of
                 structureel via een retainer. DBA-compliant en volledig
                 uitgerust.{" "}
-                <span className="text-[#A0A0A0] text-sm font-normal">
+                <span className="text-[#9C9690] text-sm font-normal">
                   (Bron: LYFD)
                 </span>
               </p>
@@ -61,12 +61,12 @@ export function CaasDefinitie() {
           {/* Body text */}
           <ScrollReveal delay={0.2}>
             <div className="mt-8 md:mt-10 space-y-5">
-              <p className="text-sm md:text-base text-[#404040] leading-relaxed text-center">
+              <p className="text-sm md:text-base text-[#3D3A37] leading-relaxed text-center">
                 Het model is vergelijkbaar met SaaS (Software as a Service): je
                 betaalt voor wat je gebruikt, schaalt op en af wanneer nodig, en
                 de leverancier draagt zorg voor kwaliteit en beschikbaarheid.
               </p>
-              <p className="text-sm md:text-base text-[#404040] leading-relaxed text-center">
+              <p className="text-sm md:text-base text-[#3D3A37] leading-relaxed text-center">
                 <span className="text-[#1A1A1A] font-medium">
                   LYFD is het eerste CaaS-platform dat dit model toepast op de
                   liftindustrie.

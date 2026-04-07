@@ -7,9 +7,9 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 
 export function ContactHero() {
   return (
-    <section className="relative bg-white overflow-hidden pt-32 md:pt-40 pb-20 md:pb-28">
+    <section className="relative bg-[#FDFCFA] overflow-hidden pt-32 md:pt-40 pb-20 md:pb-28">
       {/* Top gradient blend */}
-      <div className="absolute top-0 left-0 right-0 h-56 bg-gradient-to-b from-white via-white/80 to-transparent z-[2] pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-56 bg-gradient-to-b from-[#FDFCFA] via-[#FDFCFA]/80 to-transparent z-[2] pointer-events-none" />
 
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center">
@@ -43,7 +43,7 @@ export function ContactHero() {
             initial={{ opacity: 0, y: 32, filter: "blur(6px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.35 }}
-            className="mt-5 text-base md:text-lg text-[#404040] leading-relaxed max-w-[500px] mx-auto"
+            className="mt-5 text-base md:text-lg text-[#3D3A37] leading-relaxed max-w-[500px] mx-auto"
           >
             We reageren binnen 1 werkdag op alle aanvragen. Geen verkooppraatje, een helder antwoord.
           </motion.p>

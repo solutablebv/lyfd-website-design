@@ -7,6 +7,7 @@ import { OnderhoudWatJeKrijgt } from "@/components/sections/onderhoud/OnderhoudW
 import { OnderhoudZelfdiagnose } from "@/components/sections/onderhoud/OnderhoudZelfdiagnose";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
 import { FaqSection } from "@/components/sections/diensten/FaqSection";
+import { TeamQuote } from "@/components/ui/TeamQuote";
 
 export const metadata: Metadata = {
   title:
@@ -148,6 +149,11 @@ export default function LiftonderhoudCapaciteitPage() {
       />
       <OnderhoudProbleem />
       <OnderhoudAanpak />
+      <TeamQuote
+        quote="Ik werk bij drie verschillende opdrachtgevers. Elke dag is anders. Dat is precies waarom ik dit doe."
+        name="Jasvir Singh"
+        role="Sr Servicemonteur Liften"
+      />
       <CapaciteitsPlanner />
       <OnderhoudWatJeKrijgt />
       <OnderhoudZelfdiagnose />

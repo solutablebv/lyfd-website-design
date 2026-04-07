@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function VoorwaardenPage() {
   return (
-    <section className="bg-white pt-32 md:pt-40 pb-20 md:pb-28">
+    <section className="bg-[#FDFCFA] pt-32 md:pt-40 pb-20 md:pb-28">
       <Container>
         <ScrollReveal>
           <div className="max-w-3xl mx-auto">
@@ -32,8 +32,8 @@ export default function VoorwaardenPage() {
               Algemene Voorwaarden
             </h1>
 
-            <div className="bg-[#F8F8F8] border border-[#EBEBEB] rounded-xl p-4 mb-10">
-              <p className="text-sm text-[#6B6B6B] leading-relaxed">
+            <div className="bg-[#F5F3F0] border border-[#E8E5E0] rounded-xl p-4 mb-10">
+              <p className="text-sm text-[#6B6560] leading-relaxed">
                 Dit zijn conceptteksten. Raadpleeg een juridisch adviseur voor
                 definitieve versies.
               </p>

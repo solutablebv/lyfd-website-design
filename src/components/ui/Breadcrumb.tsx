@@ -28,13 +28,13 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
               <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DCDCDC]" />
             )}
             {isLast || !item.href ? (
-              <span className="text-xs text-[#6B6B6B] font-medium">
+              <span className="text-xs text-[#6B6560] font-medium">
                 {item.label}
               </span>
             ) : (
               <Link
                 href={item.href}
-                className="text-xs text-[#A0A0A0] hover:text-[#6B6B6B] transition-colors duration-300 font-medium"
+                className="text-xs text-[#9C9690] hover:text-[#6B6560] transition-colors duration-300 font-medium"
               >
                 {item.label}
               </Link>

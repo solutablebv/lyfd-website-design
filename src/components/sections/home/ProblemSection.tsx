@@ -56,7 +56,7 @@ function AnimatedCounter({
           {count.toLocaleString("nl-NL")}
           {suffix}
         </span>
-        <span className="block mt-4 text-sm md:text-base text-[#6B6B6B] font-medium tracking-wide">
+        <span className="block mt-4 text-sm md:text-base text-[#6B6560] font-medium tracking-wide">
           {label}
         </span>
       </motion.div>
@@ -66,9 +66,9 @@ function AnimatedCounter({
 
 export function ProblemSection() {
   return (
-    <section className="relative bg-white py-32 md:py-44">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
       {/* Top blend from hero */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       {/* Subtle gradient mesh background */}
       <div className="absolute inset-0 gradient-mesh-light pointer-events-none" />
@@ -94,10 +94,10 @@ export function ProblemSection() {
               <div className="hidden md:flex flex-col items-center gap-2 px-8 md:px-12">
                 <div className="w-px h-10 bg-gradient-to-b from-transparent via-[#DCDCDC] to-transparent" />
                 <div className="relative flex items-center justify-center">
-                  <div className="absolute w-20 h-20 rounded-full bg-[#EBEBEB]/30 animate-pulse" />
-                  <div className="absolute w-16 h-16 rounded-full bg-[#F0F0F0]/40 glow-pulse" />
-                  <div className="relative w-12 h-12 rounded-full bg-[#F0F0F0] border border-[#DCDCDC] flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
-                    <span className="text-[#6B6B6B] font-bold text-xs font-mono">vs</span>
+                  <div className="absolute w-20 h-20 rounded-full bg-[#E8E5E0]/30 animate-pulse" />
+                  <div className="absolute w-16 h-16 rounded-full bg-[#F2F0ED]/40 glow-pulse" />
+                  <div className="relative w-12 h-12 rounded-full bg-[#F2F0ED] border border-[#D9D4CE] flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+                    <span className="text-[#6B6560] font-bold text-xs font-mono">vs</span>
                   </div>
                 </div>
                 <div className="w-px h-10 bg-gradient-to-b from-transparent via-[#DCDCDC] to-transparent" />
@@ -108,8 +108,8 @@ export function ProblemSection() {
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
                 <div className="relative">
                   <div className="absolute inset-0 w-10 h-10 rounded-full glow-pulse" />
-                  <div className="relative w-10 h-10 rounded-full bg-[#F0F0F0] border border-[#DCDCDC] flex items-center justify-center">
-                    <span className="text-[#6B6B6B] font-bold text-[10px] font-mono">vs</span>
+                  <div className="relative w-10 h-10 rounded-full bg-[#F2F0ED] border border-[#D9D4CE] flex items-center justify-center">
+                    <span className="text-[#6B6560] font-bold text-[10px] font-mono">vs</span>
                   </div>
                 </div>
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
@@ -126,7 +126,7 @@ export function ProblemSection() {
           {/* Body Text */}
           <ScrollReveal delay={0.2}>
             <div className="mt-20 md:mt-28 max-w-[65ch] mx-auto">
-              <p className="text-base md:text-lg text-[#404040] leading-[1.75] text-center">
+              <p className="text-base md:text-lg text-[#3D3A37] leading-[1.75] text-center">
                 De rekensom klopt niet. Liftbedrijven voelen dit elke dag: routes
                 die niet gereden kunnen worden, moderniseringsprojecten die
                 uitlopen. Niet omdat je
@@ -134,7 +134,7 @@ export function ProblemSection() {
                 gecertificeerde mensen zijn, en de bestaande alternatieven (zzp,
                 uitzendbureau) betrouwbaarheid noch kwaliteitsgarantie bieden.
               </p>
-              <p className="mt-6 text-xs text-[#A0A0A0] text-center font-mono">
+              <p className="mt-6 text-xs text-[#9C9690] text-center font-mono">
                 (Bron: LYFD, marktervaring 5 jaar)
               </p>
             </div>

@@ -30,7 +30,7 @@ const stats = [
 
 export function OnderhoudWatJeKrijgt() {
   return (
-    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -45,13 +45,13 @@ export function OnderhoudWatJeKrijgt() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          className="object-cover contrast-[1.05] brightness-[1.1] opacity-[0.05]"
           loading="lazy"
         />
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="max-w-2xl">
@@ -69,11 +69,11 @@ export function OnderhoudWatJeKrijgt() {
         <div className="mt-14 md:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl">
           {/* Kolom 1: groot, span 2 */}
           <ScrollReveal delay={0.15} className="lg:col-span-2">
-            <div className="rounded-2xl border border-[#EBEBEB] bg-white p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full">
+            <div className="rounded-2xl border border-[#E8E5E0] bg-[#FDFCFA] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full">
               <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-snug text-[#1A1A1A]">
                 Direct inzetbare liftcapaciteit
               </h3>
-              <p className="mt-4 text-sm md:text-base text-[#404040] leading-[1.8] max-w-[50ch]">
+              <p className="mt-4 text-sm md:text-base text-[#3D3A37] leading-[1.8] max-w-[50ch]">
                 Gecertificeerde monteurs die dag 1 productief zijn. Geen inwerkperiode, geen onzekerheden. Met eigen uitrusting, verzekeringen en vervangingsgarantie.
               </p>
               <StaggerContainer
@@ -89,7 +89,7 @@ export function OnderhoudWatJeKrijgt() {
                           className="w-5 h-5 text-[#2A2A2A]"
                         />
                       </div>
-                      <p className="text-sm md:text-base text-[#404040] leading-relaxed">
+                      <p className="text-sm md:text-base text-[#3D3A37] leading-relaxed">
                         {voordeel}
                       </p>
                     </div>
@@ -108,16 +108,16 @@ export function OnderhoudWatJeKrijgt() {
               const Icon = stat.icon;
               return (
                 <StaggerItem key={stat.label}>
-                  <div className="rounded-2xl border border-[#EBEBEB] bg-white p-6 md:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)] text-center">
+                  <div className="rounded-2xl border border-[#E8E5E0] bg-[#FDFCFA] p-6 md:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)] text-center">
                     <div className="flex items-center justify-center mb-3">
-                      <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
                         <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
                       </div>
                     </div>
                     <span className="block text-3xl md:text-4xl font-bold tracking-tighter text-[#1A1A1A] font-mono">
                       {stat.value}
                     </span>
-                    <span className="block mt-1.5 text-xs text-[#A0A0A0] font-medium uppercase tracking-wide">
+                    <span className="block mt-1.5 text-xs text-[#9C9690] font-medium uppercase tracking-wide">
                       {stat.label}
                     </span>
                   </div>
@@ -130,23 +130,23 @@ export function OnderhoudWatJeKrijgt() {
         {/* Vergelijkingsrij */}
         <ScrollReveal delay={0.25}>
           <div className="mt-14 md:mt-20 max-w-5xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden border border-[#EBEBEB]">
+            <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden border border-[#E8E5E0]">
               {/* Zonder LYFD */}
-              <div className="bg-[#FAFAFA] p-6 md:p-8 border-b md:border-b-0 md:border-r border-[#EBEBEB]">
+              <div className="bg-[#F8F6F3] p-6 md:p-8 border-b md:border-b-0 md:border-r border-[#E8E5E0]">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-2 h-2 rounded-full bg-[#C0C0C0]" />
-                  <span className="text-xs font-medium uppercase tracking-wide text-[#A0A0A0]">
+                  <span className="text-xs font-medium uppercase tracking-wide text-[#9C9690]">
                     Zonder LYFD
                   </span>
                 </div>
-                <p className="text-sm text-[#6B6B6B] leading-relaxed">
+                <p className="text-sm text-[#6B6560] leading-relaxed">
                   Onzekerheid over beschikbaarheid, DBA-risico bij zzp-inhuur, wisselende kwaliteit en certificeringen
                 </p>
               </div>
               {/* Met LYFD */}
               <div className="bg-[#1A1A1A] p-6 md:p-8">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 rounded-full bg-white" />
+                  <div className="w-2 h-2 rounded-full bg-[#FDFCFA]" />
                   <span className="text-xs font-medium uppercase tracking-wide text-white/60">
                     Met LYFD
                   </span>

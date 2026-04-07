@@ -112,7 +112,7 @@ export function PlatformModules() {
   const [activeModule, setActiveModule] = useState(modules[0].id);
 
   return (
-    <section id="modules" className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section id="modules" className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       <Container>
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <ScrollReveal>
@@ -121,7 +121,7 @@ export function PlatformModules() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="mt-6 text-base md:text-lg text-[#6B6B6B] leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto">
               Elke module lost een specifiek probleem op. Samen vormen ze het meest
               complete platform voor de liftindustrie.
             </p>
@@ -140,8 +140,8 @@ export function PlatformModules() {
                   className={cn(
                     "w-full text-left px-4 py-4 rounded-r-xl border-l-2 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] cursor-pointer",
                     activeModule === mod.id
-                      ? "border-l-[#1A1A1A] bg-[#F8F8F8] text-[#1A1A1A]"
-                      : "border-l-transparent text-[#6B6B6B] hover:text-[#1A1A1A] hover:bg-[#FAFAFA]"
+                      ? "border-l-[#A0704C] bg-[#F5F3F0] text-[#1A1A1A]"
+                      : "border-l-transparent text-[#6B6560] hover:text-[#1A1A1A] hover:bg-[#F8F6F3]"
                   )}
                 >
                   <div className="flex items-center gap-2">
@@ -153,9 +153,9 @@ export function PlatformModules() {
                     >
                       {mod.name}
                     </span>
-                    <span className="text-xs text-[#A0A0A0]">{mod.tagline}</span>
+                    <span className="text-xs text-[#9C9690]">{mod.tagline}</span>
                     {mod.badge && (
-                      <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-medium uppercase tracking-wider bg-[#F0F0F0] text-[#6B6B6B]">
+                      <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-medium uppercase tracking-wider bg-[#F2F0ED] text-[#6B6560]">
                         {mod.badge}
                       </span>
                     )}
@@ -171,14 +171,14 @@ export function PlatformModules() {
                         transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
                         className="overflow-hidden"
                       >
-                        <p className="mt-2 text-xs text-[#6B6B6B] leading-relaxed">
+                        <p className="mt-2 text-xs text-[#6B6560] leading-relaxed">
                           {mod.description}
                         </p>
                         <div className="mt-3 flex flex-wrap gap-1.5">
                           {mod.features.map((feature) => (
                             <span
                               key={feature}
-                              className="inline-flex items-center text-[10px] text-[#A0A0A0] bg-white rounded-full px-2 py-0.5 border border-[#EBEBEB]"
+                              className="inline-flex items-center text-[10px] text-[#9C9690] bg-[#FDFCFA] rounded-full px-2 py-0.5 border border-[#E8E5E0]"
                             >
                               {feature}
                             </span>
@@ -216,8 +216,8 @@ export function PlatformModules() {
                 className={cn(
                   "rounded-xl border transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]",
                   activeModule === mod.id
-                    ? "border-[#DCDCDC] bg-[#F8F8F8]"
-                    : "border-[#EBEBEB] bg-white"
+                    ? "border-[#D9D4CE] bg-[#F5F3F0]"
+                    : "border-[#E8E5E0] bg-[#FDFCFA]"
                 )}
               >
                 <button
@@ -232,14 +232,14 @@ export function PlatformModules() {
                         "text-sm transition-all duration-300",
                         activeModule === mod.id
                           ? "font-semibold text-[#1A1A1A]"
-                          : "font-medium text-[#6B6B6B]"
+                          : "font-medium text-[#6B6560]"
                       )}
                     >
                       {mod.name}
                     </span>
-                    <span className="text-xs text-[#A0A0A0]">{mod.tagline}</span>
+                    <span className="text-xs text-[#9C9690]">{mod.tagline}</span>
                     {mod.badge && (
-                      <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-medium uppercase tracking-wider bg-[#F0F0F0] text-[#6B6B6B]">
+                      <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-medium uppercase tracking-wider bg-[#F2F0ED] text-[#6B6560]">
                         {mod.badge}
                       </span>
                     )}
@@ -256,14 +256,14 @@ export function PlatformModules() {
                       className="overflow-hidden"
                     >
                       <div className="px-4 pb-4">
-                        <p className="text-xs text-[#6B6B6B] leading-relaxed mb-3">
+                        <p className="text-xs text-[#6B6560] leading-relaxed mb-3">
                           {mod.description}
                         </p>
                         <div className="flex flex-wrap gap-1.5 mb-4">
                           {mod.features.map((feature) => (
                             <span
                               key={feature}
-                              className="inline-flex items-center text-[10px] text-[#A0A0A0] bg-white rounded-full px-2 py-0.5 border border-[#EBEBEB]"
+                              className="inline-flex items-center text-[10px] text-[#9C9690] bg-[#FDFCFA] rounded-full px-2 py-0.5 border border-[#E8E5E0]"
                             >
                               {feature}
                             </span>

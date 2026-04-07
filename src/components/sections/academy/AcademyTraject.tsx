@@ -171,7 +171,7 @@ function ParallaxFase({
             className={cn(
               "w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shrink-0",
               isDark
-                ? "bg-white text-[#1A1A1A]"
+                ? "bg-[#FDFCFA] text-[#1A1A1A]"
                 : "bg-[#1A1A1A] text-white"
             )}
           >
@@ -186,7 +186,7 @@ function ParallaxFase({
             <span
               className={cn(
                 "text-[10px] uppercase tracking-[0.25em] font-medium mb-3 block",
-                isDark ? "text-white/40" : "text-[#A0A0A0]"
+                isDark ? "text-white/40" : "text-[#9C9690]"
               )}
             >
               {blokLabels[fase.blok]}
@@ -204,7 +204,7 @@ function ParallaxFase({
             <p
               className={cn(
                 "text-base md:text-lg leading-relaxed mb-3 max-w-[52ch]",
-                isDark ? "text-white/70" : "text-[#404040]"
+                isDark ? "text-white/70" : "text-[#3D3A37]"
               )}
             >
               {fase.description}
@@ -216,7 +216,7 @@ function ParallaxFase({
                   "inline-flex items-center rounded-full px-3 py-1 text-xs font-mono",
                   isDark
                     ? "bg-white/10 text-white/60"
-                    : "bg-[#F0F0F0] text-[#6B6B6B]"
+                    : "bg-[#F2F0ED] text-[#6B6560]"
                 )}
               >
                 {fase.duur}
@@ -246,7 +246,7 @@ function BlokSeparator({ label }: { label: string }) {
   return (
     <div
       ref={ref}
-      className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden bg-white"
+      className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden bg-[#FDFCFA]"
     >
       <motion.span
         style={{ opacity, scale }}
@@ -295,7 +295,7 @@ function TrajectCTA() {
         </p>
         <a
           href="#assessment"
-          className="inline-flex items-center justify-center rounded-full bg-white text-[#1A1A1A] px-8 py-3.5 text-sm font-semibold tracking-tight hover:bg-white/90 transition-colors"
+          className="inline-flex items-center justify-center rounded-full bg-[#FDFCFA] text-[#1A1A1A] px-8 py-3.5 text-sm font-semibold tracking-tight hover:bg-[#FDFCFA]/90 transition-colors"
         >
           Start de assessment
         </a>
@@ -321,19 +321,19 @@ function TrajectHeader() {
   return (
     <div
       ref={ref}
-      className="relative h-[60vh] md:h-[70vh] flex items-center justify-center bg-[#F8F8F8] overflow-hidden"
+      className="relative h-[60vh] md:h-[70vh] flex items-center justify-center bg-[#F5F3F0] overflow-hidden"
     >
       <motion.div
         style={{ opacity: headerOpacity, y: headerY }}
         className="text-center px-6 max-w-2xl mx-auto"
       >
-        <span className="inline-flex items-center rounded-full border border-[#E0E0E0] bg-white px-4 py-1.5 text-[11px] uppercase tracking-[0.2em] font-medium text-[#6B6B6B] mb-6">
+        <span className="inline-flex items-center rounded-full border border-[#E0E0E0] bg-[#FDFCFA] px-4 py-1.5 text-[11px] uppercase tracking-[0.2em] font-medium text-[#6B6560] mb-6">
           Het traject
         </span>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-5">
           Van nul naar gecertificeerd liftmonteur
         </h2>
-        <p className="text-base text-[#6B6B6B] max-w-[48ch] mx-auto">
+        <p className="text-base text-[#6B6560] max-w-[48ch] mx-auto">
           Een gestructureerd opleidingstraject in 7 fases, van geschiktheidstest
           tot certificering.
         </p>

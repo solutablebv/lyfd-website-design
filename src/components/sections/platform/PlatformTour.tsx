@@ -52,20 +52,20 @@ function BrowserChrome({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-[#DCDCDC] bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06)] overflow-hidden">
-      <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#EBEBEB] bg-[#FAFAFA]">
+    <div className="rounded-2xl border border-[#D9D4CE] bg-[#FDFCFA] shadow-[0_8px_40px_rgba(0,0,0,0.06)] overflow-hidden">
+      <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#E8E5E0] bg-[#F8F6F3]">
         <div className="flex gap-1.5">
-          <div className="w-2.5 h-2.5 rounded-full bg-[#E8E8E8]" />
-          <div className="w-2.5 h-2.5 rounded-full bg-[#E8E8E8]" />
-          <div className="w-2.5 h-2.5 rounded-full bg-[#E8E8E8]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#E5E0DA]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#E5E0DA]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#E5E0DA]" />
         </div>
         <div className="flex-1 mx-6">
-          <div className="max-w-xs mx-auto h-5 rounded-md bg-[#F0F0F0] flex items-center px-2.5">
-            <span className="text-[9px] text-[#A0A0A0] font-mono">{url}</span>
+          <div className="max-w-xs mx-auto h-5 rounded-md bg-[#F2F0ED] flex items-center px-2.5">
+            <span className="text-[9px] text-[#9C9690] font-mono">{url}</span>
           </div>
         </div>
       </div>
-      <div className="p-4 md:p-5 bg-[#F8F8F8]">{children}</div>
+      <div className="p-4 md:p-5 bg-[#F5F3F0]">{children}</div>
     </div>
   );
 }
@@ -105,9 +105,9 @@ function DashboardMockup() {
         ].map((s) => (
           <div
             key={s.label}
-            className="rounded-lg border border-[#EBEBEB] bg-white p-2.5"
+            className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2.5"
           >
-            <div className="text-[10px] text-[#A0A0A0] mb-1">{s.label}</div>
+            <div className="text-[10px] text-[#9C9690] mb-1">{s.label}</div>
             <div className="text-base font-bold font-mono text-[#1A1A1A]">
               {s.value}
             </div>
@@ -116,9 +116,9 @@ function DashboardMockup() {
       </div>
 
       {/* Recent werkorders */}
-      <div className="rounded-lg border border-[#EBEBEB] bg-white">
+      <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA]">
         <div className="px-3 py-2 border-b border-[#F0F0F0]">
-          <span className="text-[10px] font-medium text-[#6B6B6B] uppercase tracking-wider">
+          <span className="text-[10px] font-medium text-[#6B6560] uppercase tracking-wider">
             Recente werkorders
           </span>
         </div>
@@ -155,7 +155,7 @@ function DashboardMockup() {
             <span className="text-[11px] font-mono text-[#1A1A1A] w-16">
               {r.id}
             </span>
-            <span className="text-[11px] text-[#6B6B6B] flex-1 truncate">
+            <span className="text-[11px] text-[#6B6560] flex-1 truncate">
               {r.loc}
             </span>
             <StatusDot color={r.color} label={r.status} />
@@ -171,31 +171,31 @@ function WorkorderAssignMockup() {
   return (
     <div className="space-y-3">
       {/* Werkorder header */}
-      <div className="rounded-lg border border-[#EBEBEB] bg-white p-3">
+      <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-3">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs font-bold text-[#1A1A1A]">WO-2851</span>
           <StatusDot color="#F59E0B" label="Niet toegewezen" />
         </div>
         <div className="space-y-1.5">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-[#A0A0A0] w-16">Locatie</span>
+            <span className="text-[10px] text-[#9C9690] w-16">Locatie</span>
             <span className="text-[11px] text-[#1A1A1A]">
               Rabobank Utrecht, Lift A-3
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-[#A0A0A0] w-16">Type</span>
+            <span className="text-[10px] text-[#9C9690] w-16">Type</span>
             <span className="text-[11px] text-[#1A1A1A]">
               Storing deurmotor
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-[#A0A0A0] w-16">Prioriteit</span>
+            <span className="text-[10px] text-[#9C9690] w-16">Prioriteit</span>
             <StatusDot color="#EF4444" label="Hoog" />
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-[#A0A0A0] w-16">Lift ID</span>
-            <span className="text-[11px] font-mono text-[#6B6B6B]">
+            <span className="text-[10px] text-[#9C9690] w-16">Lift ID</span>
+            <span className="text-[11px] font-mono text-[#6B6560]">
               NL-UTR-RAB-A3
             </span>
           </div>
@@ -203,8 +203,8 @@ function WorkorderAssignMockup() {
       </div>
 
       {/* Monteur dropdown */}
-      <div className="rounded-lg border border-[#1A1A1A] bg-white p-3">
-        <span className="text-[10px] font-medium text-[#6B6B6B] uppercase tracking-wider block mb-2">
+      <div className="rounded-lg border border-[#1A1A1A] bg-[#FDFCFA] p-3">
+        <span className="text-[10px] font-medium text-[#6B6560] uppercase tracking-wider block mb-2">
           Monteur toewijzen
         </span>
         {[
@@ -234,7 +234,7 @@ function WorkorderAssignMockup() {
               !m.avail && "opacity-40"
             )}
           >
-            <div className="w-6 h-6 rounded-full bg-[#F0F0F0] flex items-center justify-center text-[9px] font-bold text-[#6B6B6B]">
+            <div className="w-6 h-6 rounded-full bg-[#F2F0ED] flex items-center justify-center text-[9px] font-bold text-[#6B6560]">
               {m.name
                 .split(" ")
                 .map((n) => n[0])
@@ -245,9 +245,9 @@ function WorkorderAssignMockup() {
               <span className="text-[11px] text-[#1A1A1A] font-medium block">
                 {m.name}
               </span>
-              <span className="text-[10px] text-[#A0A0A0]">{m.cert}</span>
+              <span className="text-[10px] text-[#9C9690]">{m.cert}</span>
             </div>
-            <span className="text-[10px] font-mono text-[#A0A0A0]">
+            <span className="text-[10px] font-mono text-[#9C9690]">
               {m.dist}
             </span>
             {m.avail ? (
@@ -287,7 +287,7 @@ function WeekplanningMockup() {
         <div />
         {days.map((d) => (
           <div key={d} className="text-center">
-            <span className="text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider">
+            <span className="text-[10px] font-medium text-[#9C9690] uppercase tracking-wider">
               {d}
             </span>
           </div>
@@ -298,7 +298,7 @@ function WeekplanningMockup() {
       {monteurs.map((m, mi) => (
         <div key={m.name} className="grid grid-cols-[80px_repeat(5,1fr)] gap-1">
           <div className="flex items-center">
-            <span className="text-[10px] text-[#6B6B6B] truncate">
+            <span className="text-[10px] text-[#6B6560] truncate">
               {m.name}
             </span>
           </div>
@@ -315,7 +315,7 @@ function WeekplanningMockup() {
                   />
                 ))
               ) : (
-                <div className="rounded h-4 border border-dashed border-[#EBEBEB]" />
+                <div className="rounded h-4 border border-dashed border-[#E8E5E0]" />
               )}
             </div>
           ))}
@@ -324,8 +324,8 @@ function WeekplanningMockup() {
 
       {/* Capacity bar */}
       <div className="flex items-center gap-3 pt-2 border-t border-[#F0F0F0]">
-        <span className="text-[10px] text-[#A0A0A0]">Bezetting</span>
-        <div className="flex-1 h-2 rounded-full bg-[#F0F0F0] overflow-hidden">
+        <span className="text-[10px] text-[#9C9690]">Bezetting</span>
+        <div className="flex-1 h-2 rounded-full bg-[#F2F0ED] overflow-hidden">
           <div
             className="h-full rounded-full bg-[#1A1A1A]"
             style={{ width: "78%" }}
@@ -343,31 +343,31 @@ function SenseMonitorMockup() {
     <div className="space-y-3">
       {/* Status cards */}
       <div className="grid grid-cols-3 gap-2">
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-2.5">
-          <div className="text-[10px] text-[#A0A0A0] mb-1">Online</div>
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2.5">
+          <div className="text-[10px] text-[#9C9690] mb-1">Online</div>
           <div className="text-sm font-bold text-[#1A1A1A] font-mono">
             247
           </div>
         </div>
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-2.5">
-          <div className="text-[10px] text-[#A0A0A0] mb-1">Storing</div>
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2.5">
+          <div className="text-[10px] text-[#9C9690] mb-1">Storing</div>
           <div className="text-sm font-bold text-[#EF4444] font-mono">3</div>
         </div>
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-2.5">
-          <div className="text-[10px] text-[#A0A0A0] mb-1">Onderhoud</div>
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2.5">
+          <div className="text-[10px] text-[#9C9690] mb-1">Onderhoud</div>
           <div className="text-sm font-bold text-[#F59E0B] font-mono">12</div>
         </div>
       </div>
 
       {/* Live feed */}
-      <div className="rounded-lg border border-[#EBEBEB] bg-white p-3">
+      <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-3">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-[10px] font-medium text-[#6B6B6B]">
+          <span className="text-[10px] font-medium text-[#6B6560]">
             Live installaties
           </span>
           <div className="flex items-center gap-1">
             <div className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
-            <span className="text-[9px] text-[#A0A0A0]">Live</span>
+            <span className="text-[9px] text-[#9C9690]">Live</span>
           </div>
         </div>
         {[
@@ -404,10 +404,10 @@ function SenseMonitorMockup() {
               className="w-1.5 h-1.5 rounded-full flex-shrink-0"
               style={{ backgroundColor: item.color }}
             />
-            <span className="text-[10px] font-mono text-[#A0A0A0] w-24 flex-shrink-0">
+            <span className="text-[10px] font-mono text-[#9C9690] w-24 flex-shrink-0">
               {item.id}
             </span>
-            <span className="text-[10px] text-[#6B6B6B] flex-1 truncate">
+            <span className="text-[10px] text-[#6B6560] flex-1 truncate">
               {item.loc}
             </span>
             <StatusDot color={item.color} label={item.status} />
@@ -416,8 +416,8 @@ function SenseMonitorMockup() {
       </div>
 
       {/* Mini chart */}
-      <div className="rounded-lg border border-[#EBEBEB] bg-white p-3">
-        <span className="text-[10px] font-medium text-[#6B6B6B] block mb-2">
+      <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-3">
+        <span className="text-[10px] font-medium text-[#6B6560] block mb-2">
           Storinghistorie (7 dagen)
         </span>
         <svg viewBox="0 0 280 50" className="w-full h-12" fill="none">
@@ -447,7 +447,7 @@ function OfferteBuilderMockup() {
   return (
     <div className="space-y-3">
       {/* Template header */}
-      <div className="rounded-lg border border-[#EBEBEB] bg-white p-3">
+      <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-3">
         <div className="flex items-center justify-between mb-3">
           <span className="text-xs font-bold text-[#1A1A1A]">
             Nieuwe offerte
@@ -456,24 +456,24 @@ function OfferteBuilderMockup() {
         </div>
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-[#A0A0A0] w-16">Klant</span>
-            <div className="flex-1 h-6 rounded bg-[#F8F8F8] border border-[#EBEBEB] px-2 flex items-center">
+            <span className="text-[10px] text-[#9C9690] w-16">Klant</span>
+            <div className="flex-1 h-6 rounded bg-[#F5F3F0] border border-[#E8E5E0] px-2 flex items-center">
               <span className="text-[11px] text-[#1A1A1A]">
                 Otis Nederland B.V.
               </span>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-[#A0A0A0] w-16">Project</span>
-            <div className="flex-1 h-6 rounded bg-[#F8F8F8] border border-[#EBEBEB] px-2 flex items-center">
+            <span className="text-[10px] text-[#9C9690] w-16">Project</span>
+            <div className="flex-1 h-6 rounded bg-[#F5F3F0] border border-[#E8E5E0] px-2 flex items-center">
               <span className="text-[11px] text-[#1A1A1A]">
                 Onderhoud Q2 2026
               </span>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-[#A0A0A0] w-16">Template</span>
-            <div className="flex-1 h-6 rounded bg-[#F8F8F8] border border-[#EBEBEB] px-2 flex items-center">
+            <span className="text-[10px] text-[#9C9690] w-16">Template</span>
+            <div className="flex-1 h-6 rounded bg-[#F5F3F0] border border-[#E8E5E0] px-2 flex items-center">
               <span className="text-[11px] text-[#1A1A1A]">
                 Onderhoudscontract
               </span>
@@ -483,9 +483,9 @@ function OfferteBuilderMockup() {
       </div>
 
       {/* Line items */}
-      <div className="rounded-lg border border-[#EBEBEB] bg-white">
+      <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA]">
         <div className="px-3 py-2 border-b border-[#F0F0F0]">
-          <span className="text-[10px] font-medium text-[#6B6B6B] uppercase tracking-wider">
+          <span className="text-[10px] font-medium text-[#6B6560] uppercase tracking-wider">
             Regels
           </span>
         </div>
@@ -501,7 +501,7 @@ function OfferteBuilderMockup() {
             <span className="text-[11px] text-[#1A1A1A] flex-1">
               {line.item}
             </span>
-            <span className="text-[10px] font-mono text-[#A0A0A0] w-8 text-right">
+            <span className="text-[10px] font-mono text-[#9C9690] w-8 text-right">
               {line.qty}x
             </span>
             <span className="text-[11px] font-mono text-[#1A1A1A] w-16 text-right">
@@ -509,7 +509,7 @@ function OfferteBuilderMockup() {
             </span>
           </div>
         ))}
-        <div className="flex items-center justify-between px-3 py-2 bg-[#F8F8F8]">
+        <div className="flex items-center justify-between px-3 py-2 bg-[#F5F3F0]">
           <span className="text-[11px] font-bold text-[#1A1A1A]">Totaal</span>
           <span className="text-[11px] font-bold font-mono text-[#1A1A1A]">
             EUR 4.280
@@ -519,8 +519,8 @@ function OfferteBuilderMockup() {
 
       {/* Actions */}
       <div className="flex items-center gap-2 justify-end">
-        <div className="h-6 rounded-full border border-[#DCDCDC] px-3 flex items-center">
-          <span className="text-[10px] text-[#6B6B6B] font-medium">
+        <div className="h-6 rounded-full border border-[#D9D4CE] px-3 flex items-center">
+          <span className="text-[10px] text-[#6B6560] font-medium">
             Voorbeeld
           </span>
         </div>
@@ -583,7 +583,7 @@ export function PlatformTour() {
   const ActiveMockup = tourMockups[activeStep].component;
 
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
 
       <Container>
@@ -607,7 +607,7 @@ export function PlatformTour() {
               {/* Progress line with dots */}
               <div className="relative pl-6">
                 {/* Vertical line */}
-                <div className="absolute left-[9px] top-3 bottom-3 w-px bg-[#EBEBEB]" />
+                <div className="absolute left-[9px] top-3 bottom-3 w-px bg-[#E8E5E0]" />
 
                 {steps.map((step, i) => (
                   <button
@@ -616,8 +616,8 @@ export function PlatformTour() {
                     className={cn(
                       "relative w-full text-left py-4 pl-6 rounded-r-xl transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] cursor-pointer",
                       activeStep === i
-                        ? "bg-white text-[#1A1A1A]"
-                        : "text-[#6B6B6B] hover:text-[#1A1A1A] hover:bg-[#F0F0F0]"
+                        ? "bg-[#FDFCFA] text-[#1A1A1A]"
+                        : "text-[#6B6560] hover:text-[#1A1A1A] hover:bg-[#F2F0ED]"
                     )}
                   >
                     {/* Step indicator dot */}
@@ -628,12 +628,12 @@ export function PlatformTour() {
                           ? "w-4 h-4 bg-[#1A1A1A] border-[#1A1A1A]"
                           : i < activeStep
                             ? "w-3 h-3 bg-[#6B6B6B] border-[#6B6B6B]"
-                            : "w-3 h-3 bg-white border-[#DCDCDC]"
+                            : "w-3 h-3 bg-[#FDFCFA] border-[#D9D4CE]"
                       )}
                     />
 
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono text-[#A0A0A0]">
+                      <span className="text-[10px] font-mono text-[#9C9690]">
                         0{i + 1}
                       </span>
                       <span
@@ -658,7 +658,7 @@ export function PlatformTour() {
                           }}
                           className="overflow-hidden"
                         >
-                          <p className="mt-2 text-xs text-[#6B6B6B] leading-relaxed">
+                          <p className="mt-2 text-xs text-[#6B6560] leading-relaxed">
                             {step.description}
                           </p>
                         </motion.div>
@@ -694,7 +694,7 @@ export function PlatformTour() {
             const Mockup = tourMockups[i].component;
             return (
               <ScrollReveal key={i}>
-                <div className="rounded-xl border border-[#EBEBEB] bg-white overflow-hidden">
+                <div className="rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] overflow-hidden">
                   <div className="px-4 py-4">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1A1A1A] text-white text-[10px] font-bold">
@@ -704,7 +704,7 @@ export function PlatformTour() {
                         {step.title}
                       </span>
                     </div>
-                    <p className="text-xs text-[#6B6B6B] leading-relaxed mb-4">
+                    <p className="text-xs text-[#6B6560] leading-relaxed mb-4">
                       {step.description}
                     </p>
                     <BrowserChrome url={tourMockups[i].url}>
@@ -737,7 +737,7 @@ export function PlatformTour() {
         {/* CTA */}
         <ScrollReveal delay={0.2}>
           <div className="text-center mt-16 md:mt-20">
-            <p className="text-base md:text-lg text-[#6B6B6B] mb-6">
+            <p className="text-base md:text-lg text-[#6B6560] mb-6">
               Klaar om het zelf te ervaren? Plan een live demo.
             </p>
             <Button

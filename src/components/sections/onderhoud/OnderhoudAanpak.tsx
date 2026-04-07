@@ -44,7 +44,7 @@ const models = [
 
 export function OnderhoudAanpak() {
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -59,7 +59,7 @@ export function OnderhoudAanpak() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.06]"
+          className="object-cover contrast-[1.05] brightness-[1.1] opacity-[0.06]"
           loading="lazy"
         />
       </div>
@@ -88,16 +88,16 @@ export function OnderhoudAanpak() {
             const Icon = model.icon;
             return (
               <StaggerItem key={model.title}>
-                <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
                       <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
                     </div>
                     <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug">
                       {model.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-[#404040] leading-relaxed">
+                  <p className="text-sm text-[#3D3A37] leading-relaxed">
                     {model.description}
                   </p>
                 </div>
@@ -108,7 +108,7 @@ export function OnderhoudAanpak() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

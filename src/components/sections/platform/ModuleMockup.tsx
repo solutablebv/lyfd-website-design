@@ -40,18 +40,18 @@ function WerkbeheerMockup() {
   return (
     <div className="space-y-0">
       {/* Table header */}
-      <div className="grid grid-cols-12 gap-2 py-2 border-b border-[#EBEBEB] mb-1">
-        <span className="col-span-2 text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider">Order</span>
-        <span className="col-span-3 text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider">Locatie</span>
-        <span className="col-span-2 text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider">Monteur</span>
-        <span className="col-span-2 text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider text-center">Status</span>
-        <span className="col-span-3 text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider text-right">Prioriteit</span>
+      <div className="grid grid-cols-12 gap-2 py-2 border-b border-[#E8E5E0] mb-1">
+        <span className="col-span-2 text-[10px] font-medium text-[#9C9690] uppercase tracking-wider">Order</span>
+        <span className="col-span-3 text-[10px] font-medium text-[#9C9690] uppercase tracking-wider">Locatie</span>
+        <span className="col-span-2 text-[10px] font-medium text-[#9C9690] uppercase tracking-wider">Monteur</span>
+        <span className="col-span-2 text-[10px] font-medium text-[#9C9690] uppercase tracking-wider text-center">Status</span>
+        <span className="col-span-3 text-[10px] font-medium text-[#9C9690] uppercase tracking-wider text-right">Prioriteit</span>
       </div>
       {orders.map((order) => (
-        <div key={order.id} className="grid grid-cols-12 gap-2 py-2.5 border-b border-[#F5F5F5] last:border-0 hover:bg-[#FAFAFA] transition-colors items-center">
+        <div key={order.id} className="grid grid-cols-12 gap-2 py-2.5 border-b border-[#F5F5F5] last:border-0 hover:bg-[#F8F6F3] transition-colors items-center">
           <span className="col-span-2 text-xs font-mono text-[#1A1A1A]">{order.id}</span>
-          <span className="col-span-3 text-xs text-[#6B6B6B] truncate">{order.locatie}</span>
-          <span className="col-span-2 text-xs text-[#6B6B6B]">{order.monteur}</span>
+          <span className="col-span-3 text-xs text-[#6B6560] truncate">{order.locatie}</span>
+          <span className="col-span-2 text-xs text-[#6B6560]">{order.monteur}</span>
           <div className="col-span-2 flex justify-center">
             <StatusBadge color={order.statusColor} label={order.status} />
           </div>
@@ -75,10 +75,10 @@ function PlanningMockup() {
   ];
 
   function getCellColor(uren: string): string {
-    if (uren === "-") return "bg-[#F0F0F0] text-[#A0A0A0]";
+    if (uren === "-") return "bg-[#F2F0ED] text-[#9C9690]";
     if (uren.startsWith("8/8")) return "bg-[#1A1A1A] text-white";
     if (uren.startsWith("6/8") || uren.startsWith("4/8")) return "bg-[#4A4A4A] text-white";
-    return "bg-[#F0F0F0] text-[#6B6B6B]";
+    return "bg-[#F2F0ED] text-[#6B6560]";
   }
 
   return (
@@ -88,14 +88,14 @@ function PlanningMockup() {
         <div />
         {days.map((day) => (
           <div key={day} className="text-center">
-            <span className="text-[10px] font-medium text-[#A0A0A0] uppercase tracking-wider">{day}</span>
+            <span className="text-[10px] font-medium text-[#9C9690] uppercase tracking-wider">{day}</span>
           </div>
         ))}
       </div>
       {/* Rows */}
       {monteurs.map((m) => (
         <div key={m.naam} className="grid grid-cols-[80px_repeat(5,1fr)] gap-1.5 items-center">
-          <span className="text-[10px] text-[#6B6B6B] font-medium truncate">{m.naam}</span>
+          <span className="text-[10px] text-[#6B6560] font-medium truncate">{m.naam}</span>
           {m.uren.map((u, i) => (
             <div
               key={i}
@@ -108,8 +108,8 @@ function PlanningMockup() {
       ))}
       {/* Capacity bar */}
       <div className="flex items-center gap-3 pt-3 border-t border-[#F0F0F0]">
-        <span className="text-[10px] text-[#A0A0A0]">Team capaciteit</span>
-        <div className="flex-1 h-2 rounded-full bg-[#F0F0F0] overflow-hidden">
+        <span className="text-[10px] text-[#9C9690]">Team capaciteit</span>
+        <div className="flex-1 h-2 rounded-full bg-[#F2F0ED] overflow-hidden">
           <div className="h-full rounded-full bg-[#1A1A1A]" style={{ width: "84%" }} />
         </div>
         <span className="text-[10px] font-mono font-medium text-[#1A1A1A]">84% bezet</span>
@@ -164,11 +164,11 @@ function ReparatieMockup() {
       {columns.map((col) => (
         <div key={col.label} className="space-y-2">
           <div className="flex items-center gap-2 pb-1 border-b-2" style={{ borderColor: col.color }}>
-            <span className="text-[10px] font-medium text-[#6B6B6B]">{col.label}</span>
-            <span className="text-[10px] font-mono text-[#A0A0A0]">{col.count}</span>
+            <span className="text-[10px] font-medium text-[#6B6560]">{col.label}</span>
+            <span className="text-[10px] font-mono text-[#9C9690]">{col.count}</span>
           </div>
           {col.items.map((item, i) => (
-            <div key={i} className="rounded-lg border border-[#EBEBEB] bg-white p-2 space-y-1">
+            <div key={i} className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2 space-y-1">
               <span className="text-[10px] font-medium text-[#1A1A1A] block">{item.title}</span>
               <span className="text-[9px] block" style={{ color: item.detailColor }}>{item.detail}</span>
             </div>
@@ -194,12 +194,12 @@ function OnderdelenMockup() {
     <div className="space-y-3">
       {/* Search bar */}
       <div className="flex gap-2">
-        <div className="flex-1 h-8 rounded-lg bg-[#F0F0F0] flex items-center px-3">
+        <div className="flex-1 h-8 rounded-lg bg-[#F2F0ED] flex items-center px-3">
           <svg className="w-3 h-3 text-[#DCDCDC]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <circle cx="11" cy="11" r="8" />
             <path d="M21 21l-4.35-4.35" />
           </svg>
-          <span className="text-[10px] text-[#A0A0A0] ml-2 font-mono">Zoek onderdeel...</span>
+          <span className="text-[10px] text-[#9C9690] ml-2 font-mono">Zoek onderdeel...</span>
         </div>
         <div className="h-8 px-3 rounded-lg bg-[#1A1A1A] flex items-center">
           <span className="text-[10px] text-white font-medium">Filters</span>
@@ -208,9 +208,9 @@ function OnderdelenMockup() {
       {/* Product grid */}
       <div className="grid grid-cols-3 gap-2">
         {products.map((p, i) => (
-          <div key={i} className="rounded-lg border border-[#EBEBEB] bg-white p-2.5 space-y-1.5">
+          <div key={i} className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2.5 space-y-1.5">
             <div className="aspect-square rounded-md bg-[#F5F5F5] flex items-center justify-center">
-              <div className="w-8 h-8 rounded bg-[#EBEBEB]" />
+              <div className="w-8 h-8 rounded bg-[#E8E5E0]" />
             </div>
             <span className="text-[10px] text-[#1A1A1A] font-medium block leading-tight truncate">{p.name}</span>
             <div className="flex items-center justify-between">
@@ -239,12 +239,12 @@ function OffertesMockup() {
       {docs.map((doc) => (
         <div key={doc.name} className="flex items-center gap-4 py-3 border-b border-[#F5F5F5] last:border-0">
           {/* Document icon */}
-          <div className="w-8 h-10 rounded border border-[#EBEBEB] bg-white flex items-center justify-center">
-            <div className="w-4 h-5 rounded-sm bg-[#F0F0F0]" />
+          <div className="w-8 h-10 rounded border border-[#E8E5E0] bg-[#FDFCFA] flex items-center justify-center">
+            <div className="w-4 h-5 rounded-sm bg-[#F2F0ED]" />
           </div>
           <div className="flex-1 min-w-0">
             <span className="text-xs text-[#1A1A1A] font-medium block truncate">{doc.name}</span>
-            <span className="text-[10px] text-[#A0A0A0]">{doc.date}</span>
+            <span className="text-[10px] text-[#9C9690]">{doc.date}</span>
           </div>
           <StatusBadge color={doc.statusColor} label={doc.status} />
         </div>
@@ -259,26 +259,26 @@ function MonitorMockup() {
     <div className="space-y-3">
       {/* Status row */}
       <div className="grid grid-cols-3 gap-2">
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-2.5">
-          <div className="text-[10px] text-[#A0A0A0] mb-1">Online</div>
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2.5">
+          <div className="text-[10px] text-[#9C9690] mb-1">Online</div>
           <div className="text-sm font-bold text-[#22C55E] font-mono">247</div>
         </div>
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-2.5">
-          <div className="text-[10px] text-[#A0A0A0] mb-1">Storing</div>
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2.5">
+          <div className="text-[10px] text-[#9C9690] mb-1">Storing</div>
           <div className="text-sm font-bold text-[#EF4444] font-mono">3</div>
         </div>
-        <div className="rounded-lg border border-[#EBEBEB] bg-white p-2.5">
-          <div className="text-[10px] text-[#A0A0A0] mb-1">Onderhoud</div>
+        <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2.5">
+          <div className="text-[10px] text-[#9C9690] mb-1">Onderhoud</div>
           <div className="text-sm font-bold text-[#F59E0B] font-mono">12</div>
         </div>
       </div>
       {/* Chart mockup with SVG */}
-      <div className="rounded-lg border border-[#EBEBEB] bg-white p-3">
+      <div className="rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-3">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-[10px] font-medium text-[#6B6B6B]">Storinghistorie (30 dagen)</span>
+          <span className="text-[10px] font-medium text-[#6B6560]">Storinghistorie (30 dagen)</span>
           <div className="flex gap-2">
-            <div className="h-4 w-10 rounded bg-[#F0F0F0]" />
-            <div className="h-4 w-10 rounded bg-[#F0F0F0]" />
+            <div className="h-4 w-10 rounded bg-[#F2F0ED]" />
+            <div className="h-4 w-10 rounded bg-[#F2F0ED]" />
           </div>
         </div>
         <svg viewBox="0 0 300 80" className="w-full h-20" fill="none">
@@ -317,8 +317,8 @@ function MonitorMockup() {
         ].map((item) => (
           <div key={item.text} className="flex items-center gap-2 py-1">
             <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: item.color }} />
-            <span className="text-[10px] text-[#6B6B6B] flex-1 truncate">{item.text}</span>
-            <span className="text-[10px] text-[#A0A0A0] font-mono">{item.time}</span>
+            <span className="text-[10px] text-[#6B6560] flex-1 truncate">{item.text}</span>
+            <span className="text-[10px] text-[#9C9690] font-mono">{item.time}</span>
           </div>
         ))}
       </div>
@@ -377,19 +377,19 @@ function MarktplaatsMockup() {
           <div
             key={f}
             className={`h-7 rounded-full px-3 flex items-center ${
-              i === 0 ? "bg-[#1A1A1A]" : "bg-[#F0F0F0]"
+              i === 0 ? "bg-[#1A1A1A]" : "bg-[#F2F0ED]"
             }`}
           >
-            <span className={`text-[10px] ${i === 0 ? "text-white" : "text-[#6B6B6B]"}`}>{f}</span>
+            <span className={`text-[10px] ${i === 0 ? "text-white" : "text-[#6B6560]"}`}>{f}</span>
           </div>
         ))}
       </div>
       {/* Listings */}
       <div className="space-y-2">
         {listings.map((item, i) => (
-          <div key={i} className="flex gap-3 rounded-lg border border-[#EBEBEB] bg-white p-2.5">
+          <div key={i} className="flex gap-3 rounded-lg border border-[#E8E5E0] bg-[#FDFCFA] p-2.5">
             <div className="w-14 h-14 rounded-md bg-[#F5F5F5] flex items-center justify-center flex-shrink-0">
-              <div className="w-7 h-7 rounded bg-[#EBEBEB]" />
+              <div className="w-7 h-7 rounded bg-[#E8E5E0]" />
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between gap-2">
@@ -398,7 +398,7 @@ function MarktplaatsMockup() {
               </div>
               <span className="text-[9px] font-medium" style={{ color: item.conditionColor }}>{item.condition}</span>
               <div className="flex items-center justify-between mt-1">
-                <span className="text-[9px] text-[#A0A0A0]">{item.seller} - {item.location}</span>
+                <span className="text-[9px] text-[#9C9690]">{item.seller} - {item.location}</span>
                 <div className="flex gap-0.5">
                   {Array.from({ length: 5 }).map((_, s) => (
                     <span
@@ -435,17 +435,17 @@ export function ModuleMockup({ moduleId }: ModuleMockupProps) {
   if (!MockupComponent) return null;
 
   return (
-    <div className="rounded-2xl border border-[#DCDCDC] bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06)] overflow-hidden">
+    <div className="rounded-2xl border border-[#D9D4CE] bg-[#FDFCFA] shadow-[0_8px_40px_rgba(0,0,0,0.06)] overflow-hidden">
       {/* Browser bar */}
-      <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#EBEBEB] bg-[#FAFAFA]">
+      <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[#E8E5E0] bg-[#F8F6F3]">
         <div className="flex gap-1.5">
-          <div className="w-2.5 h-2.5 rounded-full bg-[#E8E8E8]" />
-          <div className="w-2.5 h-2.5 rounded-full bg-[#E8E8E8]" />
-          <div className="w-2.5 h-2.5 rounded-full bg-[#E8E8E8]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#E5E0DA]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#E5E0DA]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#E5E0DA]" />
         </div>
         <div className="flex-1 mx-6">
-          <div className="max-w-xs mx-auto h-5 rounded-md bg-[#F0F0F0] flex items-center px-2.5">
-            <span className="text-[9px] text-[#A0A0A0] font-mono">
+          <div className="max-w-xs mx-auto h-5 rounded-md bg-[#F2F0ED] flex items-center px-2.5">
+            <span className="text-[9px] text-[#9C9690] font-mono">
               app.lyfd.nl/{moduleId}
             </span>
           </div>
@@ -453,7 +453,7 @@ export function ModuleMockup({ moduleId }: ModuleMockupProps) {
       </div>
 
       {/* Content */}
-      <div className="p-4 md:p-5 bg-[#F8F8F8]">
+      <div className="p-4 md:p-5 bg-[#F5F3F0]">
         <MockupComponent />
       </div>
     </div>

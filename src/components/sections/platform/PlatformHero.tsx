@@ -82,7 +82,7 @@ export function PlatformHero() {
   ];
 
   return (
-    <section className="relative bg-white pt-32 md:pt-44 pb-24 md:pb-32 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] pt-32 md:pt-44 pb-24 md:pb-32 overflow-hidden">
       <Container className="relative z-10">
         {/* Text content */}
         <div className="max-w-3xl mx-auto text-center">
@@ -107,7 +107,7 @@ export function PlatformHero() {
             initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1], delay: 0.2 }}
-            className="mt-6 text-base md:text-lg text-[#6B6B6B] leading-[1.7] max-w-[55ch] mx-auto"
+            className="mt-6 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto"
           >
             Van werkorderbeheer tot IoT monitoring. Zeven modules die samenwerken.
             Gebouwd voor liftbedrijven die vooruit willen.
@@ -140,17 +140,17 @@ export function PlatformHero() {
           <div className="absolute -inset-4 bg-gradient-to-b from-[#F0F0F0] via-[#E8E8E8] to-transparent rounded-3xl blur-2xl opacity-60" />
 
           {/* Het "scherm" */}
-          <div className="relative rounded-2xl border border-[#DCDCDC] bg-white shadow-[0_8px_40px_rgba(0,0,0,0.08)] overflow-hidden">
+          <div className="relative rounded-2xl border border-[#D9D4CE] bg-[#FDFCFA] shadow-[0_8px_40px_rgba(0,0,0,0.08)] overflow-hidden">
             {/* Browser bar */}
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-[#EBEBEB] bg-[#FAFAFA]">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-[#E8E5E0] bg-[#F8F6F3]">
               <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-[#E8E8E8]" />
-                <div className="w-3 h-3 rounded-full bg-[#E8E8E8]" />
-                <div className="w-3 h-3 rounded-full bg-[#E8E8E8]" />
+                <div className="w-3 h-3 rounded-full bg-[#E5E0DA]" />
+                <div className="w-3 h-3 rounded-full bg-[#E5E0DA]" />
+                <div className="w-3 h-3 rounded-full bg-[#E5E0DA]" />
               </div>
               <div className="flex-1 mx-8">
-                <div className="max-w-md mx-auto h-6 rounded-md bg-[#F0F0F0] flex items-center px-3">
-                  <span className="text-[10px] text-[#A0A0A0] font-mono">
+                <div className="max-w-md mx-auto h-6 rounded-md bg-[#F2F0ED] flex items-center px-3">
+                  <span className="text-[10px] text-[#9C9690] font-mono">
                     app.lyfd.nl/dashboard
                   </span>
                 </div>
@@ -158,18 +158,18 @@ export function PlatformHero() {
             </div>
 
             {/* Dashboard content mockup */}
-            <div className="p-4 md:p-6 bg-[#F8F8F8]">
+            <div className="p-4 md:p-6 bg-[#F5F3F0]">
               <div className="grid grid-cols-12 gap-3 md:gap-4">
                 {/* Sidebar mockup */}
                 <div className="col-span-3 hidden md:block">
-                  <div className="bg-white rounded-xl border border-[#EBEBEB] p-3 space-y-1">
+                  <div className="bg-[#FDFCFA] rounded-xl border border-[#E8E5E0] p-3 space-y-1">
                     {/* Logo */}
                     <div className="flex items-center gap-1.5 px-2 py-1.5 mb-1">
                       <div className="w-4 h-4 rounded bg-[#1A1A1A]" />
                       <span className="text-[9px] font-mono font-bold text-[#1A1A1A] tracking-tight">LYFD</span>
                     </div>
 
-                    <div className="h-px bg-[#EBEBEB] my-1.5" />
+                    <div className="h-px bg-[#E8E5E0] my-1.5" />
 
                     {/* Primary nav */}
                     {sidebarItems.map((item) => (
@@ -178,28 +178,28 @@ export function PlatformHero() {
                         className={`px-2 py-1.5 rounded-md text-[8px] font-mono leading-none ${
                           item.active
                             ? "bg-[#1A1A1A] text-white font-medium"
-                            : "text-[#6B6B6B] hover:bg-[#F5F5F5]"
+                            : "text-[#6B6560] hover:bg-[#F5F5F5]"
                         }`}
                       >
                         {item.label}
                       </div>
                     ))}
 
-                    <div className="h-px bg-[#EBEBEB] my-1.5" />
+                    <div className="h-px bg-[#E8E5E0] my-1.5" />
 
                     {/* Secondary nav */}
                     {sidebarSecondary.map((item) => (
                       <div
                         key={item.label}
-                        className="px-2 py-1.5 rounded-md text-[8px] font-mono text-[#6B6B6B] leading-none"
+                        className="px-2 py-1.5 rounded-md text-[8px] font-mono text-[#6B6560] leading-none"
                       >
                         {item.label}
                       </div>
                     ))}
 
-                    <div className="h-px bg-[#EBEBEB] my-1.5" />
+                    <div className="h-px bg-[#E8E5E0] my-1.5" />
 
-                    <div className="px-2 py-1.5 rounded-md text-[8px] font-mono text-[#A0A0A0] leading-none">
+                    <div className="px-2 py-1.5 rounded-md text-[8px] font-mono text-[#9C9690] leading-none">
                       Instellingen
                     </div>
                   </div>
@@ -212,7 +212,7 @@ export function PlatformHero() {
                     {statCards.map((card) => (
                       <div
                         key={card.label}
-                        className="rounded-xl bg-white border border-[#EBEBEB] p-2.5 md:p-3"
+                        className="rounded-xl bg-[#FDFCFA] border border-[#E8E5E0] p-2.5 md:p-3"
                       >
                         <div className="flex items-center gap-1 mb-1.5">
                           {card.dotColor && (
@@ -229,7 +229,7 @@ export function PlatformHero() {
                               />
                             </span>
                           )}
-                          <span className="text-[8px] text-[#A0A0A0] font-mono uppercase tracking-wider leading-none">
+                          <span className="text-[8px] text-[#9C9690] font-mono uppercase tracking-wider leading-none">
                             {card.label}
                           </span>
                         </div>
@@ -246,10 +246,10 @@ export function PlatformHero() {
                   </div>
 
                   {/* Work order table */}
-                  <div className="rounded-xl bg-white border border-[#EBEBEB] p-3 md:p-4">
+                  <div className="rounded-xl bg-[#FDFCFA] border border-[#E8E5E0] p-3 md:p-4">
                     {/* Breadcrumb */}
                     <div className="mb-2.5">
-                      <span className="text-[8px] font-mono text-[#A0A0A0]">
+                      <span className="text-[8px] font-mono text-[#9C9690]">
                         Dashboard &gt; Overzicht
                       </span>
                     </div>
@@ -262,11 +262,11 @@ export function PlatformHero() {
                     {/* Table */}
                     <div className="overflow-hidden">
                       {/* Table head */}
-                      <div className="grid grid-cols-12 gap-2 py-1.5 border-b border-[#EBEBEB]">
-                        <span className="col-span-2 text-[8px] font-mono text-[#A0A0A0] uppercase tracking-wider">Order</span>
-                        <span className="col-span-4 text-[8px] font-mono text-[#A0A0A0] uppercase tracking-wider">Locatie</span>
-                        <span className="col-span-3 text-[8px] font-mono text-[#A0A0A0] uppercase tracking-wider">Monteur</span>
-                        <span className="col-span-3 text-[8px] font-mono text-[#A0A0A0] uppercase tracking-wider text-right">Status</span>
+                      <div className="grid grid-cols-12 gap-2 py-1.5 border-b border-[#E8E5E0]">
+                        <span className="col-span-2 text-[8px] font-mono text-[#9C9690] uppercase tracking-wider">Order</span>
+                        <span className="col-span-4 text-[8px] font-mono text-[#9C9690] uppercase tracking-wider">Locatie</span>
+                        <span className="col-span-3 text-[8px] font-mono text-[#9C9690] uppercase tracking-wider">Monteur</span>
+                        <span className="col-span-3 text-[8px] font-mono text-[#9C9690] uppercase tracking-wider text-right">Status</span>
                       </div>
 
                       {/* Table rows */}
@@ -276,8 +276,8 @@ export function PlatformHero() {
                           className="grid grid-cols-12 gap-2 py-2 border-b border-[#F5F5F5] last:border-0"
                         >
                           <span className="col-span-2 text-[9px] font-mono text-[#1A1A1A] font-medium">{wo.order}</span>
-                          <span className="col-span-4 text-[9px] font-mono text-[#6B6B6B] truncate">{wo.locatie}</span>
-                          <span className="col-span-3 text-[9px] font-mono text-[#6B6B6B]">{wo.monteur}</span>
+                          <span className="col-span-4 text-[9px] font-mono text-[#6B6560] truncate">{wo.locatie}</span>
+                          <span className="col-span-3 text-[9px] font-mono text-[#6B6560]">{wo.monteur}</span>
                           <div className="col-span-3 flex justify-end">
                             <span
                               className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[8px] font-mono font-medium"
@@ -303,7 +303,7 @@ export function PlatformHero() {
           </div>
 
           {/* Bottom gradient mask */}
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#FDFCFA] to-transparent z-10 pointer-events-none" />
         </motion.div>
       </Container>
     </section>

@@ -6,7 +6,7 @@ import { LinkedinLogo } from "@phosphor-icons/react";
 
 export function Bedrijfsgegevens() {
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
       <Container>
@@ -14,26 +14,26 @@ export function Bedrijfsgegevens() {
           <div className="max-w-3xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#A0A0A0] mb-2">Bedrijf</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#9C9690] mb-2">Bedrijf</p>
                 <p className="text-sm font-semibold text-[#1A1A1A]">LYFD B.V.</p>
-                <p className="text-xs text-[#6B6B6B] mt-1">Onderdeel van Solutable BV</p>
+                <p className="text-xs text-[#6B6560] mt-1">Onderdeel van Solutable BV</p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#A0A0A0] mb-2">Branche</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#9C9690] mb-2">Branche</p>
                 <p className="text-sm font-semibold text-[#1A1A1A]">Liftindustrie</p>
-                <p className="text-xs text-[#6B6B6B] mt-1">Capacity as a Service</p>
+                <p className="text-xs text-[#6B6560] mt-1">Capacity as a Service</p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#A0A0A0] mb-2">Werkgebied</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#9C9690] mb-2">Werkgebied</p>
                 <p className="text-sm font-semibold text-[#1A1A1A]">Nederland</p>
-                <p className="text-xs text-[#6B6B6B] mt-1">Randstad-first</p>
+                <p className="text-xs text-[#6B6560] mt-1">Randstad-first</p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#A0A0A0] mb-2">Contact</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#9C9690] mb-2">Contact</p>
                 <div className="flex items-center justify-center gap-3">
                   <a
                     href="/contact/"
-                    className="text-sm font-semibold text-[#1A1A1A] hover:text-[#6B6B6B] transition-colors duration-300"
+                    className="text-sm font-semibold text-[#1A1A1A] hover:text-[#6B6560] transition-colors duration-300"
                   >
                     Neem contact op
                   </a>
@@ -41,17 +41,17 @@ export function Bedrijfsgegevens() {
                     href="https://linkedin.com/company/lyfd"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-7 h-7 rounded-full bg-[#EBEBEB] hover:bg-[#DCDCDC] transition-all duration-300"
+                    className="flex items-center justify-center w-7 h-7 rounded-full bg-[#E8E5E0] hover:bg-[#DCDCDC] transition-all duration-300"
                     aria-label="LYFD op LinkedIn"
                   >
-                    <LinkedinLogo weight="fill" className="h-3.5 w-3.5 text-[#6B6B6B]" />
+                    <LinkedinLogo weight="fill" className="h-3.5 w-3.5 text-[#6B6560]" />
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="mt-10 text-center">
-              <p className="text-xs text-[#A0A0A0] font-mono">
+              <p className="text-xs text-[#9C9690] font-mono">
                 Lifting the workforce.
               </p>
             </div>
@@ -59,7 +59,7 @@ export function Bedrijfsgegevens() {
         </ScrollReveal>
       </Container>
 
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

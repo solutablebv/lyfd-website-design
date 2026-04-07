@@ -60,21 +60,21 @@ function AnimatedIcon({ type, delay }: { type: "x" | "check"; delay: number }) {
 
 export function StakesSection() {
   return (
-    <section className="relative bg-white py-32 md:py-44">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <Image
           src="/urban-toren.jpg"
           alt=""
           fill
-          className="object-cover opacity-[0.04] grayscale"
+          className="object-cover opacity-[0.04]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCFA] via-transparent to-[#FDFCFA]" />
       </div>
 
       {/* Top blend from CTA */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="text-center max-w-2xl mx-auto">
@@ -108,7 +108,7 @@ export function StakesSection() {
                   <StaggerItem key={item}>
                     <div className="flex items-start gap-3">
                       <AnimatedIcon type="x" delay={index * 0.08} />
-                      <span className="text-base font-medium text-[#404040] leading-relaxed">
+                      <span className="text-base font-medium text-[#3D3A37] leading-relaxed">
                         {item}
                       </span>
                     </div>
@@ -137,7 +137,7 @@ export function StakesSection() {
                   <StaggerItem key={item}>
                     <div className="flex items-start gap-3">
                       <AnimatedIcon type="check" delay={index * 0.08} />
-                      <span className="text-base font-medium text-[#404040] leading-relaxed">
+                      <span className="text-base font-medium text-[#3D3A37] leading-relaxed">
                         {item}
                       </span>
                     </div>

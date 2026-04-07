@@ -36,7 +36,7 @@ const painPoints = [
 
 export function OnderhoudProbleem() {
   return (
-    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -51,13 +51,13 @@ export function OnderhoudProbleem() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.06]"
+          className="object-cover contrast-[1.05] brightness-[1.1] opacity-[0.06]"
           loading="lazy"
         />
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto">
@@ -72,14 +72,14 @@ export function OnderhoudProbleem() {
 
           {/* Subtext with integrated stats */}
           <ScrollReveal delay={0.1}>
-            <p className="mt-8 md:mt-10 text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[55ch] mx-auto">
+            <p className="mt-8 md:mt-10 text-base md:text-lg text-[#3D3A37] leading-relaxed text-center max-w-[55ch] mx-auto">
               105.000 installaties. 1.800 monteurs. De rekensom klopt niet, en jouw bedrijf voelt het elke dag.
             </p>
           </ScrollReveal>
 
           {/* Body */}
           <ScrollReveal delay={0.15}>
-            <p className="mt-10 md:mt-14 text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[65ch] mx-auto">
+            <p className="mt-10 md:mt-14 text-base md:text-lg text-[#3D3A37] leading-relaxed text-center max-w-[65ch] mx-auto">
               Liftbedrijven voelen dit elke dag:
             </p>
           </ScrollReveal>
@@ -94,11 +94,11 @@ export function OnderhoudProbleem() {
             const Icon = point.icon;
             return (
               <StaggerItem key={point.text}>
-                <div className="rounded-2xl bg-white border border-[#EBEBEB] p-5 md:p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center">
-                    <Icon weight="light" className="w-5 h-5 text-[#6B6B6B]" />
+                <div className="rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-5 md:p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
+                    <Icon weight="light" className="w-5 h-5 text-[#6B6560]" />
                   </div>
-                  <p className="text-sm md:text-base text-[#404040] leading-relaxed pt-1.5">
+                  <p className="text-sm md:text-base text-[#3D3A37] leading-relaxed pt-1.5">
                     {point.text}
                   </p>
                 </div>
@@ -110,7 +110,7 @@ export function OnderhoudProbleem() {
         {/* Closing paragraph */}
         <ScrollReveal delay={0.3}>
           <div className="mt-14 md:mt-18 max-w-[65ch] mx-auto">
-            <p className="text-sm md:text-base text-[#404040] leading-relaxed text-center">
+            <p className="text-sm md:text-base text-[#3D3A37] leading-relaxed text-center">
               De klassieke oplossing? Zzp&apos;ers bellen, hopen dat ze
               beschikbaar zijn, hopen dat hun certificeringen kloppen. Dat is geen
               oplossing. Het is een gok.{" "}

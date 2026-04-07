@@ -165,7 +165,7 @@ export function AcademyAssessment() {
     : 0;
 
   return (
-    <section id="assessment" className="relative bg-white py-32 md:py-44 scroll-mt-24">
+    <section id="assessment" className="relative bg-[#FDFCFA] py-32 md:py-44 scroll-mt-24">
       <Container>
         <div className="max-w-2xl mx-auto">
           <ScrollReveal>
@@ -174,7 +174,7 @@ export function AcademyAssessment() {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
                 Past de liftbranche bij jou?
               </h2>
-              <p className="mt-4 text-base text-[#6B6B6B]">
+              <p className="mt-4 text-base text-[#6B6560]">
                 5 korte vragen. Geen account nodig. Direct resultaat.
               </p>
             </div>
@@ -182,9 +182,9 @@ export function AcademyAssessment() {
 
           {/* Quiz container */}
           <ScrollReveal delay={0.15}>
-            <div className="rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+            <div className="rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
               {/* Progress bar */}
-              <div className="h-1 bg-[#EBEBEB]">
+              <div className="h-1 bg-[#E8E5E0]">
                 <motion.div
                   className="h-full bg-[#1A1A1A]"
                   initial={{ width: 0 }}
@@ -205,7 +205,7 @@ export function AcademyAssessment() {
                       transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
                       className="text-center py-8"
                     >
-                      <p className="text-base text-[#404040] mb-8 max-w-[44ch] mx-auto leading-relaxed">
+                      <p className="text-base text-[#3D3A37] mb-8 max-w-[44ch] mx-auto leading-relaxed">
                         Ontdek in 5 vragen of een carriere als liftmonteur bij je past. Het kost je minder dan 2 minuten.
                       </p>
                       <Button
@@ -227,7 +227,7 @@ export function AcademyAssessment() {
                       transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
                     >
                       <div className="flex items-center gap-3 mb-6">
-                        <span className="text-xs font-mono text-[#A0A0A0] uppercase tracking-wider">
+                        <span className="text-xs font-mono text-[#9C9690] uppercase tracking-wider">
                           Vraag {currentQuestion + 1} van {questions.length}
                         </span>
                       </div>
@@ -251,7 +251,7 @@ export function AcademyAssessment() {
                               "w-full text-left rounded-xl border px-5 py-4 text-sm font-medium transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] cursor-pointer",
                               answers[questions[currentQuestion].id] === option.value
                                 ? "bg-[#1A1A1A] text-white border-[#1A1A1A]"
-                                : "bg-white text-[#1A1A1A] border-[#EBEBEB] hover:border-[#C0C0C0] hover:bg-[#FAFAFA] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
+                                : "bg-[#FDFCFA] text-[#1A1A1A] border-[#E8E5E0] hover:border-[#C0C0C0] hover:bg-[#F8F6F3] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
                             )}
                           >
                             {option.label}
@@ -271,7 +271,7 @@ export function AcademyAssessment() {
                       <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-4">
                         De liftbranche is misschien niet de beste match voor jou.
                       </h3>
-                      <p className="text-base text-[#6B6B6B] leading-relaxed mb-8 max-w-[48ch] mx-auto">
+                      <p className="text-base text-[#6B6560] leading-relaxed mb-8 max-w-[48ch] mx-auto">
                         Maar er zijn genoeg andere technische beroepen die bij je passen. Succes met je zoektocht.
                       </p>
                       <Button href="/" variant="ghost" size="default" icon="arrow-right">
@@ -287,16 +287,16 @@ export function AcademyAssessment() {
                       transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
                       className="text-center py-8"
                     >
-                      <div className="w-14 h-14 rounded-full bg-[#F0F0F0] flex items-center justify-center mx-auto mb-5">
+                      <div className="w-14 h-14 rounded-full bg-[#F2F0ED] flex items-center justify-center mx-auto mb-5">
                         <CheckCircle weight="fill" className="w-7 h-7 text-[#2A2A2A]" />
                       </div>
                       <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                         Bedankt{submittedName ? ` ${submittedName}` : ""}!
                       </h3>
-                      <p className="text-base text-[#6B6B6B] leading-relaxed mb-2">
+                      <p className="text-base text-[#6B6560] leading-relaxed mb-2">
                         We nemen binnen 5 werkdagen contact op voor een eerste kennismaking.
                       </p>
-                      <p className="text-sm text-[#A0A0A0]">
+                      <p className="text-sm text-[#9C9690]">
                         Wat kun je verwachten? Een telefoongesprek van 15 minuten waarin we je vragen beantwoorden.
                       </p>
                     </motion.div>
@@ -309,13 +309,13 @@ export function AcademyAssessment() {
                       transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
                     >
                       <div className="text-center mb-8">
-                        <div className="w-14 h-14 rounded-full bg-[#F0F0F0] flex items-center justify-center mx-auto mb-5">
+                        <div className="w-14 h-14 rounded-full bg-[#F2F0ED] flex items-center justify-center mx-auto mb-5">
                           <CheckCircle weight="fill" className="w-7 h-7 text-[#2A2A2A]" />
                         </div>
                         <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                           Je profiel past bij de LYFD Academy!
                         </h3>
-                        <p className="text-sm text-[#6B6B6B] leading-relaxed max-w-[48ch] mx-auto">
+                        <p className="text-sm text-[#6B6560] leading-relaxed max-w-[48ch] mx-auto">
                           {getResultMessage(answers)}
                         </p>
                       </div>
@@ -323,7 +323,7 @@ export function AcademyAssessment() {
                       <form onSubmit={handleFormSubmit} className="space-y-5">
                         <div>
                           <label htmlFor="academy-naam" className="block text-sm font-medium text-[#1A1A1A] mb-2">
-                            Naam<span className="text-[#6B6B6B] ml-0.5">*</span>
+                            Naam<span className="text-[#6B6560] ml-0.5">*</span>
                           </label>
                           <input
                             type="text"
@@ -331,13 +331,13 @@ export function AcademyAssessment() {
                             name="firstname"
                             required
                             disabled={formLoading}
-                            className="w-full rounded-xl border border-[#EBEBEB] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                           />
                         </div>
 
                         <div>
                           <label htmlFor="academy-email" className="block text-sm font-medium text-[#1A1A1A] mb-2">
-                            E-mailadres<span className="text-[#6B6B6B] ml-0.5">*</span>
+                            E-mailadres<span className="text-[#6B6560] ml-0.5">*</span>
                           </label>
                           <input
                             type="email"
@@ -345,13 +345,13 @@ export function AcademyAssessment() {
                             name="email"
                             required
                             disabled={formLoading}
-                            className="w-full rounded-xl border border-[#EBEBEB] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                           />
                         </div>
 
                         <div>
                           <label htmlFor="academy-telefoon" className="block text-sm font-medium text-[#1A1A1A] mb-2">
-                            Telefoonnummer<span className="text-[#6B6B6B] ml-0.5">*</span>
+                            Telefoonnummer<span className="text-[#6B6560] ml-0.5">*</span>
                           </label>
                           <input
                             type="tel"
@@ -359,7 +359,7 @@ export function AcademyAssessment() {
                             name="phone"
                             required
                             disabled={formLoading}
-                            className="w-full rounded-xl border border-[#EBEBEB] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                           />
                         </div>
 
@@ -373,7 +373,7 @@ export function AcademyAssessment() {
                             rows={3}
                             placeholder="Vertel kort iets over je achtergrond..."
                             disabled={formLoading}
-                            className="w-full rounded-xl border border-[#EBEBEB] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                           />
                         </div>
 
@@ -385,9 +385,9 @@ export function AcademyAssessment() {
                               name="meer_info"
                               defaultChecked
                               disabled={formLoading}
-                              className="mt-1 h-4 w-4 rounded border-[#EBEBEB] text-[#1A1A1A] focus:ring-[#2A2A2A]"
+                              className="mt-1 h-4 w-4 rounded border-[#E8E5E0] text-[#1A1A1A] focus:ring-[#2A2A2A]"
                             />
-                            <label htmlFor="academy-info" className="text-xs text-[#6B6B6B] leading-relaxed">
+                            <label htmlFor="academy-info" className="text-xs text-[#6B6560] leading-relaxed">
                               Ik wil meer informatie over de LYFD Academy
                             </label>
                           </div>
@@ -398,9 +398,9 @@ export function AcademyAssessment() {
                               name="privacy"
                               required
                               disabled={formLoading}
-                              className="mt-1 h-4 w-4 rounded border-[#EBEBEB] text-[#1A1A1A] focus:ring-[#2A2A2A]"
+                              className="mt-1 h-4 w-4 rounded border-[#E8E5E0] text-[#1A1A1A] focus:ring-[#2A2A2A]"
                             />
-                            <label htmlFor="academy-privacy" className="text-xs text-[#6B6B6B] leading-relaxed">
+                            <label htmlFor="academy-privacy" className="text-xs text-[#6B6560] leading-relaxed">
                               Ik ga akkoord met de{" "}
                               <a href="/privacy/" className="underline hover:text-[#1A1A1A] transition-colors">
                                 privacyverklaring

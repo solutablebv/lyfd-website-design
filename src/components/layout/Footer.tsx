@@ -47,7 +47,7 @@ function scrollToTop() {
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#F8F8F8]">
+    <footer className="relative bg-[#F5F3F0]">
       {/* Gradient divider instead of hard border */}
       <div className="h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
 
@@ -67,7 +67,7 @@ export function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="link-underline text-sm text-[#A0A0A0] hover:text-[#1A1A1A] transition-colors duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+                      className="link-underline text-sm text-[#9C9690] hover:text-[#1A1A1A] transition-colors duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
                     >
                       {link.label}
                     </a>
@@ -89,35 +89,35 @@ export function Footer() {
               <span className="text-xs text-[#DCDCDC] hidden sm:block">
                 /
               </span>
-              <span className="text-xs text-[#A0A0A0]">
+              <span className="text-xs text-[#9C9690]">
                 Capacity as a Service voor de liftindustrie
               </span>
             </div>
 
             <div className="flex items-center gap-4">
-              <span className="text-xs text-[#A0A0A0] font-mono">
+              <span className="text-xs text-[#9C9690] font-mono">
                 Lifting the workforce.
               </span>
               <a
                 href="https://linkedin.com/company/lyfd"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center w-8 h-8 rounded-full bg-[#EBEBEB] hover:bg-[#1A1A1A] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-110"
+                className="group flex items-center justify-center w-8 h-8 rounded-full bg-[#E8E5E0] hover:bg-[#1A1A1A] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-110"
                 aria-label="LYFD op LinkedIn"
               >
-                <LinkedinLogo weight="fill" className="h-4 w-4 text-[#6B6B6B] group-hover:text-white transition-colors duration-500" />
+                <LinkedinLogo weight="fill" className="h-4 w-4 text-[#6B6560] group-hover:text-white transition-colors duration-500" />
               </a>
 
               {/* Back to top */}
               <button
                 onClick={scrollToTop}
-                className="group flex items-center justify-center w-8 h-8 rounded-full bg-[#EBEBEB] hover:bg-[#1A1A1A] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-110 cursor-pointer"
+                className="group flex items-center justify-center w-8 h-8 rounded-full bg-[#E8E5E0] hover:bg-[#1A1A1A] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-110 cursor-pointer"
                 aria-label="Terug naar boven"
               >
-                <ArrowUp weight="bold" className="h-3.5 w-3.5 text-[#6B6B6B] group-hover:text-white transition-colors duration-500" />
+                <ArrowUp weight="bold" className="h-3.5 w-3.5 text-[#6B6560] group-hover:text-white transition-colors duration-500" />
               </button>
 
-              <span className="text-xs text-[#A0A0A0]">
+              <span className="text-xs text-[#9C9690]">
                 &copy; {new Date().getFullYear()}
               </span>
             </div>

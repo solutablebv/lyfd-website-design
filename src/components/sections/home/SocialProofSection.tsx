@@ -110,7 +110,7 @@ function AnimatedCounterCard({
   return (
     <div
       ref={ref}
-      className="group rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-7 md:p-8 text-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#DCDCDC]"
+      className="group rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-7 md:p-8 text-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#D9D4CE]"
     >
       <motion.div
         initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
@@ -127,7 +127,7 @@ function AnimatedCounterCard({
         <p className="mt-4 text-sm font-semibold text-[#1A1A1A]">
           {card.label}
         </p>
-        <p className="mt-1.5 text-xs text-[#6B6B6B] leading-relaxed line-clamp-2">
+        <p className="mt-1.5 text-xs text-[#6B6560] leading-relaxed line-clamp-2">
           {card.sublabel}
         </p>
       </motion.div>
@@ -137,9 +137,9 @@ function AnimatedCounterCard({
 
 export function SocialProofSection() {
   return (
-    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="text-center max-w-2xl mx-auto">
@@ -171,10 +171,10 @@ export function SocialProofSection() {
             {trustBadges.map((badge) => (
               <div
                 key={badge}
-                className="group flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#F0F0F0] border border-[#EBEBEB] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#E8E8E8] hover:border-[#DCDCDC] hover:-translate-y-px hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
+                className="group flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#F2F0ED] border border-[#E8E5E0] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#E5E0DA] hover:border-[#D9D4CE] hover:-translate-y-px hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
               >
                 <div className="w-1.5 h-1.5 rounded-full bg-[#2A2A2A] transition-transform duration-500 group-hover:scale-125" />
-                <span className="text-xs font-medium text-[#6B6B6B] tracking-wide">
+                <span className="text-xs font-medium text-[#6B6560] tracking-wide">
                   {badge}
                 </span>
               </div>
@@ -184,7 +184,7 @@ export function SocialProofSection() {
 
         {/* Extra trust line */}
         <ScrollReveal delay={0.4}>
-          <p className="mt-10 text-sm text-[#6B6B6B] text-center max-w-[65ch] mx-auto leading-relaxed">
+          <p className="mt-10 text-sm text-[#6B6560] text-center max-w-[65ch] mx-auto leading-relaxed">
             Aanvullend: continue training en certificering, veiligheidstrainingen
             bij OEM&apos;s, en een eigen opleidingsprogramma onder begeleiding van
             beroepsprofessionals.
@@ -193,7 +193,7 @@ export function SocialProofSection() {
       </Container>
 
       {/* Bottom blend to CTA */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

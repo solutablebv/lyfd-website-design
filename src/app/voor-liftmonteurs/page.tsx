@@ -8,6 +8,7 @@ import { WatLyfdBiedt } from "@/components/sections/voor-liftmonteurs/WatLyfdBie
 import { Profiel } from "@/components/sections/voor-liftmonteurs/Profiel";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
 import { FaqSection } from "@/components/sections/diensten/FaqSection";
+import { TeamQuote } from "@/components/ui/TeamQuote";
 
 export const metadata: Metadata = {
   title: "Werken als Liftmonteur via LYFD | Beter Verdienen, Meer Vrijheid",
@@ -140,6 +141,11 @@ export default function VoorLiftmonteursPage() {
       <SalarisQuiz />
       <RouteNaarSucces />
       <WatLyfdBiedt />
+      <TeamQuote
+        quote="Bij LYFD krijg je de waardering die je verdient. En collega's die dezelfde passie delen."
+        name="Sander Viet"
+        role="Medior Servicemonteur Liften"
+      />
       <Profiel />
       <ServiceCta
         title="Klaar voor je volgende stap in de liftbranche?"

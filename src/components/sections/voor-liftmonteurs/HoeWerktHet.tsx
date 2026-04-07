@@ -28,7 +28,7 @@ const stappen = [
 
 export function HoeWerktHet() {
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -50,14 +50,14 @@ export function HoeWerktHet() {
         >
           {stappen.map((stap) => (
             <StaggerItem key={stap.nummer}>
-              <div className="h-full rounded-2xl bg-white border border-[#EBEBEB] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+              <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                 <span className="inline-block text-3xl font-bold text-[#EBEBEB] font-mono mb-4 tracking-tighter">
                   {stap.nummer}
                 </span>
                 <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
                   {stap.title}
                 </h3>
-                <p className="text-sm text-[#404040] leading-relaxed">
+                <p className="text-sm text-[#3D3A37] leading-relaxed">
                   {stap.text}
                 </p>
               </div>
@@ -67,7 +67,7 @@ export function HoeWerktHet() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

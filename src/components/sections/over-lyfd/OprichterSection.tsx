@@ -78,9 +78,9 @@ function getInitials(name: string): string {
 function TeamCard({ member }: { member: (typeof teamMembers)[number] }) {
   return (
     <div className="w-60 flex-shrink-0">
-      <div className="h-80 rounded-2xl bg-[#F0F0F0] overflow-hidden">
-        <div className="w-full h-full flex items-center justify-center bg-[#E8E8E8]">
-          <span className="text-4xl font-bold font-mono text-[#A0A0A0] tracking-tight select-none">
+      <div className="h-80 rounded-2xl bg-[#F2F0ED] overflow-hidden">
+        <div className="w-full h-full flex items-center justify-center bg-[#E5E0DA]">
+          <span className="text-4xl font-bold font-mono text-[#9C9690] tracking-tight select-none">
             {getInitials(member.name)}
           </span>
         </div>
@@ -89,7 +89,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[number] }) {
         <p className="text-[#1A1A1A] font-semibold tracking-tight text-sm">
           {member.name}
         </p>
-        <p className="text-[#6B6B6B] text-sm">{member.role}</p>
+        <p className="text-[#6B6560] text-sm">{member.role}</p>
       </div>
     </div>
   );
@@ -97,9 +97,9 @@ function TeamCard({ member }: { member: (typeof teamMembers)[number] }) {
 
 export function OprichterSection() {
   return (
-    <section className="relative bg-white py-32 md:py-44">
+    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto text-center">
@@ -108,14 +108,14 @@ export function OprichterSection() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
               De mensen achter LYFD
             </h2>
-            <p className="mt-5 text-sm md:text-base text-[#6B6B6B] leading-relaxed max-w-[52ch] mx-auto">
+            <p className="mt-5 text-sm md:text-base text-[#6B6560] leading-relaxed max-w-[52ch] mx-auto">
               LYFD groeit. Ons team combineert liftbranche-ervaring met
               technologie en operationele kennis.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.15}>
-            <div className="mt-14 md:mt-18 rounded-2xl bg-[#F8F8F8] border border-[#EBEBEB] p-8 md:p-10">
+            <div className="mt-14 md:mt-18 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-8 md:p-10">
               <div className="flex flex-col items-center gap-6">
                 {/* Avatar met initialen */}
                 <div className="w-20 h-20 rounded-full bg-[#1A1A1A] flex items-center justify-center flex-shrink-0">
@@ -128,10 +128,10 @@ export function OprichterSection() {
                   <p className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
                     Peter Koenhen
                   </p>
-                  <p className="mt-1 text-sm font-medium text-[#6B6B6B] uppercase tracking-[0.15em]">
+                  <p className="mt-1 text-sm font-medium text-[#6B6560] uppercase tracking-[0.15em]">
                     Oprichter
                   </p>
-                  <p className="mt-5 text-sm md:text-base text-[#404040] leading-[1.75] max-w-[52ch] mx-auto">
+                  <p className="mt-5 text-sm md:text-base text-[#3D3A37] leading-[1.75] max-w-[52ch] mx-auto">
                     Vijf jaar actief in de liftbranche. Zag van binnenuit dat het
                     capaciteitsprobleem structureel was, en dat de bestaande
                     oplossingen (zzp, uitzendbureau) het niet oplosten. LYFD is
@@ -148,8 +148,8 @@ export function OprichterSection() {
       <ScrollReveal delay={0.25}>
         <div className="relative mt-20 md:mt-28">
           {/* Edge fades */}
-          <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-32 bg-gradient-to-r from-white to-transparent" />
-          <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-32 bg-gradient-to-l from-white to-transparent" />
+          <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-32 bg-gradient-to-r from-[#FDFCFA] to-transparent" />
+          <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-32 bg-gradient-to-l from-[#FDFCFA] to-transparent" />
 
           <Marquee pauseOnHover duration="35s">
             {teamMembers.map((member) => (

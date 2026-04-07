@@ -8,13 +8,13 @@ import Image from "next/image";
 
 export function MonteurSection() {
   return (
-    <section id="monteurs" className="relative bg-[#F8F8F8] py-32 md:py-44">
+    <section id="monteurs" className="relative bg-[#F5F3F0] py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
       <Container>
         <ScrollReveal>
-          <div className="relative rounded-2xl border border-[#EBEBEB] p-8 md:p-10 shadow-[0_2px_8px_rgba(0,0,0,0.06)] overflow-hidden"
+          <div className="relative rounded-2xl border border-[#E8E5E0] p-8 md:p-10 shadow-[0_2px_8px_rgba(0,0,0,0.06)] overflow-hidden"
             style={{
               background: "linear-gradient(135deg, #FFFFFF 0%, #F8F8F8 50%, #F0F0F0 100%)",
             }}
@@ -33,7 +33,7 @@ export function MonteurSection() {
                 alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 80vw"
-                className="object-cover grayscale contrast-[1.05] brightness-[1.1]"
+                className="object-cover grayscale-[30%] contrast-[1.05] brightness-[1.1]"
                 loading="lazy"
               />
             </div>
@@ -57,7 +57,7 @@ export function MonteurSection() {
                   <div className="w-10 h-10 rounded-xl bg-[#1A1A1A] flex items-center justify-center">
                     <HardHat weight="light" className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#A0A0A0]">
+                  <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#9C9690]">
                     Voor monteurs
                   </span>
                 </div>
@@ -66,7 +66,7 @@ export function MonteurSection() {
                   Ben je liftmonteur?
                 </h2>
 
-                <p className="mt-4 text-base md:text-lg text-[#404040] leading-[1.7] max-w-[55ch]">
+                <p className="mt-4 text-base md:text-lg text-[#3D3A37] leading-[1.7] max-w-[55ch]">
                   LYFD werkt met monteurs in vaste dienst. Het gaat bij ons niet
                   alleen om meer verdienen, maar om de juiste beloning en
                   waardering voor je vak. Werken met ervaren collega&apos;s die

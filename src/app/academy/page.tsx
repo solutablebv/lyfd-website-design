@@ -4,6 +4,7 @@ import { WaaromAcademy } from "@/components/sections/academy/WaaromAcademy";
 import { AcademyAssessment } from "@/components/sections/academy/AcademyAssessment";
 import { AcademyTraject } from "@/components/sections/academy/AcademyTraject";
 import { AcademyCta } from "@/components/sections/academy/AcademyCta";
+import { TeamQuote } from "@/components/ui/TeamQuote";
 
 export const metadata: Metadata = {
   title: "LYFD Academy | Word Liftmonteur | Opleiding & Certificering",
@@ -74,6 +75,11 @@ export default function AcademyPage() {
       />
       <AcademyHero />
       <WaaromAcademy />
+      <TeamQuote
+        quote="De liftbranche heeft nieuwe mensen nodig. Wij leiden ze op met dezelfde standaard die wij van onszelf verwachten."
+        name="Arwin Groenenberg"
+        role="Opleiding & Ontwikkeling"
+      />
       <AcademyAssessment />
       <AcademyTraject />
       <AcademyCta />

@@ -36,7 +36,7 @@ const steps = [
 
 export function ModerniseringAanpak() {
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
       {/* Top blend */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
 
@@ -55,7 +55,7 @@ export function ModerniseringAanpak() {
         {/* Vertical timeline */}
         <div className="mt-16 md:mt-24 max-w-2xl mx-auto relative">
           {/* Vertical line */}
-          <div className="absolute left-5 md:left-6 top-0 bottom-0 w-px bg-[#EBEBEB]" />
+          <div className="absolute left-5 md:left-6 top-0 bottom-0 w-px bg-[#E8E5E0]" />
 
           <div className="space-y-12 md:space-y-16">
             {steps.map((step, index) => {
@@ -72,14 +72,14 @@ export function ModerniseringAanpak() {
                     </div>
 
                     {/* Step number */}
-                    <span className="text-xs font-mono font-medium text-[#A0A0A0] uppercase tracking-wider">
+                    <span className="text-xs font-mono font-medium text-[#9C9690] uppercase tracking-wider">
                       Stap {step.number}
                     </span>
 
                     <h3 className="mt-2 text-xl md:text-2xl font-semibold text-[#1A1A1A] tracking-tight leading-snug text-balance">
                       {step.title}
                     </h3>
-                    <p className="mt-3 text-sm md:text-base text-[#404040] leading-relaxed max-w-[50ch]">
+                    <p className="mt-3 text-sm md:text-base text-[#3D3A37] leading-relaxed max-w-[50ch]">
                       {step.description}
                     </p>
                   </div>
@@ -92,16 +92,16 @@ export function ModerniseringAanpak() {
         {/* Eerlijkheidsblok */}
         <ScrollReveal delay={0.3}>
           <div className="mt-16 md:mt-20 max-w-2xl mx-auto">
-            <div className="rounded-2xl bg-[#F0F0F0] border border-[#E5E5E5] p-7 md:p-8">
+            <div className="rounded-2xl bg-[#F2F0ED] border border-[#E5E5E5] p-7 md:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#E0E0E0] flex items-center justify-center">
-                  <Info weight="bold" className="w-5 h-5 text-[#6B6B6B]" />
+                  <Info weight="bold" className="w-5 h-5 text-[#6B6560]" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-[#1A1A1A] mb-2">
                     Eerlijk is eerlijk
                   </p>
-                  <p className="text-sm text-[#404040] leading-relaxed">
+                  <p className="text-sm text-[#3D3A37] leading-relaxed">
                     Wij kunnen de bouwplanning van de hoofdaannemer niet controleren. We kunnen niet voorkomen dat materiaal te laat wordt geleverd. Wat we wel kunnen: zorgen dat het aan de monteurs niet ligt. Dat is onze belofte.
                   </p>
                 </div>
@@ -112,7 +112,7 @@ export function ModerniseringAanpak() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
     </section>
   );
 }

@@ -86,8 +86,8 @@ export function Header() {
             className={cn(
               "flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]",
               isScrolled
-                ? "bg-white/75 backdrop-blur-2xl backdrop-saturate-[1.8] shadow-[0_2px_20px_-4px_rgba(0,0,0,0.06),0_0_0_1px_rgba(235,235,235,0.4)] rounded-full px-4 py-2.5 border border-white/60"
-                : "bg-white/40 backdrop-blur-xl backdrop-saturate-150 rounded-full px-4 py-2.5 border border-white/30 shadow-[0_2px_12px_-4px_rgba(0,0,0,0.04)]"
+                ? "bg-[#FDFCFA]/75 backdrop-blur-2xl backdrop-saturate-[1.8] shadow-[0_2px_20px_-4px_rgba(0,0,0,0.06),0_0_0_1px_rgba(235,235,235,0.4)] rounded-full px-4 py-2.5 border border-white/60"
+                : "bg-[#FDFCFA]/40 backdrop-blur-xl backdrop-saturate-150 rounded-full px-4 py-2.5 border border-white/30 shadow-[0_2px_12px_-4px_rgba(0,0,0,0.04)]"
             )}
           >
             {/* Logo */}
@@ -116,7 +116,7 @@ export function Header() {
                 >
                   <a
                     href={link.href}
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-full transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] text-[#6B6B6B] hover:text-[#1A1A1A] hover:bg-[#F5F5F5]"
+                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-full transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] text-[#6B6560] hover:text-[#1A1A1A] hover:bg-[#F5F5F5]"
                   >
                     {link.label}
                     {link.hasDropdown && (
@@ -143,7 +143,7 @@ export function Header() {
                             stiffness: 300,
                             damping: 25,
                           }}
-                          className="absolute top-full left-0 mt-2 w-64 rounded-2xl bg-white/90 backdrop-blur-xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08),0_0_0_1px_rgba(235,235,235,0.5)] border border-[#EBEBEB]/40 p-2"
+                          className="absolute top-full left-0 mt-2 w-64 rounded-2xl bg-[#FDFCFA]/90 backdrop-blur-xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08),0_0_0_1px_rgba(235,235,235,0.5)] border border-[#E8E5E0]/40 p-2"
                         >
                           {link.children?.map((child, i) => (
                             <motion.a
@@ -156,7 +156,7 @@ export function Header() {
                                 duration: 0.25,
                                 ease: [0.32, 0.72, 0, 1],
                               }}
-                              className="block px-4 py-2.5 text-sm text-[#6B6B6B] hover:text-[#1A1A1A] hover:bg-[#F8F8F8] rounded-xl transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
+                              className="block px-4 py-2.5 text-sm text-[#6B6560] hover:text-[#1A1A1A] hover:bg-[#F5F3F0] rounded-xl transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
                             >
                               {child.label}
                             </motion.a>
@@ -196,7 +196,7 @@ export function Header() {
                   className={cn(
                     "absolute left-0 w-5 h-[1.5px] rounded-full transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]",
                     isMobileOpen
-                      ? "top-1/2 -translate-y-1/2 rotate-45 bg-white"
+                      ? "top-1/2 -translate-y-1/2 rotate-45 bg-[#FDFCFA]"
                       : "top-0.5 bg-[#1A1A1A]"
                   )}
                 />
@@ -204,7 +204,7 @@ export function Header() {
                   className={cn(
                     "absolute left-0 w-5 h-[1.5px] rounded-full transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]",
                     isMobileOpen
-                      ? "top-1/2 -translate-y-1/2 -rotate-45 bg-white"
+                      ? "top-1/2 -translate-y-1/2 -rotate-45 bg-[#FDFCFA]"
                       : "bottom-0.5 bg-[#1A1A1A]"
                   )}
                 />

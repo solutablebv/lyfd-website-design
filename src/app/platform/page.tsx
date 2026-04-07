@@ -11,6 +11,7 @@ import { PlatformIntegrations } from "@/components/sections/platform/PlatformInt
 import { PlatformPricing } from "@/components/sections/platform/PlatformPricing";
 import { FaqSection } from "@/components/sections/diensten/FaqSection";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
+import { TeamQuote } from "@/components/ui/TeamQuote";
 
 export const metadata: Metadata = {
   title: "LYFD Platform | Software voor de Liftindustrie",
@@ -90,6 +91,11 @@ export default function PlatformPage() {
       <PlatformBeforeAfter />
       <PlatformModules />
       <PlatformTour />
+      <TeamQuote
+        quote="Ik bouw software die monteurs echt gebruiken. Niet omdat het moet, maar omdat het helpt."
+        name="Gydo Broos"
+        role="CTO"
+      />
       <PlatformROI />
       <PlatformImplementatie />
       <PlatformIntegrations />

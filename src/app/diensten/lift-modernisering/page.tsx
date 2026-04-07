@@ -9,6 +9,7 @@ import { ProjectenSlider } from "@/components/sections/modernisering/ProjectenSl
 import { ModerniseringZelfdiagnose } from "@/components/sections/modernisering/ModerniseringZelfdiagnose";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
 import { FaqSection } from "@/components/sections/diensten/FaqSection";
+import { TeamQuote } from "@/components/ui/TeamQuote";
 
 export const metadata: Metadata = {
   title:
@@ -152,6 +153,11 @@ export default function LiftModerniseringPage() {
       />
       <ModerniseringProbleem />
       <ModerniseringAanpak />
+      <TeamQuote
+        quote="Een moderniseringsproject lukt of faalt bij de mensen die het uitvoeren. Wij zorgen dat het de juiste mensen zijn."
+        name="Jarno de Kock"
+        role="Technisch Specialist"
+      />
       <ProjectPlanner />
       <SnelleHulplijn />
       <ModerniseringWatJeKrijgt />

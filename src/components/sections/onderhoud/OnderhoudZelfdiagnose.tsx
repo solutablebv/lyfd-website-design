@@ -20,7 +20,7 @@ const checkItems = [
 
 export function OnderhoudZelfdiagnose() {
   return (
-    <section className="relative bg-[#F8F8F8] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -35,7 +35,7 @@ export function OnderhoudZelfdiagnose() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover grayscale contrast-[1.05] brightness-[1.1] opacity-[0.05]"
+          className="object-cover contrast-[1.05] brightness-[1.1] opacity-[0.05]"
           loading="lazy"
         />
       </div>
@@ -55,7 +55,7 @@ export function OnderhoudZelfdiagnose() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="text-base md:text-lg text-[#404040] leading-relaxed text-center max-w-[65ch] mx-auto mb-10">
+            <p className="text-base md:text-lg text-[#3D3A37] leading-relaxed text-center max-w-[65ch] mx-auto mb-10">
               LYFD onderhoudscapaciteit is voor jou als je:
             </p>
           </ScrollReveal>
@@ -66,7 +66,7 @@ export function OnderhoudZelfdiagnose() {
           >
             {checkItems.map((item) => (
               <StaggerItem key={item}>
-                <div className="flex items-start gap-4 rounded-2xl bg-white p-5 border border-[#EBEBEB] shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                <div className="flex items-start gap-4 rounded-2xl bg-[#FDFCFA] p-5 border border-[#E8E5E0] shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                   <div className="flex-shrink-0 mt-0.5">
                     <CheckCircle
                       weight="fill"
@@ -83,16 +83,16 @@ export function OnderhoudZelfdiagnose() {
 
           {/* Gerelateerde kennisbank artikelen */}
           <ScrollReveal delay={0.3}>
-            <div className="mt-14 md:mt-18 pt-10 border-t border-[#EBEBEB]">
-              <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#A0A0A0] mb-5">Lees ook in de kennisbank</p>
+            <div className="mt-14 md:mt-18 pt-10 border-t border-[#E8E5E0]">
+              <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#9C9690] mb-5">Lees ook in de kennisbank</p>
               <div className="space-y-3">
-                <Link href="/kennisbank/capaciteitsmanagement/wat-kost-capaciteitsgebrek/" className="group flex items-center justify-between rounded-xl bg-white border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                <Link href="/kennisbank/capaciteitsmanagement/wat-kost-capaciteitsgebrek/" className="group flex items-center justify-between rounded-xl bg-[#FDFCFA] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                   <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Wat kost capaciteitsgebrek een liftbedrijf echt?</span>
-                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
                 </Link>
-                <Link href="/kennisbank/capaciteitsmanagement/capaciteitsplanning-servicecontracten/" className="group flex items-center justify-between rounded-xl bg-white border border-[#EBEBEB] px-5 py-4 transition-all duration-500 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                <Link href="/kennisbank/capaciteitsmanagement/capaciteitsplanning-servicecontracten/" className="group flex items-center justify-between rounded-xl bg-[#FDFCFA] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                   <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Capaciteitsplanning voor servicecontracten</span>
-                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#A0A0A0] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+                  <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
                 </Link>
               </div>
             </div>

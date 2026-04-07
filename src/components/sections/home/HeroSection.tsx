@@ -6,6 +6,14 @@ import { Button } from "@/components/ui/Button";
 import { TextReveal } from "@/components/ui/ScrollReveal";
 import { CaretDown } from "@phosphor-icons/react";
 
+function getGreeting(): string {
+  const hour = new Date().getHours();
+  if (hour >= 6 && hour < 12) return "Goedemorgen";
+  if (hour >= 12 && hour < 18) return "Goedemiddag";
+  if (hour >= 18 && hour < 22) return "Goedenavond";
+  return "Nog aan het werk?";
+}
+
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -17,7 +25,7 @@ export function HeroSection() {
   const contentY = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   return (
-    <section ref={sectionRef} className="relative min-h-[100dvh] w-full overflow-hidden flex items-center bg-white">
+    <section ref={sectionRef} className="relative min-h-[100dvh] w-full overflow-hidden flex items-center bg-[#FDFCFA]">
       {/* Centered video with tight inward masking gradient + parallax */}
       <motion.div
         className="absolute inset-0 flex items-center justify-center"
@@ -48,10 +56,10 @@ export function HeroSection() {
       </motion.div>
 
       {/* Top gradient */}
-      <div className="absolute top-0 left-0 right-0 h-56 bg-gradient-to-b from-white via-white/80 to-transparent z-[2] pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-56 bg-gradient-to-b from-[#FDFCFA] via-[#FDFCFA]/80 to-transparent z-[2] pointer-events-none" />
 
       {/* Bottom gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-white via-white/80 to-transparent z-[2] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-[#FDFCFA] via-[#FDFCFA]/80 to-transparent z-[2] pointer-events-none" />
 
       {/* Left edge softener */}
       <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-transparent to-transparent z-[1] pointer-events-none" />
@@ -65,6 +73,17 @@ export function HeroSection() {
         }}
       >
         <div className="max-w-[640px]">
+          {/* Dynamic greeting */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0 }}
+          >
+            <span className="text-xs font-mono text-[#9C9690] tracking-wider uppercase">
+              {getGreeting()}
+            </span>
+          </motion.div>
+
           {/* Badge with animated gradient border */}
           <motion.div
             initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
@@ -75,7 +94,7 @@ export function HeroSection() {
               delay: 0.1,
             }}
           >
-            <span className="animated-gradient-border inline-flex items-center rounded-full px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] font-medium text-[#2A2A2A] bg-white/90 backdrop-blur-sm mb-8">
+            <span className="animated-gradient-border inline-flex items-center rounded-full px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] font-medium text-[#7D5A3C] bg-[#F5EDE6]/90 backdrop-blur-sm mb-8">
               Capacity as a Service
             </span>
           </motion.div>
@@ -97,7 +116,7 @@ export function HeroSection() {
             />{" "}
             <TextReveal
               text="LYFD is de oplossing."
-              className="text-[#6B6B6B]"
+              className="text-[#6B6560]"
               delay={0.6}
               staggerDelay={0.04}
             />
@@ -111,7 +130,7 @@ export function HeroSection() {
               ease: [0.32, 0.72, 0, 1],
               delay: 1.0,
             }}
-            className="mt-8 text-base md:text-lg text-[#404040] leading-[1.7] max-w-[520px]"
+            className="mt-8 text-base md:text-lg text-[#3D3A37] leading-[1.7] max-w-[520px]"
           >
             Gecertificeerde liftmonteurs, wanneer en waar jij ze nodig hebt.
             On-demand, op project of op retainer. DBA-compliant. Binnen 48 uur
@@ -126,7 +145,7 @@ export function HeroSection() {
               ease: [0.32, 0.72, 0, 1],
               delay: 1.15,
             }}
-            className="mt-4 text-sm text-[#A0A0A0] leading-relaxed max-w-[480px]"
+            className="mt-4 text-sm text-[#9C9690] leading-relaxed max-w-[480px]"
           >
             LYFD B.V. is het eerste Capacity as a Service (CaaS) platform voor de Nederlandse liftindustrie. Liftbedrijven die groeien, contracten aannemen, en kwaliteit willen
             leveren, maar niet altijd de mensen hebben om het waar te maken.
@@ -165,12 +184,12 @@ export function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 0.8 }}
       >
-        <span className="text-[10px] uppercase tracking-[0.2em] text-[#A0A0A0] font-medium">Scroll</span>
+        <span className="text-[10px] uppercase tracking-[0.2em] text-[#9C9690] font-medium">Scroll</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
         >
-          <CaretDown weight="bold" className="w-4 h-4 text-[#A0A0A0]" />
+          <CaretDown weight="bold" className="w-4 h-4 text-[#9C9690]" />
         </motion.div>
       </motion.div>
     </section>
