@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { ServiceHero } from "@/components/sections/diensten/ServiceHero";
+import { OverHero } from "@/components/sections/over-lyfd/OverHero";
 import { HetVerhaal } from "@/components/sections/over-lyfd/HetVerhaal";
+import { CijfersSection } from "@/components/sections/over-lyfd/CijfersSection";
 import { MissieWaarden } from "@/components/sections/over-lyfd/MissieWaarden";
+import { CultuurSection } from "@/components/sections/over-lyfd/CultuurSection";
 import { OprichterSection } from "@/components/sections/over-lyfd/OprichterSection";
 import { Bedrijfsgegevens } from "@/components/sections/over-lyfd/Bedrijfsgegevens";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
@@ -56,17 +58,11 @@ export default function OverLyfdPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <ServiceHero
-        eyebrow="Over LYFD"
-        title="Wij zijn LYFD. Gebouwd voor de liftindustrie."
-        subtitle="Niet nog een uitzendbureau. Niet een generiek platform. Een capaciteitspartner die weet wat een MRL is, wat een hydraulische installatie vraagt, en welke monteur bij welk project past."
-        intro=""
-        ctaText="Neem contact op"
-        ctaHref="/contact/"
-        breadcrumbLabel="Over LYFD"
-      />
+      <OverHero />
       <HetVerhaal />
+      <CijfersSection />
       <MissieWaarden />
+      <CultuurSection />
       <OprichterSection />
       <Bedrijfsgegevens />
       <ServiceCta

@@ -2,9 +2,9 @@
 
 import { useState, type FormEvent } from "react";
 import { Container } from "@/components/ui/Container";
-import { Badge } from "@/components/ui/Badge";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Button } from "@/components/ui/Button";
+import { DualHeading } from "@/components/ui/DualHeading";
 import { CheckCircle } from "@phosphor-icons/react";
 import { submitToHubSpot } from "@/lib/hubspot";
 
@@ -36,7 +36,7 @@ function InputField({
         placeholder={placeholder}
         required={required}
         disabled={disabled}
-        className="w-full rounded-xl border border-[#DDDDDD] bg-white px-4 py-3 text-sm text-[#1B1D1E] placeholder:text-[#888888] focus:border-[#4928FD] focus:outline-none transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full rounded-xl border border-[#DDDDDD] bg-white px-5 py-3.5 text-sm text-[#1B1D1E] placeholder:text-[#888888] focus:border-[#4928FD] focus:outline-none transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       />
     </div>
   );
@@ -66,7 +66,7 @@ function SelectField({
         name={name}
         required={required}
         disabled={disabled}
-        className="w-full rounded-xl border border-[#DDDDDD] bg-white px-4 py-3 text-sm text-[#1B1D1E] focus:border-[#4928FD] focus:outline-none transition-colors duration-300 appearance-none disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full rounded-xl border border-[#DDDDDD] bg-white px-5 py-3.5 text-sm text-[#1B1D1E] focus:border-[#4928FD] focus:outline-none transition-colors duration-300 appearance-none disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <option value="">Selecteer...</option>
         {options.map((option) => (
@@ -101,7 +101,7 @@ function TextareaField({
         rows={4}
         placeholder={placeholder}
         disabled={disabled}
-        className="w-full rounded-xl border border-[#DDDDDD] bg-white px-4 py-3 text-sm text-[#1B1D1E] placeholder:text-[#888888] focus:border-[#4928FD] focus:outline-none transition-colors duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full rounded-xl border border-[#DDDDDD] bg-white px-5 py-3.5 text-sm text-[#1B1D1E] placeholder:text-[#888888] focus:border-[#4928FD] focus:outline-none transition-colors duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
       />
     </div>
   );
@@ -190,13 +190,37 @@ function ErrorMessage() {
   );
 }
 
+function ProfileBlock({
+  initials,
+  name,
+  role,
+  quote,
+}: {
+  initials: string;
+  name: string;
+  role: string;
+  quote: string;
+}) {
+  return (
+    <div className="flex flex-col items-start">
+      <div className="w-14 h-14 rounded-2xl bg-[#4928FD] flex items-center justify-center mb-5">
+        <span className="text-white text-sm font-bold tracking-wide">{initials}</span>
+      </div>
+      <p className="text-lg font-semibold text-[#1B1D1E] tracking-tight">{name}</p>
+      <p className="text-sm text-[#888888] mb-4">{role}</p>
+      <p className="text-sm text-[#333333] leading-relaxed italic max-w-xs">
+        &ldquo;{quote}&rdquo;
+      </p>
+    </div>
+  );
+}
+
 function extractFormData(form: HTMLFormElement): Record<string, string> {
   const formData = new FormData(form);
   const data: Record<string, string> = {};
 
   formData.forEach((value, key) => {
     if (data[key]) {
-      // Checkbox group: voeg waardes samen met komma
       data[key] = `${data[key]}, ${String(value)}`;
     } else {
       data[key] = String(value);
@@ -279,129 +303,145 @@ export function ContactFormulieren() {
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F7F7F7] to-transparent" />
 
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-          {/* Capaciteitsgesprek formulier */}
+        {/* Formulier 1: Capaciteitsgesprek */}
+        <div id="formulier-bedrijf" className="scroll-mt-24 rounded-3xl bg-[#E0EAFF]/15 p-8 md:p-12 mb-12">
           <ScrollReveal>
-            <div className="rounded-3xl bg-white border border-[#DDDDDD] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-              <Badge className="mb-5">Voor Liftbedrijven</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance mb-2">
-                Capaciteitsgesprek
-              </h2>
-              <p className="text-sm text-[#888888] mb-8">
-                Beschrijf je capaciteitsbehoefte. Wij reageren binnen 1 werkdag.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+              {/* Profile block */}
+              <div className="lg:col-span-5">
+                <ProfileBlock
+                  initials="JE"
+                  name="Joppe Erkelens"
+                  role="Sales & Contractmanagement"
+                  quote="Ik beantwoord je aanvraag persoonlijk. Meestal dezelfde werkdag."
+                />
+              </div>
 
-              {bedrijfSuccess ? (
-                <SuccessMessage message="Ontvangen. We reageren sneller dan een storing gemeld wordt." />
-              ) : (
-                <form
-                  id="contact-bedrijf"
-                  className="space-y-5"
-                  onSubmit={handleBedrijfSubmit}
-                >
-                  <InputField label="Naam" name="bedrijf-naam" required disabled={bedrijfLoading} />
-                  <InputField label="Bedrijfsnaam" name="bedrijf-bedrijfsnaam" required disabled={bedrijfLoading} />
-                  <InputField label="Functie" name="bedrijf-functie" disabled={bedrijfLoading} />
-                  <InputField label="Telefoonnummer" name="bedrijf-telefoon" type="tel" required disabled={bedrijfLoading} />
-                  <InputField label="E-mailadres" name="bedrijf-email" type="email" required disabled={bedrijfLoading} />
-                  <SelectField
-                    label="Type werkzaamheden"
-                    name="bedrijf-type"
-                    options={["Service/Onderhoud", "Reparatie", "Modernisering", "Algemeen"]}
-                    required
-                    disabled={bedrijfLoading}
-                  />
-                  <TextareaField
-                    label="Bericht"
-                    name="bedrijf-bericht"
-                    placeholder="Beschrijf je situatie en behoefte..."
-                    disabled={bedrijfLoading}
-                  />
-                  <CheckboxField
-                    label="Ik ga akkoord met de privacyverklaring van LYFD."
-                    name="bedrijf-privacy"
-                    disabled={bedrijfLoading}
-                  />
-                  {bedrijfError && <ErrorMessage />}
-                  <Button
-                    type="submit"
-                    variant="primary"
-                    size="lg"
-                    icon={bedrijfLoading ? "none" : "arrow-right"}
-                    disabled={bedrijfLoading}
+              {/* Form */}
+              <div className="lg:col-span-7">
+                <DualHeading bold="Capaciteitsgesprek" italic="aanvragen" as="h2" size="subsection" className="mb-8" />
+
+                {bedrijfSuccess ? (
+                  <SuccessMessage message="Ontvangen. We reageren sneller dan een storing gemeld wordt." />
+                ) : (
+                  <form
+                    id="contact-bedrijf"
+                    className="space-y-5"
+                    onSubmit={handleBedrijfSubmit}
                   >
-                    {bedrijfLoading ? "Versturen..." : "Verstuur aanvraag"}
-                  </Button>
-                </form>
-              )}
+                    <InputField label="Naam" name="bedrijf-naam" required disabled={bedrijfLoading} />
+                    <InputField label="Bedrijfsnaam" name="bedrijf-bedrijfsnaam" required disabled={bedrijfLoading} />
+                    <InputField label="Functie" name="bedrijf-functie" disabled={bedrijfLoading} />
+                    <InputField label="Telefoonnummer" name="bedrijf-telefoon" type="tel" required disabled={bedrijfLoading} />
+                    <InputField label="E-mailadres" name="bedrijf-email" type="email" required disabled={bedrijfLoading} />
+                    <SelectField
+                      label="Type werkzaamheden"
+                      name="bedrijf-type"
+                      options={["Service/Onderhoud", "Reparatie", "Modernisering", "Algemeen"]}
+                      required
+                      disabled={bedrijfLoading}
+                    />
+                    <TextareaField
+                      label="Bericht"
+                      name="bedrijf-bericht"
+                      placeholder="Beschrijf je situatie en behoefte..."
+                      disabled={bedrijfLoading}
+                    />
+                    <CheckboxField
+                      label="Ik ga akkoord met de privacyverklaring van LYFD."
+                      name="bedrijf-privacy"
+                      disabled={bedrijfLoading}
+                    />
+                    {bedrijfError && <ErrorMessage />}
+                    <Button
+                      type="submit"
+                      variant="primary"
+                      size="lg"
+                      icon={bedrijfLoading ? "none" : "arrow-right"}
+                      disabled={bedrijfLoading}
+                    >
+                      {bedrijfLoading ? "Versturen..." : "Verstuur aanvraag"}
+                    </Button>
+                  </form>
+                )}
+              </div>
             </div>
           </ScrollReveal>
+        </div>
 
-          {/* Aanmelden als monteur formulier */}
+        {/* Formulier 2: Aanmelden als monteur */}
+        <div id="formulier-monteur" className="scroll-mt-24 rounded-3xl bg-[#FFE4E4]/15 p-8 md:p-12">
           <ScrollReveal delay={0.15}>
-            <div className="rounded-3xl bg-white border border-[#DDDDDD] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-              <Badge className="mb-5">Voor Liftmonteurs</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance mb-2">
-                Aanmelden als monteur
-              </h2>
-              <p className="text-sm text-[#888888] mb-8">
-                Laat je gegevens achter. Wij nemen binnen 2 werkdagen contact op.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+              {/* Profile block */}
+              <div className="lg:col-span-5">
+                <ProfileBlock
+                  initials="AG"
+                  name="Arwin Groenenberg"
+                  role="Opleiding & Ontwikkeling"
+                  quote="Ik neem binnen 2 werkdagen contact op. Koffie staat klaar."
+                />
+              </div>
 
-              {monteurSuccess ? (
-                <SuccessMessage message="Welkom! We bellen je binnen 2 werkdagen. Koffie staat klaar." />
-              ) : (
-                <form
-                  id="contact-monteur"
-                  className="space-y-5"
-                  onSubmit={handleMonteurSubmit}
-                >
-                  <InputField label="Naam" name="monteur-naam" required disabled={monteurLoading} />
-                  <InputField label="Telefoonnummer" name="monteur-telefoon" type="tel" required disabled={monteurLoading} />
-                  <InputField label="E-mailadres" name="monteur-email" type="email" required disabled={monteurLoading} />
-                  <SelectField
-                    label="Jaren ervaring"
-                    name="monteur-ervaring"
-                    options={["0-2 jaar", "3-5 jaar", "5-10 jaar", "10+ jaar"]}
-                    required
-                    disabled={monteurLoading}
-                  />
-                  <CheckboxGroupField
-                    label="Certificeringen"
-                    name="monteur-certificeringen"
-                    options={["NEN 3140", "VCA", "OEM-specifiek"]}
-                    disabled={monteurLoading}
-                  />
-                  <SelectField
-                    label="Beschikbaarheid"
-                    name="monteur-beschikbaarheid"
-                    options={["Direct", "Binnen 1 maand", "Orienterend"]}
-                    required
-                    disabled={monteurLoading}
-                  />
-                  <TextareaField
-                    label="Korte motivatie"
-                    name="monteur-motivatie"
-                    placeholder="Waarom wil je via LYFD werken?"
-                    disabled={monteurLoading}
-                  />
-                  <CheckboxField
-                    label="Ik ga akkoord met de privacyverklaring van LYFD."
-                    name="monteur-privacy"
-                    disabled={monteurLoading}
-                  />
-                  {monteurError && <ErrorMessage />}
-                  <Button
-                    type="submit"
-                    variant="primary"
-                    size="lg"
-                    icon={monteurLoading ? "none" : "arrow-right"}
-                    disabled={monteurLoading}
+              {/* Form */}
+              <div className="lg:col-span-7">
+                <DualHeading bold="Meld je aan" italic="als monteur" as="h2" size="subsection" className="mb-8" />
+
+                {monteurSuccess ? (
+                  <SuccessMessage message="Welkom! We bellen je binnen 2 werkdagen. Koffie staat klaar." />
+                ) : (
+                  <form
+                    id="contact-monteur"
+                    className="space-y-5"
+                    onSubmit={handleMonteurSubmit}
                   >
-                    {monteurLoading ? "Versturen..." : "Meld je aan"}
-                  </Button>
-                </form>
-              )}
+                    <InputField label="Naam" name="monteur-naam" required disabled={monteurLoading} />
+                    <InputField label="Telefoonnummer" name="monteur-telefoon" type="tel" required disabled={monteurLoading} />
+                    <InputField label="E-mailadres" name="monteur-email" type="email" required disabled={monteurLoading} />
+                    <SelectField
+                      label="Jaren ervaring"
+                      name="monteur-ervaring"
+                      options={["0-2 jaar", "3-5 jaar", "5-10 jaar", "10+ jaar"]}
+                      required
+                      disabled={monteurLoading}
+                    />
+                    <CheckboxGroupField
+                      label="Certificeringen"
+                      name="monteur-certificeringen"
+                      options={["NEN 3140", "VCA", "OEM-specifiek"]}
+                      disabled={monteurLoading}
+                    />
+                    <SelectField
+                      label="Beschikbaarheid"
+                      name="monteur-beschikbaarheid"
+                      options={["Direct", "Binnen 1 maand", "Orienterend"]}
+                      required
+                      disabled={monteurLoading}
+                    />
+                    <TextareaField
+                      label="Korte motivatie"
+                      name="monteur-motivatie"
+                      placeholder="Waarom wil je via LYFD werken?"
+                      disabled={monteurLoading}
+                    />
+                    <CheckboxField
+                      label="Ik ga akkoord met de privacyverklaring van LYFD."
+                      name="monteur-privacy"
+                      disabled={monteurLoading}
+                    />
+                    {monteurError && <ErrorMessage />}
+                    <Button
+                      type="submit"
+                      variant="primary"
+                      size="lg"
+                      icon={monteurLoading ? "none" : "arrow-right"}
+                      disabled={monteurLoading}
+                    >
+                      {monteurLoading ? "Versturen..." : "Meld je aan"}
+                    </Button>
+                  </form>
+                )}
+              </div>
             </div>
           </ScrollReveal>
         </div>

@@ -3,9 +3,37 @@
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
-  Clock,
+  Phone,
+  WhatsappLogo,
   EnvelopeSimple,
 } from "@phosphor-icons/react";
+
+const contactCards = [
+  {
+    icon: Phone,
+    title: "Bel ons",
+    text: "Direct spreken met het team",
+    subtext: "Ma-vr 08:00 - 18:00",
+    color: "bg-[#EDE8FF]",
+    href: "tel:+31612345678",
+  },
+  {
+    icon: WhatsappLogo,
+    title: "WhatsApp",
+    text: "Stuur ons een bericht",
+    subtext: "Reactie binnen 1 uur",
+    color: "bg-[#E0EAFF]",
+    href: "https://wa.me/31612345678",
+  },
+  {
+    icon: EnvelopeSimple,
+    title: "Email",
+    text: "info@lyfd.nl",
+    subtext: "Reactie binnen 1 werkdag",
+    color: "bg-[#FFE8E0]",
+    href: "mailto:info@lyfd.nl",
+  },
+];
 
 export function ContactInfo() {
   return (
@@ -14,51 +42,23 @@ export function ContactInfo() {
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Bedrijfsinfo */}
-              <div className="rounded-3xl bg-[#F7F7F7] border border-[#DDDDDD] p-7 md:p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-[#DDDDDD]">
-                    <EnvelopeSimple weight="light" className="w-5 h-5 text-[#1B1D1E]" />
-                  </div>
-                  <h3 className="text-base font-semibold text-[#1B1D1E] tracking-tight leading-snug">
-                    Bedrijfsgegevens
-                  </h3>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-sm text-[#333333]">LYFD B.V.</p>
-                  <p className="text-sm text-[#333333]">info@lyfd.nl</p>
-                  <p className="text-sm text-[#888888]">Nederland</p>
-                </div>
-              </div>
-
-              {/* Reactietijden */}
-              <div className="rounded-3xl bg-[#F7F7F7] border border-[#DDDDDD] p-7 md:p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-[#DDDDDD]">
-                    <Clock weight="light" className="w-5 h-5 text-[#1B1D1E]" />
-                  </div>
-                  <h3 className="text-base font-semibold text-[#1B1D1E] tracking-tight leading-snug">
-                    Reactietijden
-                  </h3>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-[#333333]">Capaciteitsgesprekken</span>
-                    <span className="text-sm font-medium text-[#1B1D1E] font-mono">1 werkdag</span>
-                  </div>
-                  <div className="h-px bg-[#DDDDDD]" />
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-[#333333]">Monteur-aanmeldingen</span>
-                    <span className="text-sm font-medium text-[#1B1D1E] font-mono">2 werkdagen</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
+        <ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {contactCards.map((card) => (
+              <a
+                key={card.title}
+                href={card.href}
+                className={`${card.color} rounded-3xl p-7 md:p-8 block transition-all duration-300 hover:scale-[1.02] hover:shadow-lg`}
+              >
+                <card.icon weight="duotone" className="w-8 h-8 text-[#4928FD] mb-5" />
+                <p className="text-lg font-semibold text-[#1B1D1E] tracking-tight mb-1">
+                  {card.text}
+                </p>
+                <p className="text-sm text-[#888888]">{card.subtext}</p>
+              </a>
+            ))}
+          </div>
+        </ScrollReveal>
       </Container>
 
       {/* Bottom blend */}

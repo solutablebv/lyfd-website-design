@@ -2,7 +2,8 @@
 
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { LinkedinLogo } from "@phosphor-icons/react";
+import { LinkedinLogo, ArrowRight } from "@phosphor-icons/react";
+import Image from "next/image";
 
 export function Bedrijfsgegevens() {
   return (
@@ -11,47 +12,91 @@ export function Bedrijfsgegevens() {
 
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#888888] mb-2">Bedrijf</p>
-                <p className="text-sm font-semibold text-[#1B1D1E]">LYFD B.V.</p>
-                <p className="text-xs text-[#888888] mt-1">Onderdeel van Solutable BV</p>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#888888] mb-2">Branche</p>
-                <p className="text-sm font-semibold text-[#1B1D1E]">Liftindustrie</p>
-                <p className="text-xs text-[#888888] mt-1">Capacity as a Service</p>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#888888] mb-2">Werkgebied</p>
-                <p className="text-sm font-semibold text-[#1B1D1E]">Nederland</p>
-                <p className="text-xs text-[#888888] mt-1">Randstad-first</p>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#888888] mb-2">Contact</p>
-                <div className="flex items-center justify-center gap-3">
-                  <a
-                    href="/contact/"
-                    className="text-sm font-semibold text-[#1B1D1E] hover:text-[#888888] transition-colors duration-300"
-                  >
-                    Neem contact op
-                  </a>
-                  <a
-                    href="https://linkedin.com/company/lyfd"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-7 h-7 rounded-full bg-[#DDDDDD] hover:bg-[#DDDDDD] transition-all duration-300"
-                    aria-label="LYFD op LinkedIn"
-                  >
-                    <LinkedinLogo weight="fill" className="h-3.5 w-3.5 text-[#888888]" />
-                  </a>
+          <div className="max-w-4xl mx-auto rounded-3xl bg-[#EDE8FF] p-8 md:p-12">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+              {/* Left: logo + company info */}
+              <div className="flex-1">
+                <Image
+                  src="/logo.svg"
+                  alt="LYFD"
+                  width={160}
+                  height={48}
+                  className="h-12 w-auto mb-6"
+                />
+                <h3 className="text-xl font-semibold text-[#1B1D1E] tracking-tight">
+                  LYFD B.V.
+                </h3>
+                <p className="mt-1 text-sm text-[#333333]">
+                  Onderdeel van Solutable BV
+                </p>
+
+                <div className="mt-6 space-y-3">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#888888]">
+                      Branche
+                    </p>
+                    <p className="text-sm font-medium text-[#1B1D1E]">
+                      Liftindustrie
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#888888]">
+                      Model
+                    </p>
+                    <p className="text-sm font-medium text-[#1B1D1E]">
+                      Capacity as a Service
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#888888]">
+                      Werkgebied
+                    </p>
+                    <p className="text-sm font-medium text-[#1B1D1E]">
+                      Nederland (Randstad-first)
+                    </p>
+                  </div>
                 </div>
+              </div>
+
+              {/* Right: links + tagline */}
+              <div className="flex-shrink-0 flex flex-col gap-3">
+                <a
+                  href="/contact/"
+                  className="group inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#4928FD] transition-colors duration-300"
+                >
+                  Contact
+                  <ArrowRight
+                    weight="bold"
+                    className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
+                  />
+                </a>
+                <a
+                  href="https://linkedin.com/company/lyfd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#4928FD] transition-colors duration-300"
+                >
+                  LinkedIn
+                  <LinkedinLogo
+                    weight="fill"
+                    className="w-4 h-4"
+                  />
+                </a>
+                <a
+                  href="/kennisbank/"
+                  className="group inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#4928FD] transition-colors duration-300"
+                >
+                  Kennisbank
+                  <ArrowRight
+                    weight="bold"
+                    className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
+                  />
+                </a>
               </div>
             </div>
 
-            <div className="mt-10 text-center">
-              <p className="text-xs text-[#888888] font-mono">
+            <div className="mt-10 pt-6 border-t border-[#4928FD]/10">
+              <p className="text-sm font-mono text-[#4928FD] tracking-wide">
                 Lifting the workforce.
               </p>
             </div>
