@@ -103,19 +103,19 @@ export function PlatformPricing() {
   const recommended = getRecommendedTier(monteurs);
 
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F7F7F7] py-32 md:py-44 overflow-hidden">
       {/* Top gradient blend */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#DDDDDD] to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Schaalbaar. Van starter tot enterprise.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="mt-6 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#888888] leading-[1.7] max-w-[55ch] mx-auto">
               Kies het plan dat past bij de fase van je bedrijf. Opschalen kan
               altijd.
             </p>
@@ -125,7 +125,7 @@ export function PlatformPricing() {
         {/* Monteurs slider */}
         <ScrollReveal delay={0.15}>
           <div className="text-center mb-10">
-            <p className="text-sm font-medium text-[#6B6560] mb-4">
+            <p className="text-sm font-medium text-[#888888] mb-4">
               Hoeveel monteurs werken er in je organisatie?
             </p>
             <div className="flex items-center justify-center gap-6">
@@ -135,9 +135,9 @@ export function PlatformPricing() {
                 max={100}
                 value={monteurs}
                 onChange={(e) => setMonteurs(parseInt(e.target.value))}
-                className="w-64 accent-[#1A1A1A]"
+                className="w-64 accent-[#1B1D1E]"
               />
-              <span className="text-2xl font-bold font-mono text-[#1A1A1A] w-16 text-right">
+              <span className="text-2xl font-bold font-mono text-[#1B1D1E] w-16 text-right">
                 {monteurs}
               </span>
             </div>
@@ -153,28 +153,28 @@ export function PlatformPricing() {
               <StaggerItem key={tier.name}>
                 <div
                   className={cn(
-                    "relative rounded-2xl p-7 md:p-8 h-full flex flex-col transition-all duration-500",
+                    "relative rounded-3xl p-7 md:p-8 h-full flex flex-col transition-all duration-500",
                     isRecommended
-                      ? "bg-[#FDFCFA] border-2 border-[#1A1A1A] shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
-                      : "bg-[#FDFCFA] border border-[#E8E5E0] shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+                      ? "bg-[#EDE8FF]/20 border-2 border-[#4928FD] shadow-[0_2px_8px_rgba(73,40,253,0.1)]"
+                      : "bg-white border border-[#DDDDDD] shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
                   )}
                 >
                   {isRecommended && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-[10px] uppercase tracking-[0.15em] font-semibold bg-[#1A1A1A] text-white">
-                        Aanbevolen
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-[10px] uppercase tracking-[0.15em] font-semibold bg-[#4928FD] text-white">
+                        Meest gekozen
                       </span>
                     </div>
                   )}
 
                   <div className="mb-6">
-                    <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight">
+                    <h3 className="text-lg font-bold text-[#1B1D1E] tracking-tight">
                       {tier.name}
                     </h3>
-                    <p className="mt-1 text-sm font-mono text-[#1A1A1A] font-semibold">
+                    <p className="mt-1 text-sm font-mono text-[#1B1D1E] font-semibold">
                       {tier.price}
                     </p>
-                    <p className="mt-2 text-sm text-[#6B6560] leading-relaxed">
+                    <p className="mt-2 text-sm text-[#888888] leading-relaxed">
                       {tier.description}
                     </p>
                   </div>
@@ -183,7 +183,7 @@ export function PlatformPricing() {
                     <div className="space-y-2.5">
                       {tier.modules.map((mod) => (
                         <div key={mod} className="flex items-start gap-2.5">
-                          <div className="mt-1 w-4 h-4 rounded-full bg-[#F2F0ED] flex items-center justify-center flex-shrink-0">
+                          <div className="mt-1 w-4 h-4 rounded-full bg-[#EDE8FF] flex items-center justify-center flex-shrink-0">
                             <svg
                               width="8"
                               height="8"
@@ -192,14 +192,14 @@ export function PlatformPricing() {
                             >
                               <path
                                 d="M1.5 4L3.2 5.8L6.5 2.2"
-                                stroke="#1A1A1A"
+                                stroke="#4928FD"
                                 strokeWidth="1.2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                               />
                             </svg>
                           </div>
-                          <span className="text-sm text-[#6B6560]">{mod}</span>
+                          <span className="text-sm text-[#888888]">{mod}</span>
                         </div>
                       ))}
                     </div>
@@ -223,15 +223,15 @@ export function PlatformPricing() {
         {/* Feature comparison table */}
         <ScrollReveal delay={0.2}>
           <div className="mt-16 md:mt-24 max-w-5xl mx-auto">
-            <h3 className="text-xl font-bold text-[#1A1A1A] text-center mb-8 tracking-tight">
+            <h3 className="text-xl font-bold text-[#1B1D1E] text-center mb-8 tracking-tight">
               Vergelijk alle features
             </h3>
 
-            <div className="rounded-2xl border border-[#E8E5E0] bg-[#FDFCFA] overflow-hidden">
+            <div className="rounded-3xl border border-[#DDDDDD] bg-white overflow-hidden">
               {/* Table header */}
-              <div className="grid grid-cols-4 border-b border-[#E8E5E0]">
+              <div className="grid grid-cols-4 border-b border-[#DDDDDD]">
                 <div className="p-4">
-                  <span className="text-xs font-medium text-[#9C9690] uppercase tracking-wider">
+                  <span className="text-xs font-medium text-[#888888] uppercase tracking-wider">
                     Feature
                   </span>
                 </div>
@@ -240,15 +240,15 @@ export function PlatformPricing() {
                     key={name}
                     className={cn(
                       "p-4 text-center",
-                      name === recommended && "bg-[#F5F3F0]"
+                      name === recommended && "bg-[#EDE8FF]/30"
                     )}
                   >
                     <span
                       className={cn(
                         "text-xs font-semibold uppercase tracking-wider",
                         name === recommended
-                          ? "text-[#1A1A1A]"
-                          : "text-[#6B6560]"
+                          ? "text-[#1B1D1E]"
+                          : "text-[#888888]"
                       )}
                     >
                       {name}
@@ -267,7 +267,7 @@ export function PlatformPricing() {
                   )}
                 >
                   <div className="p-3 md:p-4 flex items-center">
-                    <span className="text-xs md:text-sm text-[#6B6560]">
+                    <span className="text-xs md:text-sm text-[#888888]">
                       {row.feature}
                     </span>
                   </div>
@@ -282,7 +282,7 @@ export function PlatformPricing() {
                       key={tier}
                       className={cn(
                         "p-3 md:p-4 flex items-center justify-center",
-                        tier === recommended && "bg-[#F5F3F0]"
+                        tier === recommended && "bg-[#EDE8FF]/30"
                       )}
                     >
                       {val === "check" ? (
@@ -291,7 +291,7 @@ export function PlatformPricing() {
                           height="14"
                           viewBox="0 0 14 14"
                           fill="none"
-                          className="text-[#1A1A1A]"
+                          className="text-[#4928FD]"
                         >
                           <path
                             d="M3 7L5.8 10L11 4"
@@ -302,9 +302,9 @@ export function PlatformPricing() {
                           />
                         </svg>
                       ) : val === "none" ? (
-                        <span className="text-xs text-[#DCDCDC]">&mdash;</span>
+                        <span className="text-xs text-[#DDDDDD]">&mdash;</span>
                       ) : (
-                        <span className="text-xs font-medium text-[#1A1A1A]">
+                        <span className="text-xs font-medium text-[#1B1D1E]">
                           {val}
                         </span>
                       )}
@@ -318,7 +318,7 @@ export function PlatformPricing() {
 
         {/* Disclaimer */}
         <ScrollReveal delay={0.25}>
-          <p className="mt-8 text-center text-xs text-[#9C9690] max-w-[65ch] mx-auto">
+          <p className="mt-8 text-center text-xs text-[#888888] max-w-[65ch] mx-auto">
             Alle prijzen zijn indicatief en exclusief BTW. Neem contact op voor
             een offerte op maat.
           </p>

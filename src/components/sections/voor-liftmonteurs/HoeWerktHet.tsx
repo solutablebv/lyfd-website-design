@@ -28,9 +28,9 @@ const stappen = [
 
 export function HoeWerktHet() {
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
+    <section className="relative bg-[#F7F7F7] py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F7F7F7] to-transparent" />
 
       <Container>
         <div className="max-w-2xl">
@@ -38,7 +38,7 @@ export function HoeWerktHet() {
             <Badge className="mb-5">Hoe het werkt</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               In drie stappen aan de slag
             </h2>
           </ScrollReveal>
@@ -50,14 +50,14 @@ export function HoeWerktHet() {
         >
           {stappen.map((stap) => (
             <StaggerItem key={stap.nummer}>
-              <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-                <span className="inline-block text-3xl font-bold text-[#EBEBEB] font-mono mb-4 tracking-tighter">
+              <div className="h-full rounded-3xl bg-white border border-[#DDDDDD] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                <span className="inline-block text-3xl font-bold text-[#DDDDDD] font-mono mb-4 tracking-tighter">
                   {stap.nummer}
                 </span>
-                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
+                <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-3">
                   {stap.title}
                 </h3>
-                <p className="text-sm text-[#3D3A37] leading-relaxed">
+                <p className="text-sm text-[#333333] leading-relaxed">
                   {stap.text}
                 </p>
               </div>
@@ -67,7 +67,7 @@ export function HoeWerktHet() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

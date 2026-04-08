@@ -12,6 +12,7 @@ import {
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
 import { X, Check, ArrowRight } from "@phosphor-icons/react";
+import { DualHeading } from "@/components/ui/DualHeading";
 
 const withoutLyfd = [
   "Serviceroutes die niet gereden worden, klanten die wachten",
@@ -60,7 +61,7 @@ function AnimatedIcon({ type, delay }: { type: "x" | "check"; delay: number }) {
 
 export function StakesSection() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <Image
@@ -70,28 +71,30 @@ export function StakesSection() {
           className="object-cover opacity-[0.04]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCFA] via-transparent to-[#FDFCFA]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
       </div>
 
       {/* Top blend from CTA */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
         <div className="text-center max-w-2xl mx-auto">
           <ScrollReveal>
-            <Badge className="mb-5">Het verschil</Badge>
+            <Badge variant="pastel-pink" className="mb-5">Het verschil</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Wat staat er op het spel?
-            </h2>
+            <DualHeading
+              bold="Wat staat er"
+              italic="op het spel?"
+              className="text-center"
+            />
           </ScrollReveal>
         </div>
 
         <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {/* Without LYFD */}
           <ScrollReveal delay={0.1}>
-            <div className="group rounded-2xl bg-[#FDF6F6] border border-[#E8D0D0] p-8 md:p-10 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+            <div className="group rounded-3xl bg-[#FFE4E4] p-8 md:p-10 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F5E0E0] mb-6">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#C0A0A0]" />
                 <span className="text-xs font-medium text-[#8B6B6B] tracking-wide">
@@ -99,7 +102,7 @@ export function StakesSection() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6">
+              <h3 className="text-xl font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-6">
                 Het risico van niets doen
               </h3>
 
@@ -108,7 +111,7 @@ export function StakesSection() {
                   <StaggerItem key={item}>
                     <div className="flex items-start gap-3">
                       <AnimatedIcon type="x" delay={index * 0.08} />
-                      <span className="text-base font-medium text-[#3D3A37] leading-relaxed">
+                      <span className="text-base font-medium text-[#333333] leading-relaxed">
                         {item}
                       </span>
                     </div>
@@ -120,15 +123,15 @@ export function StakesSection() {
 
           {/* With LYFD */}
           <ScrollReveal delay={0.2}>
-            <div className="group rounded-2xl bg-[#F6FDF6] border-l-2 border border-[#E0E0E0] border-l-[#2A2A2A] p-8 md:p-10 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+            <div className="group rounded-3xl bg-[#E0EAFF] p-8 md:p-10 h-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E0F0E0] mb-6">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#2A2A2A]" />
-                <span className="text-xs font-medium text-[#2A2A2A] tracking-wide">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#1B1D1E]" />
+                <span className="text-xs font-medium text-[#1B1D1E] tracking-wide">
                   Met LYFD
                 </span>
               </div>
 
-              <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6">
+              <h3 className="text-xl font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-6">
                 Met LYFD als capaciteitspartner
               </h3>
 
@@ -137,7 +140,7 @@ export function StakesSection() {
                   <StaggerItem key={item}>
                     <div className="flex items-start gap-3">
                       <AnimatedIcon type="check" delay={index * 0.08} />
-                      <span className="text-base font-medium text-[#3D3A37] leading-relaxed">
+                      <span className="text-base font-medium text-[#333333] leading-relaxed">
                         {item}
                       </span>
                     </div>
@@ -147,7 +150,7 @@ export function StakesSection() {
 
               <Link
                 href="/aanvraag/"
-                className="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-[#2A2A2A] hover:gap-3 transition-all duration-300"
+                className="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-[#1B1D1E] hover:gap-3 transition-all duration-300"
               >
                 Meer weten?
                 <ArrowRight weight="bold" className="w-4 h-4" />
@@ -158,7 +161,7 @@ export function StakesSection() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FFE4E4]/20" />
     </section>
   );
 }

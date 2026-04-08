@@ -84,12 +84,12 @@ const blokLabels: Record<string, string> = {
 // Background colors per phase for the gradient progression
 const bgColors: string[] = [
   "#FAFAFA", // Fase 1 - light
-  "#F8F8F8", // Fase 2 - light
+  "#F7F7F7", // Fase 2 - light
   "#F5F5F5", // Fase 3 - start opleiding
   "#F2F2F2", // Fase 4
   "#EFEFEF", // Fase 5
-  "#F0F0F0", // Fase 6
-  "#1A1A1A", // Fase 7 - dark specialisatie
+  "#F7F7F7", // Fase 6
+  "#1B1D1E", // Fase 7 - dark specialisatie
 ];
 
 /* ------------------------------------------------------------------ */
@@ -138,7 +138,7 @@ function ParallaxFase({
           <span
             className={cn(
               "text-[30vw] font-mono font-bold select-none leading-none",
-              isDark ? "text-white opacity-[0.04]" : "text-[#1A1A1A] opacity-[0.03]"
+              isDark ? "text-white opacity-[0.04]" : "text-[#1B1D1E] opacity-[0.03]"
             )}
           >
             {String(fase.nummer).padStart(2, "0")}
@@ -152,7 +152,7 @@ function ParallaxFase({
           <span
             className={cn(
               "text-[40vw] font-mono font-bold select-none leading-none",
-              isDark ? "text-white opacity-[0.04]" : "text-[#1A1A1A] opacity-[0.03]"
+              isDark ? "text-white opacity-[0.04]" : "text-[#1B1D1E] opacity-[0.03]"
             )}
           >
             {String(fase.nummer).padStart(2, "0")}
@@ -171,8 +171,8 @@ function ParallaxFase({
             className={cn(
               "w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shrink-0",
               isDark
-                ? "bg-[#FDFCFA] text-[#1A1A1A]"
-                : "bg-[#1A1A1A] text-white"
+                ? "bg-white text-[#1B1D1E]"
+                : "bg-[#1B1D1E] text-white"
             )}
           >
             <span className="text-lg md:text-xl font-bold font-mono">
@@ -186,7 +186,7 @@ function ParallaxFase({
             <span
               className={cn(
                 "text-[10px] uppercase tracking-[0.25em] font-medium mb-3 block",
-                isDark ? "text-white/40" : "text-[#9C9690]"
+                isDark ? "text-white/40" : "text-[#888888]"
               )}
             >
               {blokLabels[fase.blok]}
@@ -195,7 +195,7 @@ function ParallaxFase({
             <h3
               className={cn(
                 "text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tighter leading-[1.05] mb-4",
-                isDark ? "text-white" : "text-[#1A1A1A]"
+                isDark ? "text-white" : "text-[#1B1D1E]"
               )}
             >
               {fase.title}
@@ -204,7 +204,7 @@ function ParallaxFase({
             <p
               className={cn(
                 "text-base md:text-lg leading-relaxed mb-3 max-w-[52ch]",
-                isDark ? "text-white/70" : "text-[#3D3A37]"
+                isDark ? "text-white/70" : "text-[#333333]"
               )}
             >
               {fase.description}
@@ -216,7 +216,7 @@ function ParallaxFase({
                   "inline-flex items-center rounded-full px-3 py-1 text-xs font-mono",
                   isDark
                     ? "bg-white/10 text-white/60"
-                    : "bg-[#F2F0ED] text-[#6B6560]"
+                    : "bg-[#F7F7F7] text-[#888888]"
                 )}
               >
                 {fase.duur}
@@ -246,11 +246,11 @@ function BlokSeparator({ label }: { label: string }) {
   return (
     <div
       ref={ref}
-      className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden bg-[#FDFCFA]"
+      className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden bg-white"
     >
       <motion.span
         style={{ opacity, scale }}
-        className="text-[12vw] md:text-[10vw] font-bold tracking-tighter text-[#1A1A1A] mix-blend-difference select-none leading-none"
+        className="text-[12vw] md:text-[10vw] font-bold tracking-tighter text-[#1B1D1E] mix-blend-difference select-none leading-none"
       >
         {label}
       </motion.span>
@@ -275,7 +275,7 @@ function TrajectCTA() {
   return (
     <div
       ref={ref}
-      className="relative h-[70vh] md:h-[80vh] flex items-center justify-center bg-[#1A1A1A] overflow-hidden"
+      className="relative h-[70vh] md:h-[80vh] flex items-center justify-center bg-[#1B1D1E] overflow-hidden"
       style={{
         clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)",
       }}
@@ -295,7 +295,7 @@ function TrajectCTA() {
         </p>
         <a
           href="#assessment"
-          className="inline-flex items-center justify-center rounded-full bg-[#FDFCFA] text-[#1A1A1A] px-8 py-3.5 text-sm font-semibold tracking-tight hover:bg-[#FDFCFA]/90 transition-colors"
+          className="inline-flex items-center justify-center rounded-full bg-white text-[#1B1D1E] px-8 py-3.5 text-sm font-semibold tracking-tight hover:bg-white/90 transition-colors"
         >
           Start de assessment
         </a>
@@ -321,19 +321,19 @@ function TrajectHeader() {
   return (
     <div
       ref={ref}
-      className="relative h-[60vh] md:h-[70vh] flex items-center justify-center bg-[#F5F3F0] overflow-hidden"
+      className="relative h-[60vh] md:h-[70vh] flex items-center justify-center bg-[#F7F7F7] overflow-hidden"
     >
       <motion.div
         style={{ opacity: headerOpacity, y: headerY }}
         className="text-center px-6 max-w-2xl mx-auto"
       >
-        <span className="inline-flex items-center rounded-full border border-[#E0E0E0] bg-[#FDFCFA] px-4 py-1.5 text-[11px] uppercase tracking-[0.2em] font-medium text-[#6B6560] mb-6">
+        <span className="inline-flex items-center rounded-full border border-[#E0E0E0] bg-white px-4 py-1.5 text-[11px] uppercase tracking-[0.2em] font-medium text-[#888888] mb-6">
           Het traject
         </span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-5">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance mb-5">
           Van nul naar gecertificeerd liftmonteur
         </h2>
-        <p className="text-base text-[#6B6560] max-w-[48ch] mx-auto">
+        <p className="text-base text-[#888888] max-w-[48ch] mx-auto">
           Een gestructureerd opleidingstraject in 7 fases, van geschiktheidstest
           tot certificering.
         </p>

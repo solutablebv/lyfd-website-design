@@ -24,9 +24,13 @@ export function ArticleHeader({
   author,
 }: ArticleHeaderProps) {
   return (
-    <section className="relative bg-[#FDFCFA] pt-36 md:pt-44 pb-12 md:pb-16">
+    <section className="relative bg-white pt-36 md:pt-44 pb-12 md:pb-16">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        background: "radial-gradient(ellipse at 20% 50%, rgba(237,232,255,0.4) 0%, transparent 50%), radial-gradient(ellipse at 80% 30%, rgba(224,234,255,0.3) 0%, transparent 50%)"
+      }} />
       {/* Top gradient (seamless header blend) */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#FDFCFA] to-transparent z-[2] pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent z-[2] pointer-events-none" />
 
       <Container className="relative z-10">
         <div className="max-w-[720px] mx-auto">
@@ -44,26 +48,26 @@ export function ArticleHeader({
           >
             <Link
               href="/"
-              className="text-xs text-[#9C9690] hover:text-[#6B6560] transition-colors duration-300 font-medium"
+              className="text-xs text-[#888888] hover:text-[#888888] transition-colors duration-300 font-medium"
             >
               Home
             </Link>
-            <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DCDCDC]" />
+            <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DDDDDD]" />
             <Link
               href="/kennisbank/"
-              className="text-xs text-[#9C9690] hover:text-[#6B6560] transition-colors duration-300 font-medium"
+              className="text-xs text-[#888888] hover:text-[#888888] transition-colors duration-300 font-medium"
             >
               Kennisbank
             </Link>
-            <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DCDCDC]" />
+            <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DDDDDD]" />
             <Link
               href={pillarHref}
-              className="text-xs text-[#9C9690] hover:text-[#6B6560] transition-colors duration-300 font-medium"
+              className="text-xs text-[#888888] hover:text-[#888888] transition-colors duration-300 font-medium"
             >
               {pillar}
             </Link>
-            <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DCDCDC]" />
-            <span className="text-xs text-[#6B6560] font-medium">Artikel</span>
+            <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DDDDDD]" />
+            <span className="text-xs text-[#888888] font-medium">Artikel</span>
           </motion.nav>
 
           {/* Pillar Badge */}
@@ -90,7 +94,7 @@ export function ArticleHeader({
               ease: [0.32, 0.72, 0, 1],
               delay: 0.2,
             }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1A1A1A] tracking-tighter leading-[1.05] text-balance"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B1D1E] tracking-tighter leading-[1.05] text-balance"
           >
             {title}
           </motion.h1>
@@ -104,15 +108,15 @@ export function ArticleHeader({
               ease: [0.32, 0.72, 0, 1],
               delay: 0.35,
             }}
-            className="mt-6 flex items-center gap-3 text-sm text-[#9C9690]"
+            className="mt-6 flex items-center gap-3 text-sm text-[#888888]"
           >
             <span className="font-mono text-xs">{date}</span>
-            <span className="w-1 h-1 rounded-full bg-[#DCDCDC]" />
+            <span className="w-1 h-1 rounded-full bg-[#DDDDDD]" />
             <span className="font-mono text-xs">{readTime}</span>
-            <span className="w-1 h-1 rounded-full bg-[#DCDCDC]" />
+            <span className="w-1 h-1 rounded-full bg-[#DDDDDD]" />
             <span className="text-xs">
               Door{" "}
-              <span className="text-[#6B6560] font-medium">{author}</span>
+              <span className="text-[#888888] font-medium">{author}</span>
             </span>
           </motion.div>
 
@@ -125,7 +129,7 @@ export function ArticleHeader({
               ease: [0.32, 0.72, 0, 1],
               delay: 0.45,
             }}
-            className="mt-8 h-px bg-[#E8E5E0] origin-left"
+            className="mt-8 h-px bg-[#DDDDDD] origin-left"
           />
         </div>
       </Container>

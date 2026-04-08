@@ -22,13 +22,13 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-[#1A1A1A] text-white hover:bg-[#2A2A2A] hover:shadow-[0_4px_16px_rgba(0,0,0,0.15),0_1px_4px_rgba(0,0,0,0.1)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0 btn-shimmer",
+    "bg-[#4928FD] text-white hover:bg-[#3B1FD4] hover:shadow-[0_4px_16px_rgba(73,40,253,0.25),0_1px_4px_rgba(73,40,253,0.15)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0 btn-shimmer",
   secondary:
-    "bg-[#2A2A2A] text-white hover:bg-[#383838] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
+    "bg-[#1B1D1E] text-white hover:bg-[#333333] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
   ghost:
-    "bg-transparent text-[#1A1A1A] border border-[#D9D4CE] hover:bg-[#F5F5F5] hover:border-[#C0C0C0] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
+    "bg-transparent text-[#1B1D1E] border border-[#DDDDDD] hover:bg-[#F5F5F5] hover:border-[#DDDDDD] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
   white:
-    "bg-[#FDFCFA] text-[#1A1A1A] hover:bg-[#F5F5F5] hover:shadow-[0_4px_16px_rgba(255,255,255,0.15)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
+    "bg-white text-[#1B1D1E] hover:bg-[#F5F5F5] hover:shadow-[0_4px_16px_rgba(255,255,255,0.15)] hover:-translate-y-px active:scale-[0.98] active:translate-y-0",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -84,8 +84,8 @@ export function Button({
             "group-hover:translate-x-0.5 group-hover:-translate-y-px group-hover:scale-110",
             variant === "primary" && "bg-white/20 text-white",
             variant === "secondary" && "bg-white/15 text-white",
-            variant === "ghost" && "bg-[#1A1A1A]/5 text-[#1A1A1A]",
-            variant === "white" && "bg-[#1A1A1A]/10 text-[#1A1A1A]",
+            variant === "ghost" && "bg-[#1B1D1E]/5 text-[#1B1D1E]",
+            variant === "white" && "bg-[#1B1D1E]/10 text-[#1B1D1E]",
             size === "sm" && "h-6 w-6",
             size === "default" && "h-7 w-7",
             size === "lg" && "h-8 w-8"
@@ -109,7 +109,7 @@ export function Button({
   const sharedClasses = cn(
     "group relative inline-flex items-center justify-center rounded-full font-medium overflow-hidden",
     "transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]",
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2A2A2A]/30 focus-visible:ring-offset-2",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4928FD]/30 focus-visible:ring-offset-2",
     "select-none cursor-pointer",
     variantStyles[variant],
     sizeStyles[size],

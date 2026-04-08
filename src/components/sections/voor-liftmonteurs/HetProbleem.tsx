@@ -7,6 +7,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 import {
   Lock,
   Warning,
@@ -19,21 +20,21 @@ const opties = [
     title: "Vast dienstverband",
     subtitle: "Voorspelbaar, maar beperkt",
     text: "Zekerheid van een contract, maar je zit vast aan CAO-lonen, dezelfde installaties en beperkte autonomie over je eigen planning. Groeien? Alleen als er ruimte is.",
-    color: "bg-[#F2F0ED]",
+    color: "bg-[#F7F7F7]",
   },
   {
     icon: Warning,
     title: "Zzp",
     subtitle: "Vrijheid, maar risico",
     text: "Je bepaalt je eigen tarief, maar draagt ook alle risico's. DBA-onzekerheid, eigen administratie, geen collega's om op terug te vallen. En altijd de vraag: waar komt de volgende opdracht vandaan?",
-    color: "bg-[#F2F0ED]",
+    color: "bg-[#F7F7F7]",
   },
   {
     icon: ArrowsSplit,
     title: "LYFD",
     subtitle: "Het beste van beide",
     text: "Vast contract met zekerheid, maar dan met afwisseling, collega's die het vak delen, 10-15% boven CAO en de mogelijkheid om bij verschillende opdrachtgevers ervaring op te doen.",
-    color: "bg-[#1A1A1A]",
+    color: "bg-[#1B1D1E]",
     textColor: "text-white",
     subtitleColor: "text-white/70",
     bodyColor: "text-white/60",
@@ -42,20 +43,22 @@ const opties = [
 
 export function HetProbleem() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <Badge className="mb-5">De keuze</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Vast of zzp. Alsof dat de enige opties zijn.
-            </h2>
+            <Badge variant="pastel-pink" className="mb-5">De keuze</Badge>
+            <DualHeading
+              bold="Vast of zzp."
+              italic="Alsof dat de enige opties zijn."
+              className="text-center"
+            />
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="mt-5 text-base md:text-lg text-[#3D3A37] leading-relaxed">
+            <p className="mt-5 text-base md:text-lg text-[#333333] leading-relaxed">
               Je bent een vakman. Je wilt gewaardeerd worden voor wat je doet, werken aan uitdagende installaties en de zekerheid hebben dat je morgen ook nog werk hebt. Maar de huidige opties dwingen je om te kiezen tussen zekerheid en vrijheid.
             </p>
           </ScrollReveal>
@@ -67,28 +70,28 @@ export function HetProbleem() {
         >
           {opties.map((optie) => {
             const Icon = optie.icon;
-            const isDark = optie.color === "bg-[#1A1A1A]";
+            const isDark = optie.color === "bg-[#1B1D1E]";
             return (
               <StaggerItem key={optie.title}>
                 <div
-                  className={`h-full rounded-2xl ${optie.color} ${
-                    isDark ? "" : "border border-[#E8E5E0]"
+                  className={`h-full rounded-3xl ${optie.color} ${
+                    isDark ? "" : "border border-[#DDDDDD]"
                   } p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]`}
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <div
                       className={`w-10 h-10 rounded-xl ${
-                        isDark ? "bg-white/10" : "bg-[#FDFCFA]"
+                        isDark ? "bg-white/10" : "bg-white"
                       } flex items-center justify-center`}
                     >
                       <Icon
                         weight="light"
-                        className={`w-5 h-5 ${isDark ? "text-white" : "text-[#6B6560]"}`}
+                        className={`w-5 h-5 ${isDark ? "text-white" : "text-[#888888]"}`}
                       />
                     </div>
                     <h3
                       className={`text-lg font-semibold tracking-tight leading-snug ${
-                        optie.textColor || "text-[#1A1A1A]"
+                        optie.textColor || "text-[#1B1D1E]"
                       }`}
                     >
                       {optie.title}
@@ -96,14 +99,14 @@ export function HetProbleem() {
                   </div>
                   <p
                     className={`text-sm font-medium mb-4 ${
-                      optie.subtitleColor || "text-[#6B6560]"
+                      optie.subtitleColor || "text-[#888888]"
                     }`}
                   >
                     {optie.subtitle}
                   </p>
                   <p
                     className={`text-sm leading-relaxed ${
-                      optie.bodyColor || "text-[#3D3A37]"
+                      optie.bodyColor || "text-[#333333]"
                     }`}
                   >
                     {optie.text}
@@ -116,7 +119,7 @@ export function HetProbleem() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#EDE8FF]/20" />
     </section>
   );
 }

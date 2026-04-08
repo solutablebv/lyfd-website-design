@@ -15,6 +15,7 @@ interface PillarTopic {
   description: string;
   href: string;
   articleCount: string;
+  color: string;
 }
 
 const pillars: PillarTopic[] = [
@@ -25,6 +26,7 @@ const pillars: PillarTopic[] = [
       "Alles wat je moet weten over werken als liftmonteur in Nederland. Van certificeringen tot arbeidsvormen tot wat LYFD biedt.",
     href: "/kennisbank/liftmonteur-gids/",
     articleCount: "5 artikelen",
+    color: "bg-[#FFE4E4]",
   },
   {
     icon: Seal,
@@ -33,6 +35,7 @@ const pillars: PillarTopic[] = [
       "Wat zijn de NEN 3140 en aanverwante certificeringen? Wie heeft ze nodig, hoe krijg je ze, en hoe werkt keuring in de liftbranche?",
     href: "/kennisbank/nen-certificering/",
     articleCount: "4 artikelen",
+    color: "bg-[#FFE8E0]",
   },
   {
     icon: ChartBar,
@@ -41,6 +44,7 @@ const pillars: PillarTopic[] = [
       "Hoe manage je capaciteit als liftbedrijf? Van planning tot partnerstrategie tot DBA-compliant uitbesteden.",
     href: "/kennisbank/capaciteitsmanagement/",
     articleCount: "5 artikelen",
+    color: "bg-[#E0EAFF]",
   },
   {
     icon: Lightbulb,
@@ -49,12 +53,13 @@ const pillars: PillarTopic[] = [
       "Wat is Capacity as a Service, hoe verschilt het van traditionele inzet, en wanneer is het de juiste keuze?",
     href: "/kennisbank/caas-uitgelegd/",
     articleCount: "4 artikelen",
+    color: "bg-[#EDE8FF]",
   },
 ];
 
 export function PillarGrid() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
+    <section className="relative bg-white py-32 md:py-44">
       <Container>
         <StaggerContainer
           className="grid grid-cols-1 md:grid-cols-12 gap-4"
@@ -86,29 +91,29 @@ function PillarCard({ pillar }: { pillar: PillarTopic }) {
 
   return (
     <a href={pillar.href} className="group block h-full">
-      <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] shadow-[0_1px_3px_rgba(0,0,0,0.04)] p-7 md:p-8 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#D9D4CE] hover:-translate-y-0.5 flex flex-col">
+      <div className={`h-full rounded-3xl ${pillar.color} p-7 md:p-8 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] flex flex-col`}>
         {/* Icon */}
-        <div className="w-12 h-12 rounded-full bg-[#F2F0ED] flex items-center justify-center mb-5 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105">
-          <IconComponent weight="light" className="w-6 h-6 text-[#2A2A2A]" />
+        <div className="w-12 h-12 rounded-full bg-white/60 flex items-center justify-center mb-5 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105">
+          <IconComponent weight="light" className="w-6 h-6 text-[#4928FD]" />
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
+        <h3 className="text-xl font-semibold text-[#1B1D1E] tracking-tight leading-snug">
           {pillar.title}
         </h3>
 
         {/* Description */}
-        <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed line-clamp-2 max-w-[45ch]">
+        <p className="mt-2 text-sm text-[#333333] leading-relaxed line-clamp-2 max-w-[45ch]">
           {pillar.description}
         </p>
 
         {/* Bottom row: badge + arrow */}
         <div className="mt-auto pt-6 flex items-center justify-between">
           <Badge variant="outline">{pillar.articleCount}</Badge>
-          <div className="w-8 h-8 rounded-full bg-[#F2F0ED] flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:bg-[#1A1A1A]">
+          <div className="w-8 h-8 rounded-full bg-white/60 flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:bg-[#4928FD]">
             <ArrowRight
               weight="bold"
-              className="w-3.5 h-3.5 text-[#2A2A2A] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:text-white group-hover:translate-x-0.5"
+              className="w-3.5 h-3.5 text-[#1B1D1E] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:text-white group-hover:translate-x-0.5"
             />
           </div>
         </div>

@@ -49,7 +49,7 @@ const routes = [
 
 export function CaasModellen() {
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F7F7F7] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -70,7 +70,7 @@ export function CaasModellen() {
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F7F7F7] to-transparent" />
 
       <Container>
         <div className="max-w-2xl">
@@ -78,7 +78,7 @@ export function CaasModellen() {
             <Badge className="mb-5">Modellen</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Twee routes naar capaciteit
             </h2>
           </ScrollReveal>
@@ -93,9 +93,9 @@ export function CaasModellen() {
             return (
               <StaggerItem key={route.title}>
                 <div
-                  className={`h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-10 md:p-12 shadow-[0_1px_3px_rgba(0,0,0,0.04)] ${
+                  className={`h-full rounded-3xl bg-white border border-[#DDDDDD] p-10 md:p-12 shadow-[0_1px_3px_rgba(0,0,0,0.04)] ${
                     route.accent
-                      ? "border-l-[3px] border-l-[#A0704C]"
+                      ? "border-l-[3px] border-l-[#4928FD]"
                       : "opacity-90"
                   }`}
                 >
@@ -115,22 +115,22 @@ export function CaasModellen() {
                   )}
 
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-[#F7F7F7] flex items-center justify-center">
                       <Icon
                         weight="light"
-                        className="w-5 h-5 text-[#2A2A2A]"
+                        className="w-5 h-5 text-[#1B1D1E]"
                       />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug">
+                    <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug">
                       {route.title}
                     </h3>
                   </div>
 
-                  <p className="text-sm font-medium text-[#2A2A2A] mb-4">
+                  <p className="text-sm font-medium text-[#1B1D1E] mb-4">
                     {route.tagline}
                   </p>
 
-                  <p className="text-sm text-[#3D3A37] leading-relaxed mb-6">
+                  <p className="text-sm text-[#333333] leading-relaxed mb-6">
                     {route.description}
                   </p>
 
@@ -138,9 +138,9 @@ export function CaasModellen() {
                     {route.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-start gap-2.5 text-sm text-[#3D3A37] leading-relaxed"
+                        className="flex items-start gap-2.5 text-sm text-[#333333] leading-relaxed"
                       >
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#1A1A1A] flex-shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#1B1D1E] flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -153,7 +153,7 @@ export function CaasModellen() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

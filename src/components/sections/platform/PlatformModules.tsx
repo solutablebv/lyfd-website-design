@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 import { ModuleMockup } from "./ModuleMockup";
 import { cn } from "@/lib/utils";
 
@@ -112,16 +113,18 @@ export function PlatformModules() {
   const [activeModule, setActiveModule] = useState(modules[0].id);
 
   return (
-    <section id="modules" className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
+    <section id="modules" className="relative bg-white py-32 md:py-44 overflow-hidden">
       <Container>
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Zeven modules. Een platform.
-            </h2>
+            <DualHeading
+              bold="Zeven modules."
+              italic="Een platform."
+              className="text-center"
+            />
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="mt-6 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#888888] leading-[1.7] max-w-[55ch] mx-auto">
               Elke module lost een specifiek probleem op. Samen vormen ze het meest
               complete platform voor de liftindustrie.
             </p>
@@ -140,8 +143,8 @@ export function PlatformModules() {
                   className={cn(
                     "w-full text-left px-4 py-4 rounded-r-xl border-l-2 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] cursor-pointer",
                     activeModule === mod.id
-                      ? "border-l-[#A0704C] bg-[#F5F3F0] text-[#1A1A1A]"
-                      : "border-l-transparent text-[#6B6560] hover:text-[#1A1A1A] hover:bg-[#F8F6F3]"
+                      ? "border-l-[#4928FD] bg-[#EDE8FF]/40 text-[#1B1D1E]"
+                      : "border-l-transparent text-[#888888] hover:text-[#1B1D1E] hover:bg-[#F7F7F7]"
                   )}
                 >
                   <div className="flex items-center gap-2">
@@ -153,9 +156,13 @@ export function PlatformModules() {
                     >
                       {mod.name}
                     </span>
-                    <span className="text-xs text-[#9C9690]">{mod.tagline}</span>
+                    <span className="text-xs text-[#888888]">{mod.tagline}</span>
                     {mod.badge && (
-                      <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-medium uppercase tracking-wider bg-[#F2F0ED] text-[#6B6560]">
+                      <span className={`inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-medium uppercase tracking-wider ${
+                        mod.badge === "Pro" ? "bg-[#EDE8FF] text-[#4928FD]" :
+                        mod.badge === "IoT" ? "bg-[#E0EAFF] text-[#1B1D1E]" :
+                        "bg-[#F7F7F7] text-[#888888]"
+                      }`}>
                         {mod.badge}
                       </span>
                     )}
@@ -171,14 +178,14 @@ export function PlatformModules() {
                         transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
                         className="overflow-hidden"
                       >
-                        <p className="mt-2 text-xs text-[#6B6560] leading-relaxed">
+                        <p className="mt-2 text-xs text-[#888888] leading-relaxed">
                           {mod.description}
                         </p>
                         <div className="mt-3 flex flex-wrap gap-1.5">
                           {mod.features.map((feature) => (
                             <span
                               key={feature}
-                              className="inline-flex items-center text-[10px] text-[#9C9690] bg-[#FDFCFA] rounded-full px-2 py-0.5 border border-[#E8E5E0]"
+                              className="inline-flex items-center text-[10px] text-[#4928FD] bg-[#EDE8FF] rounded-full px-2 py-0.5"
                             >
                               {feature}
                             </span>
@@ -214,10 +221,10 @@ export function PlatformModules() {
             <ScrollReveal key={mod.id}>
               <div
                 className={cn(
-                  "rounded-xl border transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]",
+                  "rounded-3xl transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]",
                   activeModule === mod.id
-                    ? "border-[#D9D4CE] bg-[#F5F3F0]"
-                    : "border-[#E8E5E0] bg-[#FDFCFA]"
+                    ? "bg-[#EDE8FF]"
+                    : "bg-[#F7F7F7]"
                 )}
               >
                 <button
@@ -231,15 +238,19 @@ export function PlatformModules() {
                       className={cn(
                         "text-sm transition-all duration-300",
                         activeModule === mod.id
-                          ? "font-semibold text-[#1A1A1A]"
-                          : "font-medium text-[#6B6560]"
+                          ? "font-semibold text-[#1B1D1E]"
+                          : "font-medium text-[#888888]"
                       )}
                     >
                       {mod.name}
                     </span>
-                    <span className="text-xs text-[#9C9690]">{mod.tagline}</span>
+                    <span className="text-xs text-[#888888]">{mod.tagline}</span>
                     {mod.badge && (
-                      <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-medium uppercase tracking-wider bg-[#F2F0ED] text-[#6B6560]">
+                      <span className={`inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-medium uppercase tracking-wider ${
+                        mod.badge === "Pro" ? "bg-[#EDE8FF] text-[#4928FD]" :
+                        mod.badge === "IoT" ? "bg-[#E0EAFF] text-[#1B1D1E]" :
+                        "bg-[#F7F7F7] text-[#888888]"
+                      }`}>
                         {mod.badge}
                       </span>
                     )}
@@ -256,14 +267,14 @@ export function PlatformModules() {
                       className="overflow-hidden"
                     >
                       <div className="px-4 pb-4">
-                        <p className="text-xs text-[#6B6560] leading-relaxed mb-3">
+                        <p className="text-xs text-[#888888] leading-relaxed mb-3">
                           {mod.description}
                         </p>
                         <div className="flex flex-wrap gap-1.5 mb-4">
                           {mod.features.map((feature) => (
                             <span
                               key={feature}
-                              className="inline-flex items-center text-[10px] text-[#9C9690] bg-[#FDFCFA] rounded-full px-2 py-0.5 border border-[#E8E5E0]"
+                              className="inline-flex items-center text-[10px] text-[#4928FD] bg-white/60 rounded-full px-2 py-0.5"
                             >
                               {feature}
                             </span>

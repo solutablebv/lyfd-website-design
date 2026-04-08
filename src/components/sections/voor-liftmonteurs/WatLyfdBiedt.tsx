@@ -7,6 +7,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 import {
   CurrencyEur,
   ShieldCheck,
@@ -65,19 +66,20 @@ const voordelen = [
 
 export function WatLyfdBiedt() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
+    <section className="relative bg-[#FFE8E0]/20 py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
         <div className="max-w-2xl">
           <ScrollReveal>
-            <Badge className="mb-5">Wat LYFD biedt</Badge>
+            <Badge variant="pastel-peach" className="mb-5">Wat LYFD biedt</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Wat LYFD anders maakt voor monteurs
-            </h2>
+            <DualHeading
+              bold="Wat LYFD anders maakt"
+              italic="voor monteurs"
+            />
           </ScrollReveal>
         </div>
 
@@ -89,14 +91,23 @@ export function WatLyfdBiedt() {
             const Icon = voordeel.icon;
             return (
               <StaggerItem key={voordeel.title}>
-                <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-6 md:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-                  <div className="w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center mb-5">
-                    <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
+                <div className="h-full rounded-3xl bg-white border border-[#DDDDDD] p-6 md:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-5 ${
+                    voordeel.icon === ShieldCheck ? 'bg-[#E0EAFF]' :
+                    voordeel.icon === CurrencyEur ? 'bg-[#EDE8FF]' :
+                    voordeel.icon === ArrowsClockwise ? 'bg-[#FFE8E0]' :
+                    voordeel.icon === UsersThree ? 'bg-[#FFE4E4]' :
+                    voordeel.icon === Phone ? 'bg-[#E0EAFF]' :
+                    voordeel.icon === Laptop ? 'bg-[#EDE8FF]' :
+                    voordeel.icon === TrendUp ? 'bg-[#FFE8E0]' :
+                    'bg-[#FFE4E4]'
+                  }`}>
+                    <Icon weight="light" className="w-5 h-5 text-[#1B1D1E]" />
                   </div>
-                  <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-2">
+                  <h3 className="text-base font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-2">
                     {voordeel.title}
                   </h3>
-                  <p className="text-sm text-[#3D3A37] leading-relaxed">
+                  <p className="text-sm text-[#333333] leading-relaxed">
                     {voordeel.text}
                   </p>
                 </div>
@@ -107,16 +118,16 @@ export function WatLyfdBiedt() {
 
         {/* Gerelateerde kennisbank artikelen */}
         <ScrollReveal delay={0.3}>
-          <div className="mt-14 md:mt-18 pt-10 border-t border-[#E8E5E0]">
-            <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#9C9690] mb-5">Lees ook in de kennisbank</p>
+          <div className="mt-14 md:mt-18 pt-10 border-t border-[#DDDDDD]">
+            <p className="text-xs uppercase tracking-[0.15em] font-medium text-[#888888] mb-5">Lees ook in de kennisbank</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/kennisbank/liftmonteur-gids/salaris-liftmonteur/" className="group flex items-center justify-between rounded-xl bg-[#FDFCFA] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-                <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Wat verdient een liftmonteur?</span>
-                <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+              <Link href="/kennisbank/liftmonteur-gids/salaris-liftmonteur/" className="group flex items-center justify-between rounded-xl bg-white border border-[#DDDDDD] px-5 py-4 transition-all duration-500 hover:border-[#DDDDDD] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                <span className="text-sm font-medium text-[#1B1D1E] group-hover:text-[#1B1D1E]">Wat verdient een liftmonteur?</span>
+                <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#888888] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#1B1D1E]" />
               </Link>
-              <Link href="/kennisbank/liftmonteur-gids/vast-zzp-of-caas/" className="group flex items-center justify-between rounded-xl bg-[#FDFCFA] border border-[#E8E5E0] px-5 py-4 transition-all duration-500 hover:border-[#D9D4CE] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-                <span className="text-sm font-medium text-[#1A1A1A] group-hover:text-[#2A2A2A]">Vast, zzp of CaaS?</span>
-                <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#9C9690] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#2A2A2A]" />
+              <Link href="/kennisbank/liftmonteur-gids/vast-zzp-of-caas/" className="group flex items-center justify-between rounded-xl bg-white border border-[#DDDDDD] px-5 py-4 transition-all duration-500 hover:border-[#DDDDDD] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                <span className="text-sm font-medium text-[#1B1D1E] group-hover:text-[#1B1D1E]">Vast, zzp of CaaS?</span>
+                <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#888888] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#1B1D1E]" />
               </Link>
             </div>
           </div>
@@ -124,7 +135,7 @@ export function WatLyfdBiedt() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FFE8E0]/20" />
     </section>
   );
 }

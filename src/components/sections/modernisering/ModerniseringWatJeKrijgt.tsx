@@ -38,9 +38,9 @@ const outcomes = [
 
 export function ModerniseringWatJeKrijgt() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
         <div className="max-w-2xl mx-auto text-center">
@@ -48,12 +48,12 @@ export function ModerniseringWatJeKrijgt() {
             <Badge className="mb-5">Het resultaat</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Na het project: wat je hebt bereikt
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
-            <p className="mt-6 text-base md:text-lg text-[#3D3A37] leading-relaxed max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#333333] leading-relaxed max-w-[55ch] mx-auto">
               Opgeleverd op datum. Opdrachtgever tevreden. Volgende project al in
               de planning. Dat is het verschil van een capaciteitspartner die
               levert.
@@ -69,14 +69,14 @@ export function ModerniseringWatJeKrijgt() {
             const Icon = item.icon;
             return (
               <StaggerItem key={item.title}>
-                <div className="h-full rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-7 md:p-8">
-                  <div className="w-12 h-12 rounded-2xl bg-[#1A1A1A] flex items-center justify-center mb-6">
+                <div className="h-full rounded-3xl bg-[#F7F7F7] border border-[#DDDDDD] p-7 md:p-8">
+                  <div className="w-12 h-12 rounded-2xl bg-[#1B1D1E] flex items-center justify-center mb-6">
                     <Icon weight="bold" className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug text-balance">
+                  <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug text-balance">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm text-[#3D3A37] leading-relaxed">
+                  <p className="mt-3 text-sm text-[#333333] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -90,7 +90,7 @@ export function ModerniseringWatJeKrijgt() {
           <div className="mt-12 text-center">
             <Link
               href="/aanvraag/"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1A1A] hover:gap-3 transition-all duration-300"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#1B1D1E] hover:gap-3 transition-all duration-300"
             >
               Plan je project in
               <ArrowRight weight="bold" className="w-4 h-4" />
@@ -100,7 +100,7 @@ export function ModerniseringWatJeKrijgt() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#E0EAFF]/20" />
     </section>
   );
 }

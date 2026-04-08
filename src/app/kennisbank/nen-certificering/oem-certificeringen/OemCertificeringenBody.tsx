@@ -14,19 +14,19 @@ const tocItems = [
 
 export function OemCertificeringenBody() {
   return (
-    <section className="relative bg-[#FDFCFA] pb-20 md:pb-28">
+    <section className="relative bg-white pb-20 md:pb-28">
       <Container>
         <div className="relative flex justify-center gap-16">
           <article className="w-full max-w-[720px]">
             <div className="prose-lyfd">
               {/* Definitie-blok (AEO) */}
               <ScrollReveal>
-                <div className="relative bg-[#F5F3F0] rounded-lg border-l-2 border-[#A0704C] px-6 py-5 mb-10">
-                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#E8E5E0] text-[#6B6560] mb-3">
+                <div className="relative bg-[#F7F7F7] rounded-lg border-l-2 border-[#4928FD] px-6 py-5 mb-10">
+                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#DDDDDD] text-[#888888] mb-3">
                     Definitie
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-[#3D3A37] m-0">
-                    <strong className="text-[#1A1A1A]">OEM-certificeringen</strong>{" "}
+                  <p className="text-[0.9375rem] leading-relaxed text-[#333333] m-0">
+                    <strong className="text-[#1B1D1E]">OEM-certificeringen</strong>{" "}
                     (Original Equipment Manufacturer) zijn fabrikantspecifieke
                     opleidingen en certificeringen die aantonen dat een
                     liftmonteur gekwalificeerd is om aan installaties van een
@@ -34,7 +34,7 @@ export function OemCertificeringenBody() {
                     certificeringen zoals{" "}
                     <a
                       href="/kennisbank/nen-certificering/nen-3140-uitleg/"
-                      className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300"
+                      className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300"
                     >
                       NEN 3140
                     </a>
@@ -321,7 +321,7 @@ export function OemCertificeringenBody() {
                     105.000
                   </span>{" "}
                   installaties{" "}
-                  <span className="text-[#9C9690] text-xs">
+                  <span className="text-[#888888] text-xs">
                     (Bron: LYFD, marktervaring 5 jaar)
                   </span>{" "}
                   is het tekort al structureel. Binnen die schaarse pool is het
@@ -363,7 +363,7 @@ export function OemCertificeringenBody() {
                   heeft. Dat maakt{" "}
                   <a
                     href="/kennisbank/capaciteitsmanagement/"
-                    className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300"
+                    className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300"
                   >
                     capaciteitsmanagement
                   </a>{" "}
@@ -424,7 +424,7 @@ export function OemCertificeringenBody() {
                   Dit is een van de concrete voordelen van het{" "}
                   <a
                     href="/diensten/"
-                    className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300"
+                    className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300"
                   >
                     Capacity as a Service model
                   </a>
@@ -448,20 +448,20 @@ export function OemCertificeringenBody() {
             </div>
 
             {/* Article closing CTA */}
-            <div className="mt-16 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-8 md:p-10">
-              <p className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+            <div className="mt-16 rounded-2xl bg-[#F7F7F7] border border-[#DDDDDD] p-8 md:p-10">
+              <p className="text-lg font-semibold text-[#1B1D1E] tracking-tight">
                 Monteurs nodig met de juiste OEM-ervaring?
               </p>
-              <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed max-w-[50ch]">
+              <p className="mt-2 text-sm text-[#333333] leading-relaxed max-w-[50ch]">
                 LYFD matcht op competentie, niet alleen op beschikbaarheid. Vertel
                 ons welke merken je in portefeuille hebt.
               </p>
               <a
                 href="/aanvraag/"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300"
               >
                 Plan een gesprek
-                <span className="text-[#9C9690]">&rarr;</span>
+                <span className="text-[#888888]">&rarr;</span>
               </a>
             </div>
           </article>

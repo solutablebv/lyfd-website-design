@@ -27,7 +27,7 @@ const PANEL_IMAGES = [
 const GRADIENT_OVERLAYS = Array.from({ length: PANEL_COUNT }, (_, i) => {
   const opacity1 = 0.1 + (i / PANEL_COUNT) * 0.3;
   const opacity2 = 0.2 + (i / PANEL_COUNT) * 0.2;
-  return `linear-gradient(135deg, rgba(26,26,26,${opacity1}) 0%, rgba(26,26,26,${opacity2}) 100%)`;
+  return `linear-gradient(135deg, rgba(27,29,30,${opacity1}) 0%, rgba(27,29,30,${opacity2}) 100%)`;
 });
 
 function PanelCard({

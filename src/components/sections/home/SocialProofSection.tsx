@@ -9,6 +9,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 
 interface ResultCard {
   value: string;
@@ -17,6 +18,7 @@ interface ResultCard {
   label: string;
   sublabel: string;
   isAnimated: boolean;
+  bg: string;
 }
 
 const resultCards: ResultCard[] = [
@@ -27,6 +29,7 @@ const resultCards: ResultCard[] = [
     label: "Levertijd eerste monteur",
     sublabel: "On-demand inzet, binnen twee werkdagen op locatie",
     isAnimated: true,
+    bg: "bg-[#E0EAFF]",
   },
   {
     value: "0",
@@ -35,6 +38,7 @@ const resultCards: ResultCard[] = [
     label: "DBA-incidenten",
     sublabel: "Volledige compliance sinds oprichting. Geen risico voor jou.",
     isAnimated: false,
+    bg: "bg-[#EDE8FF]",
   },
   {
     value: "24/7",
@@ -44,6 +48,7 @@ const resultCards: ResultCard[] = [
     sublabel:
       "Onze monteurs hebben altijd toegang tot LYFD technische ondersteuning",
     isAnimated: false,
+    bg: "bg-[#FFE8E0]",
   },
   {
     value: "EVA",
@@ -53,6 +58,7 @@ const resultCards: ResultCard[] = [
     sublabel:
       "Verslaglegging, foto/video rapportage en actieve liftkennis via ons eigen systeem",
     isAnimated: false,
+    bg: "bg-[#FFE4E4]",
   },
 ];
 
@@ -110,7 +116,7 @@ function AnimatedCounterCard({
   return (
     <div
       ref={ref}
-      className="group rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-7 md:p-8 text-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#D9D4CE]"
+      className={`group rounded-3xl ${card.bg} p-7 md:p-8 text-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]`}
     >
       <motion.div
         initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
@@ -118,16 +124,16 @@ function AnimatedCounterCard({
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <p
-          className={`text-5xl md:text-6xl tracking-tight text-[#1A1A1A] leading-none ${
+          className={`text-5xl md:text-6xl tracking-tight text-[#4928FD] leading-none ${
             isStatic ? "font-bold" : "font-mono font-bold"
           }`}
         >
           {displayValue}
         </p>
-        <p className="mt-4 text-sm font-semibold text-[#1A1A1A]">
+        <p className="mt-4 text-sm font-semibold text-[#1B1D1E]">
           {card.label}
         </p>
-        <p className="mt-1.5 text-xs text-[#6B6560] leading-relaxed line-clamp-2">
+        <p className="mt-1.5 text-xs text-[#888888] leading-relaxed line-clamp-2">
           {card.sublabel}
         </p>
       </motion.div>
@@ -137,19 +143,21 @@ function AnimatedCounterCard({
 
 export function SocialProofSection() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#E0EAFF]/20 py-32 md:py-44 overflow-hidden">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#E0EAFF]/20 to-transparent" />
 
       <Container>
         <div className="text-center max-w-2xl mx-auto">
           <ScrollReveal>
-            <Badge className="mb-5">Resultaten</Badge>
+            <Badge variant="pastel-peach" className="mb-5">Resultaten</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Resultaten die spreken
-            </h2>
+            <DualHeading
+              bold="Resultaten die"
+              italic="spreken"
+              className="text-center"
+            />
           </ScrollReveal>
         </div>
 
@@ -171,10 +179,10 @@ export function SocialProofSection() {
             {trustBadges.map((badge) => (
               <div
                 key={badge}
-                className="group flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#F2F0ED] border border-[#E8E5E0] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#E5E0DA] hover:border-[#D9D4CE] hover:-translate-y-px hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
+                className="group flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#F7F7F7] border border-[#DDDDDD] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#F7F7F7] hover:border-[#DDDDDD] hover:-translate-y-px hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
               >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#2A2A2A] transition-transform duration-500 group-hover:scale-125" />
-                <span className="text-xs font-medium text-[#6B6560] tracking-wide">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#1B1D1E] transition-transform duration-500 group-hover:scale-125" />
+                <span className="text-xs font-medium text-[#888888] tracking-wide">
                   {badge}
                 </span>
               </div>
@@ -184,7 +192,7 @@ export function SocialProofSection() {
 
         {/* Extra trust line */}
         <ScrollReveal delay={0.4}>
-          <p className="mt-10 text-sm text-[#6B6560] text-center max-w-[65ch] mx-auto leading-relaxed">
+          <p className="mt-10 text-sm text-[#888888] text-center max-w-[65ch] mx-auto leading-relaxed">
             Aanvullend: continue training en certificering, veiligheidstrainingen
             bij OEM&apos;s, en een eigen opleidingsprogramma onder begeleiding van
             beroepsprofessionals.
@@ -193,7 +201,7 @@ export function SocialProofSection() {
       </Container>
 
       {/* Bottom blend to CTA */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

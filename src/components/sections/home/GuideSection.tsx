@@ -8,6 +8,7 @@ import {
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
 import { Certificate, ShieldCheck, ArrowsClockwise } from "@phosphor-icons/react";
+import { DualHeading } from "@/components/ui/DualHeading";
 import Image from "next/image";
 import { TeamQuote } from "@/components/ui/TeamQuote";
 
@@ -17,26 +18,29 @@ const trustIndicators = [
     title: "Branchekennis",
     description:
       "Wij matchen op certificering, OEM-ervaring en projecttype. Niet op beschikbaarheid.",
+    bg: "bg-[#EDE8FF]",
   },
   {
     icon: ShieldCheck,
     title: "DBA-compliant",
     description:
       "Alle inzet via LYFD B.V. Geen ZZP-risico. Geen juridisch grijs gebied.",
+    bg: "bg-[#E0EAFF]",
   },
   {
     icon: ArrowsClockwise,
     title: "Gegarandeerde continuïteit",
     description:
       "Als een monteur uitvalt, leveren wij vervanging. Dat is de afspraak, niet een gunst.",
+    bg: "bg-[#FFE8E0]",
   },
 ];
 
 export function GuideSection() {
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
+    <section className="relative bg-[#EDE8FF]/30 py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#EDE8FF]/30 to-transparent" />
 
       {/* Subtle background image */}
       <div
@@ -62,17 +66,18 @@ export function GuideSection() {
           {/* Left Column (5 cols) */}
           <div className="lg:col-span-5">
             <ScrollReveal>
-              <Badge className="mb-5">Waarom LYFD</Badge>
+              <Badge variant="pastel-lilac" className="mb-5">Waarom LYFD</Badge>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-                LYFD: de capaciteitspartner die de liftbranche kent
-              </h2>
+              <DualHeading
+                bold="LYFD: de capaciteitspartner die"
+                italic="de liftbranche kent"
+              />
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <p className="mt-6 text-base md:text-lg text-[#3D3A37] leading-[1.75] max-w-[50ch]">
+              <p className="mt-6 text-base md:text-lg text-[#333333] leading-[1.75] max-w-[50ch]">
                 Wij zijn geen uitzendbureau. Wij zijn geen headhunter. LYFD is een
                 Capacity as a Service platform, gebouwd door mensen die weten wat
                 een MRL is, wat een hydraulische installatie vraagt, en welk
@@ -89,19 +94,19 @@ export function GuideSection() {
                 const Icon = item.icon;
                 return (
                   <StaggerItem key={item.title}>
-                    <div className="group rounded-2xl bg-[#FDFCFA] p-7 md:p-8 border border-[#E8E5E0] shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:-translate-y-1 hover:border-[#D9D4CE]">
+                    <div className={`group rounded-3xl ${item.bg} p-7 md:p-8 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1`}>
                       <div className="flex items-start gap-5">
-                        <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[#F2F0ED] flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-110 group-hover:bg-[#E8E5E0]">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[#F7F7F7] flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-110 group-hover:bg-[#DDDDDD]">
                           <Icon
                             weight="light"
-                            className="w-6 h-6 text-[#2A2A2A]"
+                            className="w-6 h-6 text-[#1B1D1E]"
                           />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug">
+                          <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug">
                             {item.title}
                           </h3>
-                          <p className="mt-1.5 text-sm text-[#3D3A37] leading-relaxed">
+                          <p className="mt-1.5 text-sm text-[#333333] leading-relaxed">
                             {item.description}
                           </p>
                         </div>
@@ -121,7 +126,8 @@ export function GuideSection() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
+
     </section>
   );
 }

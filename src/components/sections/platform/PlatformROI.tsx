@@ -70,8 +70,8 @@ function Slider({
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium text-[#1A1A1A]">{label}</span>
-        <span className="text-sm font-mono font-bold text-[#1A1A1A] tabular-nums">
+        <span className="text-sm font-medium text-[#1B1D1E]">{label}</span>
+        <span className="text-sm font-mono font-bold text-[#1B1D1E] tabular-nums">
           {prefix}
           {value}
           {unit}
@@ -85,9 +85,9 @@ function Slider({
           step={step}
           value={value}
           onChange={(e) => onChange(Number(e.target.value))}
-          className="w-full h-2 rounded-full appearance-none cursor-pointer bg-[#F2F0ED] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#1A1A1A] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white [&::-webkit-slider-thumb]:shadow-[0_2px_8px_rgba(0,0,0,0.2)] [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:duration-200 [&::-webkit-slider-thumb]:hover:scale-110 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#1A1A1A] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white [&::-moz-range-thumb]:shadow-[0_2px_8px_rgba(0,0,0,0.2)]"
+          className="w-full h-2 rounded-full appearance-none cursor-pointer bg-[#F7F7F7] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#1B1D1E] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white [&::-webkit-slider-thumb]:shadow-[0_2px_8px_rgba(0,0,0,0.2)] [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:duration-200 [&::-webkit-slider-thumb]:hover:scale-110 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#1B1D1E] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white [&::-moz-range-thumb]:shadow-[0_2px_8px_rgba(0,0,0,0.2)]"
           style={{
-            background: `linear-gradient(to right, #1A1A1A ${percentage}%, #F0F0F0 ${percentage}%)`,
+            background: `linear-gradient(to right, #1B1D1E ${percentage}%, #F7F7F7 ${percentage}%)`,
           }}
         />
       </div>
@@ -119,19 +119,19 @@ export function PlatformROI() {
   }, []);
 
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
+    <section className="relative bg-[#EDE8FF]/20 py-32 md:py-44">
       <Container>
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <ScrollReveal>
-            <Badge className="mb-5">Besparing</Badge>
+            <Badge variant="pastel-lilac" className="mb-5">Besparing</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Wat levert het op?
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
-            <p className="mt-6 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#888888] leading-[1.7] max-w-[55ch] mx-auto">
               Bereken je besparing met het LYFD Platform.
             </p>
           </ScrollReveal>
@@ -143,7 +143,7 @@ export function PlatformROI() {
             className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10"
           >
             {/* Sliders */}
-            <div className="space-y-8 rounded-2xl border border-[#E8E5E0] bg-[#F8F6F3] p-6 md:p-8">
+            <div className="space-y-8 rounded-3xl border border-[#DDDDDD] bg-[#F7F7F7] p-6 md:p-8">
               <Slider
                 label="Hoeveel monteurs heb je?"
                 value={monteurs}
@@ -174,7 +174,7 @@ export function PlatformROI() {
 
             {/* Results */}
             <motion.div
-              className="rounded-2xl bg-[#1A1A1A] p-6 md:p-8 flex flex-col justify-center"
+              className="rounded-3xl bg-[#1B1D1E] p-6 md:p-8 flex flex-col justify-center"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}

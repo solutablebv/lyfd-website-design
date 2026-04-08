@@ -55,7 +55,7 @@ function ProjectCard({
   project: (typeof projecten)[number];
 }) {
   return (
-    <div className="w-72 flex-shrink-0 rounded-2xl border border-[#E8E5E0] bg-[#FDFCFA] shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-500 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+    <div className="w-72 flex-shrink-0 rounded-3xl border border-[#DDDDDD] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-500 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
       <div className="relative h-48 overflow-hidden">
         <Image
           src={project.image}
@@ -66,19 +66,19 @@ function ProjectCard({
         />
       </div>
       <div className="p-5">
-        <h3 className="text-sm font-semibold text-[#1A1A1A] tracking-tight leading-snug text-balance">
+        <h3 className="text-sm font-semibold text-[#1B1D1E] tracking-tight leading-snug text-balance">
           {project.title}
         </h3>
         <div className="mt-1.5 flex items-center gap-2">
-          <span className="text-xs font-mono text-[#9C9690]">
+          <span className="text-xs font-mono text-[#888888]">
             {project.location}
           </span>
-          <span className="text-xs text-[#DCDCDC]">/</span>
-          <span className="text-xs font-mono text-[#9C9690]">
+          <span className="text-xs text-[#DDDDDD]">/</span>
+          <span className="text-xs font-mono text-[#888888]">
             {project.year}
           </span>
         </div>
-        <p className="mt-3 text-sm text-[#3D3A37] leading-relaxed">
+        <p className="mt-3 text-sm text-[#333333] leading-relaxed">
           {project.description}
         </p>
       </div>
@@ -88,9 +88,9 @@ function ProjectCard({
 
 export function ProjectenSlider() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
         <div className="max-w-2xl mx-auto text-center">
@@ -98,7 +98,7 @@ export function ProjectenSlider() {
             <Badge className="mb-5">Track record</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Projecten die ons voorgingen
             </h2>
           </ScrollReveal>
@@ -118,14 +118,14 @@ export function ProjectenSlider() {
 
       <Container>
         <ScrollReveal delay={0.3}>
-          <p className="mt-10 text-center text-xs text-[#9C9690] leading-relaxed">
+          <p className="mt-10 text-center text-xs text-[#888888] leading-relaxed">
             Klantnamen worden op verzoek gedeeld tijdens een persoonlijk gesprek.
           </p>
         </ScrollReveal>
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F7F7F7]" />
     </section>
   );
 }

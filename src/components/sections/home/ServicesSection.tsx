@@ -3,6 +3,7 @@
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState, useCallback } from "react";
@@ -13,24 +14,28 @@ const services = [
     description: "Capaciteit voor dagelijks onderhoud en storingen",
     href: "/diensten/liftonderhoud-capaciteit",
     image: "/lift-schacht-boven.jpg",
+    mobileBg: "bg-[#E0EAFF]",
   },
   {
     title: "Reparatie",
     description: "Gericht herstel dat niet in de reguliere service past",
     href: "/diensten/reparatie",
     image: "/lift-staalkabels.jpg",
+    mobileBg: "bg-[#FFE8E0]",
   },
   {
     title: "Modernisering",
     description: "Projectcapaciteit voor renovatie en vernieuwing",
     href: "/diensten/lift-modernisering",
     image: "/lift-deuren-industrieel.jpg",
+    mobileBg: "bg-[#EDE8FF]",
   },
   {
     title: "Capacity as a Service",
     description: "Het capaciteitsmodel achter LYFD",
     href: "/diensten/capacity-as-a-service",
     image: "/network-nodes.jpg",
+    mobileBg: "bg-[#FFE4E4]",
   },
 ];
 
@@ -105,11 +110,11 @@ function DesktopServices() {
           <a
             key={service.title}
             href={service.href}
-            className="group flex items-center justify-between border-t border-[#E8E5E0] px-4 md:px-8 py-10 md:py-14 cursor-pointer transition-opacity duration-300 ease-out"
+            className="group flex items-center justify-between border-t border-[#DDDDDD] px-4 md:px-8 py-10 md:py-14 cursor-pointer transition-opacity duration-300 ease-out"
             style={{
               borderBottom:
                 index === services.length - 1
-                  ? "1px solid #EBEBEB"
+                  ? "1px solid #DDDDDD"
                   : undefined,
               opacity: activeIndex !== null && activeIndex !== index ? 0.5 : 1,
             }}
@@ -117,11 +122,11 @@ function DesktopServices() {
             onMouseLeave={handleMouseLeave}
           >
             <h3
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1A1A1A] tracking-tighter leading-[1.05] transition-transform duration-300 ease-out group-hover:translate-x-[10px]"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B1D1E] tracking-tighter leading-[1.05] transition-transform duration-300 ease-out group-hover:translate-x-[10px]"
             >
               {service.title}
             </h3>
-            <p className="hidden sm:block text-base text-[#6B6560] max-w-[30ch] text-right">
+            <p className="hidden sm:block text-base text-[#888888] max-w-[30ch] text-right">
               {service.description}
             </p>
           </a>
@@ -206,7 +211,7 @@ function DesktopServices() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{ duration: 0.25, ease: [0.32, 0.72, 0, 1] }}
-              className="w-20 h-20 rounded-full bg-[#1A1A1A] flex items-center justify-center"
+              className="w-20 h-20 rounded-full bg-[#1B1D1E] flex items-center justify-center"
             >
               <span className="text-white text-sm font-medium">Bekijk</span>
             </motion.div>
@@ -224,7 +229,7 @@ function MobileServices() {
         <a
           key={service.title}
           href={service.href}
-          className="block rounded-xl overflow-hidden border border-[#E8E5E0]"
+          className={`block rounded-3xl overflow-hidden ${service.mobileBg}`}
         >
           <div className="relative w-full h-48">
             <Image
@@ -236,10 +241,10 @@ function MobileServices() {
             />
           </div>
           <div className="p-5">
-            <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
+            <h3 className="text-xl font-semibold text-[#1B1D1E] tracking-tight leading-snug">
               {service.title}
             </h3>
-            <p className="mt-1 text-sm text-[#6B6560]">
+            <p className="mt-1 text-sm text-[#888888]">
               {service.description}
             </p>
           </div>
@@ -251,16 +256,17 @@ function MobileServices() {
 
 export function ServicesSection() {
   return (
-    <section id="diensten" className="relative bg-[#FDFCFA] py-32 md:py-44">
+    <section id="diensten" className="relative bg-white py-32 md:py-44">
       <Container>
         <div className="max-w-2xl">
           <ScrollReveal>
-            <Badge className="mb-5">Diensten</Badge>
+            <Badge variant="pastel-blue" className="mb-5">Diensten</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Waarvoor zet je LYFD in?
-            </h2>
+            <DualHeading
+              bold="Waarvoor zet je"
+              italic="LYFD in?"
+            />
           </ScrollReveal>
         </div>
 

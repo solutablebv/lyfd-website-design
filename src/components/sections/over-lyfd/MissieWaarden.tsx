@@ -7,6 +7,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 import {
   UserCircle,
   ShieldCheck,
@@ -39,9 +40,9 @@ const waarden = [
 
 export function MissieWaarden() {
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
+    <section className="relative bg-[#F7F7F7] py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F7F7F7] to-transparent" />
 
       <Container>
         <div className="max-w-2xl">
@@ -49,9 +50,10 @@ export function MissieWaarden() {
             <Badge className="mb-5">Waar we voor staan</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Vier principes. Geen compromissen.
-            </h2>
+            <DualHeading
+              bold="Vier principes."
+              italic="Geen compromissen."
+            />
           </ScrollReveal>
         </div>
 
@@ -63,16 +65,16 @@ export function MissieWaarden() {
             const Icon = waarde.icon;
             return (
               <StaggerItem key={waarde.title}>
-                <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                <div className="h-full rounded-3xl bg-white border border-[#DDDDDD] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
-                      <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
+                    <div className="w-10 h-10 rounded-xl bg-[#F7F7F7] flex items-center justify-center">
+                      <Icon weight="light" className="w-5 h-5 text-[#1B1D1E]" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug">
+                    <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug">
                       {waarde.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-[#3D3A37] leading-relaxed">
+                  <p className="text-sm text-[#333333] leading-relaxed">
                     {waarde.text}
                   </p>
                 </div>
@@ -83,7 +85,7 @@ export function MissieWaarden() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

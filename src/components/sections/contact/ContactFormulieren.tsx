@@ -25,9 +25,9 @@ function InputField({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="block text-sm font-medium text-[#1A1A1A] mb-2">
+      <label htmlFor={name} className="block text-sm font-medium text-[#1B1D1E] mb-2">
         {label}
-        {required && <span className="text-[#6B6560] ml-0.5">*</span>}
+        {required && <span className="text-[#888888] ml-0.5">*</span>}
       </label>
       <input
         type={type}
@@ -36,7 +36,7 @@ function InputField({
         placeholder={placeholder}
         required={required}
         disabled={disabled}
-        className="w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full rounded-xl border border-[#DDDDDD] bg-white px-4 py-3 text-sm text-[#1B1D1E] placeholder:text-[#888888] focus:border-[#4928FD] focus:outline-none transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       />
     </div>
   );
@@ -57,16 +57,16 @@ function SelectField({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="block text-sm font-medium text-[#1A1A1A] mb-2">
+      <label htmlFor={name} className="block text-sm font-medium text-[#1B1D1E] mb-2">
         {label}
-        {required && <span className="text-[#6B6560] ml-0.5">*</span>}
+        {required && <span className="text-[#888888] ml-0.5">*</span>}
       </label>
       <select
         id={name}
         name={name}
         required={required}
         disabled={disabled}
-        className="w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 appearance-none disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full rounded-xl border border-[#DDDDDD] bg-white px-4 py-3 text-sm text-[#1B1D1E] focus:border-[#4928FD] focus:outline-none transition-colors duration-300 appearance-none disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <option value="">Selecteer...</option>
         {options.map((option) => (
@@ -92,7 +92,7 @@ function TextareaField({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="block text-sm font-medium text-[#1A1A1A] mb-2">
+      <label htmlFor={name} className="block text-sm font-medium text-[#1B1D1E] mb-2">
         {label}
       </label>
       <textarea
@@ -101,7 +101,7 @@ function TextareaField({
         rows={4}
         placeholder={placeholder}
         disabled={disabled}
-        className="w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] focus:border-[#2A2A2A] focus:outline-none transition-colors duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full rounded-xl border border-[#DDDDDD] bg-white px-4 py-3 text-sm text-[#1B1D1E] placeholder:text-[#888888] focus:border-[#4928FD] focus:outline-none transition-colors duration-300 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
       />
     </div>
   );
@@ -123,9 +123,9 @@ function CheckboxField({
         id={name}
         name={name}
         disabled={disabled}
-        className="mt-1 h-4 w-4 rounded border-[#E8E5E0] text-[#1A1A1A] focus:ring-[#2A2A2A]"
+        className="mt-1 h-4 w-4 rounded border-[#DDDDDD] text-[#1B1D1E] focus:ring-[#4928FD]"
       />
-      <label htmlFor={name} className="text-xs text-[#6B6560] leading-relaxed">
+      <label htmlFor={name} className="text-xs text-[#888888] leading-relaxed">
         {label}
       </label>
     </div>
@@ -145,7 +145,7 @@ function CheckboxGroupField({
 }) {
   return (
     <div>
-      <span className="block text-sm font-medium text-[#1A1A1A] mb-2">
+      <span className="block text-sm font-medium text-[#1B1D1E] mb-2">
         {label}
       </span>
       <div className="space-y-2">
@@ -157,9 +157,9 @@ function CheckboxGroupField({
               name={name}
               value={option}
               disabled={disabled}
-              className="h-4 w-4 rounded border-[#E8E5E0] text-[#1A1A1A] focus:ring-[#2A2A2A]"
+              className="h-4 w-4 rounded border-[#DDDDDD] text-[#1B1D1E] focus:ring-[#4928FD]"
             />
-            <label htmlFor={`${name}-${option}`} className="text-sm text-[#3D3A37]">
+            <label htmlFor={`${name}-${option}`} className="text-sm text-[#333333]">
               {option}
             </label>
           </div>
@@ -172,11 +172,11 @@ function CheckboxGroupField({
 function SuccessMessage({ message }: { message: string }) {
   return (
     <div className="flex flex-col items-center justify-center py-16 text-center">
-      <div className="w-14 h-14 rounded-full bg-[#F2F0ED] flex items-center justify-center mb-5">
-        <CheckCircle weight="fill" className="w-7 h-7 text-[#2A2A2A]" />
+      <div className="w-14 h-14 rounded-full bg-[#F7F7F7] flex items-center justify-center mb-5">
+        <CheckCircle weight="fill" className="w-7 h-7 text-[#1B1D1E]" />
       </div>
-      <p className="text-lg font-semibold text-[#1A1A1A] mb-2">Bedankt!</p>
-      <p className="text-sm text-[#6B6560]">{message}</p>
+      <p className="text-lg font-semibold text-[#1B1D1E] mb-2">Bedankt!</p>
+      <p className="text-sm text-[#888888]">{message}</p>
     </div>
   );
 }
@@ -274,20 +274,20 @@ export function ContactFormulieren() {
   }
 
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
+    <section className="relative bg-[#F7F7F7] py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F7F7F7] to-transparent" />
 
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {/* Capaciteitsgesprek formulier */}
           <ScrollReveal>
-            <div className="rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+            <div className="rounded-3xl bg-white border border-[#DDDDDD] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
               <Badge className="mb-5">Voor Liftbedrijven</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-2">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance mb-2">
                 Capaciteitsgesprek
               </h2>
-              <p className="text-sm text-[#6B6560] mb-8">
+              <p className="text-sm text-[#888888] mb-8">
                 Beschrijf je capaciteitsbehoefte. Wij reageren binnen 1 werkdag.
               </p>
 
@@ -339,12 +339,12 @@ export function ContactFormulieren() {
 
           {/* Aanmelden als monteur formulier */}
           <ScrollReveal delay={0.15}>
-            <div className="rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+            <div className="rounded-3xl bg-white border border-[#DDDDDD] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
               <Badge className="mb-5">Voor Liftmonteurs</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance mb-2">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance mb-2">
                 Aanmelden als monteur
               </h2>
-              <p className="text-sm text-[#6B6560] mb-8">
+              <p className="text-sm text-[#888888] mb-8">
                 Laat je gegevens achter. Wij nemen binnen 2 werkdagen contact op.
               </p>
 
@@ -408,7 +408,7 @@ export function ContactFormulieren() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

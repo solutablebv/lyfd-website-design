@@ -4,19 +4,20 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { HardHat } from "@phosphor-icons/react";
+import { DualHeading } from "@/components/ui/DualHeading";
 import Image from "next/image";
 
 export function MonteurSection() {
   return (
-    <section id="monteurs" className="relative bg-[#F5F3F0] py-32 md:py-44">
+    <section id="monteurs" className="relative bg-[#FFE4E4]/20 py-32 md:py-44">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FFE4E4]/20 to-transparent" />
 
       <Container>
         <ScrollReveal>
-          <div className="relative rounded-2xl border border-[#E8E5E0] p-8 md:p-10 shadow-[0_2px_8px_rgba(0,0,0,0.06)] overflow-hidden"
+          <div className="relative rounded-3xl border border-[#DDDDDD] p-8 md:p-10 shadow-[0_2px_8px_rgba(0,0,0,0.06)] overflow-hidden"
             style={{
-              background: "linear-gradient(135deg, #FFFFFF 0%, #F8F8F8 50%, #F0F0F0 100%)",
+              background: "linear-gradient(135deg, #FFFFFF 0%, #F7F7F7 50%, #F7F7F7 100%)",
             }}
           >
             {/* Decorative background image */}
@@ -40,12 +41,12 @@ export function MonteurSection() {
             {/* Decorative pattern */}
             <div className="absolute top-0 right-0 w-64 h-64 opacity-[0.03] pointer-events-none"
               style={{
-                backgroundImage: "repeating-linear-gradient(45deg, #1A1A1A 0px, #1A1A1A 1px, transparent 1px, transparent 16px)",
+                backgroundImage: "repeating-linear-gradient(45deg, #1B1D1E 0px, #1B1D1E 1px, transparent 1px, transparent 16px)",
               }}
             />
             <div className="absolute bottom-0 left-0 w-48 h-48 opacity-[0.02] pointer-events-none"
               style={{
-                backgroundImage: "radial-gradient(circle, #1A1A1A 1px, transparent 1px)",
+                backgroundImage: "radial-gradient(circle, #1B1D1E 1px, transparent 1px)",
                 backgroundSize: "20px 20px",
               }}
             />
@@ -54,19 +55,21 @@ export function MonteurSection() {
               {/* Icon + Content */}
               <div className="lg:col-span-8">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#1A1A1A] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#1B1D1E] flex items-center justify-center">
                     <HardHat weight="light" className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#9C9690]">
+                  <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#888888]">
                     Voor monteurs
                   </span>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-                  Ben je liftmonteur?
-                </h2>
+                <DualHeading
+                  bold="Ben je"
+                  italic="liftmonteur?"
+                  size="subsection"
+                />
 
-                <p className="mt-4 text-base md:text-lg text-[#3D3A37] leading-[1.7] max-w-[55ch]">
+                <p className="mt-4 text-base md:text-lg text-[#333333] leading-[1.7] max-w-[55ch]">
                   LYFD werkt met monteurs in vaste dienst. Het gaat bij ons niet
                   alleen om meer verdienen, maar om de juiste beloning en
                   waardering voor je vak. Werken met ervaren collega&apos;s die
@@ -93,7 +96,7 @@ export function MonteurSection() {
       </Container>
 
       {/* Bottom blend to footer */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FFE4E4]/20" />
     </section>
   );
 }

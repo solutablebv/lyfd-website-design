@@ -11,6 +11,7 @@ import {
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
 import Image from "next/image";
+import { DualHeading } from "@/components/ui/DualHeading";
 
 const steps = [
   {
@@ -44,18 +45,18 @@ function AnimatedLine() {
   return (
     <div ref={ref} className="hidden md:block absolute top-[5rem] left-[16.67%] right-[16.67%] h-px overflow-hidden">
       {/* Background line */}
-      <div className="absolute inset-0 bg-[#E8E5E0]" />
+      <div className="absolute inset-0 bg-[#DDDDDD]" />
       {/* Animated fill */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-[#2A2A2A] via-[#6B6B6B] to-[#2A2A2A] origin-left"
+        className="absolute inset-0 bg-gradient-to-r from-[#1B1D1E] via-[#888888] to-[#1B1D1E] origin-left"
         style={{ scaleX }}
       />
       {/* Glow dot that follows the line */}
       <motion.div
-        className="absolute top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#1A1A1A]"
+        className="absolute top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#1B1D1E]"
         style={{
           left: useTransform(scaleX, [0, 1], ["0%", "100%"]),
-          boxShadow: "0 0 12px rgba(26,26,26,0.3)",
+          boxShadow: "0 0 12px rgba(27,29,30,0.3)",
         }}
       />
     </div>
@@ -69,7 +70,7 @@ function StepDot({ index }: { index: number }) {
   return (
     <div ref={ref} className="hidden md:flex absolute -bottom-1 left-1/2 -translate-x-1/2 items-center justify-center">
       <motion.div
-        className="w-5 h-5 rounded-full bg-[#FDFCFA] border-2 border-[#2A2A2A] flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
+        className="w-5 h-5 rounded-full bg-white border-2 border-[#1B1D1E] flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
         transition={{
@@ -80,7 +81,7 @@ function StepDot({ index }: { index: number }) {
         }}
       >
         <motion.div
-          className="w-2 h-2 rounded-full bg-[#2A2A2A]"
+          className="w-2 h-2 rounded-full bg-[#1B1D1E]"
           animate={isInView ? { scale: [1, 1.3, 1] } : {}}
           transition={{
             delay: index * 0.2 + 0.3,
@@ -94,9 +95,9 @@ function StepDot({ index }: { index: number }) {
 
 export function PlanSection() {
   return (
-    <section id="plan" className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
+    <section id="plan" className="relative bg-white py-32 md:py-44 overflow-hidden">
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       {/* Decorative network nodes background */}
       <div
@@ -120,12 +121,14 @@ export function PlanSection() {
       <Container>
         <div className="text-center max-w-2xl mx-auto">
           <ScrollReveal>
-            <Badge className="mb-5">Het proces</Badge>
+            <Badge variant="pastel-blue" className="mb-5">Het proces</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Hoe werkt LYFD? In drie stappen.
-            </h2>
+            <DualHeading
+              bold="Hoe werkt LYFD?"
+              italic="In drie stappen."
+              className="text-center"
+            />
           </ScrollReveal>
         </div>
 
@@ -144,7 +147,7 @@ export function PlanSection() {
                 <div className="relative flex justify-center md:justify-start mb-6">
                   <div className="relative">
                     <span
-                      className="font-bold tracking-tighter text-[#EBEBEB]/50 leading-none select-none font-mono"
+                      className="font-bold tracking-tighter text-[#DDDDDD]/50 leading-none select-none font-mono"
                       style={{ fontSize: "clamp(6rem, 10vw, 9rem)" }}
                     >
                       {step.number}
@@ -154,10 +157,10 @@ export function PlanSection() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
+                <h3 className="text-xl font-semibold text-[#1B1D1E] tracking-tight leading-snug">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-sm text-[#3D3A37] leading-relaxed max-w-[38ch] mx-auto md:mx-0">
+                <p className="mt-3 text-sm text-[#333333] leading-relaxed max-w-[38ch] mx-auto md:mx-0">
                   {step.description}
                 </p>
               </div>
@@ -176,7 +179,7 @@ export function PlanSection() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

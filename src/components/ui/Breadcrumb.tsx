@@ -25,16 +25,16 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
         return (
           <span key={item.label} className="flex items-center gap-1.5">
             {index > 0 && (
-              <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DCDCDC]" />
+              <CaretRight weight="bold" className="w-2.5 h-2.5 text-[#DDDDDD]" />
             )}
             {isLast || !item.href ? (
-              <span className="text-xs text-[#6B6560] font-medium">
+              <span className="text-xs text-[#888888] font-medium">
                 {item.label}
               </span>
             ) : (
               <Link
                 href={item.href}
-                className="text-xs text-[#9C9690] hover:text-[#6B6560] transition-colors duration-300 font-medium"
+                className="text-xs text-[#888888] hover:text-[#888888] transition-colors duration-300 font-medium"
               >
                 {item.label}
               </Link>

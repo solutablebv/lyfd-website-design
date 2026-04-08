@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/Button";
 import { TextReveal } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 import { CaretDown } from "@phosphor-icons/react";
 
 function getGreeting(): string {
@@ -25,7 +26,7 @@ export function HeroSection() {
   const contentY = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   return (
-    <section ref={sectionRef} className="relative min-h-[100dvh] w-full overflow-hidden flex items-center bg-[#FDFCFA]">
+    <section ref={sectionRef} className="relative min-h-[100dvh] w-full overflow-hidden flex items-center bg-white">
       {/* Centered video with tight inward masking gradient + parallax */}
       <motion.div
         className="absolute inset-0 flex items-center justify-center"
@@ -50,19 +51,29 @@ export function HeroSection() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover object-center opacity-85"
           >
-            <source src="/hero-video.mp4" type="video/mp4" />
+            {/* 4K voor desktop, 1080p voor mobiel */}
+            <source src="/hero-video-4k.mp4" type="video/mp4" media="(min-width: 768px)" />
+            <source src="/hero-video-1080.mp4" type="video/mp4" />
           </video>
         </div>
       </motion.div>
 
       {/* Top gradient */}
-      <div className="absolute top-0 left-0 right-0 h-56 bg-gradient-to-b from-[#FDFCFA] via-[#FDFCFA]/80 to-transparent z-[2] pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-56 bg-gradient-to-b from-white via-white/80 to-transparent z-[2] pointer-events-none" />
 
       {/* Bottom gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-[#FDFCFA] via-[#FDFCFA]/80 to-transparent z-[2] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-white via-white/80 to-transparent z-[2] pointer-events-none" />
 
       {/* Left edge softener */}
       <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-transparent to-transparent z-[1] pointer-events-none" />
+
+      {/* Subtle warm gradient */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-50 z-[1]"
+        style={{
+          background: "radial-gradient(ellipse at 10% 20%, rgba(255,180,130,0.5) 0%, transparent 50%), radial-gradient(ellipse at 90% 80%, rgba(180,220,255,0.4) 0%, transparent 50%), radial-gradient(ellipse at 50% 0%, rgba(237,232,255,0.4) 0%, transparent 40%)"
+        }}
+      />
 
       {/* Content overlay with parallax */}
       <motion.div
@@ -79,7 +90,7 @@ export function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0 }}
           >
-            <span className="text-xs font-mono text-[#9C9690] tracking-wider uppercase">
+            <span className="text-xs font-mono text-[#888888] tracking-wider uppercase">
               {getGreeting()}
             </span>
           </motion.div>
@@ -94,33 +105,24 @@ export function HeroSection() {
               delay: 0.1,
             }}
           >
-            <span className="animated-gradient-border inline-flex items-center rounded-full px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] font-medium text-[#7D5A3C] bg-[#F5EDE6]/90 backdrop-blur-sm mb-8">
+            <span className="animated-gradient-border inline-flex items-center rounded-full px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] font-medium text-[#4928FD] bg-[#EDE8FF]/90 backdrop-blur-sm mb-8">
               Capacity as a Service
             </span>
           </motion.div>
 
-          {/* Heading with TextReveal */}
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.15 }}
-            className="font-bold text-[#1A1A1A] tracking-tighter leading-[1.05] text-balance"
-            style={{
-              fontSize: "clamp(2rem, 4.5vw + 0.5rem, 3.75rem)",
-            }}
+          {/* Heading with DualHeading */}
+          <motion.div
+            initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1], delay: 0.15 }}
           >
-            <TextReveal
-              text="De liftindustrie heeft een capaciteitsprobleem."
-              delay={0.2}
-              staggerDelay={0.035}
-            />{" "}
-            <TextReveal
-              text="LYFD is de oplossing."
-              className="text-[#6B6560]"
-              delay={0.6}
-              staggerDelay={0.04}
+            <DualHeading
+              as="h1"
+              size="hero"
+              bold="De liftindustrie heeft een capaciteitsprobleem."
+              italic="LYFD is de oplossing."
             />
-          </motion.h1>
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 32, filter: "blur(6px)" }}
@@ -130,7 +132,7 @@ export function HeroSection() {
               ease: [0.32, 0.72, 0, 1],
               delay: 1.0,
             }}
-            className="mt-8 text-base md:text-lg text-[#3D3A37] leading-[1.7] max-w-[520px]"
+            className="mt-8 text-base md:text-lg text-[#333333] leading-[1.7] max-w-[520px]"
           >
             Gecertificeerde liftmonteurs, wanneer en waar jij ze nodig hebt.
             On-demand, op project of op retainer. DBA-compliant. Binnen 48 uur
@@ -145,7 +147,7 @@ export function HeroSection() {
               ease: [0.32, 0.72, 0, 1],
               delay: 1.15,
             }}
-            className="mt-4 text-sm text-[#9C9690] leading-relaxed max-w-[480px]"
+            className="mt-4 text-sm text-[#888888] leading-relaxed max-w-[480px]"
           >
             LYFD B.V. is het eerste Capacity as a Service (CaaS) platform voor de Nederlandse liftindustrie. Liftbedrijven die groeien, contracten aannemen, en kwaliteit willen
             leveren, maar niet altijd de mensen hebben om het waar te maken.
@@ -184,12 +186,12 @@ export function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 0.8 }}
       >
-        <span className="text-[10px] uppercase tracking-[0.2em] text-[#9C9690] font-medium">Scroll</span>
+        <span className="text-[10px] uppercase tracking-[0.2em] text-[#888888] font-medium">Scroll</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
         >
-          <CaretDown weight="bold" className="w-4 h-4 text-[#9C9690]" />
+          <CaretDown weight="bold" className="w-4 h-4 text-[#888888]" />
         </motion.div>
       </motion.div>
     </section>

@@ -15,19 +15,19 @@ const tocItems = [
 
 export function VastZzpOfCaasBody() {
   return (
-    <section className="relative bg-[#FDFCFA] pb-20 md:pb-28">
+    <section className="relative bg-white pb-20 md:pb-28">
       <Container>
         <div className="relative flex justify-center gap-16">
           <article className="w-full max-w-[720px]">
             <div className="prose-lyfd">
               {/* Definitie-blok (AEO) */}
               <ScrollReveal>
-                <div className="relative bg-[#F5F3F0] rounded-lg border-l-2 border-[#A0704C] px-6 py-5 mb-10">
-                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#E8E5E0] text-[#6B6560] mb-3">
+                <div className="relative bg-[#F7F7F7] rounded-lg border-l-2 border-[#4928FD] px-6 py-5 mb-10">
+                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#DDDDDD] text-[#888888] mb-3">
                     Samenvatting
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-[#3D3A37] m-0">
-                    <strong className="text-[#1A1A1A]">
+                  <p className="text-[0.9375rem] leading-relaxed text-[#333333] m-0">
+                    <strong className="text-[#1B1D1E]">
                       Liftmonteurs in Nederland
                     </strong>{" "}
                     hebben drie hoofdopties: vast dienstverband (zekerheid,
@@ -276,7 +276,7 @@ export function VastZzpOfCaasBody() {
                     10 tot 15%
                   </span>{" "}
                   boven de CAO Metalektro.{" "}
-                  <span className="text-[#9C9690] text-xs">
+                  <span className="text-[#888888] text-xs">
                     (Bron: LYFD, geverifieerde bedrijfscijfers)
                   </span>{" "}
                   Dat is geen klein verschil. Voor een ervaren monteur kan dit
@@ -352,78 +352,78 @@ export function VastZzpOfCaasBody() {
                 <div className="overflow-x-auto -mx-6 px-6">
                   <table className="w-full text-sm border-collapse">
                     <thead>
-                      <tr className="border-b-2 border-[#1A1A1A]">
-                        <th className="text-left py-3 pr-4 font-semibold text-[#1A1A1A]">
+                      <tr className="border-b-2 border-[#1B1D1E]">
+                        <th className="text-left py-3 pr-4 font-semibold text-[#1B1D1E]">
                           Criterium
                         </th>
-                        <th className="text-left py-3 px-4 font-semibold text-[#1A1A1A]">
+                        <th className="text-left py-3 px-4 font-semibold text-[#1B1D1E]">
                           Vast
                         </th>
-                        <th className="text-left py-3 px-4 font-semibold text-[#1A1A1A]">
+                        <th className="text-left py-3 px-4 font-semibold text-[#1B1D1E]">
                           Zzp
                         </th>
-                        <th className="text-left py-3 pl-4 font-semibold text-[#1A1A1A]">
+                        <th className="text-left py-3 pl-4 font-semibold text-[#1B1D1E]">
                           CaaS (LYFD)
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="text-[#3D3A37]">
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Inkomen</td>
+                    <tbody className="text-[#333333]">
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Inkomen</td>
                         <td className="py-3 px-4">CAO-schaal (plafond)</td>
                         <td className="py-3 px-4">Hoog bruto, lager netto</td>
                         <td className="py-3 pl-4">CAO +10-15%</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Inkomenszekerheid</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Inkomenszekerheid</td>
                         <td className="py-3 px-4">Hoog</td>
                         <td className="py-3 px-4">Laag</td>
                         <td className="py-3 pl-4">Middel tot hoog</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Flexibiliteit</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Flexibiliteit</td>
                         <td className="py-3 px-4">Laag</td>
                         <td className="py-3 px-4">Hoog</td>
                         <td className="py-3 pl-4">Hoog</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Administratie</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Administratie</td>
                         <td className="py-3 px-4">Geen</td>
                         <td className="py-3 px-4">Volledig zelf</td>
                         <td className="py-3 pl-4">Geen</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">DBA-risico</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">DBA-risico</td>
                         <td className="py-3 px-4">Geen</td>
                         <td className="py-3 px-4">Hoog</td>
                         <td className="py-3 pl-4">Geen</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Pensioen</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Pensioen</td>
                         <td className="py-3 px-4">Via werkgever (PME/PMT)</td>
                         <td className="py-3 px-4">Zelf regelen</td>
                         <td className="py-3 pl-4">Geregeld</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Ziektevangnet</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Ziektevangnet</td>
                         <td className="py-3 px-4">Loondoorbetaling 2 jaar</td>
                         <td className="py-3 px-4">Alleen AOV (zelf betaald)</td>
                         <td className="py-3 pl-4">Geregeld</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Projectkeuze</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Projectkeuze</td>
                         <td className="py-3 px-4">Werkgever bepaalt</td>
                         <td className="py-3 px-4">Eigen keuze</td>
                         <td className="py-3 pl-4">Eigen keuze</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Acquisitie nodig</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Acquisitie nodig</td>
                         <td className="py-3 px-4">Nee</td>
                         <td className="py-3 px-4">Ja</td>
                         <td className="py-3 pl-4">Nee</td>
                       </tr>
                       <tr>
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Ontwikkeling</td>
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Ontwikkeling</td>
                         <td className="py-3 px-4">Vaak beperkt</td>
                         <td className="py-3 px-4">Eigen verantwoordelijkheid</td>
                         <td className="py-3 pl-4">Breed via pool</td>
@@ -499,7 +499,7 @@ export function VastZzpOfCaasBody() {
                   en verborgen lasten. En als je twijfelt,{" "}
                   <a
                     href="/kennisbank/liftmonteur-gids/salaris-liftmonteur/"
-                    className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300"
+                    className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300"
                   >
                     lees ons artikel over salarissen en tarieven
                   </a>{" "}
@@ -518,7 +518,7 @@ export function VastZzpOfCaasBody() {
                     1.600 tot 1.800
                   </span>{" "}
                   actieve monteurs.{" "}
-                  <span className="text-[#9C9690] text-xs">
+                  <span className="text-[#888888] text-xs">
                     (Bron: LYFD, marktervaring 5 jaar)
                   </span>{" "}
                   In die schaarse markt heb je als monteur de luxe om te kiezen.
@@ -528,20 +528,20 @@ export function VastZzpOfCaasBody() {
             </div>
 
             {/* Article closing CTA */}
-            <div className="mt-16 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-8 md:p-10">
-              <p className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+            <div className="mt-16 rounded-2xl bg-[#F7F7F7] border border-[#DDDDDD] p-8 md:p-10">
+              <p className="text-lg font-semibold text-[#1B1D1E] tracking-tight">
                 Benieuwd of CaaS bij jou past?
               </p>
-              <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed max-w-[50ch]">
+              <p className="mt-2 text-sm text-[#333333] leading-relaxed max-w-[50ch]">
                 We bespreken graag de mogelijkheden. Geen verplichtingen,
                 wel een eerlijk gesprek.
               </p>
               <a
                 href="/aanvraag/"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300"
               >
                 Neem contact op
-                <span className="text-[#9C9690]">&rarr;</span>
+                <span className="text-[#888888]">&rarr;</span>
               </a>
             </div>
           </article>

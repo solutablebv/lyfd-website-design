@@ -24,11 +24,11 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <section className="bg-[#FDFCFA] pt-32 md:pt-40 pb-20 md:pb-28">
+    <section className="bg-white pt-32 md:pt-40 pb-20 md:pb-28">
       <Container>
         <ScrollReveal>
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1A1A1A] tracking-tighter leading-[1.05] mb-10">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B1D1E] tracking-tighter leading-[1.05] mb-10">
               Privacyverklaring
             </h1>
 

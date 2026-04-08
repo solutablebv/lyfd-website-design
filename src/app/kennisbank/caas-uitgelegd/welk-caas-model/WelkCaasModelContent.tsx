@@ -15,18 +15,18 @@ const tocItems = [
 
 export function WelkCaasModelContent() {
   return (
-    <section className="relative bg-[#FDFCFA] pb-20 md:pb-28">
+    <section className="relative bg-white pb-20 md:pb-28">
       <Container>
         <div className="relative flex justify-center gap-16">
           <article className="w-full max-w-[720px]">
             <div className="prose-lyfd">
               <ScrollReveal>
-                <div className="relative bg-[#F5F3F0] rounded-lg border-l-2 border-[#A0704C] px-6 py-5 mb-10">
-                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#E8E5E0] text-[#6B6560] mb-3">
+                <div className="relative bg-[#F7F7F7] rounded-lg border-l-2 border-[#4928FD] px-6 py-5 mb-10">
+                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#DDDDDD] text-[#888888] mb-3">
                     Definitie
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-[#3D3A37] m-0">
-                    <strong className="text-[#1A1A1A]">CaaS-modellen</strong> zijn de
+                  <p className="text-[0.9375rem] leading-relaxed text-[#333333] m-0">
+                    <strong className="text-[#1B1D1E]">CaaS-modellen</strong> zijn de
                     verschillende configuraties waarmee Capacity as a Service kan worden
                     afgenomen. LYFD biedt vier modellen: On-Demand (acute inzet), Project
                     (tijdelijke versterking), Retainer (structurele reservering) en Enterprise
@@ -74,17 +74,17 @@ export function WelkCaasModelContent() {
                 <div className="overflow-x-auto my-8">
                   <table className="w-full text-sm border-collapse">
                     <thead>
-                      <tr className="border-b-2 border-[#1A1A1A]">
-                        <th className="text-left py-3 pr-4 font-semibold text-[#1A1A1A]">Model</th>
-                        <th className="text-left py-3 pr-4 font-semibold text-[#1A1A1A]">Doel</th>
-                        <th className="text-left py-3 pr-4 font-semibold text-[#1A1A1A]">Commitment</th>
-                        <th className="text-left py-3 font-semibold text-[#1A1A1A]">Geschikt voor</th>
+                      <tr className="border-b-2 border-[#1B1D1E]">
+                        <th className="text-left py-3 pr-4 font-semibold text-[#1B1D1E]">Model</th>
+                        <th className="text-left py-3 pr-4 font-semibold text-[#1B1D1E]">Doel</th>
+                        <th className="text-left py-3 pr-4 font-semibold text-[#1B1D1E]">Commitment</th>
+                        <th className="text-left py-3 font-semibold text-[#1B1D1E]">Geschikt voor</th>
                       </tr>
                     </thead>
-                    <tbody className="text-[#3D3A37]">
-                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">On-Demand</td><td className="py-3 pr-4">Acute behoefte</td><td className="py-3 pr-4">Geen minimum</td><td className="py-3">Pieken, uitval, ad hoc</td></tr>
-                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Project</td><td className="py-3 pr-4">Tijdelijke versterking</td><td className="py-3 pr-4">Projectduur</td><td className="py-3">Modernisering, nieuwbouw</td></tr>
-                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4 font-medium">Retainer</td><td className="py-3 pr-4">Structurele reservering</td><td className="py-3 pr-4">Maandelijks</td><td className="py-3">Vaste servicecontracten</td></tr>
+                    <tbody className="text-[#333333]">
+                      <tr className="border-b border-[#DDDDDD]"><td className="py-3 pr-4 font-medium">On-Demand</td><td className="py-3 pr-4">Acute behoefte</td><td className="py-3 pr-4">Geen minimum</td><td className="py-3">Pieken, uitval, ad hoc</td></tr>
+                      <tr className="border-b border-[#DDDDDD]"><td className="py-3 pr-4 font-medium">Project</td><td className="py-3 pr-4">Tijdelijke versterking</td><td className="py-3 pr-4">Projectduur</td><td className="py-3">Modernisering, nieuwbouw</td></tr>
+                      <tr className="border-b border-[#DDDDDD]"><td className="py-3 pr-4 font-medium">Retainer</td><td className="py-3 pr-4">Structurele reservering</td><td className="py-3 pr-4">Maandelijks</td><td className="py-3">Vaste servicecontracten</td></tr>
                       <tr><td className="py-3 pr-4 font-medium">Enterprise</td><td className="py-3 pr-4">Maatwerk groot volume</td><td className="py-3 pr-4">Jaarlijks</td><td className="py-3">Multi-locatie, complexe organisaties</td></tr>
                     </tbody>
                   </table>
@@ -306,19 +306,19 @@ export function WelkCaasModelContent() {
                 <div className="overflow-x-auto my-8">
                   <table className="w-full text-sm border-collapse">
                     <thead>
-                      <tr className="border-b-2 border-[#1A1A1A]">
-                        <th className="text-left py-3 pr-4 font-semibold text-[#1A1A1A]">Jouw situatie</th>
-                        <th className="text-left py-3 font-semibold text-[#1A1A1A]">Aanbevolen model</th>
+                      <tr className="border-b-2 border-[#1B1D1E]">
+                        <th className="text-left py-3 pr-4 font-semibold text-[#1B1D1E]">Jouw situatie</th>
+                        <th className="text-left py-3 font-semibold text-[#1B1D1E]">Aanbevolen model</th>
                       </tr>
                     </thead>
-                    <tbody className="text-[#3D3A37]">
-                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4">Ik heb incidenteel een extra monteur nodig</td><td className="py-3 font-medium">On-Demand</td></tr>
-                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4">Ik heb een moderniseringsproject dat extra handen vereist</td><td className="py-3 font-medium">Project</td></tr>
-                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4">Mijn contractenportefeuille groeit en ik wil structurele capaciteit</td><td className="py-3 font-medium">Retainer</td></tr>
-                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4">Ik wil CaaS eerst testen voordat ik meer commitment geef</td><td className="py-3 font-medium">On-Demand (start)</td></tr>
-                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4">Ik heb seizoenspieken die ik flexibel wil opvangen</td><td className="py-3 font-medium">Retainer + On-Demand</td></tr>
-                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4">Ik zoek een langetermijnpartner voor capaciteitsmanagement</td><td className="py-3 font-medium">Retainer of Enterprise</td></tr>
-                      <tr className="border-b border-[#E8E5E0]"><td className="py-3 pr-4">Ik heb meerdere vestigingen en complexe planning</td><td className="py-3 font-medium">Enterprise</td></tr>
+                    <tbody className="text-[#333333]">
+                      <tr className="border-b border-[#DDDDDD]"><td className="py-3 pr-4">Ik heb incidenteel een extra monteur nodig</td><td className="py-3 font-medium">On-Demand</td></tr>
+                      <tr className="border-b border-[#DDDDDD]"><td className="py-3 pr-4">Ik heb een moderniseringsproject dat extra handen vereist</td><td className="py-3 font-medium">Project</td></tr>
+                      <tr className="border-b border-[#DDDDDD]"><td className="py-3 pr-4">Mijn contractenportefeuille groeit en ik wil structurele capaciteit</td><td className="py-3 font-medium">Retainer</td></tr>
+                      <tr className="border-b border-[#DDDDDD]"><td className="py-3 pr-4">Ik wil CaaS eerst testen voordat ik meer commitment geef</td><td className="py-3 font-medium">On-Demand (start)</td></tr>
+                      <tr className="border-b border-[#DDDDDD]"><td className="py-3 pr-4">Ik heb seizoenspieken die ik flexibel wil opvangen</td><td className="py-3 font-medium">Retainer + On-Demand</td></tr>
+                      <tr className="border-b border-[#DDDDDD]"><td className="py-3 pr-4">Ik zoek een langetermijnpartner voor capaciteitsmanagement</td><td className="py-3 font-medium">Retainer of Enterprise</td></tr>
+                      <tr className="border-b border-[#DDDDDD]"><td className="py-3 pr-4">Ik heb meerdere vestigingen en complexe planning</td><td className="py-3 font-medium">Enterprise</td></tr>
                       <tr><td className="py-3 pr-4">Ik werf zelf maar heb een brug nodig tot mijn nieuwe monteur start</td><td className="py-3 font-medium">Project of On-Demand</td></tr>
                     </tbody>
                   </table>
@@ -355,27 +355,27 @@ export function WelkCaasModelContent() {
                 <p>
                   Wil je meer weten over hoe CaaS zich verhoudt tot andere oplossingen?
                   Lees ons artikel over{" "}
-                  <a href="/kennisbank/caas-uitgelegd/caas-vs-uitzendbureau/" className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300">
+                  <a href="/kennisbank/caas-uitgelegd/caas-vs-uitzendbureau/" className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300">
                     het verschil tussen CaaS en een uitzendbureau
                   </a>{" "}
                   of bekijk onze{" "}
-                  <a href="/diensten/capacity-as-a-service/" className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300">
+                  <a href="/diensten/capacity-as-a-service/" className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300">
                     CaaS-dienstenpagina
                   </a>.
                 </p>
               </ScrollReveal>
             </div>
 
-            <div className="mt-16 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-8 md:p-10">
-              <p className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+            <div className="mt-16 rounded-2xl bg-[#F7F7F7] border border-[#DDDDDD] p-8 md:p-10">
+              <p className="text-lg font-semibold text-[#1B1D1E] tracking-tight">
                 Wil je weten welk CaaS-model bij jouw bedrijf past?
               </p>
-              <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed max-w-[50ch]">
+              <p className="mt-2 text-sm text-[#333333] leading-relaxed max-w-[50ch]">
                 Wij helpen je het juiste model kiezen op basis van jouw situatie.
               </p>
-              <a href="/aanvraag/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300">
+              <a href="/aanvraag/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300">
                 Plan een gesprek
-                <span className="text-[#9C9690]">&rarr;</span>
+                <span className="text-[#888888]">&rarr;</span>
               </a>
             </div>
           </article>

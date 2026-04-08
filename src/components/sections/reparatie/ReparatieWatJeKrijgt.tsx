@@ -52,7 +52,7 @@ const reparatieTypes = [
 
 export function ReparatieWatJeKrijgt() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
+    <section className="relative bg-[#E0EAFF]/20 py-32 md:py-44">
       {/* Decorative background image */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <Image
@@ -62,11 +62,11 @@ export function ReparatieWatJeKrijgt() {
           sizes="100vw"
           className="object-cover object-center opacity-[0.07]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCFA] via-transparent to-[#FDFCFA]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container className="relative z-10">
         <div className="max-w-2xl">
@@ -74,7 +74,7 @@ export function ReparatieWatJeKrijgt() {
             <Badge className="mb-5">Reparatietypen</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Welke reparaties pakt LYFD aan?
             </h2>
           </ScrollReveal>
@@ -89,14 +89,14 @@ export function ReparatieWatJeKrijgt() {
             const Icon = item.icon;
             return (
               <StaggerItem key={item.title}>
-                <div className="h-full rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-7 md:p-8">
-                  <div className="w-10 h-10 rounded-xl bg-[#1A1A1A] flex items-center justify-center mb-5">
+                <div className="h-full rounded-3xl bg-[#F7F7F7] border border-[#DDDDDD] p-7 md:p-8">
+                  <div className="w-10 h-10 rounded-xl bg-[#1B1D1E] flex items-center justify-center mb-5">
                     <Icon weight="bold" className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="text-base font-semibold text-[#1A1A1A] tracking-tight leading-snug">
+                  <h3 className="text-base font-semibold text-[#1B1D1E] tracking-tight leading-snug">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed">
+                  <p className="mt-2 text-sm text-[#333333] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -108,7 +108,7 @@ export function ReparatieWatJeKrijgt() {
         {/* Closing text */}
         <ScrollReveal delay={0.3}>
           <div className="mt-14 md:mt-18 max-w-[65ch] mx-auto">
-            <p className="text-sm md:text-base text-[#3D3A37] leading-relaxed text-center">
+            <p className="text-sm md:text-base text-[#333333] leading-relaxed text-center">
               Dit is geen modernisering. Het is gericht herstel van specifieke componenten, uitgevoerd door monteurs die weten wat ze doen.
             </p>
           </div>
@@ -116,7 +116,7 @@ export function ReparatieWatJeKrijgt() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#E0EAFF]/20" />
     </section>
   );
 }

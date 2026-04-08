@@ -79,13 +79,13 @@ function getCellColor(value: string): string {
 
   if (positiveValues.includes(value)) return "text-[#059669] font-medium";
   if (negativeValues.includes(value)) return "text-[#DC2626] font-medium";
-  if (neutralValues.includes(value)) return "text-[#9C9690]";
-  return "text-[#3D3A37]";
+  if (neutralValues.includes(value)) return "text-[#888888]";
+  return "text-[#333333]";
 }
 
 export function CaasVergelijking() {
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#F7F7F7] py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -106,7 +106,7 @@ export function CaasVergelijking() {
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F7F7F7] to-transparent" />
 
       <Container>
         <div className="max-w-2xl">
@@ -114,7 +114,7 @@ export function CaasVergelijking() {
             <Badge className="mb-5">Vergelijking</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               CaaS vs. zzp vs. uitzendbureau: wat is het verschil?
             </h2>
           </ScrollReveal>
@@ -124,19 +124,19 @@ export function CaasVergelijking() {
         <ScrollReveal delay={0.2}>
           <div className="mt-14 md:mt-20 -mx-4 sm:mx-0">
             <div className="overflow-x-auto px-4 sm:px-0">
-              <table className="w-full min-w-[640px] border-collapse bg-[#FDFCFA] rounded-2xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)] border border-[#E8E5E0]">
+              <table className="w-full min-w-[640px] border-collapse bg-white rounded-3xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)] border border-[#DDDDDD]">
                 <thead>
-                  <tr className="bg-[#F5F3F0]">
-                    <th className="text-left text-xs font-semibold text-[#6B6560] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#E8E5E0]">
+                  <tr className="bg-[#F7F7F7]">
+                    <th className="text-left text-xs font-semibold text-[#888888] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#DDDDDD]">
                       Criterium
                     </th>
-                    <th className="text-left text-xs font-semibold text-[#6B6560] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#E8E5E0]">
+                    <th className="text-left text-xs font-semibold text-[#888888] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#DDDDDD]">
                       Zzp
                     </th>
-                    <th className="text-left text-xs font-semibold text-[#6B6560] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#E8E5E0]">
+                    <th className="text-left text-xs font-semibold text-[#888888] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#DDDDDD]">
                       Uitzendbureau
                     </th>
-                    <th className="text-left text-xs font-semibold text-[#1A1A1A] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#E8E5E0] bg-[#F2F0ED]">
+                    <th className="text-left text-xs font-semibold text-[#1B1D1E] uppercase tracking-[0.15em] py-4 px-5 border-b border-[#DDDDDD] bg-[#F7F7F7]">
                       LYFD CaaS
                     </th>
                   </tr>
@@ -147,11 +147,11 @@ export function CaasVergelijking() {
                       key={row.criterium}
                       className={
                         index < rows.length - 1
-                          ? "border-b border-[#E8E5E0]"
+                          ? "border-b border-[#DDDDDD]"
                           : ""
                       }
                     >
-                      <td className="py-4 px-5 text-sm text-[#1A1A1A] font-medium">
+                      <td className="py-4 px-5 text-sm text-[#1B1D1E] font-medium">
                         {row.criterium}
                       </td>
                       <td
@@ -165,7 +165,7 @@ export function CaasVergelijking() {
                         {row.uitzend}
                       </td>
                       <td
-                        className={`py-4 px-5 text-sm bg-[#F8F6F3] ${getCellColor(row.caas)}`}
+                        className={`py-4 px-5 text-sm bg-[#F7F7F7] ${getCellColor(row.caas)}`}
                       >
                         {row.caas}
                       </td>
@@ -179,7 +179,7 @@ export function CaasVergelijking() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

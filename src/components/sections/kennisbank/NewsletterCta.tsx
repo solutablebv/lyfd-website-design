@@ -30,20 +30,20 @@ export function NewsletterCta() {
   }
 
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44">
+    <section className="relative bg-[#EDE8FF]/30 py-32 md:py-44">
       {/* Top gradient blend */}
-      <div className="absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute -top-24 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#EDE8FF]/30" />
 
       <Container>
         <div className="max-w-2xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Mis niets uit de liftindustrie
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-5 text-base text-[#3D3A37] leading-relaxed max-w-[50ch] mx-auto">
+            <p className="mt-5 text-base text-[#333333] leading-relaxed max-w-[50ch] mx-auto">
               Ontvang praktische inzichten over capaciteitsmanagement,
               certificering en het CaaS-model. Geen spam, alleen vakinhoud.
             </p>
@@ -52,10 +52,10 @@ export function NewsletterCta() {
           <ScrollReveal delay={0.2}>
             {success ? (
               <div className="mt-8 flex items-center justify-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#F2F0ED] flex items-center justify-center">
-                  <CheckCircle weight="fill" className="w-5 h-5 text-[#2A2A2A]" />
+                <div className="w-10 h-10 rounded-full bg-[#F7F7F7] flex items-center justify-center">
+                  <CheckCircle weight="fill" className="w-5 h-5 text-[#1B1D1E]" />
                 </div>
-                <p className="text-sm font-medium text-[#1A1A1A]">
+                <p className="text-sm font-medium text-[#1B1D1E]">
                   Je bent erbij. Alleen vakinhoud, geen spam. Beloofd.
                 </p>
               </div>
@@ -73,7 +73,7 @@ export function NewsletterCta() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={loading}
-                    className="flex-1 rounded-full border border-[#E8E5E0] bg-[#FDFCFA] py-3 px-5 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] outline-none transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] focus:border-[#D9D4CE] focus:shadow-[0_2px_12px_rgba(0,0,0,0.04)] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 rounded-full border border-[#DDDDDD] bg-white py-3 px-5 text-sm text-[#1B1D1E] placeholder:text-[#888888] outline-none transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] focus:border-[#4928FD] focus:shadow-[0_2px_12px_rgba(0,0,0,0.04)] disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                   <Button
                     type="submit"
@@ -98,7 +98,7 @@ export function NewsletterCta() {
       </Container>
 
       {/* Bottom gradient blend */}
-      <div className="absolute -bottom-24 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
+      <div className="absolute -bottom-24 left-0 right-0 h-24 bg-gradient-to-b from-[#EDE8FF]/30 to-transparent" />
     </section>
   );
 }

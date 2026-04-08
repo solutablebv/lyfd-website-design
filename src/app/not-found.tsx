@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function NotFound() {
   return (
-    <section className="min-h-[70dvh] flex items-center justify-center bg-[#FDFCFA]">
+    <section className="min-h-[70dvh] flex items-center justify-center bg-white">
       <Container className="text-center py-24">
         {/* Animated elevator icon */}
         <motion.div
@@ -27,17 +27,17 @@ export default function NotFound() {
               ease: "easeInOut",
             }}
           >
-            <Elevator weight="light" className="w-12 h-12 text-[#9C9690]" />
+            <Elevator weight="light" className="w-12 h-12 text-[#888888]" />
           </motion.div>
         </motion.div>
 
-        <p className="font-mono text-[8rem] sm:text-[10rem] md:text-[12rem] font-bold leading-none tracking-tighter text-[#EBEBEB] select-none">
+        <p className="font-mono text-[8rem] sm:text-[10rem] md:text-[12rem] font-bold leading-none tracking-tighter text-[#F7F7F7] select-none">
           404
         </p>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1A1A1A] tracking-tighter leading-[1.05] text-balance mt-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B1D1E] tracking-tighter leading-[1.05] text-balance mt-4">
           Deze lift is even buiten dienst.
         </h1>
-        <p className="text-[#6B6560] mt-3 text-base md:text-lg max-w-md mx-auto">
+        <p className="text-[#888888] mt-3 text-base md:text-lg max-w-md mx-auto">
           De pagina die je zoekt bestaat niet (meer). Neem de trap terug naar de homepage.
         </p>
         <div className="mt-8">

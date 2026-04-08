@@ -66,8 +66,8 @@ export function ArticleSidebar({ items }: ArticleSidebarProps) {
   );
 
   return (
-    <nav className="hidden xl:block sticky top-32">
-      <h4 className="text-xs font-semibold text-[#9C9690] uppercase tracking-[0.15em] mb-4">
+    <nav className="hidden xl:block sticky top-32 rounded-2xl bg-[#F7F7F7] p-5">
+      <h4 className="text-xs font-semibold text-[#888888] uppercase tracking-[0.15em] mb-4">
         In dit artikel
       </h4>
       <ul className="space-y-1">
@@ -79,8 +79,8 @@ export function ArticleSidebar({ items }: ArticleSidebarProps) {
               className={cn(
                 "block py-1.5 pl-4 text-sm leading-snug border-l-2 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]",
                 activeId === item.id
-                  ? "border-[#1A1A1A] text-[#1A1A1A] font-medium"
-                  : "border-transparent text-[#9C9690] hover:text-[#6B6560] hover:border-[#E8E5E0]"
+                  ? "border-[#4928FD] text-[#4928FD] font-medium"
+                  : "border-transparent text-[#888888] hover:text-[#888888] hover:border-[#DDDDDD]"
               )}
             >
               {item.label}

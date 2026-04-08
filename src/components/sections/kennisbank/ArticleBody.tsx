@@ -7,18 +7,18 @@ export function ArticleBody() {
     <div className="prose-lyfd">
       {/* Definitie-blok (AEO-geoptimaliseerd) */}
       <ScrollReveal>
-        <div className="relative bg-[#F5F3F0] rounded-lg border-l-2 border-[#A0704C] px-6 py-5 mb-10">
-          <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#E8E5E0] text-[#6B6560] mb-3">
+        <div className="relative bg-[#F7F7F7] rounded-lg border-l-2 border-[#4928FD] px-6 py-5 mb-10">
+          <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#DDDDDD] text-[#888888] mb-3">
             Definitie
           </span>
-          <p className="text-[0.9375rem] leading-relaxed text-[#3D3A37] m-0">
-            <strong className="text-[#1A1A1A]">Capaciteitsgebrek in de liftindustrie</strong> is
+          <p className="text-[0.9375rem] leading-relaxed text-[#333333] m-0">
+            <strong className="text-[#1B1D1E]">Capaciteitsgebrek in de liftindustrie</strong> is
             de situatie waarin een liftbedrijf structureel te weinig gecertificeerde monteurs
             beschikbaar heeft om alle gecontracteerde werkzaamheden (service, onderhoud,
             modernisering en nieuwbouw) tijdig en volledig uit te voeren. De Nederlandse liftmarkt
             telt circa 105.000 installaties tegenover 1.600 tot 1.800 actieve monteurs, waardoor
             capaciteitsgebrek een sector-breed probleem is.{" "}
-            <span className="text-[#9C9690] text-xs">(Bron: LYFD, marktervaring 5 jaar)</span>
+            <span className="text-[#888888] text-xs">(Bron: LYFD, marktervaring 5 jaar)</span>
           </p>
         </div>
       </ScrollReveal>

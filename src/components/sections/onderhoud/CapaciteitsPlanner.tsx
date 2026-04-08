@@ -123,13 +123,13 @@ export function CapaciteitsPlanner() {
   );
 
   const inputClasses =
-    "w-full rounded-xl border border-[#E8E5E0] bg-[#FDFCFA] px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9C9690] focus:outline-none focus:border-[#2A2A2A] focus:ring-1 focus:ring-[#2A2A2A]/10 transition-colors duration-300";
+    "w-full rounded-xl border border-[#DDDDDD] bg-white px-4 py-3 text-sm text-[#1B1D1E] placeholder:text-[#888888] focus:outline-none focus:border-[#4928FD] focus:ring-1 focus:ring-[#4928FD]/10 transition-colors duration-300";
 
   const totalSteps = 5;
   const progressFraction = activeStep / (totalSteps - 1);
 
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#EDE8FF]/20 py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -154,18 +154,18 @@ export function CapaciteitsPlanner() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 30% 50%, rgba(26,26,26,0.02) 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, rgba(26,26,26,0.015) 0%, transparent 50%)",
+            "radial-gradient(ellipse at 30% 50%, rgba(27,29,30,0.02) 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, rgba(27,29,30,0.015) 0%, transparent 50%)",
         }}
       />
 
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto">
-            <Badge className="mb-5">Capaciteitsplanner</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <Badge variant="pastel-lilac" className="mb-5">Capaciteitsplanner</Badge>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Plan je capaciteit
             </h2>
-            <p className="mt-5 text-sm md:text-base text-[#3D3A37] leading-relaxed">
+            <p className="mt-5 text-sm md:text-base text-[#333333] leading-relaxed">
               Configureer je capaciteitsbehoefte. Ontvang binnen 24 uur een voorstel op maat.
             </p>
           </div>
@@ -175,9 +175,9 @@ export function CapaciteitsPlanner() {
         <ScrollReveal delay={0.1}>
           <div className="mt-12 md:mt-16 relative flex items-center justify-center gap-2 md:gap-3 flex-wrap">
             {/* Progress line behind buttons */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-4rem)] h-px bg-[#E8E5E0] hidden md:block" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-4rem)] h-px bg-[#DDDDDD] hidden md:block" />
             <div
-              className="absolute top-1/2 left-1/2 -translate-y-1/2 h-px bg-[#1A1A1A] hidden md:block transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] origin-left"
+              className="absolute top-1/2 left-1/2 -translate-y-1/2 h-px bg-[#1B1D1E] hidden md:block transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] origin-left"
               style={{
                 width: "calc(100% - 4rem)",
                 left: "50%",
@@ -198,8 +198,8 @@ export function CapaciteitsPlanner() {
                     relative z-10 flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-medium transition-all duration-300
                     ${
                       isActive
-                        ? "bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                        : "bg-[#FDFCFA] text-[#6B6560] border border-[#E8E5E0] hover:border-[#C0C0C0]"
+                        ? "bg-[#1B1D1E] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+                        : "bg-white text-[#888888] border border-[#DDDDDD] hover:border-[#DDDDDD]"
                     }
                   `}
                 >
@@ -223,17 +223,17 @@ export function CapaciteitsPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-3xl border border-[#1B1D1E] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#888888] uppercase tracking-wider">
                   Stap 1/5
                 </span>
-                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-6 mt-4">
                   Wanneer heb je capaciteit nodig?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
+                    <label className="block text-xs font-medium text-[#888888] uppercase tracking-wide mb-2">
                       Startdatum
                     </label>
                     <input
@@ -244,7 +244,7 @@ export function CapaciteitsPlanner() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-[#6B6560] uppercase tracking-wide mb-2">
+                    <label className="block text-xs font-medium text-[#888888] uppercase tracking-wide mb-2">
                       Einddatum
                     </label>
                     <input
@@ -260,7 +260,7 @@ export function CapaciteitsPlanner() {
                   <div
                     className={`
                       w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all duration-200
-                      ${config.ongoing ? "bg-[#1A1A1A] border-[#1A1A1A]" : "border-[#D9D4CE] bg-[#FDFCFA]"}
+                      ${config.ongoing ? "bg-[#1B1D1E] border-[#1B1D1E]" : "border-[#DDDDDD] bg-white"}
                     `}
                     onClick={() => {
                       updateConfig("ongoing", !config.ongoing);
@@ -272,7 +272,7 @@ export function CapaciteitsPlanner() {
                     )}
                   </div>
                   <span
-                    className="text-sm text-[#3D3A37]"
+                    className="text-sm text-[#333333]"
                     onClick={() => {
                       updateConfig("ongoing", !config.ongoing);
                       if (!config.ongoing) updateConfig("endDate", "");
@@ -297,12 +297,12 @@ export function CapaciteitsPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-3xl border border-[#1B1D1E] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#888888] uppercase tracking-wider">
                   Stap 2/5
                 </span>
-                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-6 mt-4">
                   Wat voor werk moet er gebeuren?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -317,8 +317,8 @@ export function CapaciteitsPlanner() {
                         rounded-xl border-2 p-4 text-left text-sm font-medium transition-all duration-300
                         ${
                           config.workType === type.value
-                            ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                            : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
+                            ? "border-[#1B1D1E] bg-[#1B1D1E] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+                            : "border-[#DDDDDD] bg-white text-[#333333] hover:border-[#DDDDDD]"
                         }
                       `}
                     >
@@ -345,12 +345,12 @@ export function CapaciteitsPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-3xl border border-[#1B1D1E] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#888888] uppercase tracking-wider">
                   Stap 3/5
                 </span>
-                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-6 mt-4">
                   Hoeveel monteurs heb je nodig?
                 </h3>
                 <div className="flex items-center gap-6">
@@ -360,15 +360,15 @@ export function CapaciteitsPlanner() {
                     max={10}
                     value={config.count}
                     onChange={(e) => updateConfig("count", parseInt(e.target.value))}
-                    className="flex-1 h-2 bg-[#E8E5E0] rounded-full appearance-none cursor-pointer accent-[#1A1A1A] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#1A1A1A] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer"
+                    className="flex-1 h-2 bg-[#DDDDDD] rounded-full appearance-none cursor-pointer accent-[#1B1D1E] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#1B1D1E] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer"
                   />
-                  <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-[#F2F0ED] flex items-center justify-center">
-                    <span className="text-2xl font-bold text-[#1A1A1A] font-mono">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-[#F7F7F7] flex items-center justify-center">
+                    <span className="text-2xl font-bold text-[#1B1D1E] font-mono">
                       {config.count}
                     </span>
                   </div>
                 </div>
-                <p className="mt-3 text-xs text-[#9C9690]">
+                <p className="mt-3 text-xs text-[#888888]">
                   {config.count === 1 ? "1 monteur" : `${config.count} monteurs`}
                 </p>
                 <div className="mt-8 flex justify-between">
@@ -390,12 +390,12 @@ export function CapaciteitsPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-3xl border border-[#1B1D1E] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#888888] uppercase tracking-wider">
                   Stap 4/5
                 </span>
-                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-6 mt-4">
                   Welk ervaringsniveau zoek je?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -410,15 +410,15 @@ export function CapaciteitsPlanner() {
                         rounded-xl border-2 p-5 text-center transition-all duration-300
                         ${
                           config.level === niveau.value
-                            ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                            : "border-[#E8E5E0] bg-[#FDFCFA] hover:border-[#C0C0C0]"
+                            ? "border-[#1B1D1E] bg-[#1B1D1E] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+                            : "border-[#DDDDDD] bg-white hover:border-[#DDDDDD]"
                         }
                       `}
                     >
                       <span className="block text-base font-bold">{niveau.label}</span>
                       <span
                         className={`block mt-1 text-xs ${
-                          config.level === niveau.value ? "text-white/70" : "text-[#9C9690]"
+                          config.level === niveau.value ? "text-white/70" : "text-[#888888]"
                         }`}
                       >
                         {niveau.sub}
@@ -445,12 +445,12 @@ export function CapaciteitsPlanner() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                className="relative rounded-2xl border border-[#1A1A1A] bg-[#FDFCFA]/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
+                className="relative rounded-3xl border border-[#1B1D1E] bg-white/90 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)]"
               >
-                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#9C9690] uppercase tracking-wider">
+                <span className="absolute top-4 left-4 text-[10px] font-mono text-[#888888] uppercase tracking-wider">
                   Stap 5/5
                 </span>
-                <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-6 mt-4">
+                <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-6 mt-4">
                   In welke regio is de inzet?
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -465,8 +465,8 @@ export function CapaciteitsPlanner() {
                         rounded-xl border-2 p-4 text-left text-sm font-medium transition-all duration-300
                         ${
                           config.region === regio.value
-                            ? "border-[#1A1A1A] bg-[#1A1A1A] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
-                            : "border-[#E8E5E0] bg-[#FDFCFA] text-[#3D3A37] hover:border-[#C0C0C0]"
+                            ? "border-[#1B1D1E] bg-[#1B1D1E] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]"
+                            : "border-[#DDDDDD] bg-white text-[#333333] hover:border-[#DDDDDD]"
                         }
                       `}
                     >
@@ -494,7 +494,7 @@ export function CapaciteitsPlanner() {
               transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
               className="mt-10 md:mt-14 max-w-2xl mx-auto"
             >
-              <div className="rounded-2xl border border-[#1A1A1A] bg-[#1A1A1A] p-8 md:p-10 text-white shadow-[0_8px_32px_rgba(0,0,0,0.15)]">
+              <div className="rounded-3xl border border-[#1B1D1E] bg-[#1B1D1E] p-8 md:p-10 text-white shadow-[0_8px_32px_rgba(0,0,0,0.15)]">
                 <div className="flex items-center gap-2 mb-6">
                   <CheckCircle weight="fill" className="w-5 h-5 text-white/60" />
                   <span className="text-xs font-medium uppercase tracking-wide text-white/60">

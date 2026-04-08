@@ -3,10 +3,11 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 
 export function CtaSection() {
   return (
-    <section id="contact" className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
+    <section id="contact" className="relative bg-white py-32 md:py-44 overflow-hidden">
       {/* Subtle radial gradient for warmth without breaking flow */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -17,18 +18,20 @@ export function CtaSection() {
       />
 
       {/* Thin decorative line above */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-[#DDDDDD] to-transparent" />
 
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Klaar om het capaciteitsprobleem structureel op te lossen?
-            </h2>
+            <DualHeading
+              bold="Klaar om het capaciteitsprobleem"
+              italic="structureel op te lossen?"
+              className="text-center"
+            />
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-8 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-8 text-base md:text-lg text-[#888888] leading-[1.7] max-w-[55ch] mx-auto">
               Wij kijken samen naar je situatie en vertellen je binnen 24 uur welk
               model bij jou past. Geen verkooppraatje, een concreet voorstel.
             </p>
@@ -58,7 +61,7 @@ export function CtaSection() {
       </Container>
 
       {/* Thin decorative line below */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-[#DCDCDC] to-transparent" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-[#DDDDDD] to-transparent" />
     </section>
   );
 }

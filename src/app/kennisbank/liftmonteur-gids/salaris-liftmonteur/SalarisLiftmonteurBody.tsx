@@ -14,19 +14,19 @@ const tocItems = [
 
 export function SalarisLiftmonteurBody() {
   return (
-    <section className="relative bg-[#FDFCFA] pb-20 md:pb-28">
+    <section className="relative bg-white pb-20 md:pb-28">
       <Container>
         <div className="relative flex justify-center gap-16">
           <article className="w-full max-w-[720px]">
             <div className="prose-lyfd">
               {/* Definitie-blok (AEO) */}
               <ScrollReveal>
-                <div className="relative bg-[#F5F3F0] rounded-lg border-l-2 border-[#A0704C] px-6 py-5 mb-10">
-                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#E8E5E0] text-[#6B6560] mb-3">
+                <div className="relative bg-[#F7F7F7] rounded-lg border-l-2 border-[#4928FD] px-6 py-5 mb-10">
+                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#DDDDDD] text-[#888888] mb-3">
                     Samenvatting
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-[#3D3A37] m-0">
-                    <strong className="text-[#1A1A1A]">Het salaris van een liftmonteur in Nederland</strong>{" "}
+                  <p className="text-[0.9375rem] leading-relaxed text-[#333333] m-0">
+                    <strong className="text-[#1B1D1E]">Het salaris van een liftmonteur in Nederland</strong>{" "}
                     varieert sterk afhankelijk van ervaringsniveau, arbeidsmodel
                     en certificeringen. In vast dienstverband is de CAO
                     Metalektro leidend. Als zzp&apos;er liggen indicatieve
@@ -34,7 +34,7 @@ export function SalarisLiftmonteurBody() {
                     van LYFD verdienen monteurs 10 tot 15% boven de CAO
                     Metalektro, zonder eigen administratie en zonder
                     DBA-risico.{" "}
-                    <span className="text-[#9C9690] text-xs">
+                    <span className="text-[#888888] text-xs">
                       (Bron: LYFD, geverifieerde bedrijfscijfers)
                     </span>
                   </p>
@@ -266,7 +266,7 @@ export function SalarisLiftmonteurBody() {
                   LYFD biedt een derde weg: het{" "}
                   <a
                     href="/diensten/"
-                    className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300"
+                    className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300"
                   >
                     Capacity as a Service model
                   </a>
@@ -291,7 +291,7 @@ export function SalarisLiftmonteurBody() {
                       </span>{" "}
                       boven CAO Metalektro
                     </strong>{" "}
-                    <span className="text-[#9C9690] text-xs">
+                    <span className="text-[#888888] text-xs">
                       (Bron: LYFD, geverifieerde bedrijfscijfers)
                     </span>
                   </li>
@@ -358,66 +358,66 @@ export function SalarisLiftmonteurBody() {
                 <div className="overflow-x-auto -mx-6 px-6">
                   <table className="w-full text-sm border-collapse">
                     <thead>
-                      <tr className="border-b-2 border-[#1A1A1A]">
-                        <th className="text-left py-3 pr-4 font-semibold text-[#1A1A1A]">
+                      <tr className="border-b-2 border-[#1B1D1E]">
+                        <th className="text-left py-3 pr-4 font-semibold text-[#1B1D1E]">
                           Aspect
                         </th>
-                        <th className="text-left py-3 px-4 font-semibold text-[#1A1A1A]">
+                        <th className="text-left py-3 px-4 font-semibold text-[#1B1D1E]">
                           Vast
                         </th>
-                        <th className="text-left py-3 px-4 font-semibold text-[#1A1A1A]">
+                        <th className="text-left py-3 px-4 font-semibold text-[#1B1D1E]">
                           Zzp
                         </th>
-                        <th className="text-left py-3 pl-4 font-semibold text-[#1A1A1A]">
+                        <th className="text-left py-3 pl-4 font-semibold text-[#1B1D1E]">
                           CaaS (LYFD)
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="text-[#3D3A37]">
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Bruto inkomen</td>
+                    <tbody className="text-[#333333]">
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Bruto inkomen</td>
                         <td className="py-3 px-4">CAO-schaal</td>
                         <td className="py-3 px-4">EUR 50-60/uur</td>
                         <td className="py-3 pl-4">CAO +10-15%</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Netto na kosten</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Netto na kosten</td>
                         <td className="py-3 px-4">Voorspelbaar</td>
                         <td className="py-3 px-4">Lager dan verwacht</td>
                         <td className="py-3 pl-4">Hoger dan vast</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Zekerheid</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Zekerheid</td>
                         <td className="py-3 px-4">Hoog</td>
                         <td className="py-3 px-4">Laag</td>
                         <td className="py-3 pl-4">Middel tot hoog</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Flexibiliteit</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Flexibiliteit</td>
                         <td className="py-3 px-4">Beperkt</td>
                         <td className="py-3 px-4">Hoog</td>
                         <td className="py-3 pl-4">Hoog</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Administratie</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Administratie</td>
                         <td className="py-3 px-4">Geen</td>
                         <td className="py-3 px-4">Volledig zelf</td>
                         <td className="py-3 pl-4">Geen</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">DBA-risico</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">DBA-risico</td>
                         <td className="py-3 px-4">Geen</td>
                         <td className="py-3 px-4">Hoog</td>
                         <td className="py-3 pl-4">Geen</td>
                       </tr>
-                      <tr className="border-b border-[#E8E5E0]">
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Pensioen</td>
+                      <tr className="border-b border-[#DDDDDD]">
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Pensioen</td>
                         <td className="py-3 px-4">Via werkgever</td>
                         <td className="py-3 px-4">Zelf regelen</td>
                         <td className="py-3 pl-4">Geregeld</td>
                       </tr>
                       <tr>
-                        <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Projectkeuze</td>
+                        <td className="py-3 pr-4 font-medium text-[#1B1D1E]">Projectkeuze</td>
                         <td className="py-3 px-4">Beperkt</td>
                         <td className="py-3 px-4">Vrij</td>
                         <td className="py-3 pl-4">Vrij</td>
@@ -467,7 +467,7 @@ export function SalarisLiftmonteurBody() {
                   <strong>Certificeringen.</strong>{" "}
                   <a
                     href="/kennisbank/nen-certificering/nen-3140-uitleg/"
-                    className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300"
+                    className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300"
                   >
                     NEN 3140
                   </a>{" "}
@@ -485,7 +485,7 @@ export function SalarisLiftmonteurBody() {
                   aantoonbaar op twee of drie grote{" "}
                   <a
                     href="/kennisbank/nen-certificering/oem-certificeringen/"
-                    className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300"
+                    className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300"
                   >
                     OEM-merken
                   </a>{" "}
@@ -537,7 +537,7 @@ export function SalarisLiftmonteurBody() {
                     1.600 tot 1.800
                   </span>{" "}
                   actieve monteurs.{" "}
-                  <span className="text-[#9C9690] text-xs">
+                  <span className="text-[#888888] text-xs">
                     (Bron: LYFD, marktervaring 5 jaar)
                   </span>{" "}
                   Die structurele schaarste betekent dat de tarieven de komende
@@ -549,20 +549,20 @@ export function SalarisLiftmonteurBody() {
             </div>
 
             {/* Article closing CTA */}
-            <div className="mt-16 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-8 md:p-10">
-              <p className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+            <div className="mt-16 rounded-2xl bg-[#F7F7F7] border border-[#DDDDDD] p-8 md:p-10">
+              <p className="text-lg font-semibold text-[#1B1D1E] tracking-tight">
                 Benieuwd wat je via LYFD kunt verdienen?
               </p>
-              <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed max-w-[50ch]">
+              <p className="mt-2 text-sm text-[#333333] leading-relaxed max-w-[50ch]">
                 We berekenen graag wat het LYFD-model voor jouw situatie betekent.
                 Transparant, zonder verplichtingen.
               </p>
               <a
                 href="/aanvraag/"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300"
               >
                 Neem contact op
-                <span className="text-[#9C9690]">&rarr;</span>
+                <span className="text-[#888888]">&rarr;</span>
               </a>
             </div>
           </article>

@@ -8,6 +8,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 import {
   CalendarCheck,
   UsersThree,
@@ -40,7 +41,7 @@ const painPoints = [
 
 export function ModerniseringProbleem() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <Image
@@ -50,28 +51,30 @@ export function ModerniseringProbleem() {
           className="object-cover opacity-[0.05]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCFA] via-transparent to-[#FDFCFA]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="text-center">
               <Badge className="mb-5">Het probleem</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-                De deadline staat. Heb jij genoeg handen?
-              </h2>
+              <DualHeading
+                bold="De deadline staat."
+                italic="Heb jij genoeg handen?"
+                className="text-center"
+              />
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-10 md:mt-14 text-base md:text-lg text-[#3D3A37] leading-relaxed text-center max-w-[60ch] mx-auto">
+            <p className="mt-10 md:mt-14 text-base md:text-lg text-[#333333] leading-relaxed text-center max-w-[60ch] mx-auto">
               Je weet dat uitloop geen optie is. Boeteclausules, bouwvertraging,
               een opdrachtgever die belt. En jouw team is al maximaal belast.{" "}
-              <span className="text-[#1A1A1A] font-semibold">
+              <span className="text-[#1B1D1E] font-semibold">
                 Modernisering heeft geen marge voor uitval.
               </span>
             </p>
@@ -87,19 +90,24 @@ export function ModerniseringProbleem() {
             const Icon = item.icon;
             return (
               <StaggerItem key={item.title}>
-                <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-6 md:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                <div className="h-full rounded-3xl bg-white border border-[#DDDDDD] p-6 md:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
+                    <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${
+                      item.icon === CalendarCheck ? 'bg-[#EDE8FF]' :
+                      item.icon === UsersThree ? 'bg-[#FFE4E4]' :
+                      item.icon === CurrencyEur ? 'bg-[#FFE8E0]' :
+                      'bg-[#E0EAFF]'
+                    }`}>
                       <Icon
                         weight="light"
-                        className="w-5 h-5 text-[#6B6560]"
+                        className="w-5 h-5 text-[#888888]"
                       />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-[#1A1A1A] mb-1">
+                      <p className="text-sm font-semibold text-[#1B1D1E] mb-1">
                         {item.title}
                       </p>
-                      <p className="text-sm text-[#3D3A37] leading-relaxed">
+                      <p className="text-sm text-[#333333] leading-relaxed">
                         {item.text}
                       </p>
                     </div>
@@ -113,10 +121,10 @@ export function ModerniseringProbleem() {
         {/* Closing paragraph */}
         <ScrollReveal delay={0.3}>
           <div className="mt-14 md:mt-18 max-w-[65ch] mx-auto">
-            <p className="text-sm md:text-base text-[#3D3A37] leading-relaxed text-center">
+            <p className="text-sm md:text-base text-[#333333] leading-relaxed text-center">
               De meeste liftbedrijven kennen dit risico. En toch nemen ze het
               keer op keer, omdat ze geen structureel alternatief hebben.{" "}
-              <span className="text-[#1A1A1A] font-medium">
+              <span className="text-[#1B1D1E] font-medium">
                 LYFD is dat alternatief.
               </span>
             </p>
@@ -125,7 +133,7 @@ export function ModerniseringProbleem() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#EDE8FF]/20" />
     </section>
   );
 }

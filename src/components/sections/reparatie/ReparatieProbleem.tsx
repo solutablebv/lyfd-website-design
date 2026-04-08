@@ -8,6 +8,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 import {
   Wrench,
   Warning,
@@ -40,7 +41,7 @@ const painPoints = [
 
 export function ReparatieProbleem() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44">
+    <section className="relative bg-white py-32 md:py-44">
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <Image
@@ -50,25 +51,27 @@ export function ReparatieProbleem() {
           className="object-cover opacity-[0.05]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCFA] via-transparent to-[#FDFCFA]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="text-center">
               <Badge className="mb-5">Het probleem</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-                Die reparatieberg groeit. Je team komt er niet aan toe.
-              </h2>
+              <DualHeading
+                bold="Die reparatieberg groeit."
+                italic="Je team komt er niet aan toe."
+                className="text-center"
+              />
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="mt-8 md:mt-10 text-base md:text-lg text-[#3D3A37] leading-relaxed text-center max-w-[55ch] mx-auto">
+            <p className="mt-8 md:mt-10 text-base md:text-lg text-[#333333] leading-relaxed text-center max-w-[55ch] mx-auto">
               Kapotte sensorlijsten, versleten deurrubbers, defecte besturingsonderdelen. Het hoort niet bij een modernisering, maar het past ook niet meer in de reguliere service. Het blijft liggen. En elke dag dat het blijft liggen, stijgt het risico op storingen.
             </p>
           </ScrollReveal>
@@ -83,15 +86,15 @@ export function ReparatieProbleem() {
             const Icon = point.icon;
             return (
               <StaggerItem key={point.title}>
-                <div className="rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-5 md:p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
-                    <Icon weight="light" className="w-5 h-5 text-[#6B6560]" />
+                <div className="rounded-3xl bg-white border border-[#DDDDDD] p-5 md:p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#F7F7F7] flex items-center justify-center">
+                    <Icon weight="light" className="w-5 h-5 text-[#888888]" />
                   </div>
                   <div className="pt-1">
-                    <p className="text-sm md:text-base font-medium text-[#1A1A1A] leading-snug">
+                    <p className="text-sm md:text-base font-medium text-[#1B1D1E] leading-snug">
                       {point.title}
                     </p>
-                    <p className="mt-1 text-sm text-[#6B6560] leading-relaxed">
+                    <p className="mt-1 text-sm text-[#888888] leading-relaxed">
                       {point.description}
                     </p>
                   </div>
@@ -103,7 +106,7 @@ export function ReparatieProbleem() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F7F7F7]" />
     </section>
   );
 }

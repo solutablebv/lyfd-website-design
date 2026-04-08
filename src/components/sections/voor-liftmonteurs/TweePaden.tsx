@@ -14,15 +14,15 @@ import { Wrench, GraduationCap, ArrowRight } from "@phosphor-icons/react";
 
 export function TweePaden() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
             <Badge className="mb-5">Kies je route</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Waar sta jij in je carriere?
             </h2>
-            <p className="mt-5 text-sm md:text-base text-[#3D3A37] leading-relaxed">
+            <p className="mt-5 text-sm md:text-base text-[#333333] leading-relaxed">
               Of je nu ervaren liftmonteur bent of het vak wilt leren, LYFD
               heeft een pad voor jou.
             </p>
@@ -41,21 +41,21 @@ export function TweePaden() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="group block h-full"
             >
-              <div className="relative h-full rounded-2xl border-l-[3px] border-l-[#A0704C] border border-[#E8E5E0] bg-[#FDFCFA] p-7 md:p-8 transition-all duration-500 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#C0C0C0]">
-                <div className="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center mb-6">
+              <div className="relative h-full rounded-3xl border-l-[3px] border-l-[#4928FD] border border-[#DDDDDD] bg-white p-7 md:p-8 transition-all duration-500 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#DDDDDD]">
+                <div className="w-12 h-12 rounded-xl bg-[#1B1D1E] flex items-center justify-center mb-6">
                   <Wrench weight="fill" className="w-6 h-6 text-white" />
                 </div>
 
-                <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
+                <h3 className="text-xl font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-3">
                   Ik ben al liftmonteur
                 </h3>
-                <p className="text-sm text-[#6B6560] leading-relaxed mb-8">
+                <p className="text-sm text-[#888888] leading-relaxed mb-8">
                   Je hebt ervaring in de branche en wilt meer: betere beloning,
                   afwisseling, groeimogelijkheden. Ontdek wat je werkelijk waard
                   bent.
                 </p>
 
-                <div className="flex items-center gap-2 text-sm font-medium text-[#1A1A1A] group-hover:gap-3 transition-all duration-300">
+                <div className="flex items-center gap-2 text-sm font-medium text-[#1B1D1E] group-hover:gap-3 transition-all duration-300">
                   <span>Ontdek je marktwaarde</span>
                   <ArrowRight
                     weight="bold"
@@ -74,27 +74,27 @@ export function TweePaden() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="group block h-full"
             >
-              <div className="relative h-full rounded-2xl border border-[#E8E5E0] bg-[#F8F6F3] p-7 md:p-8 transition-all duration-500 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#C0C0C0]">
+              <div className="relative h-full rounded-3xl border border-[#DDDDDD] bg-[#F7F7F7] p-7 md:p-8 transition-all duration-500 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#DDDDDD]">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-[#F7F7F7] flex items-center justify-center">
                     <GraduationCap
                       weight="light"
-                      className="w-6 h-6 text-[#1A1A1A]"
+                      className="w-6 h-6 text-[#1B1D1E]"
                     />
                   </div>
                   <Badge variant="outline">LYFD Academy</Badge>
                 </div>
 
-                <h3 className="text-xl font-semibold text-[#1A1A1A] tracking-tight leading-snug mb-3">
+                <h3 className="text-xl font-semibold text-[#1B1D1E] tracking-tight leading-snug mb-3">
                   Ik wil liftmonteur worden
                 </h3>
-                <p className="text-sm text-[#6B6560] leading-relaxed mb-8">
+                <p className="text-sm text-[#888888] leading-relaxed mb-8">
                   Geen liftervaring? Geen probleem. Als je technisch aangelegd
                   bent en het vak wilt leren, leiden wij je op tot volwaardig
                   liftmonteur.
                 </p>
 
-                <div className="flex items-center gap-2 text-sm font-medium text-[#6B6560] group-hover:text-[#1A1A1A] group-hover:gap-3 transition-all duration-300">
+                <div className="flex items-center gap-2 text-sm font-medium text-[#888888] group-hover:text-[#1B1D1E] group-hover:gap-3 transition-all duration-300">
                   <span>Bekijk de Academy</span>
                   <ArrowRight
                     weight="bold"

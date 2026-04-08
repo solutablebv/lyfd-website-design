@@ -7,6 +7,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 import Image from "next/image";
 import {
   Lightning,
@@ -44,7 +45,7 @@ const models = [
 
 export function OnderhoudAanpak() {
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#E0EAFF]/20 py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -65,17 +66,18 @@ export function OnderhoudAanpak() {
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#E0EAFF]/20 to-transparent" />
 
       <Container>
         <div className="max-w-2xl">
           <ScrollReveal>
-            <Badge className="mb-5">Onze aanpak</Badge>
+            <Badge variant="pastel-blue" className="mb-5">Onze aanpak</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              Hoe levert LYFD capaciteit voor liftonderhoud en service?
-            </h2>
+            <DualHeading
+              bold="Hoe levert LYFD capaciteit"
+              italic="voor liftonderhoud en service?"
+            />
           </ScrollReveal>
         </div>
 
@@ -88,16 +90,21 @@ export function OnderhoudAanpak() {
             const Icon = model.icon;
             return (
               <StaggerItem key={model.title}>
-                <div className="h-full rounded-2xl bg-[#FDFCFA] border border-[#E8E5E0] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                <div className="h-full rounded-3xl bg-white border border-[#DDDDDD] p-7 md:p-8">
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
-                      <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+                      model.icon === Lightning ? 'bg-[#FFE8E0]' :
+                      model.icon === Calendar ? 'bg-[#E0EAFF]' :
+                      model.icon === ShieldCheck ? 'bg-[#EDE8FF]' :
+                      'bg-[#FFE4E4]'
+                    }`}>
+                      <Icon weight="light" className="w-5 h-5 text-[#1B1D1E]" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1A1A1A] tracking-tight leading-snug">
+                    <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight leading-snug">
                       {model.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-[#3D3A37] leading-relaxed">
+                  <p className="text-sm text-[#333333] leading-relaxed">
                     {model.description}
                   </p>
                 </div>
@@ -108,7 +115,7 @@ export function OnderhoudAanpak() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

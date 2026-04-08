@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { DualHeading } from "@/components/ui/DualHeading";
 import {
   ClipboardText,
   UsersThree,
@@ -36,7 +37,7 @@ const steps = [
 
 export function ReparatieAanpak() {
   return (
-    <section className="relative bg-[#F5F3F0] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-[#FFE8E0]/20 py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -57,7 +58,7 @@ export function ReparatieAanpak() {
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#F8F8F8] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FFE8E0]/20 to-transparent" />
 
       <Container>
         <div className="max-w-2xl">
@@ -65,16 +66,17 @@ export function ReparatieAanpak() {
             <Badge className="mb-5">Het plan</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
-              LYFD pakt je reparatieberg aan
-            </h2>
+            <DualHeading
+              bold="LYFD pakt je reparatieberg"
+              italic="aan"
+            />
           </ScrollReveal>
         </div>
 
         {/* Vertical timeline */}
         <div className="mt-16 md:mt-24 max-w-2xl mx-auto relative">
           {/* Vertical line */}
-          <div className="absolute left-5 md:left-6 top-0 bottom-0 w-px bg-[#E8E5E0]" />
+          <div className="absolute left-5 md:left-6 top-0 bottom-0 w-px bg-[#DDDDDD]" />
 
           <div className="space-y-12 md:space-y-16">
             {steps.map((step, index) => {
@@ -83,7 +85,7 @@ export function ReparatieAanpak() {
                 <ScrollReveal key={step.number} delay={index * 0.1}>
                   <div className="relative pl-16 md:pl-20">
                     {/* Timeline dot */}
-                    <div className="absolute left-0 top-0 w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-[#1A1A1A] flex items-center justify-center z-10">
+                    <div className="absolute left-0 top-0 w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-[#1B1D1E] flex items-center justify-center z-10">
                       <Icon
                         weight="bold"
                         className="w-5 h-5 md:w-6 md:h-6 text-white"
@@ -91,14 +93,14 @@ export function ReparatieAanpak() {
                     </div>
 
                     {/* Step number */}
-                    <span className="text-xs font-mono font-medium text-[#9C9690] uppercase tracking-wider">
+                    <span className="text-xs font-mono font-medium text-[#888888] uppercase tracking-wider">
                       Stap {step.number}
                     </span>
 
-                    <h3 className="mt-2 text-xl md:text-2xl font-semibold text-[#1A1A1A] tracking-tight leading-snug">
+                    <h3 className="mt-2 text-xl md:text-2xl font-semibold text-[#1B1D1E] tracking-tight leading-snug">
                       {step.title}
                     </h3>
-                    <p className="mt-3 text-sm md:text-base text-[#3D3A37] leading-relaxed max-w-[50ch]">
+                    <p className="mt-3 text-sm md:text-base text-[#333333] leading-relaxed max-w-[50ch]">
                       {step.description}
                     </p>
                   </div>
@@ -110,7 +112,7 @@ export function ReparatieAanpak() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FDFCFA]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

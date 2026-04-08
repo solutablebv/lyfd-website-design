@@ -30,7 +30,7 @@ const stats = [
 
 export function OnderhoudWatJeKrijgt() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
       {/* Decorative background image */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -51,7 +51,7 @@ export function OnderhoudWatJeKrijgt() {
       </div>
 
       {/* Top blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FDFCFA] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent" />
 
       <Container>
         <div className="max-w-2xl">
@@ -59,7 +59,7 @@ export function OnderhoudWatJeKrijgt() {
             <Badge className="mb-5">Inbegrepen</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Wat LYFD levert voor jouw onderhoudsteam
             </h2>
           </ScrollReveal>
@@ -69,11 +69,11 @@ export function OnderhoudWatJeKrijgt() {
         <div className="mt-14 md:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl">
           {/* Kolom 1: groot, span 2 */}
           <ScrollReveal delay={0.15} className="lg:col-span-2">
-            <div className="rounded-2xl border border-[#E8E5E0] bg-[#FDFCFA] p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full">
-              <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-snug text-[#1A1A1A]">
+            <div className="rounded-3xl border border-[#DDDDDD] bg-white p-7 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full">
+              <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-snug text-[#1B1D1E]">
                 Direct inzetbare liftcapaciteit
               </h3>
-              <p className="mt-4 text-sm md:text-base text-[#3D3A37] leading-[1.8] max-w-[50ch]">
+              <p className="mt-4 text-sm md:text-base text-[#333333] leading-[1.8] max-w-[50ch]">
                 Gecertificeerde monteurs die dag 1 productief zijn. Geen inwerkperiode, geen onzekerheden. Met eigen uitrusting, verzekeringen en vervangingsgarantie.
               </p>
               <StaggerContainer
@@ -86,10 +86,10 @@ export function OnderhoudWatJeKrijgt() {
                       <div className="flex-shrink-0 mt-0.5">
                         <CheckCircle
                           weight="fill"
-                          className="w-5 h-5 text-[#2A2A2A]"
+                          className="w-5 h-5 text-[#1B1D1E]"
                         />
                       </div>
-                      <p className="text-sm md:text-base text-[#3D3A37] leading-relaxed">
+                      <p className="text-sm md:text-base text-[#333333] leading-relaxed">
                         {voordeel}
                       </p>
                     </div>
@@ -108,16 +108,20 @@ export function OnderhoudWatJeKrijgt() {
               const Icon = stat.icon;
               return (
                 <StaggerItem key={stat.label}>
-                  <div className="rounded-2xl border border-[#E8E5E0] bg-[#FDFCFA] p-6 md:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)] text-center">
+                  <div className="rounded-3xl border border-[#DDDDDD] bg-white p-6 md:p-7 shadow-[0_1px_3px_rgba(0,0,0,0.04)] text-center">
                     <div className="flex items-center justify-center mb-3">
-                      <div className="w-10 h-10 rounded-xl bg-[#F2F0ED] flex items-center justify-center">
-                        <Icon weight="light" className="w-5 h-5 text-[#2A2A2A]" />
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+                        stat.icon === Clock ? 'bg-[#E0EAFF]' :
+                        stat.icon === Timer ? 'bg-[#FFE8E0]' :
+                        'bg-[#EDE8FF]'
+                      }`}>
+                        <Icon weight="light" className="w-5 h-5 text-[#1B1D1E]" />
                       </div>
                     </div>
-                    <span className="block text-3xl md:text-4xl font-bold tracking-tighter text-[#1A1A1A] font-mono">
+                    <span className="block text-3xl md:text-4xl font-bold tracking-tighter text-[#1B1D1E] font-mono">
                       {stat.value}
                     </span>
-                    <span className="block mt-1.5 text-xs text-[#9C9690] font-medium uppercase tracking-wide">
+                    <span className="block mt-1.5 text-xs text-[#888888] font-medium uppercase tracking-wide">
                       {stat.label}
                     </span>
                   </div>
@@ -130,23 +134,23 @@ export function OnderhoudWatJeKrijgt() {
         {/* Vergelijkingsrij */}
         <ScrollReveal delay={0.25}>
           <div className="mt-14 md:mt-20 max-w-5xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden border border-[#E8E5E0]">
+            <div className="grid grid-cols-1 md:grid-cols-2 rounded-3xl overflow-hidden border border-[#DDDDDD]">
               {/* Zonder LYFD */}
-              <div className="bg-[#F8F6F3] p-6 md:p-8 border-b md:border-b-0 md:border-r border-[#E8E5E0]">
+              <div className="bg-[#F7F7F7] p-6 md:p-8 border-b md:border-b-0 md:border-r border-[#DDDDDD]">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-2 h-2 rounded-full bg-[#C0C0C0]" />
-                  <span className="text-xs font-medium uppercase tracking-wide text-[#9C9690]">
+                  <span className="text-xs font-medium uppercase tracking-wide text-[#888888]">
                     Zonder LYFD
                   </span>
                 </div>
-                <p className="text-sm text-[#6B6560] leading-relaxed">
+                <p className="text-sm text-[#888888] leading-relaxed">
                   Onzekerheid over beschikbaarheid, DBA-risico bij zzp-inhuur, wisselende kwaliteit en certificeringen
                 </p>
               </div>
               {/* Met LYFD */}
-              <div className="bg-[#1A1A1A] p-6 md:p-8">
+              <div className="bg-[#1B1D1E] p-6 md:p-8">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 rounded-full bg-[#FDFCFA]" />
+                  <div className="w-2 h-2 rounded-full bg-white" />
                   <span className="text-xs font-medium uppercase tracking-wide text-white/60">
                     Met LYFD
                   </span>
@@ -161,7 +165,7 @@ export function OnderhoudWatJeKrijgt() {
       </Container>
 
       {/* Bottom blend */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#F8F8F8]" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#FFE8E0]/20" />
     </section>
   );
 }

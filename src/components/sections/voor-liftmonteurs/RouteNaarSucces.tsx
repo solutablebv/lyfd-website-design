@@ -104,16 +104,16 @@ export function RouteNaarSucces() {
   return (
     <section
       id="route-naar-succes"
-      className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden"
+      className="relative bg-[#E0EAFF]/20 py-32 md:py-44 overflow-hidden"
     >
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto">
-            <Badge className="mb-5">Route naar succes</Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <Badge variant="pastel-blue" className="mb-5">Route naar succes</Badge>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               7 stappen naar je nieuwe carriere
             </h2>
-            <p className="mt-5 text-sm md:text-base text-[#3D3A37] leading-relaxed">
+            <p className="mt-5 text-sm md:text-base text-[#333333] leading-relaxed">
               Van eerste kennismaking tot je eerste opdracht. Zo werkt het
               onboarding proces bij LYFD.
             </p>
@@ -126,11 +126,11 @@ export function RouteNaarSucces() {
           className="mt-16 md:mt-20 relative max-w-4xl mx-auto"
         >
           {/* Verticale lijn (achtergrond) */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-[#E8E5E0] md:-translate-x-px" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-[#DDDDDD] md:-translate-x-px" />
 
           {/* Verticale lijn (animated vul) */}
           <motion.div
-            className="absolute left-6 md:left-1/2 top-0 w-px bg-[#1A1A1A] md:-translate-x-px origin-top"
+            className="absolute left-6 md:left-1/2 top-0 w-px bg-[#1B1D1E] md:-translate-x-px origin-top"
             style={{ height: lineHeight }}
           />
 
@@ -154,8 +154,8 @@ export function RouteNaarSucces() {
                           w-12 h-12 rounded-full flex items-center justify-center text-xs font-bold font-mono border-2 transition-all duration-500
                           ${
                             index <= 0
-                              ? "bg-[#1A1A1A] text-white border-[#1A1A1A] shadow-[0_2px_12px_rgba(0,0,0,0.15)]"
-                              : "bg-[#FDFCFA] text-[#6B6560] border-[#E8E5E0]"
+                              ? "bg-[#1B1D1E] text-white border-[#1B1D1E] shadow-[0_2px_12px_rgba(0,0,0,0.15)]"
+                              : "bg-white text-[#888888] border-[#DDDDDD]"
                           }
                         `}
                       >
@@ -176,11 +176,11 @@ export function RouteNaarSucces() {
                     >
                       <div
                         className={`
-                          rounded-2xl p-7 md:p-8 transition-all duration-500
+                          rounded-3xl p-7 md:p-8 transition-all duration-500
                           ${
                             index <= 0
-                              ? "bg-[#1A1A1A] text-white border border-[#1A1A1A] shadow-[0_8px_32px_rgba(0,0,0,0.12)]"
-                              : "bg-[#FDFCFA] text-[#1A1A1A] border border-[#E8E5E0] hover:border-[#C0C0C0] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]"
+                              ? "bg-[#1B1D1E] text-white border border-[#1B1D1E] shadow-[0_8px_32px_rgba(0,0,0,0.12)]"
+                              : "bg-white text-[#1B1D1E] border border-[#DDDDDD] hover:border-[#DDDDDD] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]"
                           }
                         `}
                       >
@@ -191,28 +191,28 @@ export function RouteNaarSucces() {
                               ${
                                 index <= 0
                                   ? "bg-white/10"
-                                  : "bg-[#F2F0ED]"
+                                  : "bg-[#F7F7F7]"
                               }
                             `}
                           >
                             <stap.icon
                               weight={index <= 0 ? "fill" : "light"}
                               className={`w-5 h-5 ${
-                                index <= 0 ? "text-white" : "text-[#1A1A1A]"
+                                index <= 0 ? "text-white" : "text-[#1B1D1E]"
                               }`}
                             />
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3
                               className={`text-base font-semibold tracking-tight leading-snug ${
-                                index <= 0 ? "text-white" : "text-[#1A1A1A]"
+                                index <= 0 ? "text-white" : "text-[#1B1D1E]"
                               }`}
                             >
                               {stap.titel}
                             </h3>
                             <p
                               className={`mt-2 text-sm leading-relaxed ${
-                                index <= 0 ? "text-white/60" : "text-[#6B6560]"
+                                index <= 0 ? "text-white/60" : "text-[#888888]"
                               }`}
                             >
                               {stap.beschrijving}
@@ -222,7 +222,7 @@ export function RouteNaarSucces() {
                                 className={`inline-block mt-3 text-[10px] font-mono uppercase tracking-wider ${
                                   index <= 0
                                     ? "text-white/40"
-                                    : "text-[#9C9690]"
+                                    : "text-[#888888]"
                                 }`}
                               >
                                 {stap.detail}

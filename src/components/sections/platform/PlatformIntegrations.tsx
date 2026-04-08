@@ -45,23 +45,23 @@ const statusConfig: Record<
   active: {
     label: null,
     cardClass:
-      "bg-[#FDFCFA] border-[#D9D4CE] hover:border-[#C0C0C0] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]",
-    textClass: "text-[#1A1A1A]",
-    iconClass: "text-[#1A1A1A]",
+      "bg-[#EDE8FF] border-[#EDE8FF] hover:border-[#4928FD]/30 hover:shadow-[0_4px_16px_rgba(73,40,253,0.08)]",
+    textClass: "text-[#1B1D1E]",
+    iconClass: "text-[#4928FD]",
   },
   planned: {
     label: "Binnenkort",
     cardClass:
-      "bg-[#F8F6F3] border-[#E8E5E0] hover:border-[#D9D4CE] hover:shadow-[0_2px_12px_rgba(0,0,0,0.04)]",
-    textClass: "text-[#6B6560]",
-    iconClass: "text-[#9C9690]",
+      "bg-[#F7F7F7] border-[#DDDDDD] hover:border-[#DDDDDD] hover:shadow-[0_2px_12px_rgba(0,0,0,0.04)]",
+    textClass: "text-[#888888]",
+    iconClass: "text-[#888888]",
   },
   "on-request": {
     label: "Op aanvraag",
     cardClass:
-      "bg-transparent border-[#E8E5E0] border-dashed hover:border-[#D9D4CE] hover:bg-[#F8F6F3]",
-    textClass: "text-[#6B6560]",
-    iconClass: "text-[#9C9690]",
+      "bg-transparent border-[#DDDDDD] border-dashed hover:border-[#DDDDDD] hover:bg-[#F7F7F7]",
+    textClass: "text-[#888888]",
+    iconClass: "text-[#888888]",
   },
 };
 
@@ -71,7 +71,7 @@ const statusConfig: Record<
 
 export function PlatformIntegrations() {
   return (
-    <section className="relative bg-[#FDFCFA] py-32 md:py-44 overflow-hidden">
+    <section className="relative bg-white py-32 md:py-44 overflow-hidden">
       <Container>
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
@@ -79,12 +79,12 @@ export function PlatformIntegrations() {
             <Badge className="mb-5">Integraties</Badge>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1A1A1A] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter leading-[1.05] text-[#1B1D1E] text-balance">
               Verbindt met je bestaande systemen
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
-            <p className="mt-6 text-base md:text-lg text-[#6B6560] leading-[1.7] max-w-[55ch] mx-auto">
+            <p className="mt-6 text-base md:text-lg text-[#888888] leading-[1.7] max-w-[55ch] mx-auto">
               Het LYFD platform integreert met de tools die je al gebruikt. En
               met onze open API bouw je elke koppeling die je nodig hebt.
             </p>
@@ -101,13 +101,20 @@ export function PlatformIntegrations() {
               <StaggerItem key={integration.name}>
                 <div
                   className={cn(
-                    "relative rounded-2xl border p-6 text-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] h-full flex flex-col items-center justify-center gap-3",
+                    "relative rounded-3xl border p-6 text-center transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] h-full flex flex-col items-center justify-center gap-3",
                     config.cardClass
                   )}
                 >
-                  {config.label && (
+                  {integration.status === "active" && (
                     <div className="absolute -top-2.5 left-1/2 -translate-x-1/2">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] uppercase tracking-[0.12em] font-medium bg-[#F2F0ED] text-[#6B6560] whitespace-nowrap">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] uppercase tracking-[0.12em] font-medium bg-[#22C55E]/10 text-[#22C55E] whitespace-nowrap">
+                        Actief
+                      </span>
+                    </div>
+                  )}
+                  {config.label && integration.status !== "active" && (
+                    <div className="absolute -top-2.5 left-1/2 -translate-x-1/2">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] uppercase tracking-[0.12em] font-medium bg-[#F7F7F7] text-[#888888] whitespace-nowrap">
                         {config.label}
                       </span>
                     </div>
@@ -117,8 +124,8 @@ export function PlatformIntegrations() {
                     className={cn(
                       "w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-500",
                       integration.status === "active"
-                        ? "bg-[#F2F0ED]"
-                        : "bg-[#F5F3F0]"
+                        ? "bg-[#F7F7F7]"
+                        : "bg-[#F7F7F7]"
                     )}
                   >
                     <Icon
@@ -143,11 +150,11 @@ export function PlatformIntegrations() {
 
         {/* Bottom text */}
         <ScrollReveal delay={0.3}>
-          <p className="mt-12 md:mt-16 text-center text-sm text-[#6B6560] leading-relaxed max-w-[55ch] mx-auto">
+          <p className="mt-12 md:mt-16 text-center text-sm text-[#888888] leading-relaxed max-w-[55ch] mx-auto">
             Mis je een integratie? Neem{" "}
             <a
               href="/contact/"
-              className="text-[#1A1A1A] underline underline-offset-4 decoration-[#DCDCDC] hover:decoration-[#1A1A1A] transition-colors duration-300"
+              className="text-[#4928FD] underline underline-offset-4 decoration-[#4928FD]/30 hover:decoration-[#4928FD] transition-colors duration-300"
             >
               contact
             </a>{" "}

@@ -14,25 +14,25 @@ const tocItems = [
 
 export function CapaciteitsplanningContent() {
   return (
-    <section className="relative bg-[#FDFCFA] pb-20 md:pb-28">
+    <section className="relative bg-white pb-20 md:pb-28">
       <Container>
         <div className="relative flex justify-center gap-16">
           <article className="w-full max-w-[720px]">
             <div className="prose-lyfd">
               <ScrollReveal>
-                <div className="relative bg-[#F5F3F0] rounded-lg border-l-2 border-[#A0704C] px-6 py-5 mb-10">
-                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#E8E5E0] text-[#6B6560] mb-3">
+                <div className="relative bg-[#F7F7F7] rounded-lg border-l-2 border-[#4928FD] px-6 py-5 mb-10">
+                  <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-[0.2em] font-medium bg-[#DDDDDD] text-[#888888] mb-3">
                     Definitie
                   </span>
-                  <p className="text-[0.9375rem] leading-relaxed text-[#3D3A37] m-0">
-                    <strong className="text-[#1A1A1A]">Capaciteitsplanning in de liftindustrie</strong> is
+                  <p className="text-[0.9375rem] leading-relaxed text-[#333333] m-0">
+                    <strong className="text-[#1B1D1E]">Capaciteitsplanning in de liftindustrie</strong> is
                     het strategisch afstemmen van beschikbare monteurscapaciteit op de
                     groeiende vraag vanuit servicecontracten, onderhoudsverplichtingen,
                     moderniseringsprojecten en storingsdiensten. Bij een portefeuille van
                     circa 105.000 liftinstallaties in Nederland en slechts 1.600 tot 1.800
                     actieve monteurs is effectieve capaciteitsplanning het verschil tussen
                     winstgevende groei en onbeheersbare werkdruk.{" "}
-                    <span className="text-[#9C9690] text-xs">(Bron: LYFD, marktervaring 5 jaar)</span>
+                    <span className="text-[#888888] text-xs">(Bron: LYFD, marktervaring 5 jaar)</span>
                   </p>
                 </div>
               </ScrollReveal>
@@ -181,7 +181,7 @@ export function CapaciteitsplanningContent() {
                   flexibel, geen vaste verplichtingen. Maar met bekende nadelen: geen
                   beschikbaarheidsgarantie, wisselende kwaliteit, DBA-risico bij zzp-inzet,
                   en geen branchekennis bij uitzendbureaus. Lees meer in ons artikel over{" "}
-                  <a href="/kennisbank/capaciteitsmanagement/zzp-of-capaciteitspartner/" className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300">
+                  <a href="/kennisbank/capaciteitsmanagement/zzp-of-capaciteitspartner/" className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300">
                     zzp versus capaciteitspartner
                   </a>.
                 </p>
@@ -252,7 +252,7 @@ export function CapaciteitsplanningContent() {
                   Dat betekent: monteurs met de juiste certificeringen (NEN 3140, VCA),
                   branchekennis, en ervaring met OEM-systemen. Geen generieke uitzendkrachten,
                   maar vakmensen die direct inzetbaar zijn.{" "}
-                  <a href="/diensten/capacity-as-a-service/" className="text-[#1A1A1A] underline decoration-[#DCDCDC] underline-offset-4 hover:decoration-[#1A1A1A] transition-colors duration-300">
+                  <a href="/diensten/capacity-as-a-service/" className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300">
                     Lees meer over onze CaaS-modellen
                   </a>.
                 </p>
@@ -339,16 +339,16 @@ export function CapaciteitsplanningContent() {
               </ScrollReveal>
             </div>
 
-            <div className="mt-16 rounded-2xl bg-[#F5F3F0] border border-[#E8E5E0] p-8 md:p-10">
-              <p className="text-lg font-semibold text-[#1A1A1A] tracking-tight">
+            <div className="mt-16 rounded-2xl bg-[#F7F7F7] border border-[#DDDDDD] p-8 md:p-10">
+              <p className="text-lg font-semibold text-[#1B1D1E] tracking-tight">
                 Wil je je capaciteitsplanning strategisch aanpakken?
               </p>
-              <p className="mt-2 text-sm text-[#3D3A37] leading-relaxed max-w-[50ch]">
+              <p className="mt-2 text-sm text-[#333333] leading-relaxed max-w-[50ch]">
                 Wij helpen je het gat in kaart te brengen en een plan op maat te maken.
               </p>
-              <a href="/aanvraag/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A] hover:text-[#2A2A2A] transition-colors duration-300">
+              <a href="/aanvraag/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300">
                 Plan een gesprek
-                <span className="text-[#9C9690]">&rarr;</span>
+                <span className="text-[#888888]">&rarr;</span>
               </a>
             </div>
           </article>
