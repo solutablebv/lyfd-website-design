@@ -81,8 +81,8 @@ export default function AcademyPage() {
       <WaaromAcademy />
       <TeamQuote
         quote="De liftbranche heeft nieuwe mensen nodig. Wij leiden ze op met dezelfde standaard die wij van onszelf verwachten."
-        name="Arwin Groenenberg"
-        role="Opleiding & Ontwikkeling"
+        name="Peter Koenhen"
+        role="Oprichter"
       />
       <AcademyAssessment />
       <AcademyTraject />

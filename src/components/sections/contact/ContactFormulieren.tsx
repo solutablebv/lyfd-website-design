@@ -376,10 +376,10 @@ export function ContactFormulieren() {
               {/* Profile block */}
               <div className="lg:col-span-5">
                 <ProfileBlock
-                  initials="AG"
-                  name="Arwin Groenenberg"
-                  role="Opleiding & Ontwikkeling"
-                  quote="Ik neem binnen 2 werkdagen contact op. Koffie staat klaar."
+                  initials="JE"
+                  name="Joppe Erkelens"
+                  role="Sales & Contractmanagement"
+                  quote="Ik neem binnen 2 werkdagen contact op voor een persoonlijk gesprek."
                 />
               </div>
 

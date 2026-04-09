@@ -67,7 +67,7 @@ const contactFaqItems = [
   {
     question: "Ik ben monteur. Hoe werkt het aanmeldproces?",
     answer:
-      "Na je aanmelding belt Arwin je voor een kennismaking. Daarna volgt een persoonlijk gesprek, een technische niveaubepaling, en als het klikt: een concreet aanbod.",
+      "Na je aanmelding neemt ons team contact op voor een kennismaking. Daarna volgt een persoonlijk gesprek, een technische niveaubepaling, en als het klikt: een concreet aanbod.",
   },
 ];
 

@@ -24,12 +24,6 @@ const leadership = [
     color: "bg-[#E0EAFF]",
   },
   {
-    name: "Arwin Groenenberg",
-    role: "Opleiding & Ontwikkeling",
-    bio: "Bouwt de LYFD Academy. Gelooft dat de branche nieuwe instroom verdient.",
-    color: "bg-[#FFE8E0]",
-  },
-  {
     name: "Gydo Broos",
     role: "CTO",
     bio: "Bouwt het platform dat monteurs echt willen gebruiken.",
@@ -80,7 +74,7 @@ export function OprichterSection() {
 
         {/* Leadership grid */}
         <StaggerContainer
-          className="mt-14 md:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5"
+          className="mt-14 md:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5"
           staggerDelay={0.1}
         >
           {leadership.map((leader) => (
