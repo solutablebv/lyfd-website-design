@@ -1,10 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import StackedPanels from "@/components/ui/StackedPanels";
+
+const StackedPanels = dynamic(() => import("@/components/ui/StackedPanels"), {
+  ssr: false,
+});
 
 const mobileImages = [
   "/urban-lift-avond.jpg",

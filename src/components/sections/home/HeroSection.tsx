@@ -22,8 +22,10 @@ export function HeroSection() {
     offset: ["start start", "end start"],
   });
 
-  const videoY = useTransform(scrollYProgress, [0, 1], [0, 80]);
-  const contentY = useTransform(scrollYProgress, [0, 1], [0, -30]);
+  // Reduce parallax on mobile to prevent jank
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const videoY = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 80]);
+  const contentY = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, -30]);
 
   return (
     <section ref={sectionRef} className="relative min-h-[100dvh] w-full overflow-hidden flex items-center bg-white">
@@ -49,6 +51,7 @@ export function HeroSection() {
             muted
             loop
             playsInline
+            poster="/frame_01.jpg"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-85"
           >
             {/* 4K voor desktop, 1080p voor mobiel */}
@@ -175,6 +178,21 @@ export function HeroSection() {
             <Button href="#plan" variant="ghost" size="lg" icon="none">
               Hoe werkt LYFD?
             </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
+            className="mt-8 flex items-center gap-2"
+          >
+            <div className="relative">
+              <div className="w-2 h-2 rounded-full bg-[#22C55E]" />
+              <div className="absolute inset-0 w-2 h-2 rounded-full bg-[#22C55E] animate-ping opacity-75" />
+            </div>
+            <span className="text-xs text-[#888888] font-mono">
+              Op dit moment <span className="font-semibold text-[#4928FD]">12</span> monteurs actief
+            </span>
           </motion.div>
         </div>
       </motion.div>

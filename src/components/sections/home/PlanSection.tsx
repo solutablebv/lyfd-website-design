@@ -40,6 +40,7 @@ function AnimatedLine() {
     target: ref,
     offset: ["start 0.7", "end 0.5"],
   });
+  // AnimatedLine is hidden on mobile (hidden md:block), so no mobile check needed
   const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (

@@ -219,8 +219,10 @@ export function ParallaxLayer({
     offset: ["start end", "end start"],
   });
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
   const multiplier = direction === "up" ? -1 : 1;
-  const y = useTransform(scrollYProgress, [0, 1], [speed * 100 * multiplier, -speed * 100 * multiplier]);
+  const effectiveSpeed = isMobile ? 0 : speed;
+  const y = useTransform(scrollYProgress, [0, 1], [effectiveSpeed * 100 * multiplier, -effectiveSpeed * 100 * multiplier]);
 
   return (
     <motion.div ref={ref} style={{ y }} className={className}>

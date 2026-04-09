@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { ServiceHero } from "@/components/sections/diensten/ServiceHero";
 import { TweePaden } from "@/components/sections/voor-liftmonteurs/TweePaden";
 import { HetProbleem } from "@/components/sections/voor-liftmonteurs/HetProbleem";
-import { SalarisQuiz } from "@/components/sections/voor-liftmonteurs/SalarisQuiz";
 import { RouteNaarSucces } from "@/components/sections/voor-liftmonteurs/RouteNaarSucces";
 import { WatLyfdBiedt } from "@/components/sections/voor-liftmonteurs/WatLyfdBiedt";
 import { Profiel } from "@/components/sections/voor-liftmonteurs/Profiel";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
 import { FaqSection } from "@/components/sections/diensten/FaqSection";
 import { TeamQuote } from "@/components/ui/TeamQuote";
+
+const SalarisQuiz = dynamic(
+  () => import("@/components/sections/voor-liftmonteurs/SalarisQuiz").then((mod) => mod.SalarisQuiz)
+);
 
 export const metadata: Metadata = {
   title: "Werken als Liftmonteur via LYFD | Beter Verdienen, Meer Vrijheid",

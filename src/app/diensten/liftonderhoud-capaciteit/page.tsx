@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { ServiceHero } from "@/components/sections/diensten/ServiceHero";
 import { OnderhoudProbleem } from "@/components/sections/onderhoud/OnderhoudProbleem";
 import { OnderhoudAanpak } from "@/components/sections/onderhoud/OnderhoudAanpak";
-import { CapaciteitsPlanner } from "@/components/sections/onderhoud/CapaciteitsPlanner";
 import { OnderhoudWatJeKrijgt } from "@/components/sections/onderhoud/OnderhoudWatJeKrijgt";
 import { OnderhoudZelfdiagnose } from "@/components/sections/onderhoud/OnderhoudZelfdiagnose";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
 import { FaqSection } from "@/components/sections/diensten/FaqSection";
 import { TeamQuote } from "@/components/ui/TeamQuote";
+
+const CapaciteitsPlanner = dynamic(
+  () => import("@/components/sections/onderhoud/CapaciteitsPlanner").then((mod) => mod.CapaciteitsPlanner)
+);
 
 export const metadata: Metadata = {
   title:

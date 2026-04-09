@@ -1,14 +1,9 @@
 import { HeroSection } from "@/components/sections/home/HeroSection";
-import { LiveIndicator } from "@/components/sections/home/LiveIndicator";
 import { ProblemSection } from "@/components/sections/home/ProblemSection";
-import { UrbanShowcase } from "@/components/sections/home/UrbanShowcase";
 import { GuideSection } from "@/components/sections/home/GuideSection";
-import { PlanSection } from "@/components/sections/home/PlanSection";
 import { ServicesSection } from "@/components/sections/home/ServicesSection";
 import { SocialProofSection } from "@/components/sections/home/SocialProofSection";
 import { CtaSection } from "@/components/sections/home/CtaSection";
-import { StakesSection } from "@/components/sections/home/StakesSection";
-import { ArtikelenSlider } from "@/components/sections/kennisbank/ArtikelenSlider";
 import { MonteurSection } from "@/components/sections/home/MonteurSection";
 import { HomeFaqSection } from "@/components/sections/home/HomeFaqSection";
 
@@ -124,18 +119,13 @@ export default function HomePage() {
         }}
       />
       <HeroSection />
-      <LiveIndicator />
       <ProblemSection />
-      <UrbanShowcase />
       <GuideSection />
-      <PlanSection />
       <ServicesSection />
       <SocialProofSection />
-      <CtaSection />
-      <StakesSection />
-      <ArtikelenSlider />
       <MonteurSection />
       <HomeFaqSection />
+      <CtaSection />
     </>
   );
 }

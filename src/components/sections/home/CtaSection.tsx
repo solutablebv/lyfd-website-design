@@ -24,8 +24,8 @@ export function CtaSection() {
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <DualHeading
-              bold="Klaar om het capaciteitsprobleem"
-              italic="structureel op te lossen?"
+              bold="De eerste stap is een gesprek."
+              italic="De rest regelen wij."
               className="text-center"
             />
           </ScrollReveal>

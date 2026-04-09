@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { AcademyHero } from "@/components/sections/academy/AcademyHero";
 import { WaaromAcademy } from "@/components/sections/academy/WaaromAcademy";
-import { AcademyAssessment } from "@/components/sections/academy/AcademyAssessment";
 import { AcademyTraject } from "@/components/sections/academy/AcademyTraject";
 import { AcademyCta } from "@/components/sections/academy/AcademyCta";
 import { TeamQuote } from "@/components/ui/TeamQuote";
+
+const AcademyAssessment = dynamic(
+  () => import("@/components/sections/academy/AcademyAssessment").then((mod) => mod.AcademyAssessment)
+);
 
 export const metadata: Metadata = {
   title: "LYFD Academy | Word Liftmonteur | Opleiding & Certificering",
