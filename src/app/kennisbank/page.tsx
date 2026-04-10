@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { KennisbankHero } from "@/components/sections/kennisbank/KennisbankHero";
 import { ArtikelenSlider } from "@/components/sections/kennisbank/ArtikelenSlider";
 import { PillarGrid } from "@/components/sections/kennisbank/PillarGrid";
 import { RecentArticles } from "@/components/sections/kennisbank/RecentArticles";
 import { NewsletterCta } from "@/components/sections/kennisbank/NewsletterCta";
+
+const CapaciteitsScan = dynamic(
+  () => import("@/components/sections/shared/CapaciteitsScan").then((mod) => mod.CapaciteitsScan)
+);
 
 export const metadata: Metadata = {
   title:
@@ -19,6 +24,7 @@ export default function KennisbankPage() {
       <ArtikelenSlider />
       <PillarGrid />
       <RecentArticles />
+      <CapaciteitsScan />
       <NewsletterCta />
     </>
   );

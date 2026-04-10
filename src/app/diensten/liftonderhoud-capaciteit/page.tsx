@@ -13,6 +13,14 @@ const CapaciteitsPlanner = dynamic(
   () => import("@/components/sections/onderhoud/CapaciteitsPlanner").then((mod) => mod.CapaciteitsPlanner)
 );
 
+const KostenCalculator = dynamic(
+  () => import("@/components/sections/shared/KostenCalculator").then((mod) => mod.KostenCalculator)
+);
+
+const BeschikbaarheidCheck = dynamic(
+  () => import("@/components/sections/shared/BeschikbaarheidCheck").then((mod) => mod.BeschikbaarheidCheck)
+);
+
 export const metadata: Metadata = {
   title:
     "Liftonderhoud Capaciteit | Gecertificeerde Monteurs op Aanvraag | LYFD",
@@ -162,6 +170,7 @@ export default function LiftonderhoudCapaciteitPage() {
         imageSrc="/lift-schacht-boven.jpg"
       />
       <OnderhoudProbleem />
+      <KostenCalculator />
       <OnderhoudAanpak />
       <TeamQuote
         quote="Ik werk bij drie verschillende opdrachtgevers. Elke dag is anders. Dat is precies waarom ik dit doe."
@@ -169,6 +178,7 @@ export default function LiftonderhoudCapaciteitPage() {
         role="Sr Servicemonteur Liften"
       />
       <CapaciteitsPlanner />
+      <BeschikbaarheidCheck />
       <OnderhoudWatJeKrijgt />
       <OnderhoudZelfdiagnose />
       <ServiceCta

@@ -3,6 +3,7 @@
 import { Container } from "@/components/ui/Container";
 import { ArticleBody } from "./ArticleBody";
 import { ArticleSidebar } from "./ArticleSidebar";
+import { ArtikelCTA } from "./ArtikelCTA";
 
 const tocItems = [
   { id: "zichtbare-kosten", label: "De zichtbare kosten" },
@@ -20,22 +21,8 @@ export function ArticleLayout() {
           <article className="w-full max-w-[720px]">
             <ArticleBody />
 
-            {/* Article closing CTA */}
-            <div className="mt-16 rounded-3xl bg-[#F7F7F7] border border-[#DDDDDD] p-7 md:p-8">
-              <p className="text-lg font-semibold text-[#1B1D1E] tracking-tight">
-                Wil je weten wat capaciteitsgebrek jouw bedrijf kost?
-              </p>
-              <p className="mt-2 text-sm text-[#333333] leading-relaxed max-w-[50ch]">
-                Neem contact op. Wij rekenen het samen door.
-              </p>
-              <a
-                href="/aanvraag/"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300"
-              >
-                Plan een gesprek
-                <span className="text-[#888888]">&rarr;</span>
-              </a>
-            </div>
+            {/* Article conversion CTA */}
+            <ArtikelCTA variant="technisch" />
           </article>
 
           {/* Sidebar */}

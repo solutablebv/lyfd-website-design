@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import { HeroSection } from "@/components/sections/home/HeroSection";
 import { ProblemSection } from "@/components/sections/home/ProblemSection";
 import { GuideSection } from "@/components/sections/home/GuideSection";
@@ -6,6 +7,14 @@ import { SocialProofSection } from "@/components/sections/home/SocialProofSectio
 import { CtaSection } from "@/components/sections/home/CtaSection";
 import { MonteurSection } from "@/components/sections/home/MonteurSection";
 import { HomeFaqSection } from "@/components/sections/home/HomeFaqSection";
+
+const BeschikbaarheidCheck = dynamic(
+  () => import("@/components/sections/shared/BeschikbaarheidCheck").then((mod) => mod.BeschikbaarheidCheck)
+);
+
+const CapaciteitsScan = dynamic(
+  () => import("@/components/sections/shared/CapaciteitsScan").then((mod) => mod.CapaciteitsScan)
+);
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
@@ -121,9 +130,11 @@ export default function HomePage() {
       <HeroSection />
       <ProblemSection />
       <GuideSection />
+      <BeschikbaarheidCheck />
       <ServicesSection />
       <SocialProofSection />
       <MonteurSection />
+      <CapaciteitsScan />
       <HomeFaqSection />
       <CtaSection />
     </>

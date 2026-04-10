@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { ServiceHero } from "@/components/sections/diensten/ServiceHero";
 import { ReparatieProbleem } from "@/components/sections/reparatie/ReparatieProbleem";
 import { ReparatieAanpak } from "@/components/sections/reparatie/ReparatieAanpak";
@@ -6,6 +7,14 @@ import { ReparatieWatJeKrijgt } from "@/components/sections/reparatie/ReparatieW
 import { ReparatieZelfdiagnose } from "@/components/sections/reparatie/ReparatieZelfdiagnose";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
 import { FaqSection } from "@/components/sections/diensten/FaqSection";
+
+const KostenCalculator = dynamic(
+  () => import("@/components/sections/shared/KostenCalculator").then((mod) => mod.KostenCalculator)
+);
+
+const BeschikbaarheidCheck = dynamic(
+  () => import("@/components/sections/shared/BeschikbaarheidCheck").then((mod) => mod.BeschikbaarheidCheck)
+);
 
 export const metadata: Metadata = {
   title:
@@ -151,9 +160,11 @@ export default function ReparatiePage() {
         imageSrc="/lift-cabine-schacht.jpg"
       />
       <ReparatieProbleem />
+      <KostenCalculator />
       <ReparatieAanpak />
       <ReparatieWatJeKrijgt />
       <ReparatieZelfdiagnose />
+      <BeschikbaarheidCheck />
       <ServiceCta
         title="Klaar om die reparatielijst aan te pakken?"
         body="Stuur je reparatielijst op. Wij vertellen je binnen 24 uur wat we kunnen doen, met wie, en wat het kost."

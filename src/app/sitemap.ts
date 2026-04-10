@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/kennisbank/lift-onderhoud/liftkeuring-voorbereiden`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/kennisbank/lift-onderhoud/preventief-onderhoud`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/kennisbank/lift-techniek/hoe-werkt-een-mrl-lift`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/cases`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/over-lyfd`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/aanvraag`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },

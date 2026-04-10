@@ -29,6 +29,7 @@ const navLinks = [
     ],
   },
   { label: "Platform", href: "/platform/" },
+  { label: "Cases", href: "/cases/" },
   { label: "Kennisbank", href: "/kennisbank/" },
   { label: "Over LYFD", href: "/over-lyfd/" },
   { label: "Contact", href: "/contact/" },

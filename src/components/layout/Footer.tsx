@@ -27,6 +27,7 @@ const footerColumns = [
     title: "LYFD",
     links: [
       { label: "Over ons", href: "/over-lyfd/" },
+      { label: "Cases", href: "/cases/" },
       { label: "Kennisbank", href: "/kennisbank/" },
       { label: "Platform", href: "/platform/" },
       { label: "Contact", href: "/contact/" },
