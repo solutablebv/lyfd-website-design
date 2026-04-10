@@ -66,6 +66,11 @@ const faqItems = [
     answer:
       "Modernisering valt doorgaans onder het Project-model (2-12 weken) of een Retainer-arrangement voor bedrijven met een doorlopende moderniseringsportefeuille.",
   },
+  {
+    question: "Werken jullie ook met merkonafhankelijke besturingen?",
+    answer:
+      "Ja. Naast fabrikant-specifieke systemen hebben onze monteurs ervaring met merkonafhankelijke technologie. We matchen altijd op de specifieke kennis die jouw project vraagt.",
+  },
 ];
 
 const faqJsonLd = {

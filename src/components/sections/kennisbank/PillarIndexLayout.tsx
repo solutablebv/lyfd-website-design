@@ -24,6 +24,9 @@ const pillarColors: Record<string, { bg: string; badge: "pastel-blue" | "pastel-
   "CaaS Uitgelegd": { bg: "bg-[#EDE8FF]/20", badge: "pastel-lilac", gradient: "radial-gradient(ellipse at 30% 40%, rgba(237,232,255,0.5) 0%, transparent 60%)" },
   "Liftmonteur Gids": { bg: "bg-[#FFE4E4]/20", badge: "pastel-pink", gradient: "radial-gradient(ellipse at 30% 40%, rgba(255,228,228,0.5) 0%, transparent 60%)" },
   "NEN Certificering": { bg: "bg-[#FFE8E0]/20", badge: "pastel-peach", gradient: "radial-gradient(ellipse at 30% 40%, rgba(255,232,224,0.5) 0%, transparent 60%)" },
+  "Lift Werkzaamheden": { bg: "bg-[#E0EAFF]/20", badge: "pastel-blue", gradient: "radial-gradient(ellipse at 30% 40%, rgba(224,234,255,0.5) 0%, transparent 60%)" },
+  "Lift Onderhoud & Keuring": { bg: "bg-[#FFE8E0]/20", badge: "pastel-peach", gradient: "radial-gradient(ellipse at 30% 40%, rgba(255,232,224,0.5) 0%, transparent 60%)" },
+  "Lift Techniek": { bg: "bg-[#EDE8FF]/20", badge: "pastel-lilac", gradient: "radial-gradient(ellipse at 30% 40%, rgba(237,232,255,0.5) 0%, transparent 60%)" },
 };
 
 interface PillarIndexLayoutProps {

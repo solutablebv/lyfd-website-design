@@ -51,6 +51,16 @@ const faqItems = [
     answer:
       "Onze monteurs starten vanaf EUR 64,99 per uur (excl. BTW). Het exacte tarief hangt af van het type werk en het engagementmodel.",
   },
+  {
+    question: "Kunnen jullie spreek-luister verbindingen installeren?",
+    answer:
+      "Ja. Onze monteurs installeren en vervangen spreek-luister verbindingen, noodtelefoons en communicatiesystemen in liftinstallaties.",
+  },
+  {
+    question: "Installeren jullie ook IoT-systemen en connectiviteit?",
+    answer:
+      "Ja. Van monitoring-sensoren tot complete telemetrie-oplossingen. Onze monteurs hebben ervaring met diverse connectiviteitssystemen.",
+  },
 ];
 
 const faqJsonLd = {

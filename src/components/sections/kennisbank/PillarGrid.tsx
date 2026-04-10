@@ -6,7 +6,7 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/ScrollReveal";
-import { ArrowRight, UserCircle, Seal, ChartBar, Lightbulb } from "@phosphor-icons/react";
+import { ArrowRight, UserCircle, Seal, ChartBar, Lightbulb, Wrench, FirstAid, Lightning } from "@phosphor-icons/react";
 import type { Icon } from "@phosphor-icons/react";
 
 interface PillarTopic {
@@ -55,6 +55,33 @@ const pillars: PillarTopic[] = [
     articleCount: "4 artikelen",
     color: "bg-[#EDE8FF]",
   },
+  {
+    icon: Wrench,
+    title: "Lift Werkzaamheden",
+    description:
+      "Praktische kennis over gespecialiseerde lift werkzaamheden: van sensorlijsten tot spreek-luister verbindingen en veiligheidscomponenten.",
+    href: "/kennisbank/lift-werkzaamheden/",
+    articleCount: "6 artikelen",
+    color: "bg-[#E0EAFF]",
+  },
+  {
+    icon: FirstAid,
+    title: "Lift Onderhoud & Keuring",
+    description:
+      "Alles over liftonderhoud en liftkeuring: preventief onderhoud, keuringvoorbereiding, storingsdienst, en onderhoudsbeurten uitbesteden.",
+    href: "/kennisbank/lift-onderhoud/",
+    articleCount: "5 artikelen",
+    color: "bg-[#FFE8E0]",
+  },
+  {
+    icon: Lightning,
+    title: "Lift Techniek",
+    description:
+      "Technische kennis over liftinstallaties: MRL-liften, hydraulische systemen, besturingstechniek en veelvoorkomende storingen.",
+    href: "/kennisbank/lift-techniek/",
+    articleCount: "4 artikelen",
+    color: "bg-[#EDE8FF]",
+  },
 ];
 
 export function PillarGrid() {
@@ -79,6 +106,19 @@ export function PillarGrid() {
           </StaggerItem>
           <StaggerItem className="md:col-span-7">
             <PillarCard pillar={pillars[3]} />
+          </StaggerItem>
+
+          {/* Row 3: larger left (7col) + smaller right (5col) */}
+          <StaggerItem className="md:col-span-7">
+            <PillarCard pillar={pillars[4]} />
+          </StaggerItem>
+          <StaggerItem className="md:col-span-5">
+            <PillarCard pillar={pillars[5]} />
+          </StaggerItem>
+
+          {/* Row 4: full width */}
+          <StaggerItem className="md:col-span-5">
+            <PillarCard pillar={pillars[6]} />
           </StaggerItem>
         </StaggerContainer>
       </Container>

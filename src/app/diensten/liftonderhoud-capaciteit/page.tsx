@@ -62,6 +62,16 @@ const faqItems = [
     answer:
       "Onze monteurs starten vanaf EUR 64,99 per uur (excl. BTW). Het exacte tarief is afhankelijk van het ervaringsprofiel en het gekozen engagementmodel. Retainer- en projectafspraken bieden aantrekkelijke voorwaarden.",
   },
+  {
+    question: "Kan LYFD helpen bij keuringvoorbereiding?",
+    answer:
+      "Ja. Onze monteurs bereiden installaties voor op de jaarlijkse keuring: checklists doorlopen, proefdraaien, documentatie controleren. Zo loop je geen risico bij de inspectie.",
+  },
+  {
+    question: "Bieden jullie 24/7 storingsdienst?",
+    answer:
+      "Ja. Via het Retainer-model bieden we storingsdienst buiten kantoortijden. Beschikbaarheid en responstijden spreken we vooraf af.",
+  },
 ];
 
 const faqJsonLd = {
