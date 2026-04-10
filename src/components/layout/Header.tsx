@@ -27,6 +27,8 @@ const navLinks = [
     hasDropdown: true,
     children: [
       { label: "Werken bij LYFD", href: "/voor-liftmonteurs/" },
+      { label: "Salaris & Verdiensten", href: "/monteurs/salaris/" },
+      { label: "Vacatures", href: "/monteurs/vacatures/" },
       { label: "LYFD Academy", href: "/academy/" },
     ],
   },

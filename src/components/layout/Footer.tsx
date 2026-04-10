@@ -20,7 +20,9 @@ const footerColumns = [
     title: "Voor Liftmonteurs",
     links: [
       { label: "Werken bij LYFD", href: "/voor-liftmonteurs/" },
-      { label: "Vacatures", href: "/voor-liftmonteurs/" },
+      { label: "Salaris", href: "/monteurs/salaris/" },
+      { label: "Vacatures", href: "/monteurs/vacatures/" },
+      { label: "Opleiding", href: "/monteurs/opleiding/" },
       { label: "Certificeringen", href: "/kennisbank/nen-certificering/" },
       { label: "LYFD Academy", href: "/academy/" },
       { label: "Aanmelden", href: "/voor-liftmonteurs/" },
