@@ -11,6 +11,9 @@ const footerColumns = [
       { label: "Liftonderhoud", href: "/diensten/liftonderhoud-capaciteit" },
       { label: "Reparatie", href: "/diensten/reparatie" },
       { label: "Modernisering", href: "/diensten/lift-modernisering" },
+      { label: "Monteur inhuren", href: "/liftmonteurs/inhuren/" },
+      { label: "Beschikbaarheid", href: "/liftmonteurs/beschikbaarheid/" },
+      { label: "Tarieven", href: "/liftmonteurs/kosten/" },
     ],
   },
   {

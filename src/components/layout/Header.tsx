@@ -17,6 +17,8 @@ const navLinks = [
       { label: "Reparatie", href: "/diensten/reparatie" },
       { label: "Modernisering", href: "/diensten/lift-modernisering" },
       { label: "Capacity as a Service", href: "/diensten/capacity-as-a-service" },
+      { label: "Monteur Inhuren", href: "/liftmonteurs/inhuren" },
+      { label: "Beschikbaarheid", href: "/liftmonteurs/beschikbaarheid" },
     ],
   },
   {
