@@ -13,28 +13,27 @@ const navLinks = [
     href: "/voor-liftbedrijven/",
     hasDropdown: true,
     children: [
-      { label: "Service & Onderhoud", href: "/diensten/liftonderhoud-capaciteit" },
-      { label: "Reparatie", href: "/diensten/reparatie" },
-      { label: "Modernisering", href: "/diensten/lift-modernisering" },
-      { label: "Capacity as a Service", href: "/diensten/capacity-as-a-service" },
-      { label: "Monteur Inhuren", href: "/liftmonteurs/inhuren" },
-      { label: "Beschikbaarheid", href: "/liftmonteurs/beschikbaarheid" },
+      { label: "Monteurs inhuren", href: "/liftmonteurs/inhuren/" },
+      { label: "Storingsdienst", href: "/onderhoud/storingsdienst/" },
+      { label: "Modernisering", href: "/modernisering/" },
+      { label: "Reparatie", href: "/reparatie/" },
+      { label: "Wat is CaaS?", href: "/liftmonteurs/detachering/" },
+      { label: "Cases & resultaten", href: "/cases/" },
     ],
   },
   {
-    label: "Voor Liftmonteurs",
-    href: "/voor-liftmonteurs/",
+    label: "Voor Monteurs",
+    href: "/voor-monteurs/",
     hasDropdown: true,
     children: [
-      { label: "Werken bij LYFD", href: "/voor-liftmonteurs/" },
-      { label: "Salaris & Verdiensten", href: "/monteurs/salaris/" },
+      { label: "Werken bij LYFD", href: "/voor-monteurs/" },
+      { label: "Salaris & verdiensten", href: "/monteurs/salaris/" },
       { label: "Vacatures", href: "/monteurs/vacatures/" },
       { label: "LYFD Academy", href: "/academy/" },
     ],
   },
-  { label: "Platform", href: "/platform/" },
-  { label: "Cases", href: "/cases/" },
-  { label: "Kennisbank", href: "/kennisbank/" },
+  { label: "Tarieven", href: "/tarieven/" },
+  { label: "Branche", href: "/branche/" },
   { label: "Over LYFD", href: "/over-lyfd/" },
   { label: "Contact", href: "/contact/" },
 ];
@@ -187,11 +186,11 @@ export function Header() {
             {/* Desktop CTA */}
             <div className="hidden lg:block">
               <Button
-                href="/aanvraag/"
+                href="/liftmonteurs/beschikbaarheid/"
                 variant="primary"
                 size="sm"
               >
-                Plan een gesprek
+                Beschikbaarheid checken
               </Button>
             </div>
 
@@ -295,13 +294,13 @@ export function Header() {
                 className="mt-8 w-full"
               >
                 <Button
-                  href="/aanvraag/"
+                  href="/liftmonteurs/beschikbaarheid/"
                   variant="white"
                   size="lg"
                   className="w-full justify-center"
                   onClick={() => setIsMobileOpen(false)}
                 >
-                  Plan een gesprek
+                  Beschikbaarheid checken
                 </Button>
               </motion.div>
             </div>

@@ -221,7 +221,7 @@ export function PillarIndexLayout({
             <ScrollReveal delay={0.15}>
               <div className="mt-10">
                 <Button
-                  href="/aanvraag/"
+                  href="/liftmonteurs/beschikbaarheid/"
                   variant="white"
                   size="lg"
                   icon="arrow-right"

@@ -7,35 +7,42 @@ const footerColumns = [
   {
     title: "Voor Liftbedrijven",
     links: [
-      { label: "Capacity as a Service", href: "/diensten/capacity-as-a-service" },
-      { label: "Liftonderhoud", href: "/diensten/liftonderhoud-capaciteit" },
-      { label: "Reparatie", href: "/diensten/reparatie" },
-      { label: "Modernisering", href: "/diensten/lift-modernisering" },
-      { label: "Monteur inhuren", href: "/liftmonteurs/inhuren/" },
+      { label: "Monteurs inhuren", href: "/liftmonteurs/inhuren/" },
+      { label: "Storingsdienst", href: "/onderhoud/storingsdienst/" },
+      { label: "Modernisering", href: "/modernisering/" },
+      { label: "Reparatie", href: "/reparatie/" },
+      { label: "CaaS uitgelegd", href: "/liftmonteurs/detachering/" },
       { label: "Beschikbaarheid", href: "/liftmonteurs/beschikbaarheid/" },
-      { label: "Tarieven", href: "/liftmonteurs/kosten/" },
     ],
   },
   {
-    title: "Voor Liftmonteurs",
+    title: "Voor Monteurs",
     links: [
-      { label: "Werken bij LYFD", href: "/voor-liftmonteurs/" },
+      { label: "Werken bij LYFD", href: "/voor-monteurs/" },
       { label: "Salaris", href: "/monteurs/salaris/" },
       { label: "Vacatures", href: "/monteurs/vacatures/" },
-      { label: "Opleiding", href: "/monteurs/opleiding/" },
-      { label: "Certificeringen", href: "/kennisbank/nen-certificering/" },
-      { label: "LYFD Academy", href: "/academy/" },
-      { label: "Aanmelden", href: "/voor-liftmonteurs/" },
+      { label: "Academy", href: "/academy/" },
+      { label: "ZZP vs loondienst", href: "/monteurs/zzp-vs-loondienst/" },
     ],
   },
   {
     title: "LYFD",
     links: [
-      { label: "Over ons", href: "/over-lyfd/" },
+      { label: "Over LYFD", href: "/over-lyfd/" },
       { label: "Cases", href: "/cases/" },
-      { label: "Kennisbank", href: "/kennisbank/" },
       { label: "Platform", href: "/platform/" },
+      { label: "Tarieven", href: "/tarieven/" },
       { label: "Contact", href: "/contact/" },
+    ],
+  },
+  {
+    title: "Kennisbank",
+    links: [
+      { label: "Alle artikelen", href: "/kennisbank/" },
+      { label: "Lift werkzaamheden", href: "/kennisbank/lift-werkzaamheden/" },
+      { label: "Lift onderhoud", href: "/kennisbank/lift-onderhoud/" },
+      { label: "Capaciteitsmanagement", href: "/kennisbank/capaciteitsmanagement/" },
+      { label: "NEN certificering", href: "/kennisbank/nen-certificering/" },
     ],
   },
   {
@@ -62,7 +69,7 @@ export function Footer() {
 
       <Container className="py-16 md:py-24">
         {/* Footer Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {footerColumns.map((column) => (
             <div key={column.title}>
               <h4 className="text-sm font-semibold text-[#1B1D1E] mb-5 tracking-tight">

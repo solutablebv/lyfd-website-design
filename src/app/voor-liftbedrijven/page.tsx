@@ -1,73 +1,98 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+import Link from "next/link";
 import { ServiceHero } from "@/components/sections/diensten/ServiceHero";
-import { ProbleemSchets } from "@/components/sections/voor-liftbedrijven/ProbleemSchets";
-import { DienstenOverzicht } from "@/components/sections/voor-liftbedrijven/DienstenOverzicht";
-import { EngagementModellen } from "@/components/sections/voor-liftbedrijven/EngagementModellen";
-import { ChameleonConcept } from "@/components/sections/voor-liftbedrijven/ChameleonConcept";
-import { DbaCompliance } from "@/components/sections/voor-liftbedrijven/DbaCompliance";
 import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
-import { FaqSection } from "@/components/sections/diensten/FaqSection";
+import { Container } from "@/components/ui/Container";
+import { DualHeading } from "@/components/ui/DualHeading";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
+
+const BeschikbaarheidCheck = dynamic(
+  () =>
+    import("@/components/sections/shared/BeschikbaarheidCheck").then(
+      (mod) => mod.BeschikbaarheidCheck
+    )
+);
 
 export const metadata: Metadata = {
-  title: "Liftcapaciteit voor Liftbedrijven | Flexibel en Gecertificeerd | LYFD",
+  title: "Voor Liftbedrijven | Capaciteit op Maat | LYFD",
   description:
-    "Capaciteitstekort bij uw liftbedrijf oplossen? LYFD levert gecertificeerde monteurs on-demand of op retainer. DBA-compliant. Plan een gesprek.",
+    "Capaciteitstekort bij uw liftbedrijf? LYFD levert gecertificeerde monteurs voor onderhoud, storingsdienst, modernisering en reparatie. DBA-compliant.",
   openGraph: {
-    title: "Liftcapaciteit voor Liftbedrijven | Flexibel en Gecertificeerd | LYFD",
+    title: "Voor Liftbedrijven | Capaciteit op Maat | LYFD",
     description:
-      "Capaciteitstekort bij uw liftbedrijf oplossen? LYFD levert gecertificeerde monteurs on-demand of op retainer. DBA-compliant. Plan een gesprek.",
+      "Capaciteitstekort bij uw liftbedrijf? LYFD levert gecertificeerde monteurs voor onderhoud, storingsdienst, modernisering en reparatie. DBA-compliant.",
     type: "website",
     locale: "nl_NL",
     siteName: "LYFD",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Liftcapaciteit voor Liftbedrijven | Flexibel en Gecertificeerd | LYFD",
-    description:
-      "Capaciteitstekort bij uw liftbedrijf oplossen? LYFD levert gecertificeerde monteurs on-demand of op retainer. DBA-compliant. Plan een gesprek.",
-  },
 };
 
-const faqItems = [
+const diensten = [
   {
-    question: "Hoe snel kan LYFD een liftmonteur leveren?",
-    answer:
-      "Op het On-Demand model leveren wij binnen 48 uur een gecertificeerde monteur. Bij een Retainer-afspraak is de SLA 24 uur.",
+    title: "Monteurs inhuren",
+    description:
+      "Gecertificeerde liftmonteurs, on-demand of op retainer. Volledig uitgerust en klaar voor het werk.",
+    href: "/liftmonteurs/inhuren/",
+    color: "bg-[#E0EAFF]",
   },
   {
-    question: "Is LYFD duurder dan zzp?",
-    answer:
-      "Op uurtarief ja, op totale kosten nee. Tel DBA-risico, vervanging bij uitval, uitrusting en certificeringsbeheer erbij. Dan is LYFD vaak voordeliger.",
+    title: "Storingsdienst",
+    description:
+      "24/7 storingsdienst capaciteit voor liftbedrijven. Avond, nacht en weekend afgedekt.",
+    href: "/onderhoud/storingsdienst/",
+    color: "bg-[#FFE8E0]",
   },
   {
-    question: "Werken LYFD-monteurs ook buiten de Randstad?",
-    answer:
-      "Fase 1 richt zich op Nederland, met een primaire focus op de Randstad. Neem contact op voor beschikbaarheid in jouw regio.",
+    title: "Modernisering",
+    description:
+      "Combiteams voor moderniseringsprojecten. Vervangingsgarantie en vaste opleverdatum.",
+    href: "/modernisering/",
+    color: "bg-[#EDE8FF]",
   },
   {
-    question: "Wat zijn de minimumafspraken voor een retainercontract?",
-    answer:
-      "Minimaal 3 maanden, daarna maandelijks opzegbaar met 4 weken opzegtermijn.",
-  },
-  {
-    question: "Hoe worden LYFD-monteurs gecertificeerd?",
-    answer:
-      "Minimaal NEN 3140 en VCA. OEM-specifieke certificeringen worden erbij geleverd op basis van jouw installaties. Elke monteur is persoonlijk gescreend.",
+    title: "Reparatie",
+    description:
+      "Sensorlijsten, deuren, besturingsonderdelen. De tussenlaag tussen onderhoud en modernisering.",
+    href: "/reparatie/",
+    color: "bg-[#FFEEE4]",
   },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
-};
+const usps = [
+  {
+    title: "DBA-compliant",
+    description:
+      "Onze monteurs zijn in dienst bij LYFD B.V. Geen zzp-risico, geen schijnzelfstandigheid.",
+  },
+  {
+    title: "Vervangingsgarantie",
+    description:
+      "Valt een monteur uit? Binnen 24-48 uur staat er een gekwalificeerde vervanger.",
+  },
+  {
+    title: "Branche-expertise",
+    description:
+      "Wij werken uitsluitend in de liftbranche. Elke monteur kent de installaties, de certificeringen en de werkwijze.",
+  },
+];
+
+const cases = [
+  {
+    company: "Procewo Achterhoek",
+    result: "200 onderhoudsbeurten afgedekt met LYFD-capaciteit",
+  },
+  {
+    company: "Regionaal liftbedrijf",
+    result: "Storingsdienst in avond en weekend volledig ontzorgd",
+  },
+  {
+    company: "Moderniseringspartner",
+    result: "3 combiteams ingezet voor doorlopende renovatieprojecten",
+  },
+];
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -88,64 +113,136 @@ const breadcrumbJsonLd = {
   ],
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "LYFD Liftcapaciteit voor Liftbedrijven",
-  description:
-    "LYFD levert gecertificeerde liftmonteurs aan liftbedrijven in Nederland. On-demand tot retainer. DBA-compliant.",
-  provider: {
-    "@type": "Organization",
-    name: "LYFD B.V.",
-    url: "https://lyfd.nl",
-  },
-  areaServed: {
-    "@type": "Country",
-    name: "Nederland",
-  },
-  serviceType: "Capacity as a Service",
-};
-
 export default function VoorLiftbedrijvenPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+
+      {/* Hero */}
       <ServiceHero
         eyebrow="Voor Liftbedrijven"
-        title="Jouw liftbedrijf verdient een capaciteitspartner die de branche kent."
-        subtitle="Niet nog een uitzendbureau. Niet weer een zzp-gok. Een partner die weet wat een MRL is, welk certificaat je monteur nodig heeft, en die levert wanneer het ertoe doet."
+        title="Capaciteit nodig?"
+        subtitle="Wij leveren. Gecertificeerde liftmonteurs, volledig uitgerust, klaar wanneer jij ze nodig hebt. Geen uitzendbureau. Geen zzp-gok. Een partner die de branche kent."
         intro=""
-        ctaText="Laten we in gesprek gaan"
-        ctaHref="/aanvraag/"
+        ctaText="Beschikbaarheid checken"
+        ctaHref="/liftmonteurs/beschikbaarheid/"
         breadcrumbLabel="Voor Liftbedrijven"
         imageSrc="/lift-gang-perspectief.jpg"
       />
-      <ProbleemSchets />
-      <DienstenOverzicht />
-      <EngagementModellen />
-      <ChameleonConcept />
-      <DbaCompliance />
+
+      {/* Diensten kaarten */}
+      <section className="relative bg-white py-32 md:py-44">
+        <Container>
+          <ScrollReveal>
+            <Badge variant="pastel-blue" className="mb-5">
+              Onze diensten
+            </Badge>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <DualHeading bold="Waar kunnen we" italic="je mee helpen?" />
+          </ScrollReveal>
+
+          <StaggerContainer className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {diensten.map((dienst) => (
+              <StaggerItem key={dienst.title}>
+                <Link
+                  href={dienst.href}
+                  className={`group block rounded-3xl ${dienst.color} p-8 md:p-10 transition-all duration-500 hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.08)] hover:-translate-y-1`}
+                >
+                  <h3 className="text-2xl font-bold text-[#1B1D1E] tracking-tight">
+                    {dienst.title}
+                  </h3>
+                  <p className="mt-3 text-[#888888] text-base leading-relaxed max-w-[45ch]">
+                    {dienst.description}
+                  </p>
+                  <span className="inline-block mt-6 text-sm font-semibold text-[#1B1D1E] group-hover:translate-x-1 transition-transform duration-300">
+                    Meer informatie &rarr;
+                  </span>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </Container>
+      </section>
+
+      {/* Beschikbaarheid */}
+      <BeschikbaarheidCheck />
+
+      {/* Waarom LYFD */}
+      <section className="relative bg-[#F7F7F7] py-32 md:py-44">
+        <Container>
+          <ScrollReveal>
+            <Badge variant="pastel-lilac" className="mb-5">
+              Waarom LYFD
+            </Badge>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <DualHeading bold="Wat ons anders maakt" italic="dan de rest." />
+          </ScrollReveal>
+
+          <StaggerContainer className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {usps.map((usp) => (
+              <StaggerItem key={usp.title}>
+                <div className="bg-white rounded-2xl p-8 border border-[#DDDDDD]/40 h-full">
+                  <h3 className="text-lg font-semibold text-[#1B1D1E] tracking-tight">
+                    {usp.title}
+                  </h3>
+                  <p className="mt-3 text-sm text-[#888888] leading-relaxed">
+                    {usp.description}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </Container>
+      </section>
+
+      {/* Cases preview */}
+      <section className="relative bg-white py-32 md:py-44">
+        <Container>
+          <ScrollReveal>
+            <Badge variant="pastel-peach" className="mb-5">
+              Resultaten
+            </Badge>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <DualHeading bold="Cases uit" italic="de praktijk." />
+          </ScrollReveal>
+
+          <StaggerContainer className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {cases.map((c) => (
+              <StaggerItem key={c.company}>
+                <div className="rounded-2xl bg-[#F7F7F7] border border-[#DDDDDD]/40 p-8">
+                  <p className="text-sm font-semibold text-[#4928FD] tracking-tight">
+                    {c.company}
+                  </p>
+                  <p className="mt-3 text-base text-[#1B1D1E] leading-relaxed">
+                    {c.result}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <ScrollReveal delay={0.2}>
+            <div className="mt-12 text-center">
+              <Button href="/cases/" variant="ghost" size="lg" icon="arrow-right">
+                Bekijk alle cases
+              </Button>
+            </div>
+          </ScrollReveal>
+        </Container>
+      </section>
+
+      {/* CTA */}
       <ServiceCta
-        title="Klaar om te groeien zonder capaciteitsrisico?"
-        body="Laten we in gesprek gaan over wat jouw bedrijf nodig heeft. Geen verkooppraatje, een concreet voorstel."
-        ctaText="Laten we in gesprek gaan"
-        ctaHref="/aanvraag/"
-      />
-      <FaqSection
-        title="Veelgestelde vragen voor liftbedrijven"
-        items={faqItems}
-        closingText="LYFD werkt uitsluitend voor de liftbranche. Wij kennen de installaties, de certificeringen en de uitdagingen. Dat merk je in de kwaliteit van de monteurs die wij leveren."
+        title="Klaar om capaciteit te regelen?"
+        body="Vertel ons wat je nodig hebt. Binnen 24 uur hoor je van ons met een concreet voorstel."
+        ctaText="Beschikbaarheid checken"
+        ctaHref="/liftmonteurs/beschikbaarheid/"
       />
     </>
   );

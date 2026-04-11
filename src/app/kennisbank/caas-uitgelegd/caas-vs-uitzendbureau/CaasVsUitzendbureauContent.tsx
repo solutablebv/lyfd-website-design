@@ -305,7 +305,7 @@ export function CaasVsUitzendbureauContent() {
               <p className="mt-2 text-sm text-[#333333] leading-relaxed max-w-[50ch]">
                 Plan een gesprek. Wij rekenen beide scenario&apos;s voor je door.
               </p>
-              <a href="/aanvraag/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300">
+              <a href="/liftmonteurs/beschikbaarheid/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300">
                 Plan een gesprek
                 <span className="text-[#888888]">&rarr;</span>
               </a>

@@ -528,7 +528,7 @@ export default function TechnologieLiftbranchePage() {
                     <p className="text-sm text-[#333333] leading-relaxed">
                       De Energy Performance of Buildings Directive schrijft voor dat bestaande
                       gebouwen worden verduurzaamd.{" "}
-                      <Link href="/diensten/lift-modernisering/" className="text-[#4928FD] hover:underline">
+                      <Link href="/modernisering/" className="text-[#4928FD] hover:underline">
                         Modernisering
                       </Link>{" "}
                       van liften is daar onderdeel van.
@@ -600,7 +600,7 @@ export default function TechnologieLiftbranchePage() {
 
             <ScrollReveal delay={0.2}>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button href="/aanvraag/" variant="primary" size="lg">
+                <Button href="/liftmonteurs/beschikbaarheid/" variant="primary" size="lg">
                   Plan een demo
                 </Button>
                 <Button href="tel:+31850000000" variant="ghost" size="lg" icon="none">

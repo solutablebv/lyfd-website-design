@@ -895,10 +895,10 @@ export function ProjectPlanner() {
                 </div>
 
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <Button href="/aanvraag/" variant="white" size="lg" icon="arrow-right">
+                  <Button href="/liftmonteurs/beschikbaarheid/" variant="white" size="lg" icon="arrow-right">
                     Ontvang je projectvoorstel
                   </Button>
-                  <Button href="/aanvraag/" variant="ghost" size="lg" icon="none" className="border-white/20 text-white hover:bg-white/10 hover:border-white/30">
+                  <Button href="/liftmonteurs/beschikbaarheid/" variant="ghost" size="lg" icon="none" className="border-white/20 text-white hover:bg-white/10 hover:border-white/30">
                     <EnvelopeSimple weight="bold" className="w-4 h-4 mr-2" />
                     Ontvang deze indicatie per email
                   </Button>

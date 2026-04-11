@@ -366,7 +366,7 @@ export default function MonteursSalarisPage() {
 
             <ScrollReveal delay={0.3}>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button href="/voor-liftmonteurs/" variant="primary" size="lg">
+                <Button href="/voor-monteurs/" variant="primary" size="lg">
                   Ontdek je marktwaarde
                 </Button>
                 <Button href="/contact/" variant="ghost" size="lg" icon="none">
@@ -534,7 +534,7 @@ export default function MonteursSalarisPage() {
                   wat je marktwaarde is als liftmonteur.
                 </p>
                 <div className="mt-8">
-                  <Button href="/voor-liftmonteurs/" variant="primary" size="lg">
+                  <Button href="/voor-monteurs/" variant="primary" size="lg">
                     Bereken je marktwaarde
                   </Button>
                 </div>
@@ -649,7 +649,7 @@ export default function MonteursSalarisPage() {
 
             <ScrollReveal delay={0.2}>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button href="/voor-liftmonteurs/" variant="primary" size="lg">
+                <Button href="/voor-monteurs/" variant="primary" size="lg">
                   Meld je aan
                 </Button>
                 <Button href="/contact/" variant="ghost" size="lg" icon="none">

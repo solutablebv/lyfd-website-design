@@ -223,7 +223,7 @@ export default function ZzpVsLoondienst() {
         "@type": "ListItem",
         position: 2,
         name: "Voor Liftmonteurs",
-        item: "https://lyfd.nl/voor-liftmonteurs/",
+        item: "https://lyfd.nl/voor-monteurs/",
       },
       {
         "@type": "ListItem",
@@ -294,7 +294,7 @@ export default function ZzpVsLoondienst() {
 
             <ScrollReveal delay={0.3}>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button href="/voor-liftmonteurs/" variant="primary" size="lg">
+                <Button href="/voor-monteurs/" variant="primary" size="lg">
                   Bekijk wat LYFD biedt
                 </Button>
                 <Button href="/contact/" variant="ghost" size="lg" icon="none">
@@ -664,7 +664,7 @@ export default function ZzpVsLoondienst() {
 
             <ScrollReveal delay={0.2}>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button href="/voor-liftmonteurs/" variant="primary" size="lg">
+                <Button href="/voor-monteurs/" variant="primary" size="lg">
                   Bekijk de mogelijkheden
                 </Button>
                 <Button href="/contact/" variant="ghost" size="lg" icon="none">

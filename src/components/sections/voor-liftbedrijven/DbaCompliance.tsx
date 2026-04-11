@@ -105,7 +105,7 @@ export function DbaCompliance() {
                   <span className="text-sm font-medium text-[#1B1D1E] group-hover:text-[#1B1D1E]">Wat kost capaciteitsgebrek een liftbedrijf echt?</span>
                   <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#888888] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#1B1D1E]" />
                 </Link>
-                <Link href="/diensten/capacity-as-a-service/" className="group flex items-center justify-between rounded-xl bg-[#F7F7F7] border border-[#DDDDDD] px-5 py-4 transition-all duration-500 hover:border-[#DDDDDD] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                <Link href="/liftmonteurs/detachering/" className="group flex items-center justify-between rounded-xl bg-[#F7F7F7] border border-[#DDDDDD] px-5 py-4 transition-all duration-500 hover:border-[#DDDDDD] hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
                   <span className="text-sm font-medium text-[#1B1D1E] group-hover:text-[#1B1D1E]">Wat is Capacity as a Service?</span>
                   <ArrowRight weight="bold" className="w-3.5 h-3.5 text-[#888888] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[#1B1D1E]" />
                 </Link>

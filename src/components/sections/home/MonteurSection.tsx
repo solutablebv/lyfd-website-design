@@ -82,7 +82,7 @@ export function MonteurSection() {
               {/* CTA */}
               <div className="lg:col-span-4 lg:flex lg:justify-end">
                 <Button
-                  href="/voor-liftmonteurs/"
+                  href="/voor-monteurs/"
                   variant="primary"
                   size="lg"
                   icon="arrow-right"

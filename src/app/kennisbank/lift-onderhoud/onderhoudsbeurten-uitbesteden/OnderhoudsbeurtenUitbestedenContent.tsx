@@ -250,7 +250,7 @@ export function OnderhoudsbeurtenUitbestedenContent() {
                 LYFD levert gecertificeerde monteurs als verlengstuk van je team. Bespreek de mogelijkheden.
               </p>
               <a
-                href="/aanvraag/"
+                href="/liftmonteurs/beschikbaarheid/"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300"
               >
                 Bespreek de mogelijkheden

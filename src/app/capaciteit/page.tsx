@@ -565,7 +565,7 @@ export default function CapaciteitPage() {
 
             <ScrollReveal delay={0.2}>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button href="/aanvraag/" variant="primary" size="lg">
+                <Button href="/liftmonteurs/beschikbaarheid/" variant="primary" size="lg">
                   Plan een capaciteitsgesprek
                 </Button>
                 <Button href="tel:+31850000000" variant="ghost" size="lg" icon="none">

@@ -168,7 +168,7 @@ export function HeroSection() {
             className="mt-12 flex flex-col sm:flex-row gap-3"
           >
             <Button
-              href="/aanvraag/"
+              href="/liftmonteurs/beschikbaarheid/"
               variant="primary"
               size="lg"
               icon="arrow-right"

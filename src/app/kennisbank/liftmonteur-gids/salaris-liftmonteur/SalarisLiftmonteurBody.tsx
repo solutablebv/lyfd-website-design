@@ -265,7 +265,7 @@ export function SalarisLiftmonteurBody() {
                 <p>
                   LYFD biedt een derde weg: het{" "}
                   <a
-                    href="/diensten/"
+                    href="/voor-liftbedrijven/"
                     className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300"
                   >
                     Capacity as a Service model
@@ -558,7 +558,7 @@ export function SalarisLiftmonteurBody() {
                 Transparant, zonder verplichtingen.
               </p>
               <a
-                href="/aanvraag/"
+                href="/liftmonteurs/beschikbaarheid/"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300"
               >
                 Neem contact op

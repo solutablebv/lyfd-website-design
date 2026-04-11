@@ -12,7 +12,10 @@ import { FaqSection } from "@/components/sections/diensten/FaqSection";
 import { TeamQuote } from "@/components/ui/TeamQuote";
 
 const ProjectPlanner = dynamic(
-  () => import("@/components/sections/modernisering/ProjectPlanner").then((mod) => mod.ProjectPlanner)
+  () =>
+    import("@/components/sections/modernisering/ProjectPlanner").then(
+      (mod) => mod.ProjectPlanner
+    )
 );
 
 export const metadata: Metadata = {
@@ -21,18 +24,13 @@ export const metadata: Metadata = {
   description:
     "Liftmonteurs voor modernisering nodig? LYFD levert combiteams met vervangingsgarantie en vaste opleverdatum. DBA-compliant. Vraag capaciteit aan.",
   openGraph: {
-    title: "Liftmonteurs voor Modernisering | Combiteams & Vervangingsgarantie | LYFD",
+    title:
+      "Liftmonteurs voor Modernisering | Combiteams & Vervangingsgarantie | LYFD",
     description:
-      "Liftmonteurs voor modernisering nodig? LYFD levert combiteams met vervangingsgarantie en vaste opleverdatum. DBA-compliant. Vraag capaciteit aan.",
+      "Liftmonteurs voor modernisering nodig? LYFD levert combiteams met vervangingsgarantie en vaste opleverdatum. DBA-compliant.",
     type: "website",
     locale: "nl_NL",
     siteName: "LYFD",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Liftmonteurs voor Modernisering | Combiteams & Vervangingsgarantie | LYFD",
-    description:
-      "Liftmonteurs voor modernisering nodig? LYFD levert combiteams met vervangingsgarantie en vaste opleverdatum. DBA-compliant. Vraag capaciteit aan.",
   },
 };
 
@@ -61,8 +59,7 @@ const faqItems = [
       "Een uitzendbureau levert uren. LYFD levert capaciteit: gecertificeerde monteurs, volledig uitgerust, met vervanging bij uitval en inzet onder jouw bedrijfsnaam indien gewenst. Geen mismatch, geen onboarding-ellende, geen verrassingen op de rekening.",
   },
   {
-    question:
-      "Valt moderniseringsinzet onder een apart contract?",
+    question: "Valt moderniseringsinzet onder een apart contract?",
     answer:
       "Modernisering valt doorgaans onder het Project-model (2-12 weken) of een Retainer-arrangement voor bedrijven met een doorlopende moderniseringsportefeuille.",
   },
@@ -99,14 +96,8 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Diensten",
-      item: "https://lyfd.nl/diensten/",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "Lift Modernisering",
-      item: "https://lyfd.nl/diensten/lift-modernisering/",
+      name: "Modernisering",
+      item: "https://lyfd.nl/modernisering/",
     },
   ],
 };
@@ -129,26 +120,20 @@ const serviceJsonLd = {
   serviceType: "Lift Modernisering",
 };
 
-export default function LiftModerniseringPage() {
+export default function ModerniseringPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <ServiceHero
         eyebrow="Modernisering"
@@ -156,8 +141,8 @@ export default function LiftModerniseringPage() {
         subtitle="Capaciteit voor liftmodernisering, op tijd, volledig uitgerust, klaar voor het werk."
         intro="Lift modernisering is het vervangen of upgraden van bestaande liftinstallaties, van besturingssystemen tot complete renovaties. Bij een moderniseringsproject staat er meer op het spel dan een monteur die niet komt opdagen. De steigers staan. De opdrachtgever heeft een contractuele opleverdatum. LYFD zorgt dat jouw planning niet afhankelijk is van geluk."
         ctaText="Bespreek je project"
-        ctaHref="/aanvraag/"
-        breadcrumbLabel="Lift Modernisering"
+        ctaHref="/liftmonteurs/beschikbaarheid/"
+        breadcrumbLabel="Modernisering"
         imageSrc="/lift-deuren-industrieel.jpg"
       />
       <ModerniseringProbleem />
@@ -176,7 +161,7 @@ export default function LiftModerniseringPage() {
         title="Je volgende project wacht niet. Jouw capaciteit ook niet."
         body="Vertel ons over je moderniseringsproject. Binnen 24 uur weet je of we kunnen leveren, met wie, en wat het kost."
         ctaText="Plan je project in"
-        ctaHref="/aanvraag/"
+        ctaHref="/liftmonteurs/beschikbaarheid/"
       />
       <FaqSection
         title="Veelgestelde vragen over liftmodernisering"

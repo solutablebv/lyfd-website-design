@@ -361,7 +361,7 @@ export default function MonteursVacaturesPage() {
 
             <ScrollReveal delay={0.3}>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button href="/voor-liftmonteurs/" variant="primary" size="lg">
+                <Button href="/voor-monteurs/" variant="primary" size="lg">
                   Meld je aan
                 </Button>
                 <Button href="/contact/" variant="ghost" size="lg" icon="none">
@@ -492,7 +492,7 @@ export default function MonteursVacaturesPage() {
 
           <ScrollReveal delay={0.3}>
             <div className="text-center mt-12">
-              <Button href="/voor-liftmonteurs/" variant="primary" size="lg">
+              <Button href="/voor-monteurs/" variant="primary" size="lg">
                 Bekijk alle voordelen
               </Button>
             </div>
@@ -603,7 +603,7 @@ export default function MonteursVacaturesPage() {
 
             <ScrollReveal delay={0.2}>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button href="/voor-liftmonteurs/" variant="primary" size="lg">
+                <Button href="/voor-monteurs/" variant="primary" size="lg">
                   Meld je aan
                 </Button>
                 <Button href="/contact/" variant="ghost" size="lg" icon="none">

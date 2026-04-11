@@ -507,7 +507,7 @@ export default function VergrijzingLiftbranchePage() {
                       </h3>
                       <p className="text-sm text-[#333333] leading-relaxed">
                         Het{" "}
-                        <Link href="/diensten/capacity-as-a-service/" className="text-[#4928FD] hover:underline">
+                        <Link href="/liftmonteurs/detachering/" className="text-[#4928FD] hover:underline">
                           Capacity as a Service
                         </Link>{" "}
                         model deelt bestaande capaciteit slimmer. In plaats van overcapaciteit bij
@@ -603,7 +603,7 @@ export default function VergrijzingLiftbranchePage() {
 
             <ScrollReveal delay={0.2}>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Button href="/aanvraag/" variant="primary" size="lg">
+                <Button href="/liftmonteurs/beschikbaarheid/" variant="primary" size="lg">
                   Plan een gesprek
                 </Button>
                 <Button href="tel:+31850000000" variant="ghost" size="lg" icon="none">

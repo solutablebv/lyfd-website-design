@@ -142,7 +142,7 @@ export function BeschikbaarheidCheck() {
 
                       <div className="mt-5">
                         <Button
-                          href="/aanvraag/"
+                          href="/liftmonteurs/beschikbaarheid/"
                           variant="primary"
                           size="default"
                           icon="arrow-right"

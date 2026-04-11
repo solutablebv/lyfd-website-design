@@ -206,7 +206,7 @@ export function PlatformPricing() {
                   </div>
 
                   <Button
-                    href="/aanvraag/"
+                    href="/liftmonteurs/beschikbaarheid/"
                     variant={isRecommended ? "primary" : "ghost"}
                     size="default"
                     icon="arrow-right"

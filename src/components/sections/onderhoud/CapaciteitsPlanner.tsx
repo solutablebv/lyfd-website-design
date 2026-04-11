@@ -536,7 +536,7 @@ export function CapaciteitsPlanner() {
                 </div>
 
                 <div className="mt-6">
-                  <Button href="/aanvraag/" variant="white" size="lg" icon="arrow-right">
+                  <Button href="/liftmonteurs/beschikbaarheid/" variant="white" size="lg" icon="arrow-right">
                     Ontvang je voorstel op maat
                   </Button>
                 </div>

@@ -93,7 +93,7 @@ function VariantOnderhoud() {
       </div>
       <div className="mt-5">
         <Button
-          href="/aanvraag/"
+          href="/liftmonteurs/beschikbaarheid/"
           variant="primary"
           size="default"
           icon="arrow-right"
@@ -187,7 +187,7 @@ function VariantTechnisch({ onderwerp }: { onderwerp?: string }) {
       </p>
       <div className="mt-5">
         <Button
-          href="/aanvraag/"
+          href="/liftmonteurs/beschikbaarheid/"
           variant="primary"
           size="default"
           icon="arrow-right"

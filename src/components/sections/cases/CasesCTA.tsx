@@ -15,7 +15,7 @@ export function CasesCTA() {
             </h2>
             <div className="mt-8">
               <Button
-                href="/aanvraag/"
+                href="/liftmonteurs/beschikbaarheid/"
                 variant="primary"
                 size="lg"
                 icon="arrow-right"

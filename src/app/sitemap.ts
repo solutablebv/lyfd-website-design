@@ -4,66 +4,79 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://lyfd.nl';
 
   return [
+    // Homepage & top-level
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
+    { url: `${baseUrl}/tarieven`, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
+
+    // Hub pages
     { url: `${baseUrl}/voor-liftbedrijven`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/voor-liftmonteurs`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/academy`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/platform`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/diensten/capacity-as-a-service`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/diensten/liftonderhoud-capaciteit`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/diensten/reparatie`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/diensten/lift-modernisering`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/kennisbank`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/kennisbank/capaciteitsmanagement`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/kennisbank/capaciteitsmanagement/wat-kost-capaciteitsgebrek`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/capaciteitsmanagement/wet-dba-liftbranche`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/capaciteitsmanagement/zzp-of-capaciteitspartner`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/capaciteitsmanagement/capaciteitsplanning-servicecontracten`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/caas-uitgelegd`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/kennisbank/caas-uitgelegd/caas-vs-uitzendbureau`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/caas-uitgelegd/welk-caas-model`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/liftmonteur-gids`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/kennisbank/liftmonteur-gids/salaris-liftmonteur`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/liftmonteur-gids/vast-zzp-of-caas`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/nen-certificering`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/kennisbank/nen-certificering/nen-3140-uitleg`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/nen-certificering/oem-certificeringen`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/lift-werkzaamheden`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/kennisbank/lift-onderhoud`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/kennisbank/lift-techniek`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/kennisbank/lift-werkzaamheden/sensorlijsten-installeren`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/lift-werkzaamheden/spreek-luister-verbindingen`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/lift-onderhoud/liftkeuring-voorbereiden`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/lift-onderhoud/preventief-onderhoud`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/kennisbank/lift-techniek/hoe-werkt-een-mrl-lift`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/liftmonteurs/detachering`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/voor-monteurs`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+
+    // Cluster A: Liftmonteurs inhuren
     { url: `${baseUrl}/liftmonteurs/inhuren`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/liftmonteurs/detachering`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/liftmonteurs/beschikbaarheid`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/liftmonteurs/certificering`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/liftmonteurs/kosten`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/liftmonteurs/capaciteit`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/liftmonteurs/regio`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/liftmonteurs/samenwerking`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+
+    // Cluster B: Monteurs (voor monteurs)
     { url: `${baseUrl}/monteurs/salaris`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/monteurs/vacatures`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/monteurs/opleiding`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/monteurs/zzp-vs-loondienst`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/monteurs/carriere`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/cases`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/over-lyfd`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/aanvraag`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/branche/toekomst`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/branche/vergrijzing`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/branche/technologie`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/voorwaarden`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+
+    // Cluster C: Capaciteit
     { url: `${baseUrl}/capaciteit`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/capaciteit/calculator`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/capaciteit/oplossingen`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+
+    // Cluster D: Onderhoud
     { url: `${baseUrl}/onderhoud/storingsdienst`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/onderhoud/keuring`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/modernisering/capaciteit`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/modernisering/regelgeving`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+
+    // Diensten (directe URLs)
+    { url: `${baseUrl}/modernisering`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/reparatie`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+
+    // Overig
+    { url: `${baseUrl}/academy`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/platform`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/cases`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/over-lyfd`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+
+    // Branche
+    { url: `${baseUrl}/branche/vergrijzing`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/branche/technologie`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+
+    // Kennisbank pillars
+    { url: `${baseUrl}/kennisbank`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/kennisbank/capaciteitsmanagement`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/kennisbank/caas-uitgelegd`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/kennisbank/liftmonteur-gids`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/kennisbank/nen-certificering`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/kennisbank/lift-werkzaamheden`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/kennisbank/lift-onderhoud`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${baseUrl}/kennisbank/lift-techniek`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+
+    // Kennisbank artikelen
+    { url: `${baseUrl}/kennisbank/capaciteitsmanagement/wat-kost-capaciteitsgebrek`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/capaciteitsmanagement/wet-dba-liftbranche`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/capaciteitsmanagement/zzp-of-capaciteitspartner`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/capaciteitsmanagement/capaciteitsplanning-servicecontracten`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/caas-uitgelegd/caas-vs-uitzendbureau`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/caas-uitgelegd/welk-caas-model`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/liftmonteur-gids/salaris-liftmonteur`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/liftmonteur-gids/vast-zzp-of-caas`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/nen-certificering/nen-3140-uitleg`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/nen-certificering/oem-certificeringen`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/lift-werkzaamheden/sensorlijsten-installeren`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/lift-werkzaamheden/spreek-luister-verbindingen`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/lift-werkzaamheden/iot-connectiviteit-liften`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/lift-onderhoud/liftkeuring-voorbereiden`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/kennisbank/lift-onderhoud/onderhoudsbeurten-uitbesteden`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+
+    // Juridisch
+    { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.5 },
+    { url: `${baseUrl}/voorwaarden`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.5 },
   ];
 }

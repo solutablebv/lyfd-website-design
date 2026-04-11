@@ -122,7 +122,7 @@ export function PlatformHero() {
             <Button href="#modules" variant="ghost" size="lg" icon="arrow-right">
               Bekijk de modules
             </Button>
-            <Button href="/aanvraag/" variant="primary" size="lg" icon="arrow-right">
+            <Button href="/liftmonteurs/beschikbaarheid/" variant="primary" size="lg" icon="arrow-right">
               Plan een demo
             </Button>
           </motion.div>

@@ -89,7 +89,7 @@ export function ModerniseringWatJeKrijgt() {
         <ScrollReveal delay={0.3}>
           <div className="mt-12 text-center">
             <Link
-              href="/aanvraag/"
+              href="/liftmonteurs/beschikbaarheid/"
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#1B1D1E] hover:gap-3 transition-all duration-300"
             >
               Plan je project in

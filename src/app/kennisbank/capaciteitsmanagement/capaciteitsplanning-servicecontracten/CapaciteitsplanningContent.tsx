@@ -252,7 +252,7 @@ export function CapaciteitsplanningContent() {
                   Dat betekent: monteurs met de juiste certificeringen (NEN 3140, VCA),
                   branchekennis, en ervaring met OEM-systemen. Geen generieke uitzendkrachten,
                   maar vakmensen die direct inzetbaar zijn.{" "}
-                  <a href="/diensten/capacity-as-a-service/" className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300">
+                  <a href="/liftmonteurs/detachering/" className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300">
                     Lees meer over onze CaaS-modellen
                   </a>.
                 </p>
@@ -346,7 +346,7 @@ export function CapaciteitsplanningContent() {
               <p className="mt-2 text-sm text-[#333333] leading-relaxed max-w-[50ch]">
                 Wij helpen je het gat in kaart te brengen en een plan op maat te maken.
               </p>
-              <a href="/aanvraag/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300">
+              <a href="/liftmonteurs/beschikbaarheid/" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300">
                 Plan een gesprek
                 <span className="text-[#888888]">&rarr;</span>
               </a>

@@ -381,7 +381,7 @@ export function Nen3140Body() {
                 <p>
                   Voor liftmonteurs die via een{" "}
                   <a
-                    href="/diensten/"
+                    href="/voor-liftbedrijven/"
                     className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300"
                   >
                     CaaS-model
@@ -497,7 +497,7 @@ export function Nen3140Body() {
                 <p>
                   Dit is ook een van de kernverschillen tussen een{" "}
                   <a
-                    href="/diensten/"
+                    href="/voor-liftbedrijven/"
                     className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300"
                   >
                     CaaS-platform als LYFD
@@ -549,7 +549,7 @@ export function Nen3140Body() {
                 gesprek en we bespreken je capaciteitsvraag.
               </p>
               <a
-                href="/aanvraag/"
+                href="/liftmonteurs/beschikbaarheid/"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300"
               >
                 Plan een gesprek

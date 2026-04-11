@@ -28,11 +28,11 @@ export function SnelleHulplijn() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <Button href="/aanvraag/" variant="primary" size="lg" icon="none">
+              <Button href="/liftmonteurs/beschikbaarheid/" variant="primary" size="lg" icon="none">
                 <Phone weight="bold" className="w-4 h-4 mr-2" />
                 Neem contact op
               </Button>
-              <Button href="/aanvraag/" variant="ghost" size="lg" icon="none">
+              <Button href="/liftmonteurs/beschikbaarheid/" variant="ghost" size="lg" icon="none">
                 <WhatsappLogo weight="bold" className="w-4 h-4 mr-2" />
                 Stuur een WhatsApp
               </Button>

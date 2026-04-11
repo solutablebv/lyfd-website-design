@@ -547,7 +547,7 @@ export default function LiftmonteurBeschikbaarheidPage() {
                   <Phone weight="bold" className="w-4 h-4 mr-2" />
                   Bel direct
                 </Button>
-                <Button href="/aanvraag/" variant="ghost" size="lg">
+                <Button href="/liftmonteurs/beschikbaarheid/" variant="ghost" size="lg">
                   Vul het formulier in
                 </Button>
               </div>

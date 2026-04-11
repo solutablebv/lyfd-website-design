@@ -133,7 +133,7 @@ export function ModerniseringZelfdiagnose() {
               </StaggerContainer>
 
               <Link
-                href="/aanvraag/"
+                href="/liftmonteurs/beschikbaarheid/"
                 className="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-[#1B1D1E] hover:gap-3 transition-all duration-300"
               >
                 Plan je project in

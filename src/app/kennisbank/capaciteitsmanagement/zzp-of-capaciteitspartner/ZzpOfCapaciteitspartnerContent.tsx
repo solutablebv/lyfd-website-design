@@ -401,7 +401,7 @@ export function ZzpOfCapaciteitspartnerContent() {
               <ScrollReveal delay={0.05}>
                 <p>
                   Benieuwd wat het verschil zou betekenen voor jouw specifieke situatie?{" "}
-                  <a href="/diensten/capacity-as-a-service/" className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300">
+                  <a href="/liftmonteurs/detachering/" className="text-[#4928FD] underline decoration-[#4928FD]/30 underline-offset-4 hover:decoration-[#4928FD] transition-colors duration-300">
                     Lees meer over ons CaaS-model
                   </a>{" "}
                   of plan direct een gesprek.
@@ -418,7 +418,7 @@ export function ZzpOfCapaciteitspartnerContent() {
                 Wij rekenen het samen door, specifiek voor jouw bedrijf.
               </p>
               <a
-                href="/aanvraag/"
+                href="/liftmonteurs/beschikbaarheid/"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300"
               >
                 Plan een gesprek

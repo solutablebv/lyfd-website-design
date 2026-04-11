@@ -265,7 +265,7 @@ export function SensorlijstenInstallerenContent() {
                 LYFD levert gekwalificeerde monteurs voor sensorlijstvervanging en andere lift-werkzaamheden. Vraag vrijblijvend aan.
               </p>
               <a
-                href="/aanvraag/"
+                href="/liftmonteurs/beschikbaarheid/"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1B1D1E] hover:text-[#1B1D1E] transition-colors duration-300"
               >
                 Vraag capaciteit aan

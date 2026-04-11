@@ -179,7 +179,7 @@ export function KostenCalculator() {
 
                 <div className="mt-6">
                   <Button
-                    href="/aanvraag/"
+                    href="/liftmonteurs/beschikbaarheid/"
                     variant="white"
                     size="lg"
                     icon="arrow-right"

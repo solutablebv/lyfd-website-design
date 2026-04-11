@@ -40,7 +40,7 @@ export function CtaSection() {
           <ScrollReveal delay={0.2}>
             <div className="mt-14 flex flex-col sm:flex-row gap-3 justify-center">
               <Button
-                href="/aanvraag/"
+                href="/liftmonteurs/beschikbaarheid/"
                 variant="primary"
                 size="lg"
                 icon="arrow-right"

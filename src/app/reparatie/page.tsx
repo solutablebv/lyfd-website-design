@@ -9,38 +9,36 @@ import { ServiceCta } from "@/components/sections/diensten/ServiceCta";
 import { FaqSection } from "@/components/sections/diensten/FaqSection";
 
 const KostenCalculator = dynamic(
-  () => import("@/components/sections/shared/KostenCalculator").then((mod) => mod.KostenCalculator)
+  () =>
+    import("@/components/sections/shared/KostenCalculator").then(
+      (mod) => mod.KostenCalculator
+    )
 );
 
 const BeschikbaarheidCheck = dynamic(
-  () => import("@/components/sections/shared/BeschikbaarheidCheck").then((mod) => mod.BeschikbaarheidCheck)
+  () =>
+    import("@/components/sections/shared/BeschikbaarheidCheck").then(
+      (mod) => mod.BeschikbaarheidCheck
+    )
 );
 
 export const metadata: Metadata = {
-  title:
-    "Liftreparatie | Onderdelen Vervangen zonder Modernisering | LYFD",
+  title: "Liftreparatie | Onderdelen Vervangen zonder Modernisering | LYFD",
   description:
     "Sensorlijsten, deuren, besturingsonderdelen vervangen? LYFD levert gecertificeerde monteurs voor reparatiewerk. De tussenlaag tussen onderhoud en modernisering.",
   openGraph: {
     title: "Liftreparatie | Onderdelen Vervangen zonder Modernisering | LYFD",
     description:
-      "Sensorlijsten, deuren, besturingsonderdelen vervangen? LYFD levert gecertificeerde monteurs voor reparatiewerk. De tussenlaag tussen onderhoud en modernisering.",
+      "Sensorlijsten, deuren, besturingsonderdelen vervangen? LYFD levert gecertificeerde monteurs voor reparatiewerk.",
     type: "website",
     locale: "nl_NL",
     siteName: "LYFD",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Liftreparatie | Onderdelen Vervangen zonder Modernisering | LYFD",
-    description:
-      "Sensorlijsten, deuren, besturingsonderdelen vervangen? LYFD levert gecertificeerde monteurs voor reparatiewerk. De tussenlaag tussen onderhoud en modernisering.",
   },
 };
 
 const faqItems = [
   {
-    question:
-      "Wat is het verschil tussen reparatie en modernisering?",
+    question: "Wat is het verschil tussen reparatie en modernisering?",
     answer:
       "Reparatie is het vervangen van individuele onderdelen. Modernisering is het upgraden of vervangen van complete systemen. Bij reparatie blijft de installatie grotendeels intact.",
   },
@@ -55,10 +53,9 @@ const faqItems = [
       "Wij werken met een prioriteitenlijst. Veiligheidskritische reparaties eerst, daarna preventief en kosmetisch. Je bepaalt het tempo.",
   },
   {
-    question:
-      "Wat kost reparatiecapaciteit via LYFD?",
+    question: "Wat kost reparatiecapaciteit via LYFD?",
     answer:
-      "Onze monteurs starten vanaf EUR 64,99 per uur (excl. BTW). Het exacte tarief hangt af van het type werk en het engagementmodel.",
+      "Onze monteurs starten vanaf EUR 69,96 per uur (excl. BTW). Het exacte tarief hangt af van het type werk en het engagementmodel.",
   },
   {
     question: "Kunnen jullie spreek-luister verbindingen installeren?",
@@ -98,14 +95,8 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Diensten",
-      item: "https://lyfd.nl/diensten/",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
       name: "Reparatie",
-      item: "https://lyfd.nl/diensten/reparatie/",
+      item: "https://lyfd.nl/reparatie/",
     },
   ],
 };
@@ -115,7 +106,7 @@ const serviceJsonLd = {
   "@type": "Service",
   name: "Liftreparatie",
   description:
-    "Sensorlijsten, deuren, besturingsonderdelen vervangen? LYFD levert gecertificeerde monteurs voor reparatiewerk. De tussenlaag tussen onderhoud en modernisering.",
+    "Sensorlijsten, deuren, besturingsonderdelen vervangen? LYFD levert gecertificeerde monteurs voor reparatiewerk.",
   provider: {
     "@type": "Organization",
     name: "LYFD B.V.",
@@ -133,21 +124,15 @@ export default function ReparatiePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <ServiceHero
         eyebrow="Reparatie"
@@ -155,7 +140,7 @@ export default function ReparatiePage() {
         subtitle="Sensorlijsten, deuren, besturingsonderdelen. Het zijn geen moderniseringen, maar ze moeten wel gebeuren. LYFD levert de handen die je nodig hebt."
         intro="Liftreparatie is het gericht vervangen van specifieke componenten die niet meer in de reguliere service aangepakt kunnen worden. Geen volledige modernisering, wel vakkundig herstel door gecertificeerde monteurs die weten wat ze doen."
         ctaText="Plan je reparatiecapaciteit"
-        ctaHref="/aanvraag/"
+        ctaHref="/liftmonteurs/beschikbaarheid/"
         breadcrumbLabel="Reparatie"
         imageSrc="/lift-cabine-schacht.jpg"
       />
@@ -169,7 +154,7 @@ export default function ReparatiePage() {
         title="Klaar om die reparatielijst aan te pakken?"
         body="Stuur je reparatielijst op. Wij vertellen je binnen 24 uur wat we kunnen doen, met wie, en wat het kost."
         ctaText="Stuur je reparatielijst"
-        ctaHref="/aanvraag/"
+        ctaHref="/contact/"
       />
       <FaqSection
         title="Veelgestelde vragen over liftreparatie"

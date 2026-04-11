@@ -431,7 +431,7 @@ export function PlatformImplementatie() {
         <ScrollReveal delay={0.2}>
           <div className="text-center mt-16 md:mt-20">
             <Button
-              href="/aanvraag/"
+              href="/liftmonteurs/beschikbaarheid/"
               variant="primary"
               size="lg"
               icon="arrow-right"

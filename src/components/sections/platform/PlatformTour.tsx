@@ -741,7 +741,7 @@ export function PlatformTour() {
               Klaar om het zelf te ervaren? Plan een live demo.
             </p>
             <Button
-              href="/aanvraag/"
+              href="/liftmonteurs/beschikbaarheid/"
               variant="primary"
               size="lg"
               icon="arrow-right"
