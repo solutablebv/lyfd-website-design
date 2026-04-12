@@ -621,7 +621,7 @@ export default function MonteursVacaturesPage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
                   {[
-                    { label: "Voor liftmonteurs", href: "/voor-liftmonteurs/" },
+                    { label: "Voor liftmonteurs", href: "/voor-monteurs/" },
                     { label: "Liftmonteur salaris", href: "/monteurs/salaris/" },
                     { label: "Liftmonteur opleiding", href: "/monteurs/opleiding/" },
                     { label: "LYFD Academy", href: "/academy/" },

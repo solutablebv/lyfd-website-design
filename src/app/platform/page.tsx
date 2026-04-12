@@ -108,7 +108,7 @@ export default function PlatformPage() {
         title="Klaar om je liftoperatie te digitaliseren?"
         body="Plan een demo. We laten je in 30 minuten zien hoe het LYFD platform werkt voor jouw bedrijf."
         ctaText="Plan een demo"
-        ctaHref="/aanvraag/"
+        ctaHref="/contact/"
       />
     </>
   );

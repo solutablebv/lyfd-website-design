@@ -886,7 +886,7 @@ export function ProjectPlanner() {
 
                 <div className="mt-8 p-4 rounded-xl bg-white/10">
                   <p className="text-lg font-bold">
-                    Vanaf EUR 64,99/uur per monteur{" "}
+                    Vanaf EUR 69,96/uur per monteur{" "}
                     <span className="text-sm font-normal text-white/60">(excl. BTW)</span>
                   </p>
                   <p className="text-xs text-white/50 mt-1">

@@ -563,11 +563,11 @@ export default function LiftmonteurBeschikbaarheidPage() {
                   {[
                     { label: "Liftmonteur inhuren", href: "/liftmonteurs/inhuren/" },
                     { label: "Liftmonteur detachering", href: "/liftmonteurs/detachering/" },
-                    { label: "Liftmonteur kosten", href: "/liftmonteurs/kosten/" },
+                    { label: "Liftmonteur kosten", href: "/tarieven/" },
                     { label: "Certificering", href: "/liftmonteurs/certificering/" },
-                    { label: "Liftonderhoud capaciteit", href: "/diensten/liftonderhoud-capaciteit/" },
+                    { label: "Liftonderhoud capaciteit", href: "/onderhoud/" },
                     { label: "Cases", href: "/cases/" },
-                    { label: "Aanvraag", href: "/aanvraag/" },
+                    { label: "Contact", href: "/contact/" },
                   ].map((link) => (
                     <Link
                       key={link.href}

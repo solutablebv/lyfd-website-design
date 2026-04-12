@@ -667,7 +667,7 @@ export default function MonteursSalarisPage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
                   {[
-                    { label: "Voor liftmonteurs", href: "/voor-liftmonteurs/" },
+                    { label: "Voor liftmonteurs", href: "/voor-monteurs/" },
                     { label: "Carriere als liftmonteur", href: "/monteurs/carriere/" },
                     { label: "ZZP vs loondienst", href: "/monteurs/zzp-vs-loondienst/" },
                     { label: "Salaris gids", href: "/kennisbank/liftmonteur-gids/salaris-liftmonteur/" },

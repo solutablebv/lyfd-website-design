@@ -152,7 +152,7 @@ export function ZzpOfCapaciteitspartnerContent() {
                       <tr className="border-b border-[#DDDDDD]">
                         <td className="py-3 pr-4 font-medium">Uurtarief</td>
                         <td className="py-3 pr-4">EUR 45 - 70</td>
-                        <td className="py-3">Vanaf EUR 64,99</td>
+                        <td className="py-3">Vanaf EUR 69,96</td>
                       </tr>
                       <tr className="border-b border-[#DDDDDD]">
                         <td className="py-3 pr-4 font-medium">Certificeringskosten</td>
@@ -366,7 +366,7 @@ export function ZzpOfCapaciteitspartnerContent() {
               <ScrollReveal delay={0.05}>
                 <p><strong>Scenario B: CaaS via LYFD</strong></p>
                 <ul>
-                  <li>Vanaf-tarief: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 64,99</span> per uur (Bron: LYFD Pricing 2026)</li>
+                  <li>Vanaf-tarief: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 69,96</span> per uur (Bron: LYFD Pricing 2026)</li>
                   <li>Jaarlijkse uren: 3 x 1.472 = <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">4.416 uur</span></li>
                   <li>Totale kosten: <span className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded text-sm">EUR 286.916</span></li>
                   <li>Administratie: minimaal (enkele factuur per maand)</li>

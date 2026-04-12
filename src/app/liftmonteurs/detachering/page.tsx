@@ -52,7 +52,7 @@ const faqItems = [
   {
     question: "Wat kost het detacheren van een liftmonteur?",
     answer:
-      "Onze monteurs starten vanaf EUR 64,99 per uur (excl. BTW). Het exacte tarief hangt af van ervaringsniveau, type werkzaamheden en engagementmodel.",
+      "Onze monteurs starten vanaf EUR 69,96 per uur (excl. BTW). Het exacte tarief hangt af van ervaringsniveau, type werkzaamheden en engagementmodel.",
   },
   {
     question: "Kan een gedetacheerde monteur werken in mijn bedrijfskleding?",
@@ -157,21 +157,21 @@ const werkzaamheden = [
     description: "Routes, storingen, onderhoudsbeurten. Regulier werk dat altijd moet doorgaan.",
     color: "bg-[#E0EAFF]",
     icon: GearSix,
-    href: "/diensten/liftonderhoud-capaciteit/",
+    href: "/onderhoud/",
   },
   {
     title: "Reparatie",
     description: "Sensorlijsten, deuren, veiligheidscomponenten. De onverwachte klussen die niet kunnen wachten.",
     color: "bg-[#FFE8E0]",
     icon: Wrench,
-    href: "/diensten/reparatie/",
+    href: "/reparatie/",
   },
   {
     title: "Modernisering",
     description: "Combiteams, besturingsupgrades, volledige renovaties. Projectmatige inzet van A tot Z.",
     color: "bg-[#EDE8FF]",
     icon: Lightning,
-    href: "/diensten/lift-modernisering/",
+    href: "/modernisering/",
   },
   {
     title: "Specialistisch",
@@ -605,7 +605,7 @@ export default function LiftmonteurDetacheringPage() {
             <ScrollReveal delay={0.1}>
               <p className="mt-6 text-base md:text-lg text-[#333333] leading-relaxed">
                 Onze monteurs starten vanaf{" "}
-                <span className="font-semibold text-[#1B1D1E]">EUR 64,99 per uur</span>{" "}
+                <span className="font-semibold text-[#1B1D1E]">EUR 69,96 per uur</span>{" "}
                 (excl. BTW). Het tarief hangt af van ervaringsniveau, type werkzaamheden en de duur
                 van de inzet.
               </p>
@@ -818,10 +818,10 @@ export default function LiftmonteurDetacheringPage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
                   {[
-                    { label: "Capacity as a Service", href: "/diensten/capacity-as-a-service/" },
-                    { label: "Liftonderhoud capaciteit", href: "/diensten/liftonderhoud-capaciteit/" },
-                    { label: "Reparatie", href: "/diensten/reparatie/" },
-                    { label: "Lift modernisering", href: "/diensten/lift-modernisering/" },
+                    { label: "Capacity as a Service", href: "/liftmonteurs/detachering/" },
+                    { label: "Liftonderhoud capaciteit", href: "/onderhoud/" },
+                    { label: "Reparatie", href: "/reparatie/" },
+                    { label: "Lift modernisering", href: "/modernisering/" },
                     { label: "Wet DBA in de liftbranche", href: "/kennisbank/capaciteitsmanagement/wet-dba-liftbranche/" },
                     { label: "Lift werkzaamheden", href: "/kennisbank/lift-werkzaamheden/" },
                     { label: "Cases", href: "/cases/" },

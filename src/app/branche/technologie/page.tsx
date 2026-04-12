@@ -618,11 +618,10 @@ export default function TechnologieLiftbranchePage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
                   {[
-                    { label: "Toekomst liftbranche", href: "/branche/toekomst/" },
                     { label: "Vergrijzing liftbranche", href: "/branche/vergrijzing/" },
                     { label: "LYFD Platform", href: "/platform/" },
-                    { label: "Capacity as a Service", href: "/diensten/capacity-as-a-service/" },
-                    { label: "Lift modernisering", href: "/diensten/lift-modernisering/" },
+                    { label: "Capacity as a Service", href: "/liftmonteurs/detachering/" },
+                    { label: "Lift modernisering", href: "/modernisering/" },
                     { label: "Contact", href: "/contact/" },
                   ].map((link) => (
                     <Link

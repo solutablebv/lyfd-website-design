@@ -42,7 +42,7 @@ const faqItems = [
   {
     question: "Wat kost CaaS van LYFD per uur?",
     answer:
-      "Het LYFD-tarief is afhankelijk van het ervaringsniveau van de monteur. Het tarief van LYFD start vanaf EUR 64,99 per uur (excl. BTW). Daarin zit meer dan alleen een monteur: volledige certificering, gereedschap, vervangingsgarantie bij uitval, DBA-compliance en administratieve afhandeling. (Bron: LYFD Pricing 2026)",
+      "Het LYFD-tarief is afhankelijk van het ervaringsniveau van de monteur. Het tarief van LYFD start vanaf EUR 69,96 per uur (excl. BTW). Daarin zit meer dan alleen een monteur: volledige certificering, gereedschap, vervangingsgarantie bij uitval, DBA-compliance en administratieve afhandeling. (Bron: LYFD Pricing 2026)",
   },
   {
     question:

@@ -21,7 +21,7 @@ const homeFaqItems = [
   {
     question: "Wat kost het om een monteur via LYFD in te zetten?",
     answer:
-      "Onze liftmonteurs starten vanaf EUR 64,99 per uur (excl. BTW). Inclusief certificering, uitrusting, verzekeringen en vervangingsgarantie. Het exacte tarief hangt af van het ervaringsprofiel en het gekozen engagementmodel.",
+      "Onze liftmonteurs starten vanaf EUR 69,96 per uur (excl. BTW). Inclusief certificering, uitrusting, verzekeringen en vervangingsgarantie. Het exacte tarief hangt af van het ervaringsprofiel en het gekozen engagementmodel.",
   },
   {
     question: "Hoe zit het met de Wet DBA en zzp-risico?",

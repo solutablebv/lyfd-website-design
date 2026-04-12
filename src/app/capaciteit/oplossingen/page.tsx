@@ -53,7 +53,7 @@ const faqItems = [
   {
     question: "Hoe verhoudt de prijs van CaaS zich tot zelf aannemen?",
     answer:
-      "Het uurtraief van LYFD (vanaf EUR 64,99) lijkt hoger dan een bruto uurloon, maar reken werving, onboarding, ziekte, gereedschap, certificeringen en management mee. Dan is CaaS vaak voordeliger.",
+      "Het uurtraief van LYFD (vanaf EUR 69,96) lijkt hoger dan een bruto uurloon, maar reken werving, onboarding, ziekte, gereedschap, certificeringen en management mee. Dan is CaaS vaak voordeliger.",
   },
   {
     question: "Kan ik een LYFD-monteur permanent overnemen?",
@@ -524,7 +524,7 @@ export default function OplossingenPage() {
                     { label: "CaaS uitgelegd", href: "/kennisbank/caas-uitgelegd/" },
                     { label: "CaaS vs uitzendbureau", href: "/kennisbank/caas-uitgelegd/caas-vs-uitzendbureau/" },
                     { label: "Liftmonteur inhuren", href: "/liftmonteurs/inhuren/" },
-                    { label: "Aanvraag", href: "/aanvraag/" },
+                    { label: "Contact", href: "/contact/" },
                   ].map((link) => (
                     <Link
                       key={link.href}

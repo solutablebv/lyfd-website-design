@@ -37,7 +37,7 @@ const faqItems = [
   {
     question: "Wat kost het om een liftmonteur in te huren?",
     answer:
-      "Onze monteurs starten vanaf EUR 64,99 per uur (excl. BTW). Het exacte tarief hangt af van ervaringsniveau, type werkzaamheden en het engagementmodel dat je kiest.",
+      "Onze monteurs starten vanaf EUR 69,96 per uur (excl. BTW). Het exacte tarief hangt af van ervaringsniveau, type werkzaamheden en het engagementmodel dat je kiest. Voertuigkosten: EUR 7,78 per uur.",
   },
   {
     question: "Is het inhuren van een liftmonteur via LYFD DBA-compliant?",
@@ -496,7 +496,7 @@ export default function LiftmonteurInhurenPage() {
             <ScrollReveal delay={0.1}>
               <p className="mt-6 text-base md:text-lg text-[#333333] leading-relaxed">
                 Onze monteurs starten vanaf{" "}
-                <span className="font-semibold text-[#1B1D1E]">EUR 64,99 per uur</span>{" "}
+                <span className="font-semibold text-[#1B1D1E]">EUR 69,96 per uur</span>{" "}
                 (excl. BTW). Het tarief hangt af van ervaringsniveau, type werkzaamheden en de duur
                 van de inzet.
               </p>
@@ -631,12 +631,12 @@ export default function LiftmonteurInhurenPage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
                   {[
-                    { label: "Liftonderhoud capaciteit", href: "/diensten/liftonderhoud-capaciteit/" },
-                    { label: "Reparatie", href: "/diensten/reparatie/" },
-                    { label: "Liftmonteur kosten", href: "/liftmonteurs/kosten/" },
+                    { label: "Liftonderhoud capaciteit", href: "/onderhoud/" },
+                    { label: "Reparatie", href: "/reparatie/" },
+                    { label: "Liftmonteur kosten", href: "/tarieven/" },
                     { label: "Beschikbaarheid", href: "/liftmonteurs/beschikbaarheid/" },
                     { label: "Cases", href: "/cases/" },
-                    { label: "Aanvraag", href: "/aanvraag/" },
+                    { label: "Contact", href: "/contact/" },
                   ].map((link) => (
                     <Link
                       key={link.href}

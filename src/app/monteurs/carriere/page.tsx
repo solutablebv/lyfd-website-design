@@ -344,7 +344,7 @@ export default function CarrierePage() {
             <Breadcrumb
               items={[
                 { label: "Home", href: "/" },
-                { label: "Voor Liftmonteurs", href: "/voor-liftmonteurs/" },
+                { label: "Voor Monteurs", href: "/voor-monteurs/" },
                 { label: "Carriere" },
               ]}
               className="mb-8"
@@ -676,7 +676,7 @@ export default function CarrierePage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
                   {[
-                    { label: "Werken bij LYFD", href: "/voor-liftmonteurs/" },
+                    { label: "Werken bij LYFD", href: "/voor-monteurs/" },
                     { label: "Salaris liftmonteur", href: "/monteurs/salaris/" },
                     { label: "Vacatures", href: "/monteurs/vacatures/" },
                     { label: "ZZP vs Loondienst", href: "/monteurs/zzp-vs-loondienst/" },

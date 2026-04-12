@@ -262,7 +262,7 @@ export default function ZzpVsLoondienst() {
             <Breadcrumb
               items={[
                 { label: "Home", href: "/" },
-                { label: "Voor Liftmonteurs", href: "/voor-liftmonteurs/" },
+                { label: "Voor Monteurs", href: "/voor-monteurs/" },
                 { label: "ZZP vs Loondienst" },
               ]}
               className="mb-8"
@@ -682,7 +682,7 @@ export default function ZzpVsLoondienst() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
                   {[
-                    { label: "Werken bij LYFD", href: "/voor-liftmonteurs/" },
+                    { label: "Werken bij LYFD", href: "/voor-monteurs/" },
                     { label: "Salaris liftmonteur", href: "/monteurs/salaris/" },
                     { label: "Carriere bij LYFD", href: "/monteurs/carriere/" },
                     { label: "Vast, ZZP of CaaS?", href: "/kennisbank/liftmonteur-gids/vast-zzp-of-caas/" },

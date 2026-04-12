@@ -39,7 +39,7 @@ const faqItems = [
   {
     question: "Wat kost een storingsdienst via LYFD?",
     answer:
-      "Onze monteurs starten vanaf EUR 64,99 per uur (excl. BTW). Voor nacht- en weekenddiensten gelden meerkosten afhankelijk van het gekozen SLA-model.",
+      "Onze monteurs starten vanaf EUR 69,96 per uur (excl. BTW). Voertuigkosten: EUR 7,78 per uur. Voor nacht- en weekenddiensten gelden meerkosten afhankelijk van het gekozen SLA-model.",
   },
   {
     question: "Welke SLA-modellen biedt LYFD voor storingsdienst?",
@@ -353,7 +353,7 @@ export default function StoringsdienstPage() {
                   <li className="text-sm text-[#333333]">Geen vaste kosten of commitment</li>
                   <li className="text-sm text-[#333333]">Betaal alleen bij inzet</li>
                   <li className="text-sm text-[#333333]">Ideaal voor incidentele storingen</li>
-                  <li className="text-sm text-[#333333]">Monteurs vanaf EUR 64,99/uur</li>
+                  <li className="text-sm text-[#333333]">Monteurs vanaf EUR 69,96/uur</li>
                 </ul>
               </div>
             </StaggerItem>
@@ -536,12 +536,11 @@ export default function StoringsdienstPage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
                   {[
-                    { label: "Liftkeuring voorbereiding", href: "/onderhoud/keuring/" },
-                    { label: "Liftonderhoud capaciteit", href: "/diensten/liftonderhoud-capaciteit/" },
+                    { label: "Liftonderhoud", href: "/onderhoud/" },
                     { label: "Liftmonteur inhuren", href: "/liftmonteurs/inhuren/" },
                     { label: "Beschikbaarheid", href: "/liftmonteurs/beschikbaarheid/" },
                     { label: "Capaciteitstekort", href: "/capaciteit/" },
-                    { label: "Aanvraag", href: "/aanvraag/" },
+                    { label: "Contact", href: "/contact/" },
                   ].map((link) => (
                     <Link
                       key={link.href}

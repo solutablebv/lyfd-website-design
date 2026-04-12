@@ -80,7 +80,7 @@ const routes = [
     titel: "Ik heb al liftervaring",
     beschrijving: "Je bent al liftmonteur en zoekt een betere werkgever. Meer salaris, meer afwisseling, betere voorwaarden. Ga direct naar onze monteurspage.",
     cta: "Bekijk mogelijkheden",
-    href: "/voor-liftmonteurs/",
+    href: "/voor-monteurs/",
     color: "bg-[#E0EAFF]",
   },
   {
@@ -657,7 +657,7 @@ export default function MonteursOpleidingPage() {
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
                   {[
                     { label: "LYFD Academy", href: "/academy/" },
-                    { label: "Voor liftmonteurs", href: "/voor-liftmonteurs/" },
+                    { label: "Voor liftmonteurs", href: "/voor-monteurs/" },
                     { label: "Liftmonteur salaris", href: "/monteurs/salaris/" },
                     { label: "Carriere als liftmonteur", href: "/monteurs/carriere/" },
                     { label: "NEN certificering", href: "/kennisbank/nen-certificering/" },

@@ -621,10 +621,9 @@ export default function VergrijzingLiftbranchePage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
                   {[
-                    { label: "Toekomst liftbranche", href: "/branche/toekomst/" },
                     { label: "Technologie in de liftbranche", href: "/branche/technologie/" },
                     { label: "LYFD Academy", href: "/academy/" },
-                    { label: "Capacity as a Service", href: "/diensten/capacity-as-a-service/" },
+                    { label: "Capacity as a Service", href: "/liftmonteurs/detachering/" },
                     { label: "Liftmonteur inhuren", href: "/liftmonteurs/inhuren/" },
                     { label: "Contact", href: "/contact/" },
                   ].map((link) => (

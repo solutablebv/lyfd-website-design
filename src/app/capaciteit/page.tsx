@@ -586,8 +586,8 @@ export default function CapaciteitPage() {
                     { label: "Capaciteitsoplossingen", href: "/capaciteit/oplossingen/" },
                     { label: "Liftmonteur inhuren", href: "/liftmonteurs/inhuren/" },
                     { label: "CaaS uitgelegd", href: "/kennisbank/caas-uitgelegd/" },
-                    { label: "Liftmonteur kosten", href: "/liftmonteurs/kosten/" },
-                    { label: "Aanvraag", href: "/aanvraag/" },
+                    { label: "Liftmonteur kosten", href: "/tarieven/" },
+                    { label: "Contact", href: "/contact/" },
                   ].map((link) => (
                     <Link
                       key={link.href}

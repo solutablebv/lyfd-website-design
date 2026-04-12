@@ -581,7 +581,7 @@ export default function LiftmonteurCertificeringPage() {
                     { label: "Beschikbaarheid", href: "/liftmonteurs/beschikbaarheid/" },
                     { label: "Wet DBA liftbranche", href: "/kennisbank/capaciteitsmanagement/wet-dba-liftbranche/" },
                     { label: "Cases", href: "/cases/" },
-                    { label: "Aanvraag", href: "/aanvraag/" },
+                    { label: "Contact", href: "/contact/" },
                   ].map((link) => (
                     <Link
                       key={link.href}

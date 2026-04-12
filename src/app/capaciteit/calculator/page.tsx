@@ -42,7 +42,7 @@ const faqItems = [
   {
     question: "Hoe vergelijk ik de kosten van LYFD met zelf inhuren?",
     answer:
-      "Reken alle kosten mee: werving, onboarding, ziekte, gereedschap, certificeringen, management-overhead en risico op mismatch. Bij LYFD betaal je vanaf EUR 64,99 per uur, alles inbegrepen.",
+      "Reken alle kosten mee: werving, onboarding, ziekte, gereedschap, certificeringen, management-overhead en risico op mismatch. Bij LYFD betaal je vanaf EUR 69,96 per uur, alles inbegrepen.",
   },
   {
     question: "Wat kost een DBA-boete als ik zzp'ers inzet?",
@@ -451,10 +451,10 @@ export default function CalculatorPage() {
                   {[
                     { label: "Capaciteitstekort", href: "/capaciteit/" },
                     { label: "Capaciteitsoplossingen", href: "/capaciteit/oplossingen/" },
-                    { label: "Liftmonteur kosten", href: "/liftmonteurs/kosten/" },
+                    { label: "Liftmonteur kosten", href: "/tarieven/" },
                     { label: "Liftmonteur inhuren", href: "/liftmonteurs/inhuren/" },
                     { label: "CaaS uitgelegd", href: "/kennisbank/caas-uitgelegd/" },
-                    { label: "Aanvraag", href: "/aanvraag/" },
+                    { label: "Contact", href: "/contact/" },
                   ].map((link) => (
                     <Link
                       key={link.href}
